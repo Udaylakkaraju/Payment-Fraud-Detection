@@ -46,6 +46,12 @@ flowchart LR
 | Retry opportunity | 23.5% | Indicates recoverable failures |
 | Holdout recall | 83.5% | Fraud capture on unseen sample |
 
+### Data Charts
+
+![Top Failure Reasons](docs/visuals/01-failure-mix.png)
+![Retry Recovery Opportunity](docs/visuals/02-retry-recovery.png)
+![Holdout Confusion Matrix](docs/visuals/03-holdout-confusion.png)
+
 ## Project Objectives
 
 - Find where payment failures are happening and how much value is getting stuck.
