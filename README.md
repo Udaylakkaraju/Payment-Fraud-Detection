@@ -48,20 +48,32 @@ flowchart LR
 
 ### Data Charts
 
-<p align="center">
-  <img src="docs/visuals/01-failure-mix.png" alt="Top Failure Reasons" width="760" />
-</p>
-Top failure reasons are concentrated in a small set of decline categories, helping prioritize the highest-impact fixes first.
+```mermaid
+pie showData
+    title Failure Mix by Decline Reason
+    "Insufficient Funds (51.7%)" : 51.74
+    "Suspected Fraud (31.6%)" : 31.61
+    "Issuer Timeout (16.7%)" : 16.65
+```
+Most failures come from a small set of decline reasons, which helps prioritize high-impact remediation.
 
-<p align="center">
-  <img src="docs/visuals/02-retry-recovery.png" alt="Retry Recovery Opportunity" width="620" />
-</p>
-A meaningful share of failed transactions later succeeded within 24 hours, indicating a clear retry timing opportunity.
+```mermaid
+pie showData
+    title Retry Outcome Within 24 Hours
+    "Recovered" : 1554
+    "Not Recovered" : 5065
+```
+Roughly one in four failed payments later succeeds, indicating a clear retry and routing opportunity.
 
-<p align="center">
-  <img src="docs/visuals/03-holdout-confusion.png" alt="Holdout Confusion Matrix" width="640" />
-</p>
-Holdout evaluation shows strong fraud capture with low review noise at the selected operating threshold.
+```mermaid
+pie showData
+    title Holdout Fraud Prediction Outcomes
+    "True Positive (TP)" : 1349
+    "False Positive (FP)" : 0
+    "True Negative (TN)" : 885
+    "False Negative (FN)" : 266
+```
+Holdout results show strong fraud capture at the chosen threshold with minimal review noise.
 
 ## Project Objectives
 
