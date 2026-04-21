@@ -1,6 +1,6 @@
 # Power BI Screenshots
 
-Add 2-3 exported dashboard images in this folder with these names:
+Add 2-3 exported dashboard images in this folder using the following names:
 
 - `01-executive-summary.png`
 - `02-retry-and-failures.png`

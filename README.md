@@ -26,6 +26,16 @@ flowchart LR
     B --> D[Power BI Reporting]
     C --> E[Retry Optimization]
     C --> F[Fraud Review Prioritization]
+
+    classDef data fill:#E8F1FF,stroke:#2B6CB0,stroke-width:2px,color:#1A365D;
+    classDef analytics fill:#E6FFFA,stroke:#0F766E,stroke-width:2px,color:#134E4A;
+    classDef reporting fill:#FEF3C7,stroke:#B45309,stroke-width:2px,color:#78350F;
+    classDef actions fill:#F3E8FF,stroke:#7E22CE,stroke-width:2px,color:#581C87;
+
+    class A data;
+    class B analytics;
+    class D reporting;
+    class C,E,F actions;
 ```
 
 | Metric | Value | Why it matters |
@@ -36,20 +46,20 @@ flowchart LR
 | Retry opportunity | 23.5% | Indicates recoverable failures |
 | Holdout recall | 83.5% | Fraud capture on unseen sample |
 
-## Project Story (Simple)
+## Project Objectives
 
 - Find where payment failures are happening and how much value is getting stuck.
 - Check how many failed payments later succeed (retry opportunity).
 - Build a fraud risk model to rank suspicious transactions for manual review.
 - Export results so teams can track daily performance and act quickly.
 
-## Validated Metrics (Interview-Safe)
+## Validated Metrics
 
 - Payments analyzed: `51,237`
 - Failed payments: `6,619` (`12.92%` fail rate)
 - Failed transaction value opportunity pool: `$500,157.98`
 - Failed payments that later succeeded within 24h: `1,554 / 6,619` (`23.5%`)
-- Fraud holdout evaluation (time split, selected threshold):
+- Fraud holdout evaluation (time split, threshold-based operating point):
   - Recall: `83.5%`
   - Precision: `100.0%`
   - False positives: `0`
@@ -81,7 +91,7 @@ flowchart LR
 - `Tables/` - Exported SQL result tables
 - `outputs/` - Generated outputs (metrics, predictions, model artifact)
 - `PROJECT_CONTEXT.md` - Business context and recommendation summary
-- `RESUME_BULLETS_VERIFIED.md` - Safe, validated resume bullet options
+- `RESUME_BULLETS_VERIFIED.md` - Validated resume bullet options
 
 ## Setup
 
@@ -140,7 +150,7 @@ GitHub visual preview (auto-renders once screenshots are added):
 ![Retry and Failures](powerbi-screenshots/02-retry-and-failures.png)
 ![Fraud Risk Monitoring](powerbi-screenshots/03-fraud-risk-monitoring.png)
 
-### Dashboard Insights (Short)
+### Dashboard Insights
 
 - **Executive view:** shows payment volume, fail rate, failed value opportunity pool, and trend snapshot.
 - **Retry and failures:** highlights top failure reasons and the 24h retry-success signal (`23.5%`) to guide recovery strategy.
@@ -153,16 +163,48 @@ GitHub visual preview (auto-renders once screenshots are added):
 
 ```mermaid
 flowchart LR
-    A[Raw Data] --> B[SQL Diagnostics]
-    A --> C[ML Feature Engineering]
-    C --> D[Model Training]
-    D --> E[Daily Batch Scoring]
-    B --> F[Power BI]
-    E --> F
-    F --> G[Business Decisions]
+    subgraph L1[Data Layer]
+        A1[Payments Data]
+        A2[Labeled Fraud Data]
+    end
+
+    subgraph L2[Analytics Layer]
+        B1[SQL Diagnostics]
+        B2[Feature Engineering]
+        B3[Model Training]
+    end
+
+    subgraph L3[Operational Layer]
+        C1[Daily Batch Scoring]
+        C2[Output Artifacts]
+    end
+
+    subgraph L4[Reporting Layer]
+        D1[Power BI Dashboard]
+        D2[Business Decisions]
+    end
+
+    A1 --> B1
+    A2 --> B2
+    B2 --> B3
+    B3 --> C1
+    C1 --> C2
+    B1 --> D1
+    C2 --> D1
+    D1 --> D2
+
+    classDef layerData fill:#E8F1FF,stroke:#2B6CB0,stroke-width:2px,color:#1A365D;
+    classDef layerAnalytics fill:#E6FFFA,stroke:#0F766E,stroke-width:2px,color:#134E4A;
+    classDef layerOps fill:#FFF7ED,stroke:#C2410C,stroke-width:2px,color:#7C2D12;
+    classDef layerReport fill:#F3E8FF,stroke:#7E22CE,stroke-width:2px,color:#581C87;
+
+    class A1,A2 layerData;
+    class B1,B2,B3 layerAnalytics;
+    class C1,C2 layerOps;
+    class D1,D2 layerReport;
 ```
 
-## Project Journey (Simple)
+## Project Workflow
 
 ```mermaid
 flowchart TD
@@ -171,6 +213,9 @@ flowchart TD
     S3 --> S4[4. Train and benchmark fraud models]
     S4 --> S5[5. Run holdout evaluation]
     S5 --> S6[6. Daily batch scoring + dashboard reporting]
+
+    classDef step fill:#EEF2FF,stroke:#4338CA,stroke-width:2px,color:#1E1B4B;
+    class S1,S2,S3,S4,S5,S6 step;
 ```
 
 ## Notes
