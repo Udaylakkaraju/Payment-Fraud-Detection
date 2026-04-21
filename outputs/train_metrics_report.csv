@@ -1,0 +1,2 @@
+model_type,model_kind,evaluation_mode,test_size,threshold,rows,fraud_events,fraud_caught,recall_pct,roc_auc,precision_pct,false_positive_rate_pct,tn,fp,fn,tp
+hist_gradient_boosting,classifier,time,0.25,0.05,2500.0,1615.0,1349.0,83.52941176470588,0.9998971506533032,100.0,0.0,885.0,0.0,266.0,1349.0

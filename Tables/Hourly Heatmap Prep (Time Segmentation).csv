@@ -1,0 +1,841 @@
+Day_Name,Hour_of_Day,Issuer_Bank,Auth_Rate_Pct
+Friday,0,Bank of America,83.9
+Friday,0,Capital One,94.0
+Friday,0,Chase,88.0
+Friday,0,Citi,76.9
+Friday,0,Wells Fargo,89.6
+Friday,1,Bank of America,90.6
+Friday,1,Capital One,85.7
+Friday,1,Chase,87.9
+Friday,1,Citi,89.2
+Friday,1,Wells Fargo,87.5
+Friday,2,Bank of America,90.3
+Friday,2,Capital One,92.9
+Friday,2,Chase,82.3
+Friday,2,Citi,82.9
+Friday,2,Wells Fargo,82.8
+Friday,3,Bank of America,83.6
+Friday,3,Capital One,84.2
+Friday,3,Chase,84.3
+Friday,3,Citi,85.1
+Friday,3,Wells Fargo,72.6
+Friday,4,Bank of America,91.4
+Friday,4,Capital One,77.1
+Friday,4,Chase,89.2
+Friday,4,Citi,79.5
+Friday,4,Wells Fargo,88.9
+Friday,5,Bank of America,90.6
+Friday,5,Capital One,92.6
+Friday,5,Chase,89.4
+Friday,5,Citi,86.8
+Friday,5,Wells Fargo,86.0
+Friday,6,Bank of America,82.6
+Friday,6,Capital One,83.7
+Friday,6,Chase,88.4
+Friday,6,Citi,89.6
+Friday,6,Wells Fargo,85.7
+Friday,7,Bank of America,79.6
+Friday,7,Capital One,93.3
+Friday,7,Chase,89.0
+Friday,7,Citi,82.4
+Friday,7,Wells Fargo,83.6
+Friday,8,Bank of America,85.0
+Friday,8,Capital One,91.3
+Friday,8,Chase,83.7
+Friday,8,Citi,90.0
+Friday,8,Wells Fargo,91.0
+Friday,9,Bank of America,92.9
+Friday,9,Capital One,94.6
+Friday,9,Chase,92.9
+Friday,9,Citi,78.8
+Friday,9,Wells Fargo,95.8
+Friday,10,Bank of America,90.2
+Friday,10,Capital One,85.7
+Friday,10,Chase,88.8
+Friday,10,Citi,82.5
+Friday,10,Wells Fargo,75.5
+Friday,11,Bank of America,87.0
+Friday,11,Capital One,88.5
+Friday,11,Chase,91.1
+Friday,11,Citi,84.8
+Friday,11,Wells Fargo,81.2
+Friday,12,Bank of America,85.2
+Friday,12,Capital One,80.8
+Friday,12,Chase,89.6
+Friday,12,Citi,81.8
+Friday,12,Wells Fargo,91.8
+Friday,13,Bank of America,82.7
+Friday,13,Capital One,86.8
+Friday,13,Chase,84.6
+Friday,13,Citi,80.0
+Friday,13,Wells Fargo,86.4
+Friday,14,Bank of America,85.7
+Friday,14,Capital One,85.7
+Friday,14,Chase,89.0
+Friday,14,Citi,88.0
+Friday,14,Wells Fargo,78.9
+Friday,15,Bank of America,89.1
+Friday,15,Capital One,85.7
+Friday,15,Chase,89.7
+Friday,15,Citi,86.7
+Friday,15,Wells Fargo,88.9
+Friday,16,Bank of America,87.3
+Friday,16,Capital One,78.7
+Friday,16,Chase,85.9
+Friday,16,Citi,92.3
+Friday,16,Wells Fargo,76.9
+Friday,17,Bank of America,86.4
+Friday,17,Capital One,91.3
+Friday,17,Chase,91.8
+Friday,17,Citi,89.8
+Friday,17,Wells Fargo,89.6
+Friday,18,Bank of America,84.3
+Friday,18,Capital One,83.7
+Friday,18,Chase,89.0
+Friday,18,Citi,90.4
+Friday,18,Wells Fargo,86.0
+Friday,19,Bank of America,92.0
+Friday,19,Capital One,82.4
+Friday,19,Chase,89.4
+Friday,19,Citi,78.7
+Friday,19,Wells Fargo,80.6
+Friday,20,Bank of America,86.4
+Friday,20,Capital One,94.2
+Friday,20,Chase,89.7
+Friday,20,Citi,84.8
+Friday,20,Wells Fargo,89.5
+Friday,21,Bank of America,90.3
+Friday,21,Capital One,77.9
+Friday,21,Chase,89.0
+Friday,21,Citi,82.9
+Friday,21,Wells Fargo,90.9
+Friday,22,Bank of America,90.3
+Friday,22,Capital One,93.2
+Friday,22,Chase,83.8
+Friday,22,Citi,91.7
+Friday,22,Wells Fargo,83.1
+Friday,23,Bank of America,93.4
+Friday,23,Capital One,90.4
+Friday,23,Chase,94.1
+Friday,23,Citi,91.7
+Friday,23,Wells Fargo,86.6
+Monday,0,Bank of America,92.1
+Monday,0,Capital One,88.1
+Monday,0,Chase,85.2
+Monday,0,Citi,84.1
+Monday,0,Wells Fargo,82.9
+Monday,1,Bank of America,90.1
+Monday,1,Capital One,81.0
+Monday,1,Chase,84.2
+Monday,1,Citi,78.4
+Monday,1,Wells Fargo,87.2
+Monday,2,Bank of America,78.3
+Monday,2,Capital One,84.3
+Monday,2,Chase,89.9
+Monday,2,Citi,83.7
+Monday,2,Wells Fargo,87.7
+Monday,3,Bank of America,87.5
+Monday,3,Capital One,88.2
+Monday,3,Chase,90.3
+Monday,3,Citi,84.8
+Monday,3,Wells Fargo,87.5
+Monday,4,Bank of America,86.9
+Monday,4,Capital One,88.1
+Monday,4,Chase,87.1
+Monday,4,Citi,88.5
+Monday,4,Wells Fargo,84.8
+Monday,5,Bank of America,85.7
+Monday,5,Capital One,82.5
+Monday,5,Chase,87.2
+Monday,5,Citi,92.5
+Monday,5,Wells Fargo,88.2
+Monday,6,Bank of America,94.5
+Monday,6,Capital One,86.8
+Monday,6,Chase,90.1
+Monday,6,Citi,86.1
+Monday,6,Wells Fargo,86.0
+Monday,7,Bank of America,91.2
+Monday,7,Capital One,93.5
+Monday,7,Chase,89.1
+Monday,7,Citi,93.1
+Monday,7,Wells Fargo,80.3
+Monday,8,Bank of America,93.9
+Monday,8,Capital One,83.7
+Monday,8,Chase,88.5
+Monday,8,Citi,70.6
+Monday,8,Wells Fargo,81.1
+Monday,9,Bank of America,79.7
+Monday,9,Capital One,86.2
+Monday,9,Chase,88.6
+Monday,9,Citi,82.4
+Monday,9,Wells Fargo,82.0
+Monday,10,Bank of America,84.6
+Monday,10,Capital One,87.5
+Monday,10,Chase,85.6
+Monday,10,Citi,86.7
+Monday,10,Wells Fargo,84.9
+Monday,11,Bank of America,85.7
+Monday,11,Capital One,94.6
+Monday,11,Chase,81.6
+Monday,11,Citi,82.9
+Monday,11,Wells Fargo,80.0
+Monday,12,Bank of America,85.2
+Monday,12,Capital One,94.4
+Monday,12,Chase,89.9
+Monday,12,Citi,88.0
+Monday,12,Wells Fargo,87.1
+Monday,13,Bank of America,93.3
+Monday,13,Capital One,79.5
+Monday,13,Chase,89.2
+Monday,13,Citi,81.4
+Monday,13,Wells Fargo,92.4
+Monday,14,Bank of America,93.1
+Monday,14,Capital One,88.9
+Monday,14,Chase,83.0
+Monday,14,Citi,87.9
+Monday,14,Wells Fargo,87.0
+Monday,15,Bank of America,90.2
+Monday,15,Capital One,86.5
+Monday,15,Chase,91.7
+Monday,15,Citi,89.7
+Monday,15,Wells Fargo,80.0
+Monday,16,Bank of America,92.9
+Monday,16,Capital One,87.8
+Monday,16,Chase,84.6
+Monday,16,Citi,95.7
+Monday,16,Wells Fargo,87.3
+Monday,17,Bank of America,83.3
+Monday,17,Capital One,81.5
+Monday,17,Chase,85.6
+Monday,17,Citi,86.0
+Monday,17,Wells Fargo,87.3
+Monday,18,Bank of America,95.2
+Monday,18,Capital One,87.8
+Monday,18,Chase,86.5
+Monday,18,Citi,91.1
+Monday,18,Wells Fargo,82.3
+Monday,19,Bank of America,91.4
+Monday,19,Capital One,89.1
+Monday,19,Chase,89.5
+Monday,19,Citi,97.7
+Monday,19,Wells Fargo,92.2
+Monday,20,Bank of America,85.0
+Monday,20,Capital One,90.9
+Monday,20,Chase,81.9
+Monday,20,Citi,94.3
+Monday,20,Wells Fargo,93.1
+Monday,21,Bank of America,87.1
+Monday,21,Capital One,86.2
+Monday,21,Chase,83.3
+Monday,21,Citi,85.1
+Monday,21,Wells Fargo,92.6
+Monday,22,Bank of America,83.6
+Monday,22,Capital One,80.8
+Monday,22,Chase,88.8
+Monday,22,Citi,78.8
+Monday,22,Wells Fargo,90.0
+Monday,23,Bank of America,90.0
+Monday,23,Capital One,92.7
+Monday,23,Chase,89.0
+Monday,23,Citi,84.4
+Monday,23,Wells Fargo,96.2
+Saturday,0,Bank of America,90.0
+Saturday,0,Capital One,70.9
+Saturday,0,Chase,87.5
+Saturday,0,Citi,88.0
+Saturday,0,Wells Fargo,92.3
+Saturday,1,Bank of America,89.9
+Saturday,1,Capital One,89.5
+Saturday,1,Chase,90.2
+Saturday,1,Citi,89.5
+Saturday,1,Wells Fargo,86.6
+Saturday,2,Bank of America,86.8
+Saturday,2,Capital One,90.9
+Saturday,2,Chase,85.0
+Saturday,2,Citi,92.0
+Saturday,2,Wells Fargo,89.8
+Saturday,3,Bank of America,83.6
+Saturday,3,Capital One,82.1
+Saturday,3,Chase,86.4
+Saturday,3,Citi,81.3
+Saturday,3,Wells Fargo,87.0
+Saturday,4,Bank of America,82.9
+Saturday,4,Capital One,82.4
+Saturday,4,Chase,86.4
+Saturday,4,Citi,82.5
+Saturday,4,Wells Fargo,89.7
+Saturday,5,Bank of America,90.6
+Saturday,5,Capital One,82.7
+Saturday,5,Chase,84.7
+Saturday,5,Citi,86.0
+Saturday,5,Wells Fargo,84.9
+Saturday,6,Bank of America,92.4
+Saturday,6,Capital One,89.4
+Saturday,6,Chase,89.2
+Saturday,6,Citi,91.5
+Saturday,6,Wells Fargo,87.3
+Saturday,7,Bank of America,88.2
+Saturday,7,Capital One,92.2
+Saturday,7,Chase,92.7
+Saturday,7,Citi,86.4
+Saturday,7,Wells Fargo,91.1
+Saturday,8,Bank of America,86.8
+Saturday,8,Capital One,88.6
+Saturday,8,Chase,90.5
+Saturday,8,Citi,86.5
+Saturday,8,Wells Fargo,88.3
+Saturday,9,Bank of America,84.7
+Saturday,9,Capital One,84.1
+Saturday,9,Chase,92.1
+Saturday,9,Citi,81.1
+Saturday,9,Wells Fargo,80.4
+Saturday,10,Bank of America,85.9
+Saturday,10,Capital One,86.2
+Saturday,10,Chase,92.0
+Saturday,10,Citi,88.4
+Saturday,10,Wells Fargo,87.0
+Saturday,11,Bank of America,79.6
+Saturday,11,Capital One,79.5
+Saturday,11,Chase,86.2
+Saturday,11,Citi,85.7
+Saturday,11,Wells Fargo,87.7
+Saturday,12,Bank of America,86.6
+Saturday,12,Capital One,89.4
+Saturday,12,Chase,84.5
+Saturday,12,Citi,89.5
+Saturday,12,Wells Fargo,92.2
+Saturday,13,Bank of America,81.8
+Saturday,13,Capital One,83.0
+Saturday,13,Chase,84.3
+Saturday,13,Citi,94.9
+Saturday,13,Wells Fargo,83.9
+Saturday,14,Bank of America,85.2
+Saturday,14,Capital One,88.6
+Saturday,14,Chase,84.5
+Saturday,14,Citi,88.7
+Saturday,14,Wells Fargo,88.0
+Saturday,15,Bank of America,91.7
+Saturday,15,Capital One,92.9
+Saturday,15,Chase,91.3
+Saturday,15,Citi,81.8
+Saturday,15,Wells Fargo,93.9
+Saturday,16,Bank of America,86.5
+Saturday,16,Capital One,94.9
+Saturday,16,Chase,85.3
+Saturday,16,Citi,83.0
+Saturday,16,Wells Fargo,92.1
+Saturday,17,Bank of America,88.9
+Saturday,17,Capital One,87.3
+Saturday,17,Chase,92.9
+Saturday,17,Citi,90.7
+Saturday,17,Wells Fargo,88.7
+Saturday,18,Bank of America,86.4
+Saturday,18,Capital One,83.9
+Saturday,18,Chase,93.3
+Saturday,18,Citi,85.7
+Saturday,18,Wells Fargo,90.6
+Saturday,19,Bank of America,91.1
+Saturday,19,Capital One,90.6
+Saturday,19,Chase,83.1
+Saturday,19,Citi,83.0
+Saturday,19,Wells Fargo,82.2
+Saturday,20,Bank of America,89.7
+Saturday,20,Capital One,83.3
+Saturday,20,Chase,86.6
+Saturday,20,Citi,80.0
+Saturday,20,Wells Fargo,85.1
+Saturday,21,Bank of America,85.5
+Saturday,21,Capital One,90.0
+Saturday,21,Chase,90.7
+Saturday,21,Citi,94.0
+Saturday,21,Wells Fargo,91.1
+Saturday,22,Bank of America,85.7
+Saturday,22,Capital One,97.5
+Saturday,22,Chase,93.4
+Saturday,22,Citi,86.4
+Saturday,22,Wells Fargo,84.7
+Saturday,23,Bank of America,96.8
+Saturday,23,Capital One,97.6
+Saturday,23,Chase,88.2
+Saturday,23,Citi,86.0
+Saturday,23,Wells Fargo,86.8
+Sunday,0,Bank of America,86.4
+Sunday,0,Capital One,84.6
+Sunday,0,Chase,84.1
+Sunday,0,Citi,88.2
+Sunday,0,Wells Fargo,79.3
+Sunday,1,Bank of America,83.3
+Sunday,1,Capital One,90.9
+Sunday,1,Chase,87.5
+Sunday,1,Citi,85.4
+Sunday,1,Wells Fargo,82.1
+Sunday,2,Bank of America,88.5
+Sunday,2,Capital One,88.9
+Sunday,2,Chase,83.8
+Sunday,2,Citi,87.2
+Sunday,2,Wells Fargo,91.4
+Sunday,3,Bank of America,89.3
+Sunday,3,Capital One,88.9
+Sunday,3,Chase,87.6
+Sunday,3,Citi,87.5
+Sunday,3,Wells Fargo,81.1
+Sunday,4,Bank of America,90.6
+Sunday,4,Capital One,89.2
+Sunday,4,Chase,89.7
+Sunday,4,Citi,78.3
+Sunday,4,Wells Fargo,92.5
+Sunday,5,Bank of America,87.7
+Sunday,5,Capital One,87.8
+Sunday,5,Chase,83.5
+Sunday,5,Citi,88.9
+Sunday,5,Wells Fargo,94.1
+Sunday,6,Bank of America,83.6
+Sunday,6,Capital One,85.7
+Sunday,6,Chase,90.0
+Sunday,6,Citi,89.4
+Sunday,6,Wells Fargo,80.6
+Sunday,7,Bank of America,89.7
+Sunday,7,Capital One,87.5
+Sunday,7,Chase,84.5
+Sunday,7,Citi,83.7
+Sunday,7,Wells Fargo,87.5
+Sunday,8,Bank of America,82.4
+Sunday,8,Capital One,85.1
+Sunday,8,Chase,84.7
+Sunday,8,Citi,91.3
+Sunday,8,Wells Fargo,75.5
+Sunday,9,Bank of America,89.7
+Sunday,9,Capital One,92.7
+Sunday,9,Chase,83.3
+Sunday,9,Citi,87.8
+Sunday,9,Wells Fargo,89.6
+Sunday,10,Bank of America,79.4
+Sunday,10,Capital One,83.0
+Sunday,10,Chase,88.0
+Sunday,10,Citi,86.2
+Sunday,10,Wells Fargo,83.6
+Sunday,11,Bank of America,90.2
+Sunday,11,Capital One,78.0
+Sunday,11,Chase,91.4
+Sunday,11,Citi,85.2
+Sunday,11,Wells Fargo,81.4
+Sunday,12,Bank of America,85.5
+Sunday,12,Capital One,92.6
+Sunday,12,Chase,85.4
+Sunday,12,Citi,84.2
+Sunday,12,Wells Fargo,87.7
+Sunday,13,Bank of America,79.3
+Sunday,13,Capital One,76.5
+Sunday,13,Chase,80.8
+Sunday,13,Citi,79.5
+Sunday,13,Wells Fargo,86.3
+Sunday,14,Bank of America,86.9
+Sunday,14,Capital One,92.7
+Sunday,14,Chase,89.2
+Sunday,14,Citi,90.9
+Sunday,14,Wells Fargo,82.9
+Sunday,15,Bank of America,87.7
+Sunday,15,Capital One,93.0
+Sunday,15,Chase,85.7
+Sunday,15,Citi,91.7
+Sunday,15,Wells Fargo,91.5
+Sunday,16,Bank of America,88.5
+Sunday,16,Capital One,84.4
+Sunday,16,Chase,90.8
+Sunday,16,Citi,86.0
+Sunday,16,Wells Fargo,86.9
+Sunday,17,Bank of America,85.0
+Sunday,17,Capital One,90.6
+Sunday,17,Chase,87.8
+Sunday,17,Citi,89.7
+Sunday,17,Wells Fargo,89.8
+Sunday,18,Bank of America,76.8
+Sunday,18,Capital One,91.8
+Sunday,18,Chase,92.5
+Sunday,18,Citi,81.0
+Sunday,18,Wells Fargo,81.5
+Sunday,19,Bank of America,75.0
+Sunday,19,Capital One,86.0
+Sunday,19,Chase,94.8
+Sunday,19,Citi,84.8
+Sunday,19,Wells Fargo,90.5
+Sunday,20,Bank of America,90.2
+Sunday,20,Capital One,90.5
+Sunday,20,Chase,88.7
+Sunday,20,Citi,82.4
+Sunday,20,Wells Fargo,88.2
+Sunday,21,Bank of America,82.3
+Sunday,21,Capital One,77.8
+Sunday,21,Chase,88.4
+Sunday,21,Citi,73.1
+Sunday,21,Wells Fargo,91.5
+Sunday,22,Bank of America,86.4
+Sunday,22,Capital One,82.6
+Sunday,22,Chase,90.3
+Sunday,22,Citi,82.4
+Sunday,22,Wells Fargo,85.5
+Sunday,23,Bank of America,92.2
+Sunday,23,Capital One,93.9
+Sunday,23,Chase,91.8
+Sunday,23,Citi,88.5
+Sunday,23,Wells Fargo,90.5
+Thursday,0,Bank of America,83.6
+Thursday,0,Capital One,87.3
+Thursday,0,Chase,85.3
+Thursday,0,Citi,79.3
+Thursday,0,Wells Fargo,94.3
+Thursday,1,Bank of America,80.6
+Thursday,1,Capital One,95.7
+Thursday,1,Chase,83.5
+Thursday,1,Citi,86.7
+Thursday,1,Wells Fargo,89.1
+Thursday,2,Bank of America,91.8
+Thursday,2,Capital One,83.7
+Thursday,2,Chase,90.5
+Thursday,2,Citi,89.8
+Thursday,2,Wells Fargo,89.2
+Thursday,3,Bank of America,89.8
+Thursday,3,Capital One,86.7
+Thursday,3,Chase,90.7
+Thursday,3,Citi,87.2
+Thursday,3,Wells Fargo,90.5
+Thursday,4,Bank of America,91.5
+Thursday,4,Capital One,91.2
+Thursday,4,Chase,87.4
+Thursday,4,Citi,92.9
+Thursday,4,Wells Fargo,87.7
+Thursday,5,Bank of America,82.3
+Thursday,5,Capital One,93.6
+Thursday,5,Chase,97.5
+Thursday,5,Citi,77.8
+Thursday,5,Wells Fargo,87.3
+Thursday,6,Bank of America,83.1
+Thursday,6,Capital One,91.2
+Thursday,6,Chase,91.5
+Thursday,6,Citi,88.2
+Thursday,6,Wells Fargo,86.2
+Thursday,7,Bank of America,82.5
+Thursday,7,Capital One,97.6
+Thursday,7,Chase,93.3
+Thursday,7,Citi,91.9
+Thursday,7,Wells Fargo,81.2
+Thursday,8,Bank of America,89.3
+Thursday,8,Capital One,89.5
+Thursday,8,Chase,82.4
+Thursday,8,Citi,92.7
+Thursday,8,Wells Fargo,86.0
+Thursday,9,Bank of America,91.5
+Thursday,9,Capital One,89.6
+Thursday,9,Chase,88.2
+Thursday,9,Citi,83.6
+Thursday,9,Wells Fargo,86.0
+Thursday,10,Bank of America,87.1
+Thursday,10,Capital One,76.2
+Thursday,10,Chase,91.0
+Thursday,10,Citi,91.7
+Thursday,10,Wells Fargo,93.2
+Thursday,11,Bank of America,88.1
+Thursday,11,Capital One,88.3
+Thursday,11,Chase,85.6
+Thursday,11,Citi,87.2
+Thursday,11,Wells Fargo,83.1
+Thursday,12,Bank of America,85.7
+Thursday,12,Capital One,78.3
+Thursday,12,Chase,87.6
+Thursday,12,Citi,84.9
+Thursday,12,Wells Fargo,85.5
+Thursday,13,Bank of America,84.4
+Thursday,13,Capital One,82.7
+Thursday,13,Chase,89.6
+Thursday,13,Citi,78.7
+Thursday,13,Wells Fargo,81.1
+Thursday,14,Bank of America,92.2
+Thursday,14,Capital One,85.1
+Thursday,14,Chase,85.3
+Thursday,14,Citi,100.0
+Thursday,14,Wells Fargo,79.4
+Thursday,15,Bank of America,85.5
+Thursday,15,Capital One,89.7
+Thursday,15,Chase,82.1
+Thursday,15,Citi,85.0
+Thursday,15,Wells Fargo,92.3
+Thursday,16,Bank of America,82.8
+Thursday,16,Capital One,87.9
+Thursday,16,Chase,84.0
+Thursday,16,Citi,75.6
+Thursday,16,Wells Fargo,80.8
+Thursday,17,Bank of America,82.3
+Thursday,17,Capital One,91.7
+Thursday,17,Chase,87.6
+Thursday,17,Citi,87.8
+Thursday,17,Wells Fargo,94.1
+Thursday,18,Bank of America,90.2
+Thursday,18,Capital One,91.4
+Thursday,18,Chase,89.0
+Thursday,18,Citi,88.3
+Thursday,18,Wells Fargo,87.9
+Thursday,19,Bank of America,84.1
+Thursday,19,Capital One,84.4
+Thursday,19,Chase,82.0
+Thursday,19,Citi,74.4
+Thursday,19,Wells Fargo,83.1
+Thursday,20,Bank of America,87.5
+Thursday,20,Capital One,83.7
+Thursday,20,Chase,88.0
+Thursday,20,Citi,88.4
+Thursday,20,Wells Fargo,96.2
+Thursday,21,Bank of America,83.3
+Thursday,21,Capital One,85.7
+Thursday,21,Chase,91.3
+Thursday,21,Citi,85.4
+Thursday,21,Wells Fargo,87.0
+Thursday,22,Bank of America,90.0
+Thursday,22,Capital One,87.0
+Thursday,22,Chase,84.8
+Thursday,22,Citi,84.8
+Thursday,22,Wells Fargo,93.0
+Thursday,23,Bank of America,86.2
+Thursday,23,Capital One,92.7
+Thursday,23,Chase,82.0
+Thursday,23,Citi,81.6
+Thursday,23,Wells Fargo,89.8
+Tuesday,0,Bank of America,85.0
+Tuesday,0,Capital One,96.4
+Tuesday,0,Chase,86.4
+Tuesday,0,Citi,96.6
+Tuesday,0,Wells Fargo,89.6
+Tuesday,1,Bank of America,85.0
+Tuesday,1,Capital One,94.3
+Tuesday,1,Chase,90.7
+Tuesday,1,Citi,84.9
+Tuesday,1,Wells Fargo,92.7
+Tuesday,2,Bank of America,95.1
+Tuesday,2,Capital One,84.6
+Tuesday,2,Chase,91.4
+Tuesday,2,Citi,92.2
+Tuesday,2,Wells Fargo,2.9
+Tuesday,3,Bank of America,81.7
+Tuesday,3,Capital One,97.4
+Tuesday,3,Chase,90.3
+Tuesday,3,Citi,87.2
+Tuesday,3,Wells Fargo,4.5
+Tuesday,4,Bank of America,88.9
+Tuesday,4,Capital One,86.5
+Tuesday,4,Chase,89.8
+Tuesday,4,Citi,84.2
+Tuesday,4,Wells Fargo,85.5
+Tuesday,5,Bank of America,89.1
+Tuesday,5,Capital One,88.9
+Tuesday,5,Chase,90.9
+Tuesday,5,Citi,91.1
+Tuesday,5,Wells Fargo,95.0
+Tuesday,6,Bank of America,92.9
+Tuesday,6,Capital One,97.4
+Tuesday,6,Chase,84.3
+Tuesday,6,Citi,76.9
+Tuesday,6,Wells Fargo,84.4
+Tuesday,7,Bank of America,89.7
+Tuesday,7,Capital One,92.9
+Tuesday,7,Chase,89.2
+Tuesday,7,Citi,77.5
+Tuesday,7,Wells Fargo,89.0
+Tuesday,8,Bank of America,91.3
+Tuesday,8,Capital One,88.9
+Tuesday,8,Chase,89.3
+Tuesday,8,Citi,84.6
+Tuesday,8,Wells Fargo,89.1
+Tuesday,9,Bank of America,85.5
+Tuesday,9,Capital One,87.2
+Tuesday,9,Chase,89.2
+Tuesday,9,Citi,93.2
+Tuesday,9,Wells Fargo,92.9
+Tuesday,10,Bank of America,87.9
+Tuesday,10,Capital One,89.5
+Tuesday,10,Chase,87.0
+Tuesday,10,Citi,90.7
+Tuesday,10,Wells Fargo,88.5
+Tuesday,11,Bank of America,89.5
+Tuesday,11,Capital One,87.0
+Tuesday,11,Chase,78.1
+Tuesday,11,Citi,89.1
+Tuesday,11,Wells Fargo,85.9
+Tuesday,12,Bank of America,90.0
+Tuesday,12,Capital One,90.0
+Tuesday,12,Chase,81.8
+Tuesday,12,Citi,85.0
+Tuesday,12,Wells Fargo,76.6
+Tuesday,13,Bank of America,78.1
+Tuesday,13,Capital One,95.8
+Tuesday,13,Chase,78.9
+Tuesday,13,Citi,91.8
+Tuesday,13,Wells Fargo,83.0
+Tuesday,14,Bank of America,86.4
+Tuesday,14,Capital One,92.7
+Tuesday,14,Chase,86.9
+Tuesday,14,Citi,87.9
+Tuesday,14,Wells Fargo,86.9
+Tuesday,15,Bank of America,93.0
+Tuesday,15,Capital One,81.3
+Tuesday,15,Chase,90.2
+Tuesday,15,Citi,91.7
+Tuesday,15,Wells Fargo,81.4
+Tuesday,16,Bank of America,86.0
+Tuesday,16,Capital One,84.2
+Tuesday,16,Chase,87.7
+Tuesday,16,Citi,81.4
+Tuesday,16,Wells Fargo,91.5
+Tuesday,17,Bank of America,85.7
+Tuesday,17,Capital One,79.5
+Tuesday,17,Chase,86.0
+Tuesday,17,Citi,91.5
+Tuesday,17,Wells Fargo,82.2
+Tuesday,18,Bank of America,88.7
+Tuesday,18,Capital One,90.2
+Tuesday,18,Chase,85.2
+Tuesday,18,Citi,87.9
+Tuesday,18,Wells Fargo,92.9
+Tuesday,19,Bank of America,79.4
+Tuesday,19,Capital One,93.8
+Tuesday,19,Chase,85.0
+Tuesday,19,Citi,91.9
+Tuesday,19,Wells Fargo,83.6
+Tuesday,20,Bank of America,90.0
+Tuesday,20,Capital One,93.6
+Tuesday,20,Chase,90.7
+Tuesday,20,Citi,90.7
+Tuesday,20,Wells Fargo,77.1
+Tuesday,21,Bank of America,90.3
+Tuesday,21,Capital One,97.9
+Tuesday,21,Chase,82.6
+Tuesday,21,Citi,85.1
+Tuesday,21,Wells Fargo,85.0
+Tuesday,22,Bank of America,82.5
+Tuesday,22,Capital One,97.8
+Tuesday,22,Chase,91.8
+Tuesday,22,Citi,80.4
+Tuesday,22,Wells Fargo,90.2
+Tuesday,23,Bank of America,86.7
+Tuesday,23,Capital One,91.2
+Tuesday,23,Chase,87.6
+Tuesday,23,Citi,83.3
+Tuesday,23,Wells Fargo,91.7
+Wednesday,0,Bank of America,83.9
+Wednesday,0,Capital One,87.5
+Wednesday,0,Chase,88.4
+Wednesday,0,Citi,84.0
+Wednesday,0,Wells Fargo,90.3
+Wednesday,1,Bank of America,90.9
+Wednesday,1,Capital One,90.7
+Wednesday,1,Chase,88.6
+Wednesday,1,Citi,84.0
+Wednesday,1,Wells Fargo,81.4
+Wednesday,2,Bank of America,86.7
+Wednesday,2,Capital One,86.4
+Wednesday,2,Chase,91.7
+Wednesday,2,Citi,91.5
+Wednesday,2,Wells Fargo,87.5
+Wednesday,3,Bank of America,88.5
+Wednesday,3,Capital One,81.5
+Wednesday,3,Chase,83.1
+Wednesday,3,Citi,82.4
+Wednesday,3,Wells Fargo,90.9
+Wednesday,4,Bank of America,89.7
+Wednesday,4,Capital One,85.4
+Wednesday,4,Chase,85.4
+Wednesday,4,Citi,93.8
+Wednesday,4,Wells Fargo,86.4
+Wednesday,5,Bank of America,88.2
+Wednesday,5,Capital One,95.5
+Wednesday,5,Chase,93.0
+Wednesday,5,Citi,87.8
+Wednesday,5,Wells Fargo,87.7
+Wednesday,6,Bank of America,89.3
+Wednesday,6,Capital One,89.7
+Wednesday,6,Chase,89.6
+Wednesday,6,Citi,85.7
+Wednesday,6,Wells Fargo,84.2
+Wednesday,7,Bank of America,87.1
+Wednesday,7,Capital One,94.1
+Wednesday,7,Chase,85.4
+Wednesday,7,Citi,85.4
+Wednesday,7,Wells Fargo,93.0
+Wednesday,8,Bank of America,91.9
+Wednesday,8,Capital One,92.5
+Wednesday,8,Chase,86.4
+Wednesday,8,Citi,83.3
+Wednesday,8,Wells Fargo,85.1
+Wednesday,9,Bank of America,88.4
+Wednesday,9,Capital One,92.2
+Wednesday,9,Chase,84.4
+Wednesday,9,Citi,88.1
+Wednesday,9,Wells Fargo,86.9
+Wednesday,10,Bank of America,86.2
+Wednesday,10,Capital One,83.0
+Wednesday,10,Chase,91.8
+Wednesday,10,Citi,79.2
+Wednesday,10,Wells Fargo,96.9
+Wednesday,11,Bank of America,87.7
+Wednesday,11,Capital One,84.0
+Wednesday,11,Chase,90.3
+Wednesday,11,Citi,88.1
+Wednesday,11,Wells Fargo,81.5
+Wednesday,12,Bank of America,92.5
+Wednesday,12,Capital One,89.5
+Wednesday,12,Chase,85.9
+Wednesday,12,Citi,89.2
+Wednesday,12,Wells Fargo,88.3
+Wednesday,13,Bank of America,89.7
+Wednesday,13,Capital One,90.0
+Wednesday,13,Chase,87.0
+Wednesday,13,Citi,88.9
+Wednesday,13,Wells Fargo,93.5
+Wednesday,14,Bank of America,88.1
+Wednesday,14,Capital One,83.6
+Wednesday,14,Chase,81.9
+Wednesday,14,Citi,81.0
+Wednesday,14,Wells Fargo,89.7
+Wednesday,15,Bank of America,84.8
+Wednesday,15,Capital One,88.2
+Wednesday,15,Chase,86.8
+Wednesday,15,Citi,86.0
+Wednesday,15,Wells Fargo,93.3
+Wednesday,16,Bank of America,95.1
+Wednesday,16,Capital One,76.3
+Wednesday,16,Chase,89.1
+Wednesday,16,Citi,88.9
+Wednesday,16,Wells Fargo,77.8
+Wednesday,17,Bank of America,84.4
+Wednesday,17,Capital One,86.8
+Wednesday,17,Chase,86.2
+Wednesday,17,Citi,91.4
+Wednesday,17,Wells Fargo,95.5
+Wednesday,18,Bank of America,89.2
+Wednesday,18,Capital One,89.4
+Wednesday,18,Chase,83.0
+Wednesday,18,Citi,88.4
+Wednesday,18,Wells Fargo,86.4
+Wednesday,19,Bank of America,88.7
+Wednesday,19,Capital One,83.7
+Wednesday,19,Chase,84.9
+Wednesday,19,Citi,88.5
+Wednesday,19,Wells Fargo,84.1
+Wednesday,20,Bank of America,89.8
+Wednesday,20,Capital One,90.7
+Wednesday,20,Chase,88.7
+Wednesday,20,Citi,90.5
+Wednesday,20,Wells Fargo,87.3
+Wednesday,21,Bank of America,82.0
+Wednesday,21,Capital One,82.0
+Wednesday,21,Chase,90.9
+Wednesday,21,Citi,91.7
+Wednesday,21,Wells Fargo,83.3
+Wednesday,22,Bank of America,88.2
+Wednesday,22,Capital One,88.7
+Wednesday,22,Chase,86.7
+Wednesday,22,Citi,91.1
+Wednesday,22,Wells Fargo,88.4
+Wednesday,23,Bank of America,94.7
+Wednesday,23,Capital One,85.2
+Wednesday,23,Chase,92.2
+Wednesday,23,Citi,91.5
+Wednesday,23,Wells Fargo,90.6

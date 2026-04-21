@@ -1,0 +1,16 @@
+report_date,Risk_Tier,daily_fraud_count,avg_fraud_amount,avg_itt_minutes,pct_mobile_traffic,z_score,Alert_Status
+11-01-2024,Tier 1: High Value,1,1662,14036,100,0,Normal Status
+15-01-2024,Tier 1: High Value,1,2673,6400,0,0,Normal Status
+16-01-2024,Tier 1: High Value,1,2017,7287,100,0,Normal Status
+17-01-2024,Tier 1: High Value,1,1505,805,0,0,Normal Status
+08-02-2024,Tier 1: High Value,1,2962,19616,0,0,Normal Status
+10-02-2024,Tier 1: High Value,1,1213,16099,0,0,Normal Status
+10-02-2024,Tier 2: Mid Value (Leakage Zone),202,70.53,312.9,100,0,Normal Status
+11-02-2024,Tier 2: Mid Value (Leakage Zone),192,68.93,127.28,100,0,Normal Status
+12-02-2024,Tier 2: Mid Value (Leakage Zone),204,70.12,55.74,100,0,Normal Status
+13-02-2024,Tier 2: Mid Value (Leakage Zone),206,70.3,198.88,100,0,Normal Status
+14-02-2024,Tier 2: Mid Value (Leakage Zone),181,70.08,287.56,100,0,Normal Status
+15-02-2024,Tier 2: Mid Value (Leakage Zone),243,70.07,189.63,100,0,Normal Status
+16-02-2024,Tier 2: Mid Value (Leakage Zone),219,69.54,567.09,100,1.921816401,Normal Status
+17-02-2024,Tier 1: High Value,1,1197,24353,100,0,Normal Status
+17-02-2024,Tier 2: Mid Value (Leakage Zone),212,70.65,370.23,100,0.664870921,Normal Status

@@ -1,0 +1,16 @@
+report_date,Risk_Tier,daily_fraud_count,avg_fraud_amount,avg_itt_minutes,pct_mobile_traffic
+2024-01-11,Tier 1: High Value,1,1662.0,14036.0,100.0
+2024-01-15,Tier 1: High Value,1,2673.0,6400.0,0.0
+2024-01-16,Tier 1: High Value,1,2017.0,7287.0,100.0
+2024-01-17,Tier 1: High Value,1,1505.0,805.0,0.0
+2024-02-08,Tier 1: High Value,1,2962.0,19616.0,0.0
+2024-02-10,Tier 1: High Value,1,1213.0,16099.0,0.0
+2024-02-10,Tier 2: Mid Value (Leakage Zone),202,70.53,312.9,100.0
+2024-02-11,Tier 2: Mid Value (Leakage Zone),192,68.93,127.28,100.0
+2024-02-12,Tier 2: Mid Value (Leakage Zone),204,70.12,55.74,100.0
+2024-02-13,Tier 2: Mid Value (Leakage Zone),206,70.3,198.88,100.0
+2024-02-14,Tier 2: Mid Value (Leakage Zone),181,70.08,287.56,100.0
+2024-02-15,Tier 2: Mid Value (Leakage Zone),243,70.07,189.63,100.0
+2024-02-16,Tier 2: Mid Value (Leakage Zone),219,69.54,567.09,100.0
+2024-02-17,Tier 1: High Value,1,1197.0,24353.0,100.0
+2024-02-17,Tier 2: Mid Value (Leakage Zone),212,70.65,370.23,100.0

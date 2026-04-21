@@ -1,0 +1,4 @@
+Initial_Error,Total_Failures,Recovered_Txns,Recovery_Rate
+51: Insufficient Funds,3425,1173,34.2
+91: Issuer System Timeout,1102,131,11.9
+59: Suspected Fraud,2092,250,12.0

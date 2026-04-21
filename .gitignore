@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local logs and temp
+*.log
+*.tmp
+
+# Keep large CSVs versioned only if needed
+# Uncomment if you want to ignore generated outputs:
+# fraud_model_output.csv
+# daily_fraud_metrics.csv
+# final_alert_output.csv
