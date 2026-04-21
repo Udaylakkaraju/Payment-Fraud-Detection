@@ -48,9 +48,20 @@ flowchart LR
 
 ### Data Charts
 
-![Top Failure Reasons](docs/visuals/01-failure-mix.png)
-![Retry Recovery Opportunity](docs/visuals/02-retry-recovery.png)
-![Holdout Confusion Matrix](docs/visuals/03-holdout-confusion.png)
+<p align="center">
+  <img src="docs/visuals/01-failure-mix.png" alt="Top Failure Reasons" width="760" />
+</p>
+Top failure reasons are concentrated in a small set of decline categories, helping prioritize the highest-impact fixes first.
+
+<p align="center">
+  <img src="docs/visuals/02-retry-recovery.png" alt="Retry Recovery Opportunity" width="620" />
+</p>
+A meaningful share of failed transactions later succeeded within 24 hours, indicating a clear retry timing opportunity.
+
+<p align="center">
+  <img src="docs/visuals/03-holdout-confusion.png" alt="Holdout Confusion Matrix" width="640" />
+</p>
+Holdout evaluation shows strong fraud capture with low review noise at the selected operating threshold.
 
 ## Project Objectives
 
