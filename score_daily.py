@@ -16,7 +16,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--output",
-        default="outputs/daily_fraud_predictions.csv",
+        default="outputs/daily_scored_transactions.csv",
         help="Path to write scored daily output.",
     )
     parser.add_argument(

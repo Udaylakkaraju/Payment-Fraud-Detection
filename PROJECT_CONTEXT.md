@@ -12,6 +12,8 @@ The goal was to reduce payment leakage and improve fraud review efficiency using
 - Daily scoring flow using saved model artifacts.
 - Exported outputs for reporting and dashboarding.
 
+The work is demonstrated on a **representative, portfolio-scale dataset** to show analytical workflow and decision framing.
+
 ## Process Followed
 
 1. Profile payments data and confirm data quality.
@@ -31,7 +33,11 @@ The goal was to reduce payment leakage and improve fraud review efficiency using
   - Recall: `83.5%`
   - Precision: `100.0%`
   - False positives: `0`
-  - Context: threshold-specific holdout sample result on project data.
+  - Context: threshold-specific holdout sample result on this dataset.
+
+## Estimated opportunity and operational metrics
+
+See `README.md` for scenario-based value estimates, decline-code recovery rates, and fraud review queue metrics. All scenario numbers are explicitly labeled as estimates, not realized revenue.
 
 ## Business Interpretation
 
@@ -51,4 +57,9 @@ The goal was to reduce payment leakage and improve fraud review efficiency using
 
 - Prefer terms such as "identified", "quantified", "estimated", and "opportunity".
 - Avoid overstating causality unless validated by rollout/A-B test.
-- Mention that model performance is from project holdout evaluation and threshold setting.
+- Model performance statements should reference **holdout evaluation** and the **chosen decision threshold**.
+- Scored exports: supervised models emit **`fraud_probability`** and **`risk_score`**; **Isolation Forest** keeps **`anomaly_score`** (raw) plus **`risk_score`** for a consistent “higher = riskier” ranking (see `outputs/README.md`).
+
+## Limitations
+
+- Results reflect this dataset and workflow setup; they are not a substitute for production A/B testing or live monitoring.

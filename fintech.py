@@ -50,13 +50,17 @@ def parse_args() -> argparse.Namespace:
 
     train_parser = subparsers.add_parser("train", help="Train and evaluate model.")
     train_parser.add_argument("--input", default="fintech_fraud_data.csv")
-    train_parser.add_argument("--output", default="outputs/fraud_model_output.csv")
+    train_parser.add_argument(
+        "--output",
+        default="outputs/fraud_scored_transactions.csv",
+        help="Full scored training table (train command).",
+    )
     train_parser.add_argument("--model-out", default="outputs/fraud_model.joblib")
     train_parser.add_argument(
         "--model-type",
         default="hist_gradient_boosting",
         choices=sorted(SUPPORTED_MODELS),
-        help="Model family to train for production scoring.",
+        help="Model family to train / persist for downstream batch scoring.",
     )
     train_parser.add_argument("--contamination", type=float, default=0.24)
     train_parser.add_argument("--rapid-threshold-minutes", type=float, default=2.0)
@@ -72,7 +76,11 @@ def parse_args() -> argparse.Namespace:
     infer_parser = subparsers.add_parser("infer", help="Score new/unlabeled data.")
     infer_parser.add_argument("--input", required=True)
     infer_parser.add_argument("--model", default="outputs/fraud_model.joblib")
-    infer_parser.add_argument("--output", default="outputs/fraud_predictions.csv")
+    infer_parser.add_argument(
+        "--output",
+        default="outputs/daily_scored_transactions.csv",
+        help="Scored inference output (batch jobs typically use daily_scored_transactions.csv).",
+    )
     infer_parser.add_argument("--rapid-threshold-minutes", type=float, default=2.0)
 
     return parser.parse_args()
@@ -95,6 +103,32 @@ def validate_train_args(args: argparse.Namespace) -> None:
 def validate_infer_args(args: argparse.Namespace) -> None:
     if args.rapid_threshold_minutes <= 0:
         raise ValueError("--rapid-threshold-minutes must be > 0.")
+
+
+def _score_for_ranking(df: pd.DataFrame, model_kind: str) -> pd.Series:
+    """Higher scores mean higher fraud risk / anomaly for ROC-AUC."""
+    if model_kind == "anomaly":
+        return df["risk_score"]
+    return df["fraud_probability"]
+
+
+def train_output_columns(model_kind: str) -> list[str]:
+    cols = BASE_REQUIRED_COLUMNS + ["is_fraud", "inter_txn_minutes"]
+    if model_kind == "anomaly":
+        return cols + ["anomaly_score", "risk_score", "risk_flag"]
+    return cols + ["fraud_probability", "risk_score", "risk_flag"]
+
+
+def infer_output_columns(model_kind: str, has_is_fraud: bool) -> list[str]:
+    tail = (
+        ["anomaly_score", "risk_score", "risk_flag"]
+        if model_kind == "anomaly"
+        else ["fraud_probability", "risk_score", "risk_flag"]
+    )
+    out = BASE_REQUIRED_COLUMNS + ["inter_txn_minutes"] + tail
+    if has_is_fraud:
+        out.insert(9, "is_fraud")
+    return out
 
 
 def validate_columns(df: pd.DataFrame, required_columns: list[str]) -> None:
@@ -178,7 +212,7 @@ def evaluate_model(df: pd.DataFrame, model_kind: str) -> None:
     caught_fraud = fraud_rows[fraud_rows["risk_flag"] == 1]
     catch_rate = (len(caught_fraud) / len(fraud_rows) * 100) if len(fraud_rows) > 0 else 0.0
 
-    score_input = -df["anomaly_score"] if model_kind == "anomaly" else df["anomaly_score"]
+    score_input = _score_for_ranking(df, model_kind)
     roc_auc = roc_auc_score(df["is_fraud"], score_input)
 
     cm = confusion_matrix(df["is_fraud"], df["risk_flag"], labels=[0, 1])
@@ -202,7 +236,7 @@ def compute_metrics(df: pd.DataFrame, model_kind: str) -> Dict[str, float]:
     caught_fraud = fraud_rows[fraud_rows["risk_flag"] == 1]
     catch_rate = (len(caught_fraud) / len(fraud_rows) * 100) if len(fraud_rows) > 0 else 0.0
 
-    score_input = -df["anomaly_score"] if model_kind == "anomaly" else df["anomaly_score"]
+    score_input = _score_for_ranking(df, model_kind)
     roc_auc = roc_auc_score(df["is_fraud"], score_input)
 
     cm = confusion_matrix(df["is_fraud"], df["risk_flag"], labels=[0, 1])
@@ -315,12 +349,16 @@ def score_dataframe(df: pd.DataFrame, model, model_kind: str, threshold: float) 
     scored = df.copy()
     all_data = scored[FEATURE_COLUMNS]
     if model_kind == "anomaly":
-        scored["anomaly_score"] = model.decision_function(all_data)
+        raw = model.decision_function(all_data)
+        scored["anomaly_score"] = raw
+        # Higher risk_score = more abnormal (consistent direction with supervised fraud_probability).
+        scored["risk_score"] = -np.asarray(raw, dtype=float)
         scored["predicted_state"] = model.predict(all_data)
         scored["risk_flag"] = (scored["predicted_state"] == -1).astype(int)
     else:
         probabilities = get_classifier_probability(model, all_data)
-        scored["anomaly_score"] = probabilities
+        scored["fraud_probability"] = probabilities
+        scored["risk_score"] = probabilities
         scored["predicted_state"] = (probabilities >= threshold).astype(int)
         scored["risk_flag"] = scored["predicted_state"].astype(int)
     return scored
@@ -371,13 +409,20 @@ def run_live_simulation(model, vocabs: Dict[str, Dict[str, int]], model_kind: st
         columns=FEATURE_COLUMNS,
     )
     if model_kind == "anomaly":
-        sim_score = float(model.decision_function(sample)[0])
-        is_risky = sim_score < 0
-        score_text = f"Anomaly Score: {round(sim_score, 4)}  (negative = anomalous)"
+        raw = float(model.decision_function(sample)[0])
+        risk = -raw
+        is_risky = raw < 0
+        score_text = (
+            f"anomaly_score: {round(raw, 4)}  | risk_score (negated raw): {round(risk, 4)}  "
+            "(more negative anomaly_score => higher risk_score)"
+        )
     else:
         sim_score = float(get_classifier_probability(model, sample)[0])
         is_risky = sim_score >= threshold
-        score_text = f"Risk Probability: {round(sim_score, 4)}  (>= {round(threshold, 2)} => high risk)"
+        score_text = (
+            f"fraud_probability / risk_score: {round(sim_score, 4)}  "
+            f"(>= {round(threshold, 2)} => high risk)"
+        )
 
     print("  Scenario: $1,850 mobile | Digital Goods | 1.2 min after prior txn | 2 AM")
     print(f"  {score_text}")
@@ -490,8 +535,7 @@ def run_train(args: argparse.Namespace) -> None:
 
     full_scored = score_dataframe(df, model, model_kind, threshold)
 
-    output_cols = BASE_REQUIRED_COLUMNS + ["is_fraud", "inter_txn_minutes", "anomaly_score", "risk_flag"]
-    full_scored[output_cols].to_csv(output_path, index=False)
+    full_scored[train_output_columns(model_kind)].to_csv(output_path, index=False)
     print(f"\nScored output saved -> {output_path}")
 
     save_artifact(
@@ -530,12 +574,15 @@ def run_inference(
 
     all_data = df[feature_columns]
     if model_kind == "anomaly":
-        df["anomaly_score"] = model.decision_function(all_data)
+        raw = model.decision_function(all_data)
+        df["anomaly_score"] = raw
+        df["risk_score"] = -np.asarray(raw, dtype=float)
         df["predicted_state"] = model.predict(all_data)
         df["risk_flag"] = (df["predicted_state"] == -1).astype(int)
     else:
         probabilities = get_classifier_probability(model, all_data)
-        df["anomaly_score"] = probabilities
+        df["fraud_probability"] = probabilities
+        df["risk_score"] = probabilities
         df["predicted_state"] = (probabilities >= threshold).astype(int)
         df["risk_flag"] = df["predicted_state"].astype(int)
 
@@ -548,10 +595,7 @@ def run_inference(
     print(f"Rapid transactions (<{rapid_threshold_minutes:g}m): {rapid_count:,}")
     print(f"Rapid + flagged transactions:  {flagged_rapid_count:,}")
 
-    output_cols = BASE_REQUIRED_COLUMNS + ["inter_txn_minutes", "anomaly_score", "risk_flag"]
-    if "is_fraud" in df.columns:
-        output_cols.insert(9, "is_fraud")
-    df[output_cols].to_csv(output_path, index=False)
+    df[infer_output_columns(model_kind, "is_fraud" in df.columns)].to_csv(output_path, index=False)
     print(f"Predictions saved -> {output_path}")
 
 

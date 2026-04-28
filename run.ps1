@@ -14,7 +14,7 @@ switch ($Task) {
     "train" {
         python fintech.py train `
             --input $InputPath `
-            --output outputs/fraud_model_output.csv `
+            --output outputs/fraud_scored_transactions.csv `
             --model-out outputs/fraud_model.joblib `
             --model-type hist_gradient_boosting `
             --evaluation-mode time `
@@ -25,7 +25,7 @@ switch ($Task) {
         python score_daily.py `
             --input $InputPath `
             --model outputs/fraud_model.joblib `
-            --output outputs/daily_fraud_predictions.csv
+            --output outputs/daily_scored_transactions.csv
     }
     "benchmark" {
         python benchmark_models.py `

@@ -1,5 +1,7 @@
 # SQL Queries Guide
 
+Reporting-ready KPI / mart selects also live under [`../sql/marts/`](../sql/marts/).
+
 The SQL files in this folder are written in BigQuery SQL and target:
 
 - `project-43c16c81-2fd4-4871-8ac.payment_optimization.payments`

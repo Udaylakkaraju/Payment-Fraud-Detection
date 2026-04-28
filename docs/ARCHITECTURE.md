@@ -18,7 +18,7 @@ flowchart LR
     subgraph OL[Operational Layer]
         F[Model Artifact\noutputs/fraud_model.joblib]
         G[Daily Batch Scoring\nscore_daily.py]
-        H[Scored Output\noutputs/daily_fraud_predictions.csv]
+        H[Scored Output\noutputs/daily_scored_transactions.csv]
         I[Business KPI Tables\nTables/*.csv + outputs/*.csv]
     end
 

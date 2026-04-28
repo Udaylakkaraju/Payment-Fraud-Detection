@@ -1,5 +1,7 @@
 # Resume Bullets (Verified)
 
+**Canonical resume file for this repository** (`docs/RESUME_BULLETS_TOP3.md` redirects here).
+
 Use these bullets as-is or adapt wording based on role.
 All numbers are from this project's current outputs.
 

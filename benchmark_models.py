@@ -1,3 +1,11 @@
+"""
+Supervised-model benchmarks with a leakage-safe split:
+
+* Fit on train.
+* Probability threshold maximizing F1 on **calibration** rows only.
+* ROC-AUC, PR-AUC, Precision@k, confusion-derived costs evaluated on held-out **test** rows.
+"""
+
 import argparse
 from pathlib import Path
 from typing import Callable, Dict, List
@@ -101,6 +109,8 @@ def evaluate_model(
     model,
     x_train: pd.DataFrame,
     y_train: np.ndarray,
+    x_cal: pd.DataFrame,
+    y_cal: np.ndarray,
     x_test: pd.DataFrame,
     y_test: np.ndarray,
     topk_frac: float,
@@ -108,9 +118,10 @@ def evaluate_model(
     review_cost: float,
 ) -> Dict[str, float]:
     model.fit(x_train, y_train)
-    y_prob = to_probability(model, x_test)
+    prob_cal = to_probability(model, x_cal)
+    threshold = choose_threshold(y_cal, prob_cal)
 
-    threshold = choose_threshold(y_test, y_prob)
+    y_prob = to_probability(model, x_test)
     y_pred = (y_prob >= threshold).astype(int)
 
     precision = precision_score(y_test, y_pred, zero_division=0)
@@ -125,9 +136,9 @@ def evaluate_model(
 
     return {
         "model": name,
-        "threshold": round(threshold, 4),
-        "roc_auc": round(float(roc_auc), 4),
-        "pr_auc": round(float(pr_auc), 4),
+        "threshold_calibration": round(threshold, 4),
+        "roc_auc_test": round(float(roc_auc), 4),
+        "pr_auc_test": round(float(pr_auc), 4),
         "precision": round(float(precision), 4),
         "recall": round(float(recall), 4),
         "precision_at_k": round(float(rank_metrics["precision_at_k"]), 4),
@@ -156,10 +167,22 @@ def main() -> None:
     x = df[FEATURE_COLUMNS]
     y = df["is_fraud"].to_numpy()
 
-    x_train, x_test, y_train, y_test = train_test_split(
-        x, y, test_size=0.25, random_state=42, stratify=y
+    # 60/20/20 train / calibration / test — threshold tuned on calibration; metrics on held-out test.
+    x_temp, x_test, y_temp, y_test = train_test_split(
+        x, y, test_size=0.2, random_state=42, stratify=y
+    )
+    x_train, x_cal, y_train, y_cal = train_test_split(
+        x_temp, y_temp, test_size=0.25, random_state=42, stratify=y_temp
     )
 
+    print(
+        "Split sizes — train:",
+        len(x_train),
+        "calibration:",
+        len(x_cal),
+        "test:",
+        len(x_test),
+    )
     print("Training benchmark models...")
     models: List[tuple[str, Callable[[], object]]] = [
         (
@@ -201,6 +224,8 @@ def main() -> None:
             model=build_model(),
             x_train=x_train,
             y_train=y_train,
+            x_cal=x_cal,
+            y_cal=y_cal,
             x_test=x_test,
             y_test=y_test,
             topk_frac=args.topk_frac,
@@ -210,7 +235,7 @@ def main() -> None:
         rows.append(row)
 
     result_df = pd.DataFrame(rows).sort_values(
-        by=["cost_score", "pr_auc", "precision_at_k"], ascending=[True, False, False]
+        by=["cost_score", "pr_auc_test", "precision_at_k"], ascending=[True, False, False]
     )
     result_df.to_csv(output_path, index=False)
 
