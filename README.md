@@ -1,8 +1,17 @@
 # Payments Optimization and Fraud Analytics
 
-An analytics portfolio project that shows where payment failures occur, which failed payment intents recover through retry, and how a limited fraud-review team can prioritize transactions.
+**The problem.** When a card payment is declined, the business loses the sale even though many declines are recoverable — a customer with insufficient funds today may succeed tomorrow, while a hard decline like suspected fraud should never be retried. Most teams see a single "failure rate" number and can't tell which failures are worth acting on. Meanwhile, fraud teams have limited review capacity and need to know *which* transactions to look at first.
 
-The project uses synthetic portfolio data inspired by common payment operations patterns. Results demonstrate analytical methods and decision framing; they are not production bank outcomes.
+**What this analysis does.** Using a synthetic three-month payment snapshot (51,237 attempts), this project breaks the 12.92% failure rate into decline reasons, quantifies which failures actually recover through retries, sizes the recoverable value pool by retry policy, and designs a capacity-limited fraud review queue that concentrates fraud ~1.7× over random review.
+
+**What it found.**
+
+- **85% of failed value comes from just two decline reasons** — insufficient funds ($255K) and suspected fraud ($171K) — so retry policy only needs to get a few codes right.
+- **Only insufficient-funds declines recover naturally** (28.1% within 24 hours); suspected fraud and issuer timeouts show 0% recovery and should not be auto-retried.
+- **$232K of unrecovered failed value is policy-eligible for retries**; a conservative 10% recovery scenario is worth ~$23K on this snapshot.
+- **A top-10% fraud review queue reaches 9.5% precision vs. a 5.5% baseline**, letting a fixed-capacity review team catch more fraud without extra headcount.
+
+All data is synthetic and results demonstrate analytical method and decision framing, not production bank outcomes. Full numbers are in [Headline results](#headline-results) below; recommendations and guardrails are in the [executive summary](docs/EXECUTIVE_SUMMARY.md).
 
 ## Portfolio deliverables
 
