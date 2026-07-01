@@ -29,12 +29,13 @@ The report contains three pages built on six imported tables. Power BI reads onl
 
 | Visual | Source table | Field / measure |
 | --- | --- | --- |
+| Narrative text box | — | Failure-driver takeaway (83% of failed value from insufficient funds + suspected fraud; retry-policy guidance) |
 | KPI card | `recovery_scenarios` | Failed Transactions (aggregation: Average over identical scenario rows) |
-| KPI card | `payments` | Failed Value |
 | KPI card | `recovery_scenarios` | Retry Recovery Rate |
+| KPI card | `payments` | Failed Value |
 | Donut chart | `payments` | Failed Amount by Payment Status |
+| Column chart | `payments` | Failed Value Trend (Daily) (`amount` by `payment_timestamp`) |
 | Clustered bar chart | `payments` | Failed Count by Card Brand |
-| Waterfall chart | `recovery_scenarios` | Unrecovered Value by Decline Reason |
 | Treemap | `fraud_scored_transactions` | Fraud Review Mix by Entry Mode (independent fraud snapshot, not payments data) |
 
 ### Page 3 — Fraud Risk Monitoring
