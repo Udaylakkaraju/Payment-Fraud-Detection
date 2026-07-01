@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360">
+  <rect width="960" height="360" fill="#fafafa"/>
+  <text x="480" y="28" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Fraud Risk Monitoring</text>
+  <text x="40" y="58" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#555">Chronological test queue • 2,000 unseen rows • synthetic dataset</text>
+  <rect x="40" y="80" width="420" height="240" fill="#fff" stroke="#ddd"/>
+  <text x="250" y="105" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">Risk Bucket Distribution</text>
+  <rect x="80" y="220" width="70" height="70" fill="#81C784"/>
+  <rect x="170" y="230" width="70" height="60" fill="#FFD54F"/>
+  <rect x="260" y="240" width="70" height="50" fill="#FF8A65"/>
+  <rect x="350" y="250" width="70" height="40" fill="#E57373"/>
+  <text x="115" y="210" text-anchor="middle" font-size="10">Low</text>
+  <text x="205" y="210" text-anchor="middle" font-size="10">Medium</text>
+  <text x="295" y="210" text-anchor="middle" font-size="10">High</text>
+  <text x="385" y="210" text-anchor="middle" font-size="10">Critical</text>
+  <rect x="500" y="80" width="420" height="240" fill="#fff" stroke="#ddd"/>
+  <text x="710" y="105" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">Top Holdout Feature Importance</text>
+  <text x="530" y="145" font-size="12">entry_code</text>
+  <rect x="700" y="132" width="180" height="16" fill="#5C6BC0"/>
+  <text x="530" y="175" font-size="12">amount</text>
+  <rect x="700" y="162" width="140" height="16" fill="#5C6BC0"/>
+  <text x="530" y="205" font-size="12">country_code</text>
+  <rect x="700" y="192" width="95" height="16" fill="#5C6BC0"/>
+  <text x="530" y="235" font-size="12">merchant_code</text>
+  <rect x="700" y="222" width="70" height="16" fill="#5C6BC0"/>
+  <text x="530" y="265" font-size="12">device_code</text>
+  <rect x="700" y="252" width="55" height="16" fill="#5C6BC0"/>
+  <text x="480" y="340" text-anchor="middle" font-size="12" fill="#555">ROC-AUC 0.621 • 9.5% precision in top-10% review queue • 17.3% recall</text>
+</svg>

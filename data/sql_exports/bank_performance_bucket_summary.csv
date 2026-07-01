@@ -1,0 +1,16 @@
+Issuer_Bank,Performance_Bucket,Hours_Count,Pct_of_Total_Hours
+Bank of America,Critical Outage (<70%),341,15.8
+Bank of America,Healthy (>85%),1377,63.8
+Bank of America,Warning (70-85%),441,20.4
+Capital One,Critical Outage (<70%),375,17.6
+Capital One,Healthy (>85%),1442,67.7
+Capital One,Warning (70-85%),312,14.7
+Chase,Critical Outage (<70%),214,9.8
+Chase,Healthy (>85%),1378,63.1
+Chase,Warning (70-85%),592,27.1
+Citi,Critical Outage (<70%),399,18.9
+Citi,Healthy (>85%),1346,63.6
+Citi,Warning (70-85%),371,17.5
+Wells Fargo,Critical Outage (<70%),372,17.2
+Wells Fargo,Healthy (>85%),1321,61.2
+Wells Fargo,Warning (70-85%),465,21.5

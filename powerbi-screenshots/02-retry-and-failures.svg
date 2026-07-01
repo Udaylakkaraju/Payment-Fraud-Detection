@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360">
+  <rect width="960" height="360" fill="#fafafa"/>
+  <text x="480" y="28" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">24h Retry Recovery by Decline Reason</text>
+  <text x="40" y="58" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#555">855 of 6,237 initially failed intents recovered within 24h (13.71%)</text>
+  <line x1="280" y1="80" x2="280" y2="310" stroke="#ccc"/>
+  <line x1="280" y1="310" x2="900" y2="310" stroke="#ccc"/>
+  <text x="250" y="120" text-anchor="end" font-size="12">59: Suspected Fraud</text>
+  <rect x="280" y="105" width="114" height="22" fill="#E53935"/>
+  <text x="404" y="120" font-size="11">11.9%</text>
+  <text x="250" y="175" text-anchor="end" font-size="12">91: Issuer System Timeout</text>
+  <rect x="280" y="160" width="114" height="22" fill="#E53935"/>
+  <text x="404" y="175" font-size="11">11.9%</text>
+  <text x="250" y="230" text-anchor="end" font-size="12">51: Insufficient Funds</text>
+  <rect x="280" y="215" width="328" height="22" fill="#43A047"/>
+  <text x="618" y="230" font-size="11">34.2%</text>
+  <text x="480" y="340" text-anchor="middle" font-size="12" fill="#555">Recovery rate (%)  green = strongest retry opportunity</text>
+</svg>

@@ -1,0 +1,117 @@
+// Power BI DAX measures for Payments_Optimization_Dashboard.pbix
+// Paste into the corresponding tables in Power BI Desktop (Modeling > New measure).
+// Table names match CSV imports from powerbi-data/.
+
+// ─── payments ───────────────────────────────────────────────────────────────
+
+Total Transactions =
+COUNTROWS ( payments )
+
+Successful Transactions =
+CALCULATE (
+    COUNTROWS ( payments ),
+    payments[payment_status] = "00: Success"
+)
+
+Failed Transactions =
+CALCULATE (
+    COUNTROWS ( payments ),
+    payments[payment_status] <> "00: Success"
+)
+
+Auth Rate =
+DIVIDE ( [Successful Transactions], [Total Transactions] )
+
+Failure Rate =
+DIVIDE ( [Failed Transactions], [Total Transactions] )
+
+Failed Value Pool =
+CALCULATE (
+    SUM ( payments[amount] ),
+    payments[payment_status] <> "00: Success"
+)
+
+Failed Value =
+[Failed Value Pool]
+
+Payment Value =
+SUM ( payments[amount] )
+
+// ─── recovery_scenarios ─────────────────────────────────────────────────────
+// Portfolio-level measures filter to ALL_DECLINES summary rows.
+
+Retry Recovery Rate =
+VAR ObservedPct =
+    CALCULATE (
+        MAX ( recovery_scenarios[observed_recovery_rate_pct] ),
+        recovery_scenarios[decline_reason] = "ALL_DECLINES",
+        recovery_scenarios[issuer_bank] = "ALL_BANKS",
+        recovery_scenarios[card_brand] = "ALL_BRANDS"
+    )
+RETURN
+    DIVIDE ( ObservedPct, 100 )
+
+Estimated 10% Recovery =
+CALCULATE (
+    MAX ( recovery_scenarios[estimated_incremental_recovered_amount] ),
+    recovery_scenarios[decline_reason] = "ALL_DECLINES",
+    recovery_scenarios[issuer_bank] = "ALL_BANKS",
+    recovery_scenarios[card_brand] = "ALL_BRANDS",
+    recovery_scenarios[scenario_recovery_lift_pct] = 10
+)
+
+Scenario Recovery Amount =
+CALCULATE (
+    MAX ( recovery_scenarios[estimated_incremental_recovered_amount] ),
+    recovery_scenarios[decline_reason] = "ALL_DECLINES",
+    recovery_scenarios[issuer_bank] = "ALL_BANKS",
+    recovery_scenarios[card_brand] = "ALL_BRANDS"
+)
+// Use scenario_recovery_lift_pct on the visual axis; do not sum across segment rows.
+
+Total Failed Transactions (Portfolio) =
+CALCULATE (
+    MAX ( recovery_scenarios[failed_txns] ),
+    recovery_scenarios[decline_reason] = "ALL_DECLINES",
+    recovery_scenarios[issuer_bank] = "ALL_BANKS",
+    recovery_scenarios[card_brand] = "ALL_BRANDS"
+)
+// Verified in Power BI Desktop: the "Failed Transactions" KPI card on the
+// Payment Failure Analysis page already uses Average (not Sum) on the raw
+// failed_txns column, filtered to decline_reason = "ALL_DECLINES" (3 rows,
+// one per scenario_recovery_lift_pct, all sharing the same failed_txns
+// value) -- Average of identical values returns the correct 6,237. Not a
+// bug. This measure is an optional, more explicit alternative if you want
+// the card driven by a named measure instead of a raw-column aggregation.
+
+// ─── fraud_scored_transactions ────────────────────────────────────────────────
+
+Flagged Transactions =
+CALCULATE (
+    COUNTROWS ( fraud_scored_transactions ),
+    fraud_scored_transactions[risk_flag] = 1
+)
+
+Flagged Rate =
+DIVIDE ( [Flagged Transactions], COUNTROWS ( fraud_scored_transactions ) )
+
+// ─── fraud_model_holdout_metrics (card visuals) ──────────────────────────────
+
+Holdout Recall =
+MAX ( fraud_model_holdout_metrics[recall_pct] )
+
+Holdout Precision =
+MAX ( fraud_model_holdout_metrics[precision_pct] )
+
+Holdout ROC AUC =
+MAX ( fraud_model_holdout_metrics[roc_auc] )
+
+Holdout False Positives =
+MAX ( fraud_model_holdout_metrics[false_positives] )
+// fraud_model_holdout_metrics is a single-row table, so the raw
+// Sum(false_positives) currently on the Fraud Risk Monitoring card is not a
+// bug (nothing to double count) -- rebind to this measure anyway so every
+// KPI card on that page uses a named measure, consistent with its siblings.
+
+// ─── feature_importance (bar chart) ─────────────────────────────────────────
+// Use model_feature on axis, importance_score as values (Top N filter = 5).

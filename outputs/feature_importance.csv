@@ -1,0 +1,16 @@
+feature,importance_mean,importance_std,rank,note
+entry_code,0.011104,0.004656,1,Permutation importance on chronological test split using average precision.
+amount,0.009884,0.006024,2,Permutation importance on chronological test split using average precision.
+country_code,0.007274,0.003559,3,Permutation importance on chronological test split using average precision.
+merchant_code,0.006011,0.002287,4,Permutation importance on chronological test split using average precision.
+device_code,0.001032,0.002219,5,Permutation importance on chronological test split using average precision.
+Day_Index,0.000494,0.005431,6,Permutation importance on chronological test split using average precision.
+inter_txn_minutes,0.000484,0.004609,7,Permutation importance on chronological test split using average precision.
+is_overnight,0.000215,0.000267,8,Permutation importance on chronological test split using average precision.
+is_non_us,4.6e-05,7.4e-05,9,Permutation importance on chronological test split using average precision.
+is_travel,5e-06,4e-06,10,Permutation importance on chronological test split using average precision.
+rapid_low_value,0.0,0.0,11,Permutation importance on chronological test split using average precision.
+is_digital_goods,-1e-06,0.0,12,Permutation importance on chronological test split using average precision.
+is_mobile,-4.5e-05,0.00158,13,Permutation importance on chronological test split using average precision.
+is_manual_keyed,-0.000439,0.000851,14,Permutation importance on chronological test split using average precision.
+Hour,-0.001988,0.007526,15,Permutation importance on chronological test split using average precision.

@@ -4,15 +4,17 @@ Artifacts produced by the Python pipeline:
 
 | File | Command | Purpose |
 | --- | --- | --- |
-| `fraud_scored_transactions.csv` | `python fintech.py train ...` | Full labeled scoring table after refit-on-all-data step. |
-| `daily_scored_transactions.csv` | `python score_daily.py ...` or `fintech.py infer ...` | Batch scoring of new transactions. |
-| `fraud_model.joblib` | `fintech.py train` | Serialized model + vocabs + threshold metadata. |
-| `train_metrics_report.csv` | `fintech.py train` | Holdout KPI block (counts, ROC-AUC column is `roc_auc`). |
-| `model_benchmark_results.csv` | `benchmark_models.py` | Supervised baseline benchmarks (test-set metrics columns end in `_test` where labeled). |
+| `fraud_scored_transactions.csv` | `python fintech.py train ...` | Chronological test rows unseen by training and calibration. |
+| `daily_scored_transactions.csv` | `python score_daily.py ...` or `fintech.py infer ...` | Label-free batch scoring demonstration queue. |
+| `fraud_model.joblib` | `fintech.py train` | Local model artifact used by batch scoring; generated but not versioned. |
+| `train_metrics_report.csv` | `fintech.py train` | Chronological test KPI block after separate threshold calibration. |
+| `feature_importance.csv` | `fintech.py train` | Chronological test permutation importance for fraud-risk drivers. |
+| `recovery_scenarios.csv` | `scenario_simulator.py` | Same-payment-intent recovery and policy-eligible scenarios by decline reason, issuer bank, and card brand. |
 
-**Legacy names (avoid for new runs):** `fraud_predictions.csv`, `daily_fraud_predictions.csv`, `fraud_model_output.csv` referred to older defaults and were superseded by the names above — remove or regenerate if seen in one-off folders.
+**Legacy names (removed):** `fraud_predictions.csv`, `daily_fraud_predictions.csv`, `fraud_model_output.csv`, `daily_fraud_metrics.csv`, `final_alert_output.csv` — superseded by the canonical filenames above.
 
 Scored columns:
 
-- **Supervised classifiers:** `fraud_probability`, `risk_score` (same value; higher = riskier), `risk_flag`.
-- **Isolation Forest:** `anomaly_score` (raw `decision_function`; more negative = more anomalous), `risk_score` (negated raw so higher aligns with supervised risk rank), `risk_flag`.
+- `fraud_probability` / `risk_score`: model ranking score; higher means higher review priority.
+- `risk_flag`: top 10% of the scored batch, matching the assumed review capacity.
+- **Business review field:** `risk_bucket` (`Low`, `Medium`, `High`, `Critical`) is included in train and inference scored outputs.

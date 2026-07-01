@@ -1,0 +1,147 @@
+{
+  "status": "active_processed_dataset",
+  "source_file": "data\\raw\\fraud_seed_v1.csv",
+  "source_sha256": "7d3d6d54e64daccf7bb98806c814d7696c738255c07521b3996ce1d4b1066e95",
+  "candidate_file": "data\\processed\\fraud_transactions.csv",
+  "seed": 20240629,
+  "invariants": {
+    "rows_preserved": true,
+    "schema_preserved": true,
+    "non_label_values_preserved": true,
+    "row_count": 10000,
+    "column_count": 9,
+    "duplicate_transaction_ids": 0,
+    "null_cells": 0
+  },
+  "fraud_prevalence": {
+    "original_transactions": 2402,
+    "original_rate": 0.2402,
+    "candidate_transactions": 519,
+    "candidate_rate": 0.0519,
+    "target_expected_rate": 0.05
+  },
+  "candidate_probability_range": {
+    "minimum": 0.004581,
+    "maximum": 0.186042
+  },
+  "simple_rule_comparison": {
+    "rule": "Manual_Keyed and merchant category in (Digital Goods, Travel)",
+    "original": {
+      "flagged_transactions": 2696,
+      "precision": 0.89095,
+      "recall": 1.0
+    },
+    "candidate": {
+      "flagged_transactions": 2696,
+      "precision": 0.095326,
+      "recall": 0.495183
+    }
+  },
+  "candidate_rapid_low_value": {
+    "definition": "same-user previous transaction under 10 minutes and amount under 100",
+    "transactions": 1635,
+    "fraud_transactions": 169,
+    "fraud_rate": 0.103364
+  },
+  "candidate_temporal_split": {
+    "development_rows": 7000,
+    "development_fraud_rate": 0.047429,
+    "holdout_rows": 3000,
+    "holdout_fraud_rate": 0.062333
+  },
+  "candidate_segment_rates": {
+    "entry_mode": {
+      "Chip": {
+        "transactions": 3708,
+        "fraud_transactions": 142,
+        "fraud_rate": 0.038296
+      },
+      "Contactless": {
+        "transactions": 3148,
+        "fraud_transactions": 97,
+        "fraud_rate": 0.030813
+      },
+      "Manual_Keyed": {
+        "transactions": 3144,
+        "fraud_transactions": 280,
+        "fraud_rate": 0.089059
+      }
+    },
+    "merchant_category": {
+      "Digital Goods": {
+        "transactions": 3534,
+        "fraud_transactions": 276,
+        "fraud_rate": 0.078098
+      },
+      "Electronics": {
+        "transactions": 1539,
+        "fraud_transactions": 43,
+        "fraud_rate": 0.02794
+      },
+      "Fashion": {
+        "transactions": 1473,
+        "fraud_transactions": 45,
+        "fraud_rate": 0.03055
+      },
+      "Grocery": {
+        "transactions": 1563,
+        "fraud_transactions": 42,
+        "fraud_rate": 0.026871
+      },
+      "Travel": {
+        "transactions": 1891,
+        "fraud_transactions": 113,
+        "fraud_rate": 0.059757
+      }
+    },
+    "device_type": {
+      "mobile": {
+        "transactions": 6826,
+        "fraud_transactions": 402,
+        "fraud_rate": 0.058892
+      },
+      "tablet": {
+        "transactions": 805,
+        "fraud_transactions": 32,
+        "fraud_rate": 0.039752
+      },
+      "web": {
+        "transactions": 2369,
+        "fraud_transactions": 85,
+        "fraud_rate": 0.03588
+      }
+    },
+    "ip_country": {
+      "AU": {
+        "transactions": 1475,
+        "fraud_transactions": 76,
+        "fraud_rate": 0.051525
+      },
+      "CA": {
+        "transactions": 1494,
+        "fraud_transactions": 113,
+        "fraud_rate": 0.075636
+      },
+      "DE": {
+        "transactions": 1486,
+        "fraud_transactions": 110,
+        "fraud_rate": 0.074024
+      },
+      "UK": {
+        "transactions": 1576,
+        "fraud_transactions": 113,
+        "fraud_rate": 0.071701
+      },
+      "US": {
+        "transactions": 3969,
+        "fraud_transactions": 107,
+        "fraud_rate": 0.026959
+      }
+    }
+  },
+  "limitations": [
+    "Labels remain synthetic and are suitable for portfolio demonstration, not production decisions.",
+    "The 5% expected prevalence is intentionally enriched for an educational dataset.",
+    "Risk relationships are modeled assumptions, not estimates learned from bank data."
+  ]
+}

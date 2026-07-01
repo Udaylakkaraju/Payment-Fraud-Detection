@@ -23,9 +23,12 @@ Thumbs.db
 # Local logs and temp
 *.log
 *.tmp
+*.joblib
+*.inspect.ndjson
+node_modules/
+_pbix_extract/
+*.pbix.zip
+1.pbix.zip
 
-# Keep large CSVs versioned only if needed
-# Uncomment if you want to ignore generated outputs:
-# fraud_model_output.csv
-# daily_fraud_metrics.csv
-# final_alert_output.csv
+# Power BI temporary lock files
+~$*.pbix

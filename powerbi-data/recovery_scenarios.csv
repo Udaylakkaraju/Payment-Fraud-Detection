@@ -1,0 +1,139 @@
+decline_reason,issuer_bank,card_brand,failed_txns,failed_amount,recovered_txns_observed,recovered_amount_observed,observed_recovery_rate_pct,unrecovered_amount_pool,window_minutes,scenario_recovery_lift_pct,estimated_incremental_recovered_amount,decline_code,automatic_retry_allowed,scenario_eligible_unrecovered_amount
+ALL_DECLINES,ALL_BANKS,ALL_BRANDS,6237,470801.05,855,67312.59,13.71,403488.46,1440,15.0,34849.2,ALL,,232327.98
+ALL_DECLINES,ALL_BANKS,ALL_BRANDS,6237,470801.05,855,67312.59,13.71,403488.46,1440,10.0,23232.8,ALL,,232327.98
+ALL_DECLINES,ALL_BANKS,ALL_BRANDS,6237,470801.05,855,67312.59,13.71,403488.46,1440,5.0,11616.4,ALL,,232327.98
+51: Insufficient Funds,Chase,Visa,429,36976.85,114,10858.38,26.57,26118.47,1440,15.0,3917.77,51,True,26118.47
+51: Insufficient Funds,Chase,Visa,429,36976.85,114,10858.38,26.57,26118.47,1440,10.0,2611.85,51,True,26118.47
+51: Insufficient Funds,Chase,Mastercard,261,20622.95,70,5500.06,26.82,15122.89,1440,15.0,2268.43,51,True,15122.89
+51: Insufficient Funds,Wells Fargo,Mastercard,217,17294.81,47,3109.52,21.66,14185.29,1440,15.0,2127.79,51,True,14185.29
+51: Insufficient Funds,Wells Fargo,Visa,291,21145.63,82,7079.35,28.18,14066.28,1440,15.0,2109.94,51,True,14066.28
+51: Insufficient Funds,Bank of America,Visa,283,19171.27,88,6143.7,31.1,13027.57,1440,15.0,1954.14,51,True,13027.57
+91: Issuer System Timeout,Wells Fargo,Visa,156,12283.05,0,0.0,0.0,12283.05,1440,15.0,1842.46,91,True,12283.05
+51: Insufficient Funds,Chase,Amex,211,13988.1,59,3663.73,27.96,10324.37,1440,15.0,1548.66,51,True,10324.37
+51: Insufficient Funds,Capital One,Visa,213,15263.73,72,5120.07,33.8,10143.66,1440,15.0,1521.55,51,True,10143.66
+91: Issuer System Timeout,Chase,Visa,134,10111.79,0,0.0,0.0,10111.79,1440,15.0,1516.77,91,True,10111.79
+51: Insufficient Funds,Chase,Mastercard,261,20622.95,70,5500.06,26.82,15122.89,1440,10.0,1512.29,51,True,15122.89
+51: Insufficient Funds,Wells Fargo,Mastercard,217,17294.81,47,3109.52,21.66,14185.29,1440,10.0,1418.53,51,True,14185.29
+51: Insufficient Funds,Wells Fargo,Visa,291,21145.63,82,7079.35,28.18,14066.28,1440,10.0,1406.63,51,True,14066.28
+51: Insufficient Funds,Citi,Visa,224,14667.25,58,5456.87,25.89,9210.38,1440,15.0,1381.56,51,True,9210.38
+51: Insufficient Funds,Bank of America,Mastercard,187,14091.3,53,5271.47,28.34,8819.83,1440,15.0,1322.97,51,True,8819.83
+51: Insufficient Funds,Chase,Visa,429,36976.85,114,10858.38,26.57,26118.47,1440,5.0,1305.92,51,True,26118.47
+51: Insufficient Funds,Bank of America,Visa,283,19171.27,88,6143.7,31.1,13027.57,1440,10.0,1302.76,51,True,13027.57
+91: Issuer System Timeout,Wells Fargo,Visa,156,12283.05,0,0.0,0.0,12283.05,1440,10.0,1228.3,91,True,12283.05
+91: Issuer System Timeout,Bank of America,Visa,112,8140.62,0,0.0,0.0,8140.62,1440,15.0,1221.09,91,True,8140.62
+51: Insufficient Funds,Capital One,Mastercard,139,10254.61,31,2226.0,22.3,8028.61,1440,15.0,1204.29,51,True,8028.61
+51: Insufficient Funds,Wells Fargo,Amex,140,11871.86,51,4025.3,36.43,7846.56,1440,15.0,1176.98,51,True,7846.56
+51: Insufficient Funds,Bank of America,Amex,125,9823.94,42,2835.4,33.6,6988.54,1440,15.0,1048.28,51,True,6988.54
+51: Insufficient Funds,Chase,Amex,211,13988.1,59,3663.73,27.96,10324.37,1440,10.0,1032.44,51,True,10324.37
+51: Insufficient Funds,Capital One,Visa,213,15263.73,72,5120.07,33.8,10143.66,1440,10.0,1014.37,51,True,10143.66
+91: Issuer System Timeout,Chase,Visa,134,10111.79,0,0.0,0.0,10111.79,1440,10.0,1011.18,91,True,10111.79
+51: Insufficient Funds,Citi,Visa,224,14667.25,58,5456.87,25.89,9210.38,1440,10.0,921.04,51,True,9210.38
+51: Insufficient Funds,Bank of America,Mastercard,187,14091.3,53,5271.47,28.34,8819.83,1440,10.0,881.98,51,True,8819.83
+51: Insufficient Funds,Citi,Mastercard,134,7747.86,41,2285.54,30.6,5462.32,1440,15.0,819.35,51,True,5462.32
+91: Issuer System Timeout,Bank of America,Visa,112,8140.62,0,0.0,0.0,8140.62,1440,10.0,814.06,91,True,8140.62
+51: Insufficient Funds,Capital One,Mastercard,139,10254.61,31,2226.0,22.3,8028.61,1440,10.0,802.86,51,True,8028.61
+51: Insufficient Funds,Wells Fargo,Amex,140,11871.86,51,4025.3,36.43,7846.56,1440,10.0,784.66,51,True,7846.56
+91: Issuer System Timeout,Chase,Mastercard,86,5086.44,0,0.0,0.0,5086.44,1440,15.0,762.97,91,True,5086.44
+51: Insufficient Funds,Chase,Mastercard,261,20622.95,70,5500.06,26.82,15122.89,1440,5.0,756.14,51,True,15122.89
+51: Insufficient Funds,Capital One,Amex,99,7064.0,26,2196.63,26.26,4867.37,1440,15.0,730.11,51,True,4867.37
+51: Insufficient Funds,Wells Fargo,Mastercard,217,17294.81,47,3109.52,21.66,14185.29,1440,5.0,709.26,51,True,14185.29
+51: Insufficient Funds,Wells Fargo,Visa,291,21145.63,82,7079.35,28.18,14066.28,1440,5.0,703.31,51,True,14066.28
+51: Insufficient Funds,Bank of America,Amex,125,9823.94,42,2835.4,33.6,6988.54,1440,10.0,698.85,51,True,6988.54
+91: Issuer System Timeout,Citi,Visa,75,4437.83,0,0.0,0.0,4437.83,1440,15.0,665.67,91,True,4437.83
+91: Issuer System Timeout,Wells Fargo,Mastercard,82,4346.26,0,0.0,0.0,4346.26,1440,15.0,651.94,91,True,4346.26
+51: Insufficient Funds,Bank of America,Visa,283,19171.27,88,6143.7,31.1,13027.57,1440,5.0,651.38,51,True,13027.57
+91: Issuer System Timeout,Wells Fargo,Amex,65,4232.62,0,0.0,0.0,4232.62,1440,15.0,634.89,91,True,4232.62
+91: Issuer System Timeout,Wells Fargo,Visa,156,12283.05,0,0.0,0.0,12283.05,1440,5.0,614.15,91,True,12283.05
+91: Issuer System Timeout,Capital One,Visa,72,3774.3,0,0.0,0.0,3774.3,1440,15.0,566.14,91,True,3774.3
+51: Insufficient Funds,Citi,Amex,90,5190.11,21,1540.57,23.33,3649.54,1440,15.0,547.43,51,True,3649.54
+51: Insufficient Funds,Citi,Mastercard,134,7747.86,41,2285.54,30.6,5462.32,1440,10.0,546.23,51,True,5462.32
+91: Issuer System Timeout,Capital One,Amex,36,3622.49,0,0.0,0.0,3622.49,1440,15.0,543.37,91,True,3622.49
+91: Issuer System Timeout,Chase,Amex,53,3564.97,0,0.0,0.0,3564.97,1440,15.0,534.75,91,True,3564.97
+51: Insufficient Funds,Chase,Amex,211,13988.1,59,3663.73,27.96,10324.37,1440,5.0,516.22,51,True,10324.37
+91: Issuer System Timeout,Bank of America,Amex,38,3421.99,0,0.0,0.0,3421.99,1440,15.0,513.3,91,True,3421.99
+91: Issuer System Timeout,Chase,Mastercard,86,5086.44,0,0.0,0.0,5086.44,1440,10.0,508.64,91,True,5086.44
+51: Insufficient Funds,Capital One,Visa,213,15263.73,72,5120.07,33.8,10143.66,1440,5.0,507.18,51,True,10143.66
+91: Issuer System Timeout,Chase,Visa,134,10111.79,0,0.0,0.0,10111.79,1440,5.0,505.59,91,True,10111.79
+51: Insufficient Funds,Capital One,Amex,99,7064.0,26,2196.63,26.26,4867.37,1440,10.0,486.74,51,True,4867.37
+91: Issuer System Timeout,Capital One,Mastercard,44,3239.98,0,0.0,0.0,3239.98,1440,15.0,486.0,91,True,3239.98
+91: Issuer System Timeout,Bank of America,Mastercard,60,3172.0,0,0.0,0.0,3172.0,1440,15.0,475.8,91,True,3172.0
+51: Insufficient Funds,Citi,Visa,224,14667.25,58,5456.87,25.89,9210.38,1440,5.0,460.52,51,True,9210.38
+91: Issuer System Timeout,Citi,Visa,75,4437.83,0,0.0,0.0,4437.83,1440,10.0,443.78,91,True,4437.83
+51: Insufficient Funds,Bank of America,Mastercard,187,14091.3,53,5271.47,28.34,8819.83,1440,5.0,440.99,51,True,8819.83
+91: Issuer System Timeout,Wells Fargo,Mastercard,82,4346.26,0,0.0,0.0,4346.26,1440,10.0,434.63,91,True,4346.26
+91: Issuer System Timeout,Wells Fargo,Amex,65,4232.62,0,0.0,0.0,4232.62,1440,10.0,423.26,91,True,4232.62
+91: Issuer System Timeout,Bank of America,Visa,112,8140.62,0,0.0,0.0,8140.62,1440,5.0,407.03,91,True,8140.62
+51: Insufficient Funds,Capital One,Mastercard,139,10254.61,31,2226.0,22.3,8028.61,1440,5.0,401.43,51,True,8028.61
+51: Insufficient Funds,Wells Fargo,Amex,140,11871.86,51,4025.3,36.43,7846.56,1440,5.0,392.33,51,True,7846.56
+91: Issuer System Timeout,Citi,Mastercard,41,2529.79,0,0.0,0.0,2529.79,1440,15.0,379.47,91,True,2529.79
+91: Issuer System Timeout,Capital One,Visa,72,3774.3,0,0.0,0.0,3774.3,1440,10.0,377.43,91,True,3774.3
+91: Issuer System Timeout,Citi,Amex,48,2502.17,0,0.0,0.0,2502.17,1440,15.0,375.33,91,True,2502.17
+51: Insufficient Funds,Citi,Amex,90,5190.11,21,1540.57,23.33,3649.54,1440,10.0,364.95,51,True,3649.54
+91: Issuer System Timeout,Capital One,Amex,36,3622.49,0,0.0,0.0,3622.49,1440,10.0,362.25,91,True,3622.49
+91: Issuer System Timeout,Chase,Amex,53,3564.97,0,0.0,0.0,3564.97,1440,10.0,356.5,91,True,3564.97
+51: Insufficient Funds,Bank of America,Amex,125,9823.94,42,2835.4,33.6,6988.54,1440,5.0,349.43,51,True,6988.54
+91: Issuer System Timeout,Bank of America,Amex,38,3421.99,0,0.0,0.0,3421.99,1440,10.0,342.2,91,True,3421.99
+91: Issuer System Timeout,Capital One,Mastercard,44,3239.98,0,0.0,0.0,3239.98,1440,10.0,324.0,91,True,3239.98
+91: Issuer System Timeout,Bank of America,Mastercard,60,3172.0,0,0.0,0.0,3172.0,1440,10.0,317.2,91,True,3172.0
+51: Insufficient Funds,Citi,Mastercard,134,7747.86,41,2285.54,30.6,5462.32,1440,5.0,273.12,51,True,5462.32
+91: Issuer System Timeout,Chase,Mastercard,86,5086.44,0,0.0,0.0,5086.44,1440,5.0,254.32,91,True,5086.44
+91: Issuer System Timeout,Citi,Mastercard,41,2529.79,0,0.0,0.0,2529.79,1440,10.0,252.98,91,True,2529.79
+91: Issuer System Timeout,Citi,Amex,48,2502.17,0,0.0,0.0,2502.17,1440,10.0,250.22,91,True,2502.17
+51: Insufficient Funds,Capital One,Amex,99,7064.0,26,2196.63,26.26,4867.37,1440,5.0,243.37,51,True,4867.37
+91: Issuer System Timeout,Citi,Visa,75,4437.83,0,0.0,0.0,4437.83,1440,5.0,221.89,91,True,4437.83
+91: Issuer System Timeout,Wells Fargo,Mastercard,82,4346.26,0,0.0,0.0,4346.26,1440,5.0,217.31,91,True,4346.26
+91: Issuer System Timeout,Wells Fargo,Amex,65,4232.62,0,0.0,0.0,4232.62,1440,5.0,211.63,91,True,4232.62
+91: Issuer System Timeout,Capital One,Visa,72,3774.3,0,0.0,0.0,3774.3,1440,5.0,188.72,91,True,3774.3
+51: Insufficient Funds,Citi,Amex,90,5190.11,21,1540.57,23.33,3649.54,1440,5.0,182.48,51,True,3649.54
+91: Issuer System Timeout,Capital One,Amex,36,3622.49,0,0.0,0.0,3622.49,1440,5.0,181.12,91,True,3622.49
+91: Issuer System Timeout,Chase,Amex,53,3564.97,0,0.0,0.0,3564.97,1440,5.0,178.25,91,True,3564.97
+91: Issuer System Timeout,Bank of America,Amex,38,3421.99,0,0.0,0.0,3421.99,1440,5.0,171.1,91,True,3421.99
+91: Issuer System Timeout,Capital One,Mastercard,44,3239.98,0,0.0,0.0,3239.98,1440,5.0,162.0,91,True,3239.98
+91: Issuer System Timeout,Bank of America,Mastercard,60,3172.0,0,0.0,0.0,3172.0,1440,5.0,158.6,91,True,3172.0
+91: Issuer System Timeout,Citi,Mastercard,41,2529.79,0,0.0,0.0,2529.79,1440,5.0,126.49,91,True,2529.79
+91: Issuer System Timeout,Citi,Amex,48,2502.17,0,0.0,0.0,2502.17,1440,5.0,125.11,91,True,2502.17
+59: Suspected Fraud,Citi,Visa,179,26580.32,0,0.0,0.0,26580.32,1440,5.0,0.0,59,False,0.0
+59: Suspected Fraud,Citi,Visa,179,26580.32,0,0.0,0.0,26580.32,1440,10.0,0.0,59,False,0.0
+59: Suspected Fraud,Citi,Visa,179,26580.32,0,0.0,0.0,26580.32,1440,15.0,0.0,59,False,0.0
+59: Suspected Fraud,Chase,Visa,301,21664.72,0,0.0,0.0,21664.72,1440,5.0,0.0,59,False,0.0
+59: Suspected Fraud,Chase,Visa,301,21664.72,0,0.0,0.0,21664.72,1440,10.0,0.0,59,False,0.0
+59: Suspected Fraud,Chase,Visa,301,21664.72,0,0.0,0.0,21664.72,1440,15.0,0.0,59,False,0.0
+59: Suspected Fraud,Bank of America,Visa,203,15340.73,0,0.0,0.0,15340.73,1440,5.0,0.0,59,False,0.0
+59: Suspected Fraud,Bank of America,Visa,203,15340.73,0,0.0,0.0,15340.73,1440,10.0,0.0,59,False,0.0
+59: Suspected Fraud,Bank of America,Visa,203,15340.73,0,0.0,0.0,15340.73,1440,15.0,0.0,59,False,0.0
+59: Suspected Fraud,Wells Fargo,Visa,210,15156.2,0,0.0,0.0,15156.2,1440,5.0,0.0,59,False,0.0
+59: Suspected Fraud,Wells Fargo,Visa,210,15156.2,0,0.0,0.0,15156.2,1440,10.0,0.0,59,False,0.0
+59: Suspected Fraud,Wells Fargo,Visa,210,15156.2,0,0.0,0.0,15156.2,1440,15.0,0.0,59,False,0.0
+59: Suspected Fraud,Citi,Mastercard,103,12744.94,0,0.0,0.0,12744.94,1440,5.0,0.0,59,False,0.0
+59: Suspected Fraud,Citi,Mastercard,103,12744.94,0,0.0,0.0,12744.94,1440,10.0,0.0,59,False,0.0
+59: Suspected Fraud,Citi,Mastercard,103,12744.94,0,0.0,0.0,12744.94,1440,15.0,0.0,59,False,0.0
+59: Suspected Fraud,Citi,Amex,79,11787.13,0,0.0,0.0,11787.13,1440,5.0,0.0,59,False,0.0
+59: Suspected Fraud,Citi,Amex,79,11787.13,0,0.0,0.0,11787.13,1440,10.0,0.0,59,False,0.0
+59: Suspected Fraud,Citi,Amex,79,11787.13,0,0.0,0.0,11787.13,1440,15.0,0.0,59,False,0.0
+59: Suspected Fraud,Bank of America,Mastercard,126,11578.94,0,0.0,0.0,11578.94,1440,5.0,0.0,59,False,0.0
+59: Suspected Fraud,Bank of America,Mastercard,126,11578.94,0,0.0,0.0,11578.94,1440,10.0,0.0,59,False,0.0
+59: Suspected Fraud,Bank of America,Mastercard,126,11578.94,0,0.0,0.0,11578.94,1440,15.0,0.0,59,False,0.0
+59: Suspected Fraud,Chase,Mastercard,191,11343.04,0,0.0,0.0,11343.04,1440,5.0,0.0,59,False,0.0
+59: Suspected Fraud,Chase,Mastercard,191,11343.04,0,0.0,0.0,11343.04,1440,10.0,0.0,59,False,0.0
+59: Suspected Fraud,Chase,Mastercard,191,11343.04,0,0.0,0.0,11343.04,1440,15.0,0.0,59,False,0.0
+59: Suspected Fraud,Wells Fargo,Mastercard,126,9259.65,0,0.0,0.0,9259.65,1440,5.0,0.0,59,False,0.0
+59: Suspected Fraud,Wells Fargo,Mastercard,126,9259.65,0,0.0,0.0,9259.65,1440,10.0,0.0,59,False,0.0
+59: Suspected Fraud,Wells Fargo,Mastercard,126,9259.65,0,0.0,0.0,9259.65,1440,15.0,0.0,59,False,0.0
+59: Suspected Fraud,Capital One,Visa,157,8923.9,0,0.0,0.0,8923.9,1440,5.0,0.0,59,False,0.0
+59: Suspected Fraud,Capital One,Visa,157,8923.9,0,0.0,0.0,8923.9,1440,10.0,0.0,59,False,0.0
+59: Suspected Fraud,Capital One,Visa,157,8923.9,0,0.0,0.0,8923.9,1440,15.0,0.0,59,False,0.0
+59: Suspected Fraud,Chase,Amex,108,7025.22,0,0.0,0.0,7025.22,1440,5.0,0.0,59,False,0.0
+59: Suspected Fraud,Chase,Amex,108,7025.22,0,0.0,0.0,7025.22,1440,10.0,0.0,59,False,0.0
+59: Suspected Fraud,Chase,Amex,108,7025.22,0,0.0,0.0,7025.22,1440,15.0,0.0,59,False,0.0
+59: Suspected Fraud,Bank of America,Amex,78,6749.96,0,0.0,0.0,6749.96,1440,5.0,0.0,59,False,0.0
+59: Suspected Fraud,Bank of America,Amex,78,6749.96,0,0.0,0.0,6749.96,1440,10.0,0.0,59,False,0.0
+59: Suspected Fraud,Bank of America,Amex,78,6749.96,0,0.0,0.0,6749.96,1440,15.0,0.0,59,False,0.0
+59: Suspected Fraud,Capital One,Mastercard,91,5033.7,0,0.0,0.0,5033.7,1440,5.0,0.0,59,False,0.0
+59: Suspected Fraud,Capital One,Mastercard,91,5033.7,0,0.0,0.0,5033.7,1440,10.0,0.0,59,False,0.0
+59: Suspected Fraud,Capital One,Mastercard,91,5033.7,0,0.0,0.0,5033.7,1440,15.0,0.0,59,False,0.0
+59: Suspected Fraud,Wells Fargo,Amex,85,4092.31,0,0.0,0.0,4092.31,1440,5.0,0.0,59,False,0.0
+59: Suspected Fraud,Wells Fargo,Amex,85,4092.31,0,0.0,0.0,4092.31,1440,10.0,0.0,59,False,0.0
+59: Suspected Fraud,Wells Fargo,Amex,85,4092.31,0,0.0,0.0,4092.31,1440,15.0,0.0,59,False,0.0
+59: Suspected Fraud,Capital One,Amex,55,3879.72,0,0.0,0.0,3879.72,1440,5.0,0.0,59,False,0.0
+59: Suspected Fraud,Capital One,Amex,55,3879.72,0,0.0,0.0,3879.72,1440,10.0,0.0,59,False,0.0
+59: Suspected Fraud,Capital One,Amex,55,3879.72,0,0.0,0.0,3879.72,1440,15.0,0.0,59,False,0.0

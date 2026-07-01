@@ -1,0 +1,4 @@
+decline_reason,failed_transactions,recovered_transactions_24h,recovery_rate_pct
+51: Insufficient Funds,3043,855,28.1
+59: Suspected Fraud,2092,0,0.0
+91: Issuer System Timeout,1102,0,0.0

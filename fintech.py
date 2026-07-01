@@ -6,10 +6,10 @@ from typing import Dict, Tuple
 import joblib
 import numpy as np
 import pandas as pd
-from sklearn.ensemble import HistGradientBoostingClassifier, IsolationForest, RandomForestClassifier
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import confusion_matrix, roc_auc_score
+from sklearn.ensemble import HistGradientBoostingClassifier
+from sklearn.metrics import average_precision_score, confusion_matrix, roc_auc_score
 from sklearn.model_selection import train_test_split
+from sklearn.inspection import permutation_importance
 
 FEATURE_COLUMNS = [
     "amount",
@@ -20,6 +20,13 @@ FEATURE_COLUMNS = [
     "merchant_code",
     "country_code",
     "entry_code",
+    "rapid_low_value",
+    "is_manual_keyed",
+    "is_digital_goods",
+    "is_travel",
+    "is_mobile",
+    "is_non_us",
+    "is_overnight",
 ]
 
 BASE_REQUIRED_COLUMNS = [
@@ -34,12 +41,8 @@ BASE_REQUIRED_COLUMNS = [
 ]
 
 TRAIN_REQUIRED_COLUMNS = BASE_REQUIRED_COLUMNS + ["is_fraud"]
-SUPPORTED_MODELS = {
-    "isolation_forest",
-    "hist_gradient_boosting",
-    "random_forest",
-    "logistic_regression",
-}
+SUPPORTED_MODELS = {"hist_gradient_boosting"}
+DEFAULT_TRAINING_INPUT = "data/processed/fraud_transactions.csv"
 
 
 def parse_args() -> argparse.Namespace:
@@ -49,7 +52,7 @@ def parse_args() -> argparse.Namespace:
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     train_parser = subparsers.add_parser("train", help="Train and evaluate model.")
-    train_parser.add_argument("--input", default="fintech_fraud_data.csv")
+    train_parser.add_argument("--input", default=DEFAULT_TRAINING_INPUT)
     train_parser.add_argument(
         "--output",
         default="outputs/fraud_scored_transactions.csv",
@@ -62,9 +65,15 @@ def parse_args() -> argparse.Namespace:
         choices=sorted(SUPPORTED_MODELS),
         help="Model family to train / persist for downstream batch scoring.",
     )
-    train_parser.add_argument("--contamination", type=float, default=0.24)
     train_parser.add_argument("--rapid-threshold-minutes", type=float, default=2.0)
-    train_parser.add_argument("--test-size", type=float, default=0.25)
+    train_parser.add_argument(
+        "--review-rate",
+        type=float,
+        default=0.10,
+        help="Target share of calibration rows routed to manual review.",
+    )
+    train_parser.add_argument("--calibration-size", type=float, default=0.20)
+    train_parser.add_argument("--test-size", type=float, default=0.20)
     train_parser.add_argument(
         "--evaluation-mode",
         default="time",
@@ -72,6 +81,21 @@ def parse_args() -> argparse.Namespace:
         help="Holdout strategy: time-based split (recommended) or stratified random split.",
     )
     train_parser.add_argument("--metrics-out", default="outputs/train_metrics_report.csv")
+    train_parser.add_argument(
+        "--feature-importance-out",
+        default="outputs/feature_importance.csv",
+        help="Permutation feature importance report from the holdout split.",
+    )
+    train_parser.add_argument(
+        "--inference-sample-out",
+        default="data/inference/fraud_inference_sample.csv",
+        help="Unlabeled chronological test-period sample for batch-scoring demonstrations.",
+    )
+    train_parser.add_argument(
+        "--daily-output",
+        default="outputs/daily_scored_transactions.csv",
+        help="Scored unlabeled test-period sample used as a demonstration inference queue.",
+    )
 
     infer_parser = subparsers.add_parser("infer", help="Score new/unlabeled data.")
     infer_parser.add_argument("--input", required=True)
@@ -92,12 +116,16 @@ def validate_common_path(path: Path, label: str) -> None:
 
 
 def validate_train_args(args: argparse.Namespace) -> None:
-    if args.model_type == "isolation_forest" and not (0 < args.contamination < 0.5):
-        raise ValueError("--contamination must be between 0 and 0.5.")
     if args.rapid_threshold_minutes <= 0:
         raise ValueError("--rapid-threshold-minutes must be > 0.")
     if not (0 < args.test_size < 0.5):
         raise ValueError("--test-size must be in (0, 0.5).")
+    if not (0 < args.calibration_size < 0.5):
+        raise ValueError("--calibration-size must be in (0, 0.5).")
+    if args.test_size + args.calibration_size >= 0.8:
+        raise ValueError("Calibration and test partitions must leave at least 20% for training.")
+    if not (0 < args.review_rate < 0.5):
+        raise ValueError("--review-rate must be in (0, 0.5).")
 
 
 def validate_infer_args(args: argparse.Namespace) -> None:
@@ -106,25 +134,17 @@ def validate_infer_args(args: argparse.Namespace) -> None:
 
 
 def _score_for_ranking(df: pd.DataFrame, model_kind: str) -> pd.Series:
-    """Higher scores mean higher fraud risk / anomaly for ROC-AUC."""
-    if model_kind == "anomaly":
-        return df["risk_score"]
+    """Higher scores mean higher fraud-review priority."""
     return df["fraud_probability"]
 
 
 def train_output_columns(model_kind: str) -> list[str]:
     cols = BASE_REQUIRED_COLUMNS + ["is_fraud", "inter_txn_minutes"]
-    if model_kind == "anomaly":
-        return cols + ["anomaly_score", "risk_score", "risk_flag"]
-    return cols + ["fraud_probability", "risk_score", "risk_flag"]
+    return cols + ["fraud_probability", "risk_score", "risk_flag", "risk_bucket"]
 
 
 def infer_output_columns(model_kind: str, has_is_fraud: bool) -> list[str]:
-    tail = (
-        ["anomaly_score", "risk_score", "risk_flag"]
-        if model_kind == "anomaly"
-        else ["fraud_probability", "risk_score", "risk_flag"]
-    )
+    tail = ["fraud_probability", "risk_score", "risk_flag", "risk_bucket"]
     out = BASE_REQUIRED_COLUMNS + ["inter_txn_minutes"] + tail
     if has_is_fraud:
         out.insert(9, "is_fraud")
@@ -173,6 +193,15 @@ def prepare_base_features(df: pd.DataFrame) -> pd.DataFrame:
     prev_txn = df.groupby("user_id", sort=False)["transaction_time"].shift(1)
     inter_minutes = (df["transaction_time"] - prev_txn).dt.total_seconds().div(60)
     df["inter_txn_minutes"] = inter_minutes.fillna(9999.0)
+    df["rapid_low_value"] = (
+        df["inter_txn_minutes"].lt(10) & df["amount"].lt(100)
+    ).astype(int)
+    df["is_manual_keyed"] = df["entry_mode"].eq("Manual_Keyed").astype(int)
+    df["is_digital_goods"] = df["merchant_category"].eq("Digital Goods").astype(int)
+    df["is_travel"] = df["merchant_category"].eq("Travel").astype(int)
+    df["is_mobile"] = df["device_type"].eq("mobile").astype(int)
+    df["is_non_us"] = df["ip_country"].ne("US").astype(int)
+    df["is_overnight"] = df["Hour"].between(0, 5).astype(int)
     return df
 
 
@@ -238,11 +267,16 @@ def compute_metrics(df: pd.DataFrame, model_kind: str) -> Dict[str, float]:
 
     score_input = _score_for_ranking(df, model_kind)
     roc_auc = roc_auc_score(df["is_fraud"], score_input)
+    pr_auc = average_precision_score(df["is_fraud"], score_input)
 
     cm = confusion_matrix(df["is_fraud"], df["risk_flag"], labels=[0, 1])
     tn, fp, fn, tp = cm.ravel()
     precision = tp / (tp + fp) if (tp + fp) > 0 else 0.0
     false_positive_rate = fp / (fp + tn) * 100 if (fp + tn) > 0 else 0.0
+    topk_count = max(1, int(len(df) * 0.05))
+    topk = df.assign(_rank_score=score_input).nlargest(topk_count, "_rank_score")
+    topk_fraud = int(topk["is_fraud"].sum())
+    total_fraud = int(df["is_fraud"].sum())
 
     return {
         "rows": float(len(df)),
@@ -250,7 +284,12 @@ def compute_metrics(df: pd.DataFrame, model_kind: str) -> Dict[str, float]:
         "fraud_caught": float(len(caught_fraud)),
         "recall_pct": catch_rate,
         "roc_auc": float(roc_auc),
+        "pr_auc": float(pr_auc),
         "precision_pct": precision * 100.0,
+        "precision_at_5pct": topk_fraud / topk_count,
+        "recall_at_5pct": topk_fraud / total_fraud if total_fraud else 0.0,
+        "top_5pct_queue_size": float(topk_count),
+        "flagged_queue_size": float(df["risk_flag"].sum()),
         "false_positive_rate_pct": false_positive_rate,
         "tn": float(tn),
         "fp": float(fp),
@@ -259,24 +298,17 @@ def compute_metrics(df: pd.DataFrame, model_kind: str) -> Dict[str, float]:
     }
 
 
-def choose_threshold(y_true: np.ndarray, y_prob: np.ndarray) -> float:
-    candidate_thresholds = np.linspace(0.05, 0.95, 91)
-    best_threshold = 0.5
-    best_score = -1.0
-
-    for thr in candidate_thresholds:
-        y_pred = (y_prob >= thr).astype(int)
-        cm = confusion_matrix(y_true, y_pred, labels=[0, 1])
-        tn, fp, fn, tp = cm.ravel()
-        precision = tp / (tp + fp) if (tp + fp) > 0 else 0.0
-        recall = tp / (tp + fn) if (tp + fn) > 0 else 0.0
-        score = (2 * precision * recall / (precision + recall)) if (precision + recall) > 0 else 0.0
-
-        if score > best_score:
-            best_score = score
-            best_threshold = float(thr)
-
-    return best_threshold
+def choose_threshold(
+    y_true: np.ndarray,
+    y_prob: np.ndarray,
+    review_rate: float = 0.10,
+) -> float:
+    """Set the operating point from calibration scores and review capacity."""
+    if len(y_true) != len(y_prob):
+        raise ValueError("Calibration labels and probabilities must have equal length.")
+    if not (0 < review_rate < 1):
+        raise ValueError("review_rate must be in (0, 1).")
+    return float(np.quantile(y_prob, 1 - review_rate))
 
 
 def get_classifier_probability(model, x_data: pd.DataFrame) -> np.ndarray:
@@ -286,81 +318,138 @@ def get_classifier_probability(model, x_data: pd.DataFrame) -> np.ndarray:
     return 1.0 / (1.0 + np.exp(-decision))
 
 
-def build_model(model_type: str, contamination: float):
-    if model_type == "isolation_forest":
-        return IsolationForest(
-            n_estimators=100,
-            contamination=contamination,
-            random_state=42,
-            n_jobs=-1,
-        )
-    if model_type == "hist_gradient_boosting":
-        return HistGradientBoostingClassifier(
-            max_iter=300,
-            learning_rate=0.05,
-            max_depth=8,
-            random_state=42,
-        )
-    if model_type == "random_forest":
-        return RandomForestClassifier(
-            n_estimators=300,
-            max_depth=12,
-            min_samples_leaf=4,
-            class_weight="balanced_subsample",
-            random_state=42,
-            n_jobs=-1,
-        )
-    if model_type == "logistic_regression":
-        return LogisticRegression(
-            max_iter=1200,
-            class_weight="balanced",
-            solver="lbfgs",
-            random_state=42,
-        )
-    raise ValueError(f"Unsupported model_type: {model_type}")
+def assign_risk_buckets(scored: pd.DataFrame, model_kind: str, threshold: float) -> pd.Series:
+    if scored.empty:
+        return pd.Series(dtype="object")
+
+    # Relative queue tiers remain useful even when calibrated probabilities are
+    # low. The flag is threshold-based; the bucket is percentile-based.
+    percentile_rank = scored["risk_score"].rank(method="first", pct=True)
+    conditions = [
+        percentile_rank > 0.99,
+        percentile_rank > 0.95,
+        percentile_rank > 0.80,
+    ]
+
+    return pd.Series(
+        np.select(conditions, ["Critical", "High", "Medium"], default="Low"),
+        index=scored.index,
+    )
 
 
-def split_train_holdout(
+def save_feature_importance(
+    model,
+    model_kind: str,
+    holdout_df: pd.DataFrame,
+    output_path: Path,
+) -> None:
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    result = permutation_importance(
+        model,
+        holdout_df[FEATURE_COLUMNS],
+        holdout_df["is_fraud"].to_numpy(),
+        scoring="average_precision",
+        n_repeats=10,
+        random_state=42,
+        n_jobs=-1,
+    )
+    order = np.argsort(result.importances_mean)[::-1]
+    rows = [
+        {
+            "feature": FEATURE_COLUMNS[idx],
+            "importance_mean": round(float(result.importances_mean[idx]), 6),
+            "importance_std": round(float(result.importances_std[idx]), 6),
+            "rank": rank,
+            "note": "Permutation importance on chronological test split using average precision.",
+        }
+        for rank, idx in enumerate(order, start=1)
+    ]
+
+    pd.DataFrame(rows).to_csv(output_path, index=False)
+    print(f"Feature importance report saved -> {output_path}")
+
+
+def build_model() -> HistGradientBoostingClassifier:
+    return HistGradientBoostingClassifier(
+        max_iter=300,
+        learning_rate=0.05,
+        max_depth=5,
+        min_samples_leaf=30,
+        class_weight="balanced",
+        categorical_features=[
+            False, False, False, False,
+            True, True, True, True,
+            False, False, False, False, False, False, False,
+        ],
+        random_state=42,
+    )
+
+
+def split_train_calibration_test(
     df: pd.DataFrame,
     evaluation_mode: str,
+    calibration_size: float,
     test_size: float,
-) -> Tuple[pd.DataFrame, pd.DataFrame]:
+) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    if calibration_size <= 0 or test_size <= 0 or calibration_size + test_size >= 1:
+        raise ValueError("Invalid train/calibration/test proportions.")
+
     if evaluation_mode == "time":
-        ordered = df.sort_values("transaction_time").reset_index(drop=True)
-        split_idx = int(len(ordered) * (1 - test_size))
-        train_df = ordered.iloc[:split_idx].copy()
-        holdout_df = ordered.iloc[split_idx:].copy()
+        ordered = df.sort_values(["transaction_time", "transaction_id"]).reset_index(drop=True)
+        train_end = int(len(ordered) * (1 - calibration_size - test_size))
+        calibration_end = int(len(ordered) * (1 - test_size))
+        train_df = ordered.iloc[:train_end].copy()
+        calibration_df = ordered.iloc[train_end:calibration_end].copy()
+        test_df = ordered.iloc[calibration_end:].copy()
     else:
-        train_idx, holdout_idx = train_test_split(
+        train_cal_idx, test_idx = train_test_split(
             df.index,
             test_size=test_size,
             random_state=42,
             stratify=df["is_fraud"],
         )
+        calibration_fraction = calibration_size / (1 - test_size)
+        train_idx, calibration_idx = train_test_split(
+            train_cal_idx,
+            test_size=calibration_fraction,
+            random_state=42,
+            stratify=df.loc[train_cal_idx, "is_fraud"],
+        )
         train_df = df.loc[train_idx].copy()
-        holdout_df = df.loc[holdout_idx].copy()
+        calibration_df = df.loc[calibration_idx].copy()
+        test_df = df.loc[test_idx].copy()
 
-    if train_df.empty or holdout_df.empty:
-        raise ValueError("Train/holdout split produced empty partition. Adjust --test-size.")
-    return train_df, holdout_df
+    if train_df.empty or calibration_df.empty or test_df.empty:
+        raise ValueError("Train/calibration/test split produced an empty partition.")
+    for name, partition in [
+        ("train", train_df),
+        ("calibration", calibration_df),
+        ("test", test_df),
+    ]:
+        if partition["is_fraud"].nunique() < 2:
+            raise ValueError(f"{name} partition must contain both fraud classes.")
+    return train_df, calibration_df, test_df
 
 
-def score_dataframe(df: pd.DataFrame, model, model_kind: str, threshold: float) -> pd.DataFrame:
+def score_dataframe(
+    df: pd.DataFrame,
+    model,
+    model_kind: str,
+    threshold: float,
+    review_rate: float | None = None,
+) -> pd.DataFrame:
     scored = df.copy()
     all_data = scored[FEATURE_COLUMNS]
-    if model_kind == "anomaly":
-        raw = model.decision_function(all_data)
-        scored["anomaly_score"] = raw
-        # Higher risk_score = more abnormal (consistent direction with supervised fraud_probability).
-        scored["risk_score"] = -np.asarray(raw, dtype=float)
-        scored["predicted_state"] = model.predict(all_data)
-        scored["risk_flag"] = (scored["predicted_state"] == -1).astype(int)
-    else:
-        probabilities = get_classifier_probability(model, all_data)
-        scored["fraud_probability"] = probabilities
-        scored["risk_score"] = probabilities
-        scored["predicted_state"] = (probabilities >= threshold).astype(int)
+    probabilities = get_classifier_probability(model, all_data)
+    scored["fraud_probability"] = probabilities
+    scored["risk_score"] = probabilities
+    scored["predicted_state"] = (probabilities >= threshold).astype(int)
+    if review_rate is None:
         scored["risk_flag"] = scored["predicted_state"].astype(int)
+    else:
+        percentile_rank = scored["risk_score"].rank(method="first", pct=True)
+        scored["risk_flag"] = (percentile_rank > 1 - review_rate).astype(int)
+    scored["risk_bucket"] = assign_risk_buckets(scored, model_kind, threshold)
     return scored
 
 
@@ -384,63 +473,16 @@ def velocity_sub_analysis(df: pd.DataFrame, rapid_threshold_minutes: float) -> N
         print("  No rapid back-to-back fraud transactions found in dataset.")
 
 
-def run_live_simulation(model, vocabs: Dict[str, Dict[str, int]], model_kind: str, threshold: float) -> None:
-    print("\nLive Anomaly Scan - Simulated High-Risk Transaction:")
-    print("=" * 45)
-
-    mobile_code = vocabs["device"].get("mobile", -1)
-    digital_code = vocabs["merchant"].get("Digital Goods", -1)
-    ru_code = vocabs["country"].get("RU", -1)
-    contactless = vocabs["entry"].get("Contactless", -1)
-
-    sample = pd.DataFrame(
-        [
-            {
-                "amount": 1850.0,
-                "Hour": 2,
-                "Day_Index": 1,
-                "inter_txn_minutes": 1.2,
-                "device_code": mobile_code,
-                "merchant_code": digital_code,
-                "country_code": ru_code,
-                "entry_code": contactless,
-            }
-        ],
-        columns=FEATURE_COLUMNS,
-    )
-    if model_kind == "anomaly":
-        raw = float(model.decision_function(sample)[0])
-        risk = -raw
-        is_risky = raw < 0
-        score_text = (
-            f"anomaly_score: {round(raw, 4)}  | risk_score (negated raw): {round(risk, 4)}  "
-            "(more negative anomaly_score => higher risk_score)"
-        )
-    else:
-        sim_score = float(get_classifier_probability(model, sample)[0])
-        is_risky = sim_score >= threshold
-        score_text = (
-            f"fraud_probability / risk_score: {round(sim_score, 4)}  "
-            f"(>= {round(threshold, 2)} => high risk)"
-        )
-
-    print("  Scenario: $1,850 mobile | Digital Goods | 1.2 min after prior txn | 2 AM")
-    print(f"  {score_text}")
-    if is_risky:
-        print("  ALERT: Transaction pattern deviates significantly from normal behavior.")
-    else:
-        print("  Status: Within normal behavioral range.")
-
-
 def save_artifact(
     model,
     vocabs: Dict[str, Dict[str, int]],
     model_type: str,
     model_kind: str,
     threshold: float,
-    contamination: float | None,
     model_path: Path,
+    training_metadata: dict | None = None,
 ) -> None:
+    model_path.parent.mkdir(parents=True, exist_ok=True)
     artifact = {
         "model": model,
         "feature_columns": FEATURE_COLUMNS,
@@ -448,8 +490,8 @@ def save_artifact(
         "model_type": model_type,
         "model_kind": model_kind,
         "threshold": threshold,
-        "contamination": contamination,
         "created_utc": datetime.now(timezone.utc).isoformat(),
+        "training_metadata": training_metadata or {},
     }
     joblib.dump(artifact, model_path)
     print(f"Model artifact saved -> {model_path}")
@@ -469,6 +511,9 @@ def run_train(args: argparse.Namespace) -> None:
     output_path = Path(args.output)
     model_path = Path(args.model_out)
     metrics_path = Path(args.metrics_out)
+    feature_importance_path = Path(args.feature_importance_out)
+    inference_sample_path = Path(args.inference_sample_out)
+    daily_output_path = Path(args.daily_output)
 
     validate_common_path(input_path, "Input")
     validate_train_args(args)
@@ -483,60 +528,118 @@ def run_train(args: argparse.Namespace) -> None:
     print(f"  Fraud rate:         {round(df['is_fraud'].mean() * 100, 1)}%")
 
     df = prepare_base_features(df)
-    df, vocabs = encode_for_training(df)
-
-    train_df, holdout_df = split_train_holdout(df, args.evaluation_mode, args.test_size)
+    train_raw, calibration_raw, test_raw = split_train_calibration_test(
+        df,
+        args.evaluation_mode,
+        args.calibration_size,
+        args.test_size,
+    )
+    train_df, vocabs = encode_for_training(train_raw.copy())
+    calibration_df = encode_for_inference(calibration_raw.copy(), vocabs)
+    test_df = encode_for_inference(test_raw.copy(), vocabs)
     print(
-        f"\nHoldout evaluation mode: {args.evaluation_mode} | "
-        f"train rows: {len(train_df):,}, holdout rows: {len(holdout_df):,}"
+        f"\nEvaluation mode: {args.evaluation_mode} | train: {len(train_df):,} | "
+        f"calibration: {len(calibration_df):,} | test: {len(test_df):,}"
     )
     print(f"\nTraining model: {args.model_type}")
 
-    model = build_model(args.model_type, args.contamination)
+    model = build_model()
+    model_kind = "classifier"
+    model.fit(train_df[FEATURE_COLUMNS], train_df["is_fraud"].to_numpy())
+    calibration_prob = get_classifier_probability(model, calibration_df[FEATURE_COLUMNS])
+    threshold = choose_threshold(
+        calibration_df["is_fraud"].to_numpy(),
+        calibration_prob,
+        review_rate=args.review_rate,
+    )
+    print(
+        f"  Calibration threshold for {args.review_rate:.0%} review capacity: "
+        f"{round(threshold, 4)}"
+    )
 
-    if args.model_type == "isolation_forest":
-        model_kind = "anomaly"
-        threshold = 0.0
-        model.fit(train_df[FEATURE_COLUMNS][train_df["is_fraud"] == 0])
-    else:
-        model_kind = "classifier"
-        model.fit(train_df[FEATURE_COLUMNS], train_df["is_fraud"].to_numpy())
-        train_prob = get_classifier_probability(model, train_df[FEATURE_COLUMNS])
-        threshold = choose_threshold(train_df["is_fraud"].to_numpy(), train_prob)
-        print(f"  Selected probability threshold: {round(threshold, 4)}")
+    test_scored = score_dataframe(
+        test_df, model, model_kind, threshold, review_rate=args.review_rate
+    )
+    print("\nChronological Test Results (Interview-Safe):")
+    evaluate_model(test_scored, model_kind)
+    velocity_sub_analysis(test_scored, args.rapid_threshold_minutes)
 
-    holdout_scored = score_dataframe(holdout_df, model, model_kind, threshold)
-    print("\nHoldout Evaluation Results (Interview-Safe):")
-    evaluate_model(holdout_scored, model_kind)
-    velocity_sub_analysis(holdout_scored, args.rapid_threshold_minutes)
-    run_live_simulation(model, vocabs, model_kind, threshold)
-
-    holdout_metrics = compute_metrics(holdout_scored, model_kind)
+    test_metrics = compute_metrics(test_scored, model_kind)
     metrics_df = pd.DataFrame(
         [
             {
+                "dataset": str(input_path).replace("\\", "/"),
                 "model_type": args.model_type,
                 "model_kind": model_kind,
                 "evaluation_mode": args.evaluation_mode,
+                "train_rows": len(train_df),
+                "calibration_rows": len(calibration_df),
+                "test_rows": len(test_df),
+                "train_fraud_rate_pct": train_df["is_fraud"].mean() * 100,
+                "calibration_fraud_rate_pct": calibration_df["is_fraud"].mean() * 100,
+                "test_fraud_rate_pct": test_df["is_fraud"].mean() * 100,
+                "calibration_size": args.calibration_size,
                 "test_size": args.test_size,
                 "threshold": threshold,
-                **holdout_metrics,
+                "threshold_source": "calibration_score_quantile",
+                "target_review_rate": args.review_rate,
+                "risk_flag_method": "batch_top_review_rate",
+                "probability_threshold_flag_rate_pct": (
+                    test_scored["predicted_state"].mean() * 100
+                ),
+                **test_metrics,
             }
         ]
     )
+    # Preserve the original Power BI-facing metric schema first. Existing M
+    # queries specify a fixed CSV column count, so new split metadata must be
+    # appended rather than inserted ahead of holdout_rows after standardizing.
+    legacy_metric_columns = [
+        "model_type",
+        "model_kind",
+        "evaluation_mode",
+        "test_size",
+        "threshold",
+        "rows",
+        "fraud_events",
+        "fraud_caught",
+        "recall_pct",
+        "roc_auc",
+        "precision_pct",
+        "false_positive_rate_pct",
+        "tn",
+        "fp",
+        "fn",
+        "tp",
+    ]
+    additional_metric_columns = [
+        column for column in metrics_df.columns if column not in legacy_metric_columns
+    ]
+    metrics_df = metrics_df[legacy_metric_columns + additional_metric_columns]
+    metrics_path.parent.mkdir(parents=True, exist_ok=True)
     metrics_df.to_csv(metrics_path, index=False)
-    print(f"\nHoldout metrics report saved -> {metrics_path}")
+    print(f"\nChronological test metrics saved -> {metrics_path}")
+    save_feature_importance(model, model_kind, test_df, feature_importance_path)
 
-    # Refit on full data for production artifact after holdout reporting is complete.
-    if model_kind == "anomaly":
-        model.fit(df[FEATURE_COLUMNS][df["is_fraud"] == 0])
-    else:
-        model.fit(df[FEATURE_COLUMNS], df["is_fraud"].to_numpy())
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    test_scored[train_output_columns(model_kind)].to_csv(output_path, index=False)
+    print(f"Chronological test-scored output saved -> {output_path}")
 
-    full_scored = score_dataframe(df, model, model_kind, threshold)
-
-    full_scored[train_output_columns(model_kind)].to_csv(output_path, index=False)
-    print(f"\nScored output saved -> {output_path}")
+    inference_sample_path.parent.mkdir(parents=True, exist_ok=True)
+    test_raw[BASE_REQUIRED_COLUMNS].to_csv(inference_sample_path, index=False)
+    unlabeled_scored = score_dataframe(
+        test_df.drop(columns=["is_fraud"]),
+        model,
+        model_kind,
+        threshold,
+        review_rate=args.review_rate,
+    )
+    daily_output_path.parent.mkdir(parents=True, exist_ok=True)
+    unlabeled_scored[infer_output_columns(model_kind, has_is_fraud=False)].to_csv(
+        daily_output_path, index=False
+    )
+    print(f"Unlabeled inference sample saved -> {inference_sample_path}")
+    print(f"Unlabeled scored queue saved -> {daily_output_path}")
 
     save_artifact(
         model=model,
@@ -544,8 +647,18 @@ def run_train(args: argparse.Namespace) -> None:
         model_type=args.model_type,
         model_kind=model_kind,
         threshold=threshold,
-        contamination=args.contamination if model_kind == "anomaly" else None,
         model_path=model_path,
+        training_metadata={
+            "dataset": str(input_path).replace("\\", "/"),
+            "evaluation_mode": args.evaluation_mode,
+            "train_rows": len(train_df),
+            "calibration_rows": len(calibration_df),
+            "test_rows": len(test_df),
+            "threshold_source": "calibration_score_quantile",
+            "target_review_rate": args.review_rate,
+            "risk_flag_method": "batch_top_review_rate",
+            "artifact_scope": "train_partition_only",
+        },
     )
 
 
@@ -566,6 +679,7 @@ def run_inference(
     vocabs: Dict[str, Dict[str, int]] = artifact["vocabs"]
     model_kind: str = artifact["model_kind"]
     threshold: float = float(artifact["threshold"])
+    review_rate = artifact.get("training_metadata", {}).get("target_review_rate")
 
     df = pd.read_csv(input_path)
     validate_columns(df, BASE_REQUIRED_COLUMNS)
@@ -573,18 +687,16 @@ def run_inference(
     df = encode_for_inference(df, vocabs)
 
     all_data = df[feature_columns]
-    if model_kind == "anomaly":
-        raw = model.decision_function(all_data)
-        df["anomaly_score"] = raw
-        df["risk_score"] = -np.asarray(raw, dtype=float)
-        df["predicted_state"] = model.predict(all_data)
-        df["risk_flag"] = (df["predicted_state"] == -1).astype(int)
-    else:
-        probabilities = get_classifier_probability(model, all_data)
-        df["fraud_probability"] = probabilities
-        df["risk_score"] = probabilities
-        df["predicted_state"] = (probabilities >= threshold).astype(int)
+    probabilities = get_classifier_probability(model, all_data)
+    df["fraud_probability"] = probabilities
+    df["risk_score"] = probabilities
+    df["predicted_state"] = (probabilities >= threshold).astype(int)
+    if review_rate is None:
         df["risk_flag"] = df["predicted_state"].astype(int)
+    else:
+        percentile_rank = df["risk_score"].rank(method="first", pct=True)
+        df["risk_flag"] = (percentile_rank > 1 - float(review_rate)).astype(int)
+    df["risk_bucket"] = assign_risk_buckets(df, model_kind, threshold)
 
     rapid_count = int((df["inter_txn_minutes"] < rapid_threshold_minutes).sum())
     flagged_rapid_count = int(

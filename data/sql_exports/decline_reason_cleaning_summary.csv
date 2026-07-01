@@ -1,0 +1,4 @@
+Original_Raw_Text,Clean_Error_Reason,Count
+51: Insufficient Funds,Insufficient Funds,3425
+59: Suspected Fraud,Suspected Fraud,2092
+91: Issuer System Timeout,Issuer System Timeout,1102

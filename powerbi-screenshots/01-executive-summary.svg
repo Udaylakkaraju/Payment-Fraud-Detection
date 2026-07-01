@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="320" viewBox="0 0 960 320">
+  <rect width="960" height="320" fill="#fafafa"/>
+  <text x="480" y="28" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Executive Summary  Payments KPIs</text>
+  <text x="40" y="58" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#555">51,237 transactions | 12.92% failure rate | $500,158 failed value pool</text>
+  <rect x="40" y="80" width="260" height="200" fill="#fff" stroke="#ddd"/>
+  <text x="170" y="105" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">Transaction Outcomes</text>
+  <rect x="70" y="200" width="80" height="60" fill="#2E7D32"/>
+  <rect x="190" y="146" width="80" height="114" fill="#C62828"/>
+  <text x="110" y="195" text-anchor="middle" fill="#fff" font-size="11">44,618</text>
+  <text x="230" y="140" text-anchor="middle" fill="#fff" font-size="11">6,619</text>
+  <text x="110" y="278" text-anchor="middle" font-size="11">Success</text>
+  <text x="230" y="278" text-anchor="middle" font-size="11">Failed</text>
+  <rect x="350" y="80" width="260" height="200" fill="#fff" stroke="#ddd"/>
+  <text x="480" y="105" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">Authorization Rates</text>
+  <rect x="380" y="148" width="90" height="112" fill="#1565C0"/>
+  <rect x="490" y="196" width="90" height="64" fill="#EF6C00"/>
+  <text x="425" y="140" text-anchor="middle" font-size="11">87.1%</text>
+  <text x="535" y="188" text-anchor="middle" font-size="11">12.9%</text>
+  <text x="425" y="278" text-anchor="middle" font-size="11">Auth Rate</text>
+  <text x="535" y="278" text-anchor="middle" font-size="11">Failure Rate</text>
+  <rect x="660" y="80" width="260" height="200" fill="#fff" stroke="#ddd"/>
+  <text x="790" y="105" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">Failed Payment Value</text>
+  <rect x="720" y="150" width="140" height="110" fill="#6A1B9A"/>
+  <text x="790" y="210" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">$500K</text>
+  <text x="790" y="278" text-anchor="middle" font-size="11">Opportunity pool</text>
+</svg>

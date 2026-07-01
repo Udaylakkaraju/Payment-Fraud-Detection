@@ -1,57 +1,63 @@
-# Architecture Diagram
+# Project Architecture
 
-This project uses an analytics pipeline that combines SQL diagnostics, ML risk scoring, and BI reporting.
+## Design goal
+
+Keep raw synthetic evidence, analytical transformations, and dashboard contracts separate. Power BI consumes only stable files under `powerbi-data/`; analytical code can change without forcing dashboard redesigns.
 
 ```mermaid
 flowchart LR
-    subgraph DL[Data Layer]
-        A[Raw Payments Data\nfintech_payments(Main Table).csv]
-        C[Labeled Fraud Data\nfintech_fraud_data.csv]
+    subgraph Sources["Synthetic source data"]
+        A["data/raw/payments.csv"]
+        B["data/processed/fraud_transactions.csv"]
+        C["data/reference/dim_decline_code.csv"]
     end
 
-    subgraph AL[Analytics Layer]
-        B[SQL Analysis\nsql quries/*.sql]
-        D[Feature Engineering\nfintech.py]
-        E[Model Training\nhist_gradient_boosting]
+    subgraph Analysis["Analytics layer"]
+        D["SQL analysis and marts"]
+        E["Retry scenario analysis"]
+        F["Fraud risk ranking"]
     end
 
-    subgraph OL[Operational Layer]
-        F[Model Artifact\noutputs/fraud_model.joblib]
-        G[Daily Batch Scoring\nscore_daily.py]
-        H[Scored Output\noutputs/daily_scored_transactions.csv]
-        I[Business KPI Tables\nTables/*.csv + outputs/*.csv]
+    subgraph Contracts["Reporting contracts"]
+        G["outputs/"]
+        H["powerbi-data/"]
     end
 
-    subgraph RL[Reporting Layer]
-        J[Power BI Dashboard]
-        K[Business Actions\nRetry tuning, failure fixes,\nrisk queue prioritization]
+    subgraph Reporting["Business reporting"]
+        I["Power BI dashboard"]
+        J["Excel analysis workbook"]
+        K["Executive summary and resume claims"]
     end
 
-    A --> B
-    C --> D
-    D --> E
-    E --> F
+    A --> D
+    A --> E
+    C --> E
+    B --> F
+    D --> H
+    E --> G --> H
     F --> G
     G --> H
-    B --> I
-    H --> J
-    I --> J
+    H --> I
+    A --> J
+    C --> J
+    I --> K
     J --> K
-
-    classDef data fill:#E8F1FF,stroke:#2B6CB0,stroke-width:2px,color:#1A365D;
-    classDef analytics fill:#E6FFFA,stroke:#0F766E,stroke-width:2px,color:#134E4A;
-    classDef ops fill:#FFF7ED,stroke:#C2410C,stroke-width:2px,color:#7C2D12;
-    classDef report fill:#F3E8FF,stroke:#7E22CE,stroke-width:2px,color:#581C87;
-
-    class A,C data;
-    class B,D,E analytics;
-    class F,G,H,I ops;
-    class J,K report;
 ```
 
-## Plain-Language Flow
+## Key decisions
 
-1. SQL finds where payment leakage happens and why.
-2. Python model ranks risky transactions for review.
-3. Daily scoring updates risk outputs in batch mode.
-4. Power BI combines KPI and risk outputs for decisions.
+1. **No payment/fraud row-level join.** The independent datasets do not share verified transaction or customer keys.
+2. **Same-intent retry matching.** Recovery requires the `-RETRY` lineage rather than any later user success.
+3. **Stable Power BI contracts.** Required column names and ordering are protected by regression tests.
+4. **Chronological fraud evaluation.** Training, calibration, and test rows are separated by time.
+5. **Capacity-limited review queue.** Risk flags select the top 10% of a scored batch.
+6. **Canonical retry metrics.** Same-intent 24-hour recovery and policy-eligible unrecovered value come from `outputs/recovery_scenarios.csv` across every reporting surface.
+
+## Operational flow
+
+1. SQL exports are stored in `data/sql_exports/`.
+2. `scenario_simulator.py` rebuilds retry and opportunity outputs.
+3. `fintech.py` rebuilds fraud metrics and scored queues.
+4. `prepare_powerbi_tables.py` standardizes all dashboard CSVs.
+5. Power BI refreshes from `powerbi-data/`.
+6. The recruiter-facing Excel workbook is published under `deliverables/` and uses the same canonical retry outputs.

@@ -1,27 +1,37 @@
 /*
-  Mart: retry / recovery signal within 24h (1440 minutes) by initial decline.
-  Same sessionizing pattern as Smart Retry Analysis (LEAD window).
+  Mart: same-payment-intent retry recovery within 24h by initial decline.
+  Retry IDs use the source convention TXN-123-RETRY.
 */
-WITH User_Journey AS (
+WITH attempts AS (
   SELECT
-    Status AS Current_Status,
-    LEAD(Status) OVER (PARTITION BY User_ID ORDER BY TIMESTAMP(Timestamp)) AS Next_Status,
-    TIMESTAMP_DIFF(
-      LEAD(TIMESTAMP(Timestamp)) OVER (PARTITION BY User_ID ORDER BY TIMESTAMP(Timestamp)),
-      TIMESTAMP(Timestamp),
-      MINUTE
-    ) AS mins_to_next
+    REGEXP_REPLACE(CAST(Transaction_ID AS STRING), r'-RETRY(?:-\d+)?$', '')
+      AS payment_intent_id,
+    TIMESTAMP(Timestamp) AS attempt_ts,
+    Status,
+    ROW_NUMBER() OVER (
+      PARTITION BY REGEXP_REPLACE(CAST(Transaction_ID AS STRING), r'-RETRY(?:-\d+)?$', '')
+      ORDER BY TIMESTAMP(Timestamp), CAST(Transaction_ID AS STRING)
+    ) AS attempt_number,
+    MIN(IF(Status = '00: Success', TIMESTAMP(Timestamp), NULL)) OVER (
+      PARTITION BY REGEXP_REPLACE(CAST(Transaction_ID AS STRING), r'-RETRY(?:-\d+)?$', '')
+    ) AS first_success_ts
   FROM `project-43c16c81-2fd4-4871-8ac.payment_optimization.payments`
+),
+initial_failures AS (
+  SELECT
+    Status AS initial_decline_label,
+    first_success_ts IS NOT NULL
+      AND TIMESTAMP_DIFF(first_success_ts, attempt_ts, MINUTE) BETWEEN 0 AND 1440
+      AS recovered_within_24h
+  FROM attempts
+  WHERE attempt_number = 1 AND Status != '00: Success'
 )
 SELECT
-  Current_Status AS initial_decline_label,
+  initial_decline_label,
   COUNT(*) AS total_failures,
-  COUNTIF(Next_Status = '00: Success' AND mins_to_next IS NOT NULL AND mins_to_next <= 1440) AS recovered_within_24h_txns,
-  ROUND(SAFE_DIVIDE(
-    COUNTIF(Next_Status = '00: Success' AND mins_to_next IS NOT NULL AND mins_to_next <= 1440),
-    NULLIF(COUNT(*), 0)
-  ) * 100, 2) AS recovery_rate_pct_24h
-FROM User_Journey
-WHERE Current_Status != '00: Success'
+  COUNTIF(recovered_within_24h) AS recovered_within_24h_txns,
+  ROUND(SAFE_DIVIDE(COUNTIF(recovered_within_24h), COUNT(*)) * 100, 2)
+    AS recovery_rate_pct_24h
+FROM initial_failures
 GROUP BY 1
 ORDER BY total_failures DESC;

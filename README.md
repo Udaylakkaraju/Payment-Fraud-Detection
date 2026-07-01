@@ -1,112 +1,160 @@
 # Payments Optimization and Fraud Analytics
 
-Portfolio-scale analytical work combining SQL, Python scoring, and Power BI to frame **payment success**, **retry recovery**, and **fraud review prioritization** on a representative dataset (not measured production uplift).
+An analytics portfolio project that shows where payment failures occur, which failed payment intents recover through retry, and how a limited fraud-review team can prioritize transactions.
 
----
+The project uses synthetic portfolio data inspired by common payment operations patterns. Results demonstrate analytical methods and decision framing; they are not production bank outcomes.
 
-## Business questions this answers
+## Portfolio deliverables
 
-1. **Where are we losing approvals?** Concentration of decline reasons and failed dollar volume.
-2. **What share of failures can realistically be reworked?** Same-user success within 24 hours after failure (recovery signal).
-3. **Which transactions merit fraud review next?** Holdout-evaluated supervised scores with batch inference for a ranked queue.
-4. **How do stakeholders monitor trends?** CSV + SQL marts + optional Power BI overlays.
-
----
-
-## Key metrics
-
-| Concept | Anchored snapshot |
+| Deliverable | What it demonstrates |
 | --- | --- |
-| Transactions analyzed | 51,237 |
-| Failure rate | 12.92% |
-| Failed value pool (opportunity framing) | $500,157.98 |
-| Fail → success within 24h | 1,554 / 6,619 failed (~23.5%) |
-| Fraud holdout (time split, threshold chosen on train) | See `outputs/train_metrics_report.csv` after `fintech.py train` |
+| [Excel analysis workbook](deliverables/Payments_Optimization_Excel_Analysis.xlsx) | Data cleaning, quality checks, formulas, lookups, pivot-style analysis, charts, scenario modeling, sensitivity analysis, and VBA workflow design |
+| [Power BI dashboard](Payments_Optimization_Dashboard.pbix) | Executive KPI reporting, payment-failure analysis, retry opportunity reporting, and fraud-review monitoring inputs |
+| [Executive summary](docs/EXECUTIVE_SUMMARY.md) | Business findings, recommended actions, and experiment guardrails |
+| [SQL analysis](sql/analysis/) and [reporting marts](sql/marts/) | Exploratory analysis, reusable KPI logic, and reporting-ready transformations |
+| [Python pipeline](run.ps1) | Reproducible retry scenarios, chronological fraud evaluation, scoring, and Power BI data contracts |
 
-See `outputs/README.md` for **canonical output filenames** and score column definitions (`fraud_probability` / `risk_score` / `anomaly_score`).
+![Power BI executive summary](powerbi-screenshots/01-executive-summary.png)
+*Power BI Executive Summary page*
 
----
+![Excel executive dashboard](docs/assets/excel-dashboard.png)
+*Excel executive dashboard*
 
-## Methodology (brief)
+## Business questions
 
-1. **SQL diagnostics** — auth rates, error mix, cohort and retry journeys against `payment_optimization.payments` (patterns captured in `sql quries/` and reporting-ready summaries in [`sql/marts/`](sql/marts/).).
-2. **Feature engineering & modeling** (`fintech.py`) — velocity-aware features, stratified or time-based holdout, persisted artifact (`outputs/fraud_model.joblib`).
-3. **Risk scoring semantics** — Supervised outputs use **`fraud_probability`** and mirrored **`risk_score`**. **Isolation Forest** keeps **`anomaly_score`** (raw `decision_function`) plus **`risk_score`** = negated raw so “higher = riskier” matches classifier direction.
+1. Where are payment approvals being lost?
+2. Which decline reasons and issuer segments create the largest failed-value pools?
+3. Which failed payment intents later succeed through a linked retry?
+4. Which transactions should enter a capacity-limited fraud review queue?
 
----
+## Headline results
 
-## Tooling & scripts
+| Business metric | Current result | Interpretation |
+| --- | ---: | --- |
+| Payment attempts analyzed | 51,237 | Three-month synthetic payment snapshot |
+| Authorization failure rate | 12.92% | 6,619 failed attempts |
+| Failed payment value | $500,157.98 | Opportunity pool, not realized loss |
+| Same-intent recovery within 24 hours | 855 / 6,237 (13.71%) | Share of initially failed intents (excluding retry rows themselves) recovered by a linked `-RETRY` attempt |
+| Policy-eligible unrecovered value | $232,327.98 | Excludes decline codes that should not be automatically retried |
+| Illustrative 10% recovery scenario | $23,232.80 | Scenario estimate, not realized revenue |
 
-| Script | Role |
-| --- | --- |
-| `fintech.py train \| infer` | Train/evaluate, write `fraud_scored_transactions.csv` or `daily_scored_transactions.csv` |
-| `score_daily.py` | Thin wrapper calling inference with **`daily_scored_transactions.csv`** default |
-| `benchmark_models.py` | Supervised benchmarks: **threshold on calibration split**, ROC/PR/confusion-derived metrics on held-out **test** |
-| `run.ps1` | PowerShell shortcuts for train / infer / benchmark |
-| [`fintech_dataset_generator.py`](fintech_dataset_generator.py) | **Placeholder only — not portfolio data**. |
+Supporting fraud-review workflow (capacity-limited queue design, not a production model):
 
----
+| Workflow metric | Current result | Interpretation |
+| --- | ---: | --- |
+| Fraud review queue | Top 200 of 2,000 test rows | Fixed 10% review capacity |
+| Fraud queue precision | 9.5% vs. 5.5% baseline | Approximately 1.7× concentration in the review queue |
+| Fraud ranking ROC-AUC | 0.621 | Moderate synthetic test signal; not production performance |
 
-## Repo map
+## Power BI dashboard
 
-- `sql quries/` — Original BigQuery study queries (historical spelling retained).
-- `sql/marts/` — Curated selects for KPI, retry/recovery, and fraud-queue framing.
-- `Tables/` — CSV snapshots exported from analyses.
-- `outputs/` — Metrics, artifacts, predictions (see [`outputs/README.md`](outputs/README.md)).
-- [`PROJECT_CONTEXT.md`](PROJECT_CONTEXT.md) — Problem framing & recommendations narrative.
-- [`RESUME_BULLETS_VERIFIED.md`](RESUME_BULLETS_VERIFIED.md) — Canonical resume bullets for this repo.
+The Power BI report is [`Payments_Optimization_Dashboard.pbix`](Payments_Optimization_Dashboard.pbix). It contains:
 
----
+- Executive Summary
+- Payment Failure Analysis
+- Fraud Risk Monitoring (KPI cards, risk-bucket breakdown, feature importance, and a Key Drivers visual)
 
-## Limitations & dataset framing
+See [`docs/POWER_BI.md`](docs/POWER_BI.md) for the full page-by-page guide, data model, DAX measures, and refresh workflow.
 
-- The bundle is **representative** of a portfolio-scale analytics exercise, not a live production control.
-- Fraud labels in this demo have **high prevalence** relative to typical production fraud — interpret queue sizes and precision claims in that context.
-- Value and recovery figures are **signals and scenarios**, not realized revenue unless measured after deployment.
+Power BI reads only from [`powerbi-data/`](powerbi-data/) — stable CSV contracts regenerated by the Python pipeline. Page previews live in [`powerbi-screenshots/`](powerbi-screenshots/).
 
----
-
-## How to reproduce
-
-1. **Environment:** `python -m venv .venv` → activate → `pip install -r requirements.txt`
-
-2. **Train + holdout + artifact + scored table**
-
-   `python fintech.py train --input fintech_fraud_data.csv --output outputs/fraud_scored_transactions.csv --model-out outputs/fraud_model.joblib --model-type hist_gradient_boosting --evaluation-mode time --test-size 0.25 --metrics-out outputs/train_metrics_report.csv`
-
-3. **Daily-style scoring**
-
-   `python score_daily.py --input fintech_fraud_data.csv --model outputs/fraud_model.joblib --output outputs/daily_scored_transactions.csv`
-
-4. **Benchmarks (no threshold leakage on test)**
-
-   `python benchmark_models.py --input fintech_fraud_data.csv --output outputs/model_benchmark_results.csv --topk-frac 0.05`
-
-5. **Shortcuts:** `.\run.ps1 -Task train`, `.\run.ps1 -Task infer -InputPath <csv>`, `.\run.ps1 -Task benchmark`
-
----
-
-## SQL workflow
-
-Ad hoc study queries: `sql quries/` on `project-43c16c81-2fd4-4871-8ac.payment_optimization.payments` (and `dim_fees` after `Dim_Fees.sql`). Reporting marts: [`sql/marts/`](sql/marts/).
-
----
-
-## Power BI (evidence layer)
-
-Screenshots are user-provided under `powerbi-screenshots/` (`01-executive-summary.png`, `02-retry-and-failures.png`, `03-fraud-risk-monitoring.png`). See `powerbi-screenshots/README.md`.
-
----
-
-## Architecture
-
-High-level diagram: [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
+## Analytics workflow
 
 ```mermaid
 flowchart LR
-    A[Payments Data] --> B[SQL + Python]
-    B --> C[Business Actions]
-    B --> D[Power BI Reporting]
-    C --> E[Retry Optimization]
-    C --> F[Fraud Review Prioritization]
+    A["Synthetic payment attempts"] --> B["SQL payment analysis"]
+    B --> C["Retry and opportunity metrics"]
+    D["Synthetic fraud transactions"] --> E["Chronological risk evaluation"]
+    E --> F["Capacity-limited review queue"]
+    C --> G["Power BI reporting tables"]
+    F --> G
+    G --> H["Business decisions"]
 ```
+
+### Payment analysis
+
+- SQL measures authorization performance, decline concentration, issuer patterns, and failed value.
+- Retry recovery is matched through payment-intent lineage (`TXN-123` → `TXN-123-RETRY`).
+- The decline-code dimension prevents hard declines such as suspected fraud from being counted as routine retry opportunities.
+
+### Fraud review analysis
+
+- Fraud prevalence is 5.19%, with fraud and legitimate transactions present in every entry mode and merchant category.
+- Evaluation uses a chronological 60% train / 20% calibration / 20% test design.
+- Power BI receives 2,000 test-period rows that were not used for model training or threshold calibration.
+- `risk_flag` selects the top 10% of each scored batch to represent a fixed manual-review capacity.
+
+The fraud component is intentionally small. This is an analytics project with a supporting ranking workflow—not an advanced machine-learning project.
+
+## Data organization
+
+| Folder | Purpose |
+| --- | --- |
+| `data/raw/` | Original synthetic payment snapshot and archived fraud seed |
+| `data/processed/` | Active fraud training dataset and generation report |
+| `data/reference/` | Decline-code definitions and retry policy |
+| `data/sql_exports/` | Checked-in outputs from the SQL analysis layer |
+| `outputs/` | Reproducible analytical and scoring outputs |
+| `powerbi-data/` | Stable, dashboard-compatible CSV contracts |
+| `deliverables/` | Recruiter-facing Excel and reporting artifacts |
+
+Payments and fraud are independent synthetic snapshots. They do not share a verified transaction or customer identity key and are intentionally not joined.
+
+See [`data/DATA_CARD.md`](data/DATA_CARD.md) and [`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md) for definitions and limitations.
+
+## Quick start
+
+### 1. Create the environment
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+```
+
+### 2. Rebuild the complete analysis
+
+```powershell
+.\run.ps1 -Task all
+```
+
+Individual tasks are also available:
+
+```powershell
+.\run.ps1 -Task train
+.\run.ps1 -Task infer
+.\run.ps1 -Task scenario
+.\run.ps1 -Task powerbi
+```
+
+### 3. Refresh Power BI
+
+Open `Payments_Optimization_Dashboard.pbix`, select **Home → Refresh**, and verify:
+
+- 51,237 payment attempts
+- 12.92% payment failure rate
+- 13.71% same-intent recovery
+- 2,000 fraud test rows with 200 review flags
+
+## Repository map
+
+| Path | Purpose |
+| --- | --- |
+| `sql/analysis/` | Exploratory BigQuery SQL |
+| `sql/marts/` | Reporting-ready SQL marts |
+| `scenario_simulator.py` | Same-intent retry and opportunity scenarios |
+| `fintech.py` | Small fraud-risk training and scoring workflow |
+| `prepare_powerbi_tables.py` | Stable Power BI export contracts |
+| `deliverables/Payments_Optimization_Excel_Analysis.xlsx` | Recruiter-facing Excel analysis and scenario model |
+| `Payments_Optimization_Dashboard.pbix` | Power BI report deliverable |
+| `tests/` | Data, methodology, and schema regression tests |
+| `docs/EXECUTIVE_SUMMARY.md` | Stakeholder-oriented result summary |
+| `docs/RESUME_BULLETS_VERIFIED.md` | Claims tied to current outputs |
+
+## Limitations
+
+- All transaction data is synthetic and enriched for analytical demonstration.
+- Opportunity amounts are scenarios, not measured revenue gains.
+- Fraud labels are modeled assumptions, not bank-confirmed outcomes.
+- Model performance is intentionally modest and should not be compared with production fraud systems.
+- A controlled experiment would be required before claiming approval-rate or recovery uplift.

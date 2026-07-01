@@ -1,0 +1,2001 @@
+transaction_id,transaction_time,amount,user_id,device_type,merchant_category,ip_country,entry_mode
+8001,2024-02-13 06:03:00,87,6268,mobile,Digital Goods,UK,Manual_Keyed
+8002,2024-02-13 06:03:00,53,6268,mobile,Digital Goods,CA,Manual_Keyed
+8003,2024-02-13 06:04:00,65,6268,mobile,Digital Goods,AU,Manual_Keyed
+8004,2024-02-13 06:05:00,76,6268,mobile,Digital Goods,AU,Manual_Keyed
+8005,2024-02-13 06:11:00,274,3076,mobile,Fashion,US,Chip
+8006,2024-02-13 06:19:00,32,6784,web,Electronics,US,Contactless
+8007,2024-02-13 06:33:00,140,6954,mobile,Grocery,CA,Contactless
+8008,2024-02-13 06:36:00,101,7313,mobile,Fashion,DE,Contactless
+8009,2024-02-13 06:43:00,229,2147,mobile,Electronics,US,Contactless
+8010,2024-02-13 06:44:00,79,5168,mobile,Digital Goods,UK,Manual_Keyed
+8011,2024-02-13 06:44:00,63,5168,mobile,Digital Goods,DE,Manual_Keyed
+8012,2024-02-13 06:45:00,87,5168,mobile,Digital Goods,CA,Manual_Keyed
+8013,2024-02-13 06:46:00,88,5168,mobile,Digital Goods,AU,Manual_Keyed
+8014,2024-02-13 06:46:00,67,1361,mobile,Digital Goods,AU,Manual_Keyed
+8015,2024-02-13 06:47:00,84,1361,mobile,Digital Goods,DE,Manual_Keyed
+8016,2024-02-13 06:47:00,73,1361,mobile,Digital Goods,DE,Manual_Keyed
+8017,2024-02-13 07:01:00,288,3739,mobile,Electronics,US,Manual_Keyed
+8018,2024-02-13 07:11:00,33,3002,web,Digital Goods,AU,Contactless
+8019,2024-02-13 07:20:00,343,5550,mobile,Fashion,UK,Manual_Keyed
+8020,2024-02-13 07:25:00,150,6997,web,Fashion,US,Contactless
+8021,2024-02-13 07:25:00,81,7077,mobile,Digital Goods,UK,Manual_Keyed
+8022,2024-02-13 07:26:00,63,7077,mobile,Digital Goods,AU,Manual_Keyed
+8023,2024-02-13 07:26:00,63,7077,mobile,Digital Goods,AU,Manual_Keyed
+8024,2024-02-13 07:27:00,72,7077,mobile,Digital Goods,CA,Manual_Keyed
+8025,2024-02-13 07:28:00,80,7077,mobile,Digital Goods,UK,Manual_Keyed
+8026,2024-02-13 07:28:00,51,7162,mobile,Digital Goods,DE,Manual_Keyed
+8027,2024-02-13 07:29:00,62,7162,mobile,Digital Goods,UK,Manual_Keyed
+8028,2024-02-13 07:29:00,77,7162,mobile,Digital Goods,AU,Manual_Keyed
+8029,2024-02-13 07:43:00,18,5383,web,Digital Goods,US,Manual_Keyed
+8030,2024-02-13 07:52:00,423,7726,mobile,Grocery,UK,Manual_Keyed
+8031,2024-02-13 08:00:00,263,3389,mobile,Electronics,US,Chip
+8032,2024-02-13 08:02:00,215,6241,web,Electronics,US,Contactless
+8033,2024-02-13 08:06:00,216,3077,mobile,Travel,AU,Manual_Keyed
+8034,2024-02-13 08:14:00,210,2285,web,Digital Goods,DE,Manual_Keyed
+8035,2024-02-13 08:15:00,63,2672,mobile,Digital Goods,DE,Manual_Keyed
+8036,2024-02-13 08:16:00,61,2672,mobile,Digital Goods,AU,Manual_Keyed
+8037,2024-02-13 08:16:00,86,2672,mobile,Digital Goods,CA,Manual_Keyed
+8038,2024-02-13 08:17:00,52,2672,mobile,Digital Goods,DE,Manual_Keyed
+8039,2024-02-13 08:18:00,67,6227,mobile,Digital Goods,CA,Manual_Keyed
+8040,2024-02-13 08:18:00,82,6227,mobile,Digital Goods,UK,Manual_Keyed
+8041,2024-02-13 08:19:00,71,6227,mobile,Digital Goods,AU,Manual_Keyed
+8042,2024-02-13 08:20:00,76,6227,mobile,Digital Goods,CA,Manual_Keyed
+8043,2024-02-13 08:20:00,57,6227,mobile,Digital Goods,CA,Manual_Keyed
+8044,2024-02-13 08:21:00,82,5467,mobile,Digital Goods,UK,Manual_Keyed
+8045,2024-02-13 08:21:00,71,5467,mobile,Digital Goods,DE,Manual_Keyed
+8046,2024-02-13 08:22:00,67,5467,mobile,Digital Goods,CA,Manual_Keyed
+8047,2024-02-13 08:23:00,77,5467,mobile,Digital Goods,UK,Manual_Keyed
+8048,2024-02-13 08:24:00,82,5467,mobile,Digital Goods,DE,Manual_Keyed
+8049,2024-02-13 08:24:00,74,5467,mobile,Digital Goods,DE,Manual_Keyed
+8050,2024-02-13 08:32:00,12,2201,mobile,Grocery,CA,Contactless
+8051,2024-02-13 08:39:00,183,3971,mobile,Digital Goods,US,Chip
+8052,2024-02-13 08:49:00,73,1878,mobile,Travel,US,Chip
+8053,2024-02-13 09:01:00,152,2101,tablet,Fashion,AU,Chip
+8054,2024-02-13 09:02:00,62,4039,mobile,Digital Goods,AU,Manual_Keyed
+8055,2024-02-13 09:02:00,57,4039,mobile,Digital Goods,UK,Manual_Keyed
+8056,2024-02-13 09:02:00,87,4039,mobile,Digital Goods,DE,Manual_Keyed
+8057,2024-02-13 09:03:00,73,4039,mobile,Digital Goods,DE,Manual_Keyed
+8058,2024-02-13 09:04:00,50,4039,mobile,Digital Goods,CA,Manual_Keyed
+8059,2024-02-13 09:04:00,81,4039,mobile,Digital Goods,DE,Manual_Keyed
+8060,2024-02-13 09:05:00,59,4669,mobile,Digital Goods,CA,Manual_Keyed
+8061,2024-02-13 09:05:00,63,4669,mobile,Digital Goods,CA,Manual_Keyed
+8062,2024-02-13 09:06:00,70,4669,mobile,Digital Goods,UK,Manual_Keyed
+8063,2024-02-13 09:07:00,55,2550,mobile,Digital Goods,CA,Manual_Keyed
+8064,2024-02-13 09:07:00,84,2550,mobile,Digital Goods,CA,Manual_Keyed
+8065,2024-02-13 09:08:00,69,2550,mobile,Digital Goods,DE,Manual_Keyed
+8066,2024-02-13 09:09:00,50,2550,mobile,Digital Goods,UK,Manual_Keyed
+8067,2024-02-13 09:17:00,172,4286,web,Electronics,AU,Chip
+8068,2024-02-13 09:24:00,342,2023,web,Travel,US,Chip
+8069,2024-02-13 09:36:00,189,3413,mobile,Grocery,CA,Contactless
+8070,2024-02-13 09:48:00,310,1105,mobile,Grocery,CA,Contactless
+8071,2024-02-13 09:48:00,60,7221,mobile,Digital Goods,UK,Manual_Keyed
+8072,2024-02-13 09:49:00,58,7221,mobile,Digital Goods,UK,Manual_Keyed
+8073,2024-02-13 09:50:00,72,7221,mobile,Digital Goods,AU,Manual_Keyed
+8074,2024-02-13 09:50:00,77,7221,mobile,Digital Goods,DE,Manual_Keyed
+8075,2024-02-13 09:51:00,78,7221,mobile,Digital Goods,UK,Manual_Keyed
+8076,2024-02-13 09:51:00,76,2766,mobile,Digital Goods,DE,Manual_Keyed
+8077,2024-02-13 09:51:00,55,2766,mobile,Digital Goods,DE,Manual_Keyed
+8078,2024-02-13 09:52:00,55,2766,mobile,Digital Goods,AU,Manual_Keyed
+8079,2024-02-13 09:52:00,85,2766,mobile,Digital Goods,UK,Manual_Keyed
+8080,2024-02-13 09:53:00,54,2766,mobile,Digital Goods,AU,Manual_Keyed
+8081,2024-02-13 09:54:00,77,2766,mobile,Digital Goods,AU,Manual_Keyed
+8082,2024-02-13 09:55:00,86,2766,mobile,Digital Goods,DE,Manual_Keyed
+8083,2024-02-13 09:55:00,50,4007,mobile,Digital Goods,DE,Manual_Keyed
+8084,2024-02-13 09:56:00,72,4007,mobile,Digital Goods,DE,Manual_Keyed
+8085,2024-02-13 09:57:00,89,4007,mobile,Digital Goods,AU,Manual_Keyed
+8086,2024-02-13 09:57:00,72,4007,mobile,Digital Goods,AU,Manual_Keyed
+8087,2024-02-13 10:02:00,340,4676,web,Digital Goods,AU,Contactless
+8088,2024-02-13 10:11:00,2804,6652,mobile,Travel,AU,Manual_Keyed
+8089,2024-02-13 10:13:00,93,5949,tablet,Fashion,US,Manual_Keyed
+8090,2024-02-13 10:18:00,60,1746,mobile,Digital Goods,UK,Contactless
+8091,2024-02-13 10:25:00,341,6319,mobile,Electronics,US,Contactless
+8092,2024-02-13 10:36:00,156,7277,mobile,Electronics,CA,Chip
+8093,2024-02-13 10:40:00,331,2280,mobile,Grocery,AU,Contactless
+8094,2024-02-13 10:41:00,54,3369,mobile,Digital Goods,CA,Manual_Keyed
+8095,2024-02-13 10:41:00,82,3369,mobile,Digital Goods,AU,Manual_Keyed
+8096,2024-02-13 10:42:00,50,3369,mobile,Digital Goods,CA,Manual_Keyed
+8097,2024-02-13 10:43:00,66,3369,mobile,Digital Goods,DE,Manual_Keyed
+8098,2024-02-13 10:53:00,303,2171,web,Grocery,DE,Contactless
+8099,2024-02-13 11:07:00,44,2795,mobile,Digital Goods,DE,Contactless
+8100,2024-02-13 11:07:00,57,6936,mobile,Digital Goods,DE,Manual_Keyed
+8101,2024-02-13 11:08:00,83,6936,mobile,Digital Goods,AU,Manual_Keyed
+8102,2024-02-13 11:08:00,79,6936,mobile,Digital Goods,AU,Manual_Keyed
+8103,2024-02-13 11:09:00,62,6936,mobile,Digital Goods,DE,Manual_Keyed
+8104,2024-02-13 11:09:00,60,6936,mobile,Digital Goods,CA,Manual_Keyed
+8105,2024-02-13 11:10:00,68,6936,mobile,Digital Goods,UK,Manual_Keyed
+8106,2024-02-13 11:14:00,432,2403,mobile,Electronics,CA,Chip
+8107,2024-02-13 11:26:00,230,7954,mobile,Digital Goods,UK,Chip
+8108,2024-02-13 11:38:00,19,2251,mobile,Electronics,US,Chip
+8109,2024-02-13 11:39:00,78,5145,mobile,Digital Goods,DE,Manual_Keyed
+8110,2024-02-13 11:39:00,73,5145,mobile,Digital Goods,UK,Manual_Keyed
+8111,2024-02-13 11:40:00,76,5145,mobile,Digital Goods,UK,Manual_Keyed
+8112,2024-02-13 11:40:00,66,5145,mobile,Digital Goods,CA,Manual_Keyed
+8113,2024-02-13 11:41:00,65,1884,mobile,Digital Goods,AU,Manual_Keyed
+8114,2024-02-13 11:41:00,76,1884,mobile,Digital Goods,UK,Manual_Keyed
+8115,2024-02-13 11:42:00,66,1884,mobile,Digital Goods,DE,Manual_Keyed
+8116,2024-02-13 11:43:00,64,1884,mobile,Digital Goods,AU,Manual_Keyed
+8117,2024-02-13 11:44:00,62,1884,mobile,Digital Goods,AU,Manual_Keyed
+8118,2024-02-13 11:51:00,264,7840,mobile,Electronics,US,Contactless
+8119,2024-02-13 12:01:00,453,2601,web,Electronics,UK,Manual_Keyed
+8120,2024-02-13 12:01:00,51,3242,mobile,Digital Goods,AU,Manual_Keyed
+8121,2024-02-13 12:02:00,61,3242,mobile,Digital Goods,UK,Manual_Keyed
+8122,2024-02-13 12:02:00,56,3242,mobile,Digital Goods,AU,Manual_Keyed
+8123,2024-02-13 12:12:00,358,4333,mobile,Fashion,US,Contactless
+8124,2024-02-13 12:24:00,24,2780,web,Travel,DE,Chip
+8125,2024-02-13 12:37:00,174,7885,web,Grocery,DE,Manual_Keyed
+8126,2024-02-13 12:45:00,41,6432,mobile,Fashion,CA,Contactless
+8127,2024-02-13 12:52:00,315,7273,tablet,Grocery,US,Chip
+8128,2024-02-13 12:52:00,84,6716,mobile,Digital Goods,AU,Manual_Keyed
+8129,2024-02-13 12:53:00,57,6716,mobile,Digital Goods,DE,Manual_Keyed
+8130,2024-02-13 12:54:00,79,6716,mobile,Digital Goods,DE,Manual_Keyed
+8131,2024-02-13 12:55:00,74,6716,mobile,Digital Goods,DE,Manual_Keyed
+8132,2024-02-13 12:55:00,84,6716,mobile,Digital Goods,AU,Manual_Keyed
+8133,2024-02-13 12:56:00,61,6716,mobile,Digital Goods,DE,Manual_Keyed
+8134,2024-02-13 12:57:00,55,6716,mobile,Digital Goods,DE,Manual_Keyed
+8135,2024-02-13 12:57:00,78,2023,mobile,Digital Goods,AU,Manual_Keyed
+8136,2024-02-13 12:57:00,73,2023,mobile,Digital Goods,UK,Manual_Keyed
+8137,2024-02-13 12:58:00,58,2023,mobile,Digital Goods,AU,Manual_Keyed
+8138,2024-02-13 12:59:00,60,2023,mobile,Digital Goods,UK,Manual_Keyed
+8139,2024-02-13 12:59:00,87,6850,mobile,Digital Goods,AU,Manual_Keyed
+8140,2024-02-13 13:00:00,50,6850,mobile,Digital Goods,DE,Manual_Keyed
+8141,2024-02-13 13:01:00,89,6850,mobile,Digital Goods,AU,Manual_Keyed
+8142,2024-02-13 13:02:00,83,6850,mobile,Digital Goods,UK,Manual_Keyed
+8143,2024-02-13 13:02:00,84,4527,mobile,Digital Goods,DE,Manual_Keyed
+8144,2024-02-13 13:03:00,60,4527,mobile,Digital Goods,AU,Manual_Keyed
+8145,2024-02-13 13:03:00,58,4527,mobile,Digital Goods,AU,Manual_Keyed
+8146,2024-02-13 13:04:00,78,4527,mobile,Digital Goods,UK,Manual_Keyed
+8147,2024-02-13 13:04:00,59,4527,mobile,Digital Goods,UK,Manual_Keyed
+8148,2024-02-13 13:05:00,61,4527,mobile,Digital Goods,AU,Manual_Keyed
+8149,2024-02-13 13:05:00,89,4527,mobile,Digital Goods,UK,Manual_Keyed
+8150,2024-02-13 13:06:00,52,2884,mobile,Digital Goods,UK,Manual_Keyed
+8151,2024-02-13 13:07:00,66,2884,mobile,Digital Goods,AU,Manual_Keyed
+8152,2024-02-13 13:07:00,78,2884,mobile,Digital Goods,AU,Manual_Keyed
+8153,2024-02-13 13:08:00,87,6160,mobile,Digital Goods,DE,Manual_Keyed
+8154,2024-02-13 13:09:00,78,6160,mobile,Digital Goods,DE,Manual_Keyed
+8155,2024-02-13 13:10:00,74,6160,mobile,Digital Goods,UK,Manual_Keyed
+8156,2024-02-13 13:10:00,57,6160,mobile,Digital Goods,AU,Manual_Keyed
+8157,2024-02-13 13:20:00,395,1087,mobile,Digital Goods,AU,Contactless
+8158,2024-02-13 13:31:00,112,3032,web,Grocery,AU,Contactless
+8159,2024-02-13 13:38:00,245,5591,web,Electronics,US,Contactless
+8160,2024-02-13 13:38:00,56,2668,mobile,Digital Goods,AU,Manual_Keyed
+8161,2024-02-13 13:39:00,74,2668,mobile,Digital Goods,UK,Manual_Keyed
+8162,2024-02-13 13:40:00,68,2668,mobile,Digital Goods,CA,Manual_Keyed
+8163,2024-02-13 13:40:00,85,2668,mobile,Digital Goods,DE,Manual_Keyed
+8164,2024-02-13 13:42:00,217,6065,web,Grocery,UK,Chip
+8165,2024-02-13 13:52:00,160,1762,mobile,Grocery,UK,Chip
+8166,2024-02-13 14:06:00,314,6790,web,Travel,DE,Contactless
+8167,2024-02-13 14:18:00,2854,5586,web,Travel,US,Manual_Keyed
+8168,2024-02-13 14:23:00,273,1285,mobile,Fashion,DE,Manual_Keyed
+8169,2024-02-13 14:33:00,472,4804,mobile,Travel,UK,Contactless
+8170,2024-02-13 14:41:00,362,5205,web,Digital Goods,UK,Contactless
+8171,2024-02-13 14:56:00,491,4634,mobile,Grocery,DE,Contactless
+8172,2024-02-13 14:57:00,55,3388,mobile,Digital Goods,UK,Manual_Keyed
+8173,2024-02-13 14:58:00,69,3388,mobile,Digital Goods,CA,Manual_Keyed
+8174,2024-02-13 14:58:00,65,3388,mobile,Digital Goods,DE,Manual_Keyed
+8175,2024-02-13 14:59:00,78,3388,mobile,Digital Goods,CA,Manual_Keyed
+8176,2024-02-13 14:59:00,88,7184,mobile,Digital Goods,DE,Manual_Keyed
+8177,2024-02-13 15:00:00,73,7184,mobile,Digital Goods,DE,Manual_Keyed
+8178,2024-02-13 15:00:00,57,7184,mobile,Digital Goods,DE,Manual_Keyed
+8179,2024-02-13 15:01:00,84,7184,mobile,Digital Goods,DE,Manual_Keyed
+8180,2024-02-13 15:01:00,83,7184,mobile,Digital Goods,UK,Manual_Keyed
+8181,2024-02-13 15:02:00,61,7184,mobile,Digital Goods,CA,Manual_Keyed
+8182,2024-02-13 15:10:00,273,1026,web,Fashion,US,Contactless
+8183,2024-02-13 15:19:00,35,3658,mobile,Fashion,DE,Contactless
+8184,2024-02-13 15:22:00,489,2477,tablet,Grocery,US,Contactless
+8185,2024-02-13 15:25:00,2162,1807,mobile,Travel,US,Manual_Keyed
+8186,2024-02-13 15:26:00,73,6618,mobile,Digital Goods,CA,Manual_Keyed
+8187,2024-02-13 15:27:00,50,6618,mobile,Digital Goods,AU,Manual_Keyed
+8188,2024-02-13 15:28:00,74,6618,mobile,Digital Goods,DE,Manual_Keyed
+8189,2024-02-13 15:29:00,72,6618,mobile,Digital Goods,UK,Manual_Keyed
+8190,2024-02-13 15:29:00,59,6618,mobile,Digital Goods,AU,Manual_Keyed
+8191,2024-02-13 15:30:00,78,6618,mobile,Digital Goods,UK,Manual_Keyed
+8192,2024-02-13 15:36:00,236,1064,mobile,Travel,DE,Contactless
+8193,2024-02-13 15:38:00,112,2552,web,Grocery,US,Chip
+8194,2024-02-13 15:38:00,85,1886,mobile,Digital Goods,DE,Manual_Keyed
+8195,2024-02-13 15:38:00,59,1886,mobile,Digital Goods,UK,Manual_Keyed
+8196,2024-02-13 15:39:00,52,1886,mobile,Digital Goods,DE,Manual_Keyed
+8197,2024-02-13 15:43:00,451,5166,tablet,Grocery,DE,Chip
+8198,2024-02-13 15:48:00,169,2235,web,Digital Goods,AU,Chip
+8199,2024-02-13 16:01:00,136,7351,web,Electronics,UK,Chip
+8200,2024-02-13 16:01:00,58,1355,mobile,Digital Goods,CA,Manual_Keyed
+8201,2024-02-13 16:02:00,74,1355,mobile,Digital Goods,UK,Manual_Keyed
+8202,2024-02-13 16:03:00,71,1355,mobile,Digital Goods,UK,Manual_Keyed
+8203,2024-02-13 16:04:00,69,1355,mobile,Digital Goods,UK,Manual_Keyed
+8204,2024-02-13 16:05:00,66,1355,mobile,Digital Goods,AU,Manual_Keyed
+8205,2024-02-13 16:05:00,80,1355,mobile,Digital Goods,UK,Manual_Keyed
+8206,2024-02-13 16:18:00,321,5766,web,Grocery,US,Chip
+8207,2024-02-13 16:26:00,318,3040,web,Digital Goods,US,Chip
+8208,2024-02-13 16:26:00,57,6077,mobile,Digital Goods,CA,Manual_Keyed
+8209,2024-02-13 16:27:00,87,6077,mobile,Digital Goods,DE,Manual_Keyed
+8210,2024-02-13 16:27:00,69,6077,mobile,Digital Goods,UK,Manual_Keyed
+8211,2024-02-13 16:27:00,59,6077,mobile,Digital Goods,UK,Manual_Keyed
+8212,2024-02-13 16:35:00,127,6643,mobile,Fashion,UK,Chip
+8213,2024-02-13 16:45:00,371,3720,tablet,Grocery,CA,Contactless
+8214,2024-02-13 16:46:00,68,7912,mobile,Digital Goods,CA,Manual_Keyed
+8215,2024-02-13 16:47:00,56,7912,mobile,Digital Goods,CA,Manual_Keyed
+8216,2024-02-13 16:47:00,62,7912,mobile,Digital Goods,AU,Manual_Keyed
+8217,2024-02-13 16:47:00,85,7912,mobile,Digital Goods,UK,Manual_Keyed
+8218,2024-02-13 16:48:00,88,7912,mobile,Digital Goods,UK,Manual_Keyed
+8219,2024-02-13 16:48:00,51,5771,mobile,Digital Goods,AU,Manual_Keyed
+8220,2024-02-13 16:49:00,52,5771,mobile,Digital Goods,CA,Manual_Keyed
+8221,2024-02-13 16:49:00,68,5771,mobile,Digital Goods,CA,Manual_Keyed
+8222,2024-02-13 16:50:00,86,5771,mobile,Digital Goods,CA,Manual_Keyed
+8223,2024-02-13 16:51:00,75,5771,mobile,Digital Goods,AU,Manual_Keyed
+8224,2024-02-13 17:01:00,223,7005,mobile,Electronics,AU,Contactless
+8225,2024-02-13 17:15:00,75,2755,mobile,Digital Goods,UK,Chip
+8226,2024-02-13 17:25:00,322,2480,web,Grocery,US,Contactless
+8227,2024-02-13 17:28:00,49,4248,mobile,Grocery,US,Contactless
+8228,2024-02-13 17:28:00,50,7017,mobile,Digital Goods,AU,Manual_Keyed
+8229,2024-02-13 17:29:00,67,7017,mobile,Digital Goods,DE,Manual_Keyed
+8230,2024-02-13 17:29:00,56,7017,mobile,Digital Goods,AU,Manual_Keyed
+8231,2024-02-13 17:30:00,83,7017,mobile,Digital Goods,DE,Manual_Keyed
+8232,2024-02-13 17:31:00,58,7017,mobile,Digital Goods,DE,Manual_Keyed
+8233,2024-02-13 17:37:00,238,7656,mobile,Digital Goods,US,Manual_Keyed
+8234,2024-02-13 17:50:00,114,6249,mobile,Electronics,US,Chip
+8235,2024-02-13 17:51:00,78,2132,mobile,Digital Goods,DE,Manual_Keyed
+8236,2024-02-13 17:51:00,88,2132,mobile,Digital Goods,AU,Manual_Keyed
+8237,2024-02-13 17:51:00,76,2132,mobile,Digital Goods,UK,Manual_Keyed
+8238,2024-02-13 17:52:00,66,2132,mobile,Digital Goods,AU,Manual_Keyed
+8239,2024-02-13 17:52:00,78,7044,mobile,Digital Goods,CA,Manual_Keyed
+8240,2024-02-13 17:52:00,85,7044,mobile,Digital Goods,CA,Manual_Keyed
+8241,2024-02-13 17:53:00,76,7044,mobile,Digital Goods,DE,Manual_Keyed
+8242,2024-02-13 17:53:00,87,7044,mobile,Digital Goods,UK,Manual_Keyed
+8243,2024-02-13 17:54:00,67,5286,mobile,Digital Goods,UK,Manual_Keyed
+8244,2024-02-13 17:54:00,54,5286,mobile,Digital Goods,UK,Manual_Keyed
+8245,2024-02-13 17:54:00,85,5286,mobile,Digital Goods,DE,Manual_Keyed
+8246,2024-02-13 17:55:00,78,5286,mobile,Digital Goods,AU,Manual_Keyed
+8247,2024-02-13 17:55:00,76,5286,mobile,Digital Goods,UK,Manual_Keyed
+8248,2024-02-13 17:56:00,74,5286,mobile,Digital Goods,AU,Manual_Keyed
+8249,2024-02-13 17:56:00,86,5286,mobile,Digital Goods,AU,Manual_Keyed
+8250,2024-02-13 18:10:00,386,4118,web,Travel,UK,Chip
+8251,2024-02-13 18:13:00,101,1175,mobile,Fashion,US,Contactless
+8252,2024-02-13 18:13:00,68,1691,mobile,Digital Goods,CA,Manual_Keyed
+8253,2024-02-13 18:14:00,66,1691,mobile,Digital Goods,CA,Manual_Keyed
+8254,2024-02-13 18:14:00,72,1691,mobile,Digital Goods,UK,Manual_Keyed
+8255,2024-02-13 18:14:00,87,1691,mobile,Digital Goods,UK,Manual_Keyed
+8256,2024-02-13 18:15:00,70,7080,mobile,Digital Goods,CA,Manual_Keyed
+8257,2024-02-13 18:16:00,75,7080,mobile,Digital Goods,AU,Manual_Keyed
+8258,2024-02-13 18:16:00,83,7080,mobile,Digital Goods,UK,Manual_Keyed
+8259,2024-02-13 18:17:00,57,7080,mobile,Digital Goods,DE,Manual_Keyed
+8260,2024-02-13 18:17:00,61,7080,mobile,Digital Goods,DE,Manual_Keyed
+8261,2024-02-13 18:18:00,78,7080,mobile,Digital Goods,AU,Manual_Keyed
+8262,2024-02-13 18:19:00,52,7080,mobile,Digital Goods,AU,Manual_Keyed
+8263,2024-02-13 18:22:00,105,5962,tablet,Grocery,CA,Contactless
+8264,2024-02-13 18:31:00,144,5141,mobile,Electronics,UK,Contactless
+8265,2024-02-13 18:31:00,86,6948,mobile,Digital Goods,CA,Manual_Keyed
+8266,2024-02-13 18:31:00,77,6948,mobile,Digital Goods,CA,Manual_Keyed
+8267,2024-02-13 18:32:00,56,6948,mobile,Digital Goods,CA,Manual_Keyed
+8268,2024-02-13 18:32:00,73,6948,mobile,Digital Goods,CA,Manual_Keyed
+8269,2024-02-13 18:33:00,61,6948,mobile,Digital Goods,CA,Manual_Keyed
+8270,2024-02-13 18:34:00,79,6948,mobile,Digital Goods,AU,Manual_Keyed
+8271,2024-02-13 18:41:00,334,4542,mobile,Fashion,US,Chip
+8272,2024-02-13 18:51:00,72,2752,mobile,Digital Goods,US,Manual_Keyed
+8273,2024-02-13 19:01:00,445,4591,mobile,Fashion,DE,Chip
+8274,2024-02-13 19:02:00,87,3793,mobile,Digital Goods,UK,Manual_Keyed
+8275,2024-02-13 19:03:00,83,3793,mobile,Digital Goods,UK,Manual_Keyed
+8276,2024-02-13 19:04:00,62,3793,mobile,Digital Goods,DE,Manual_Keyed
+8277,2024-02-13 19:04:00,75,3793,mobile,Digital Goods,UK,Manual_Keyed
+8278,2024-02-13 19:05:00,61,3793,mobile,Digital Goods,CA,Manual_Keyed
+8279,2024-02-13 19:14:00,64,2213,mobile,Electronics,UK,Manual_Keyed
+8280,2024-02-13 19:29:00,172,7198,mobile,Grocery,UK,Contactless
+8281,2024-02-13 19:30:00,51,3882,mobile,Digital Goods,DE,Manual_Keyed
+8282,2024-02-13 19:30:00,78,3882,mobile,Digital Goods,CA,Manual_Keyed
+8283,2024-02-13 19:31:00,61,3882,mobile,Digital Goods,AU,Manual_Keyed
+8284,2024-02-13 19:32:00,63,3882,mobile,Digital Goods,CA,Manual_Keyed
+8285,2024-02-13 19:32:00,72,3882,mobile,Digital Goods,CA,Manual_Keyed
+8286,2024-02-13 19:32:00,72,3882,mobile,Digital Goods,UK,Manual_Keyed
+8287,2024-02-13 19:33:00,89,3882,mobile,Digital Goods,CA,Manual_Keyed
+8288,2024-02-13 19:37:00,802,4003,mobile,Travel,CA,Manual_Keyed
+8289,2024-02-13 19:42:00,408,2418,web,Grocery,DE,Chip
+8290,2024-02-13 19:52:00,367,6852,tablet,Fashion,CA,Contactless
+8291,2024-02-13 20:03:00,70,4268,mobile,Grocery,US,Chip
+8292,2024-02-13 20:03:00,64,7797,mobile,Digital Goods,CA,Manual_Keyed
+8293,2024-02-13 20:04:00,76,7797,mobile,Digital Goods,CA,Manual_Keyed
+8294,2024-02-13 20:05:00,71,7797,mobile,Digital Goods,CA,Manual_Keyed
+8295,2024-02-13 20:05:00,58,7797,mobile,Digital Goods,AU,Manual_Keyed
+8296,2024-02-13 20:06:00,72,7797,mobile,Digital Goods,DE,Manual_Keyed
+8297,2024-02-13 20:07:00,87,7797,mobile,Digital Goods,CA,Manual_Keyed
+8298,2024-02-13 20:19:00,445,3794,mobile,Travel,US,Chip
+8299,2024-02-13 20:20:00,71,6485,mobile,Digital Goods,AU,Manual_Keyed
+8300,2024-02-13 20:20:00,62,6485,mobile,Digital Goods,AU,Manual_Keyed
+8301,2024-02-13 20:21:00,76,6485,mobile,Digital Goods,CA,Manual_Keyed
+8302,2024-02-13 20:22:00,68,6485,mobile,Digital Goods,AU,Manual_Keyed
+8303,2024-02-13 20:30:00,322,5889,mobile,Fashion,US,Contactless
+8304,2024-02-13 20:41:00,152,2824,mobile,Travel,US,Chip
+8305,2024-02-13 20:53:00,480,3118,mobile,Fashion,AU,Contactless
+8306,2024-02-13 21:07:00,85,1062,web,Grocery,UK,Manual_Keyed
+8307,2024-02-13 21:16:00,159,7841,mobile,Travel,CA,Chip
+8308,2024-02-13 21:19:00,40,4880,mobile,Travel,US,Contactless
+8309,2024-02-13 21:20:00,80,3437,mobile,Digital Goods,UK,Manual_Keyed
+8310,2024-02-13 21:21:00,77,3437,mobile,Digital Goods,CA,Manual_Keyed
+8311,2024-02-13 21:22:00,87,3437,mobile,Digital Goods,AU,Manual_Keyed
+8312,2024-02-13 21:22:00,63,3437,mobile,Digital Goods,UK,Manual_Keyed
+8313,2024-02-13 21:23:00,71,5131,mobile,Digital Goods,AU,Manual_Keyed
+8314,2024-02-13 21:24:00,88,5131,mobile,Digital Goods,CA,Manual_Keyed
+8315,2024-02-13 21:24:00,71,5131,mobile,Digital Goods,CA,Manual_Keyed
+8316,2024-02-13 21:25:00,70,5131,mobile,Digital Goods,UK,Manual_Keyed
+8317,2024-02-13 21:25:00,50,5131,mobile,Digital Goods,UK,Manual_Keyed
+8318,2024-02-13 21:36:00,297,7674,mobile,Grocery,UK,Chip
+8319,2024-02-13 21:48:00,484,5005,mobile,Electronics,CA,Contactless
+8320,2024-02-13 21:58:00,375,2966,mobile,Electronics,US,Chip
+8321,2024-02-13 22:04:00,11,7819,tablet,Travel,US,Chip
+8322,2024-02-13 22:18:00,142,2293,mobile,Grocery,CA,Chip
+8323,2024-02-13 22:25:00,73,4580,mobile,Travel,US,Chip
+8324,2024-02-13 22:31:00,108,4570,mobile,Electronics,US,Chip
+8325,2024-02-13 22:41:00,45,1097,web,Electronics,DE,Chip
+8326,2024-02-13 22:48:00,158,5945,web,Digital Goods,DE,Chip
+8327,2024-02-13 22:49:00,64,7679,mobile,Digital Goods,CA,Manual_Keyed
+8328,2024-02-13 22:49:00,72,7679,mobile,Digital Goods,UK,Manual_Keyed
+8329,2024-02-13 22:50:00,88,7679,mobile,Digital Goods,AU,Manual_Keyed
+8330,2024-02-13 23:02:00,132,4147,web,Digital Goods,AU,Contactless
+8331,2024-02-13 23:07:00,451,2187,mobile,Fashion,DE,Contactless
+8332,2024-02-13 23:21:00,487,2738,web,Grocery,AU,Chip
+8333,2024-02-13 23:24:00,466,5115,tablet,Digital Goods,US,Chip
+8334,2024-02-13 23:37:00,15,1623,mobile,Travel,AU,Contactless
+8335,2024-02-13 23:38:00,62,2871,mobile,Digital Goods,DE,Manual_Keyed
+8336,2024-02-13 23:39:00,79,2871,mobile,Digital Goods,CA,Manual_Keyed
+8337,2024-02-13 23:39:00,57,2871,mobile,Digital Goods,CA,Manual_Keyed
+8338,2024-02-13 23:40:00,80,2871,mobile,Digital Goods,UK,Manual_Keyed
+8339,2024-02-13 23:40:00,72,2871,mobile,Digital Goods,DE,Manual_Keyed
+8340,2024-02-13 23:41:00,81,2871,mobile,Digital Goods,AU,Manual_Keyed
+8341,2024-02-13 23:54:00,255,1692,mobile,Travel,AU,Chip
+8342,2024-02-13 23:58:00,405,4576,mobile,Grocery,US,Contactless
+8343,2024-02-14 00:13:00,447,1514,mobile,Digital Goods,US,Chip
+8344,2024-02-14 00:21:00,234,1886,tablet,Electronics,US,Manual_Keyed
+8345,2024-02-14 00:33:00,117,1968,mobile,Grocery,UK,Manual_Keyed
+8346,2024-02-14 00:45:00,204,2845,web,Travel,CA,Contactless
+8347,2024-02-14 00:47:00,125,3141,tablet,Grocery,US,Contactless
+8348,2024-02-14 00:58:00,385,4098,web,Fashion,US,Chip
+8349,2024-02-14 01:06:00,52,5460,mobile,Fashion,US,Chip
+8350,2024-02-14 01:06:00,68,2009,mobile,Digital Goods,AU,Manual_Keyed
+8351,2024-02-14 01:07:00,83,2009,mobile,Digital Goods,UK,Manual_Keyed
+8352,2024-02-14 01:08:00,68,2009,mobile,Digital Goods,AU,Manual_Keyed
+8353,2024-02-14 01:23:00,63,2817,mobile,Electronics,US,Chip
+8354,2024-02-14 01:23:00,66,5957,mobile,Digital Goods,AU,Manual_Keyed
+8355,2024-02-14 01:24:00,67,5957,mobile,Digital Goods,AU,Manual_Keyed
+8356,2024-02-14 01:25:00,59,5957,mobile,Digital Goods,DE,Manual_Keyed
+8357,2024-02-14 01:25:00,85,5957,mobile,Digital Goods,UK,Manual_Keyed
+8358,2024-02-14 01:26:00,65,5957,mobile,Digital Goods,DE,Manual_Keyed
+8359,2024-02-14 01:27:00,83,5957,mobile,Digital Goods,AU,Manual_Keyed
+8360,2024-02-14 01:27:00,59,5957,mobile,Digital Goods,UK,Manual_Keyed
+8361,2024-02-14 01:34:00,337,7779,mobile,Digital Goods,US,Contactless
+8362,2024-02-14 01:37:00,433,3768,mobile,Travel,CA,Contactless
+8363,2024-02-14 01:43:00,215,3566,mobile,Fashion,US,Contactless
+8364,2024-02-14 01:44:00,88,5208,mobile,Digital Goods,CA,Manual_Keyed
+8365,2024-02-14 01:44:00,88,5208,mobile,Digital Goods,DE,Manual_Keyed
+8366,2024-02-14 01:45:00,87,5208,mobile,Digital Goods,CA,Manual_Keyed
+8367,2024-02-14 01:50:00,156,1766,mobile,Electronics,DE,Chip
+8368,2024-02-14 02:02:00,490,1777,mobile,Fashion,DE,Chip
+8369,2024-02-14 02:11:00,320,5712,web,Digital Goods,CA,Chip
+8370,2024-02-14 02:12:00,55,7010,mobile,Digital Goods,CA,Manual_Keyed
+8371,2024-02-14 02:12:00,88,7010,mobile,Digital Goods,CA,Manual_Keyed
+8372,2024-02-14 02:13:00,69,7010,mobile,Digital Goods,AU,Manual_Keyed
+8373,2024-02-14 02:13:00,78,7010,mobile,Digital Goods,DE,Manual_Keyed
+8374,2024-02-14 02:14:00,65,7010,mobile,Digital Goods,UK,Manual_Keyed
+8375,2024-02-14 02:14:00,51,7010,mobile,Digital Goods,DE,Manual_Keyed
+8376,2024-02-14 02:15:00,89,7010,mobile,Digital Goods,CA,Manual_Keyed
+8377,2024-02-14 02:15:00,84,2902,mobile,Digital Goods,CA,Manual_Keyed
+8378,2024-02-14 02:16:00,85,2902,mobile,Digital Goods,AU,Manual_Keyed
+8379,2024-02-14 02:16:00,69,2902,mobile,Digital Goods,AU,Manual_Keyed
+8380,2024-02-14 02:17:00,88,2902,mobile,Digital Goods,DE,Manual_Keyed
+8381,2024-02-14 02:18:00,54,2902,mobile,Digital Goods,CA,Manual_Keyed
+8382,2024-02-14 02:27:00,219,6710,web,Electronics,AU,Contactless
+8383,2024-02-14 02:39:00,256,3559,mobile,Travel,CA,Chip
+8384,2024-02-14 02:47:00,263,7941,mobile,Travel,US,Contactless
+8385,2024-02-14 02:50:00,163,7694,web,Fashion,AU,Chip
+8386,2024-02-14 02:53:00,327,5625,web,Digital Goods,AU,Chip
+8387,2024-02-14 02:57:00,140,7441,mobile,Grocery,AU,Contactless
+8388,2024-02-14 03:01:00,126,5339,mobile,Electronics,CA,Contactless
+8389,2024-02-14 03:15:00,413,2885,web,Grocery,AU,Contactless
+8390,2024-02-14 03:30:00,264,2435,mobile,Grocery,AU,Chip
+8391,2024-02-14 03:44:00,434,4580,tablet,Fashion,AU,Manual_Keyed
+8392,2024-02-14 03:48:00,382,2099,tablet,Travel,CA,Contactless
+8393,2024-02-14 04:00:00,274,5509,web,Travel,CA,Contactless
+8394,2024-02-14 04:09:00,432,3217,web,Grocery,UK,Chip
+8395,2024-02-14 04:09:00,73,6110,mobile,Digital Goods,UK,Manual_Keyed
+8396,2024-02-14 04:10:00,69,6110,mobile,Digital Goods,DE,Manual_Keyed
+8397,2024-02-14 04:11:00,85,6110,mobile,Digital Goods,DE,Manual_Keyed
+8398,2024-02-14 04:11:00,84,6110,mobile,Digital Goods,CA,Manual_Keyed
+8399,2024-02-14 04:12:00,67,3870,mobile,Digital Goods,CA,Manual_Keyed
+8400,2024-02-14 04:12:00,66,3870,mobile,Digital Goods,CA,Manual_Keyed
+8401,2024-02-14 04:13:00,56,3870,mobile,Digital Goods,AU,Manual_Keyed
+8402,2024-02-14 04:13:00,86,3870,mobile,Digital Goods,UK,Manual_Keyed
+8403,2024-02-14 04:17:00,52,4834,web,Electronics,DE,Contactless
+8404,2024-02-14 04:18:00,59,7523,mobile,Digital Goods,AU,Manual_Keyed
+8405,2024-02-14 04:19:00,59,7523,mobile,Digital Goods,UK,Manual_Keyed
+8406,2024-02-14 04:19:00,55,7523,mobile,Digital Goods,DE,Manual_Keyed
+8407,2024-02-14 04:20:00,72,7523,mobile,Digital Goods,CA,Manual_Keyed
+8408,2024-02-14 04:20:00,50,7523,mobile,Digital Goods,CA,Manual_Keyed
+8409,2024-02-14 04:21:00,77,7523,mobile,Digital Goods,UK,Manual_Keyed
+8410,2024-02-14 04:26:00,232,5958,web,Fashion,DE,Manual_Keyed
+8411,2024-02-14 04:27:00,53,3669,mobile,Digital Goods,AU,Manual_Keyed
+8412,2024-02-14 04:28:00,67,3669,mobile,Digital Goods,UK,Manual_Keyed
+8413,2024-02-14 04:28:00,55,3669,mobile,Digital Goods,DE,Manual_Keyed
+8414,2024-02-14 04:41:00,477,6528,mobile,Travel,US,Contactless
+8415,2024-02-14 04:54:00,43,4842,web,Grocery,DE,Contactless
+8416,2024-02-14 04:59:00,334,3881,mobile,Grocery,UK,Contactless
+8417,2024-02-14 05:09:00,442,4964,mobile,Digital Goods,US,Manual_Keyed
+8418,2024-02-14 05:13:00,100,2946,tablet,Digital Goods,DE,Contactless
+8419,2024-02-14 05:17:00,292,5224,mobile,Electronics,US,Contactless
+8420,2024-02-14 05:30:00,136,7719,tablet,Travel,UK,Contactless
+8421,2024-02-14 05:36:00,272,3849,mobile,Travel,DE,Contactless
+8422,2024-02-14 05:46:00,272,4411,mobile,Electronics,US,Chip
+8423,2024-02-14 05:47:00,59,3960,mobile,Digital Goods,DE,Manual_Keyed
+8424,2024-02-14 05:47:00,87,3960,mobile,Digital Goods,CA,Manual_Keyed
+8425,2024-02-14 05:48:00,78,3960,mobile,Digital Goods,AU,Manual_Keyed
+8426,2024-02-14 05:49:00,78,3960,mobile,Digital Goods,UK,Manual_Keyed
+8427,2024-02-14 05:49:00,60,3960,mobile,Digital Goods,UK,Manual_Keyed
+8428,2024-02-14 05:53:00,312,1916,web,Grocery,US,Chip
+8429,2024-02-14 05:56:00,137,6811,mobile,Grocery,US,Manual_Keyed
+8430,2024-02-14 06:06:00,455,2596,mobile,Fashion,US,Chip
+8431,2024-02-14 06:07:00,80,6562,mobile,Digital Goods,DE,Manual_Keyed
+8432,2024-02-14 06:07:00,69,6562,mobile,Digital Goods,AU,Manual_Keyed
+8433,2024-02-14 06:08:00,82,6562,mobile,Digital Goods,DE,Manual_Keyed
+8434,2024-02-14 06:08:00,51,6562,mobile,Digital Goods,AU,Manual_Keyed
+8435,2024-02-14 06:12:00,31,2386,mobile,Travel,US,Contactless
+8436,2024-02-14 06:13:00,53,3098,mobile,Digital Goods,AU,Manual_Keyed
+8437,2024-02-14 06:13:00,50,3098,mobile,Digital Goods,CA,Manual_Keyed
+8438,2024-02-14 06:14:00,60,3098,mobile,Digital Goods,AU,Manual_Keyed
+8439,2024-02-14 06:27:00,315,5977,mobile,Electronics,US,Contactless
+8440,2024-02-14 06:35:00,262,4208,mobile,Electronics,UK,Chip
+8441,2024-02-14 06:45:00,23,7843,web,Electronics,US,Manual_Keyed
+8442,2024-02-14 06:50:00,179,4015,tablet,Fashion,US,Contactless
+8443,2024-02-14 06:56:00,137,4171,mobile,Grocery,US,Chip
+8444,2024-02-14 07:00:00,299,2299,web,Digital Goods,US,Contactless
+8445,2024-02-14 07:10:00,238,5218,mobile,Grocery,US,Chip
+8446,2024-02-14 07:11:00,86,7815,mobile,Digital Goods,CA,Manual_Keyed
+8447,2024-02-14 07:11:00,75,7815,mobile,Digital Goods,UK,Manual_Keyed
+8448,2024-02-14 07:12:00,85,7815,mobile,Digital Goods,DE,Manual_Keyed
+8449,2024-02-14 07:13:00,77,7815,mobile,Digital Goods,DE,Manual_Keyed
+8450,2024-02-14 07:14:00,79,7815,mobile,Digital Goods,UK,Manual_Keyed
+8451,2024-02-14 07:15:00,87,7815,mobile,Digital Goods,AU,Manual_Keyed
+8452,2024-02-14 07:16:00,75,7815,mobile,Digital Goods,CA,Manual_Keyed
+8453,2024-02-14 07:24:00,284,6115,web,Fashion,DE,Contactless
+8454,2024-02-14 07:32:00,420,6758,web,Travel,DE,Manual_Keyed
+8455,2024-02-14 07:37:00,2928,5534,mobile,Travel,CA,Manual_Keyed
+8456,2024-02-14 07:37:00,70,7265,mobile,Digital Goods,AU,Manual_Keyed
+8457,2024-02-14 07:38:00,50,7265,mobile,Digital Goods,UK,Manual_Keyed
+8458,2024-02-14 07:38:00,67,7265,mobile,Digital Goods,CA,Manual_Keyed
+8459,2024-02-14 07:47:00,403,3542,tablet,Digital Goods,UK,Chip
+8460,2024-02-14 07:49:00,122,1105,web,Grocery,US,Contactless
+8461,2024-02-14 08:04:00,195,2597,tablet,Digital Goods,UK,Chip
+8462,2024-02-14 08:14:00,251,4455,web,Fashion,US,Contactless
+8463,2024-02-14 08:27:00,483,7098,web,Fashion,US,Chip
+8464,2024-02-14 08:31:00,1165,2452,mobile,Travel,UK,Manual_Keyed
+8465,2024-02-14 08:42:00,87,1098,mobile,Grocery,US,Contactless
+8466,2024-02-14 08:43:00,51,6576,mobile,Digital Goods,CA,Manual_Keyed
+8467,2024-02-14 08:44:00,50,6576,mobile,Digital Goods,UK,Manual_Keyed
+8468,2024-02-14 08:45:00,67,6576,mobile,Digital Goods,UK,Manual_Keyed
+8469,2024-02-14 08:45:00,59,6576,mobile,Digital Goods,UK,Manual_Keyed
+8470,2024-02-14 08:46:00,56,6576,mobile,Digital Goods,DE,Manual_Keyed
+8471,2024-02-14 08:56:00,485,4336,tablet,Electronics,US,Chip
+8472,2024-02-14 09:06:00,376,5780,mobile,Travel,AU,Contactless
+8473,2024-02-14 09:18:00,83,7314,web,Electronics,DE,Contactless
+8474,2024-02-14 09:18:00,87,1644,mobile,Digital Goods,UK,Manual_Keyed
+8475,2024-02-14 09:19:00,73,1644,mobile,Digital Goods,UK,Manual_Keyed
+8476,2024-02-14 09:20:00,66,1644,mobile,Digital Goods,DE,Manual_Keyed
+8477,2024-02-14 09:21:00,64,1644,mobile,Digital Goods,UK,Manual_Keyed
+8478,2024-02-14 09:21:00,71,1644,mobile,Digital Goods,DE,Manual_Keyed
+8479,2024-02-14 09:21:00,86,1644,mobile,Digital Goods,AU,Manual_Keyed
+8480,2024-02-14 09:34:00,46,4326,mobile,Electronics,US,Chip
+8481,2024-02-14 09:42:00,118,3480,mobile,Grocery,UK,Chip
+8482,2024-02-14 09:50:00,135,3383,web,Digital Goods,CA,Contactless
+8483,2024-02-14 09:55:00,628,1318,web,Travel,US,Manual_Keyed
+8484,2024-02-14 10:06:00,217,4880,mobile,Digital Goods,AU,Contactless
+8485,2024-02-14 10:18:00,162,5714,web,Travel,US,Chip
+8486,2024-02-14 10:19:00,68,7131,mobile,Digital Goods,AU,Manual_Keyed
+8487,2024-02-14 10:19:00,84,7131,mobile,Digital Goods,AU,Manual_Keyed
+8488,2024-02-14 10:20:00,83,7131,mobile,Digital Goods,AU,Manual_Keyed
+8489,2024-02-14 10:21:00,81,7131,mobile,Digital Goods,UK,Manual_Keyed
+8490,2024-02-14 10:30:00,60,4786,tablet,Travel,DE,Contactless
+8491,2024-02-14 10:38:00,270,7544,web,Grocery,US,Contactless
+8492,2024-02-14 10:44:00,81,6801,web,Grocery,US,Chip
+8493,2024-02-14 10:46:00,301,4527,web,Grocery,CA,Chip
+8494,2024-02-14 10:57:00,1251,2798,web,Travel,UK,Manual_Keyed
+8495,2024-02-14 10:57:00,54,4889,mobile,Digital Goods,AU,Manual_Keyed
+8496,2024-02-14 10:58:00,75,4889,mobile,Digital Goods,DE,Manual_Keyed
+8497,2024-02-14 10:59:00,80,4889,mobile,Digital Goods,DE,Manual_Keyed
+8498,2024-02-14 10:59:00,84,4889,mobile,Digital Goods,CA,Manual_Keyed
+8499,2024-02-14 11:07:00,42,7181,mobile,Travel,US,Manual_Keyed
+8500,2024-02-14 11:08:00,84,6791,mobile,Digital Goods,DE,Manual_Keyed
+8501,2024-02-14 11:08:00,89,6791,mobile,Digital Goods,CA,Manual_Keyed
+8502,2024-02-14 11:09:00,86,6791,mobile,Digital Goods,AU,Manual_Keyed
+8503,2024-02-14 11:10:00,59,6791,mobile,Digital Goods,DE,Manual_Keyed
+8504,2024-02-14 11:17:00,253,1823,mobile,Digital Goods,US,Chip
+8505,2024-02-14 11:17:00,53,6067,mobile,Digital Goods,CA,Manual_Keyed
+8506,2024-02-14 11:18:00,52,6067,mobile,Digital Goods,DE,Manual_Keyed
+8507,2024-02-14 11:19:00,71,6067,mobile,Digital Goods,CA,Manual_Keyed
+8508,2024-02-14 11:20:00,57,6067,mobile,Digital Goods,DE,Manual_Keyed
+8509,2024-02-14 11:20:00,59,1655,mobile,Digital Goods,UK,Manual_Keyed
+8510,2024-02-14 11:21:00,69,1655,mobile,Digital Goods,AU,Manual_Keyed
+8511,2024-02-14 11:21:00,68,1655,mobile,Digital Goods,DE,Manual_Keyed
+8512,2024-02-14 11:22:00,65,1655,mobile,Digital Goods,CA,Manual_Keyed
+8513,2024-02-14 11:23:00,52,1655,mobile,Digital Goods,CA,Manual_Keyed
+8514,2024-02-14 11:23:00,75,1655,mobile,Digital Goods,DE,Manual_Keyed
+8515,2024-02-14 11:37:00,486,7084,mobile,Grocery,US,Contactless
+8516,2024-02-14 11:44:00,60,2860,mobile,Travel,DE,Contactless
+8517,2024-02-14 11:45:00,75,2773,mobile,Digital Goods,AU,Manual_Keyed
+8518,2024-02-14 11:46:00,82,2773,mobile,Digital Goods,AU,Manual_Keyed
+8519,2024-02-14 11:46:00,53,2773,mobile,Digital Goods,UK,Manual_Keyed
+8520,2024-02-14 11:46:00,75,2773,mobile,Digital Goods,CA,Manual_Keyed
+8521,2024-02-14 11:47:00,77,2773,mobile,Digital Goods,CA,Manual_Keyed
+8522,2024-02-14 11:59:00,184,2535,mobile,Grocery,CA,Contactless
+8523,2024-02-14 12:09:00,27,4088,web,Electronics,US,Manual_Keyed
+8524,2024-02-14 12:19:00,380,2509,mobile,Travel,AU,Chip
+8525,2024-02-14 12:31:00,146,6881,mobile,Grocery,DE,Contactless
+8526,2024-02-14 12:34:00,108,4162,mobile,Digital Goods,US,Chip
+8527,2024-02-14 12:41:00,314,7001,mobile,Digital Goods,US,Contactless
+8528,2024-02-14 12:41:00,76,6812,mobile,Digital Goods,CA,Manual_Keyed
+8529,2024-02-14 12:42:00,55,6812,mobile,Digital Goods,UK,Manual_Keyed
+8530,2024-02-14 12:43:00,70,6812,mobile,Digital Goods,AU,Manual_Keyed
+8531,2024-02-14 12:43:00,55,6812,mobile,Digital Goods,CA,Manual_Keyed
+8532,2024-02-14 12:44:00,74,6812,mobile,Digital Goods,UK,Manual_Keyed
+8533,2024-02-14 12:44:00,68,2885,mobile,Digital Goods,DE,Manual_Keyed
+8534,2024-02-14 12:45:00,83,2885,mobile,Digital Goods,CA,Manual_Keyed
+8535,2024-02-14 12:46:00,66,2885,mobile,Digital Goods,UK,Manual_Keyed
+8536,2024-02-14 12:46:00,71,2885,mobile,Digital Goods,CA,Manual_Keyed
+8537,2024-02-14 12:47:00,77,2885,mobile,Digital Goods,AU,Manual_Keyed
+8538,2024-02-14 12:48:00,84,2885,mobile,Digital Goods,DE,Manual_Keyed
+8539,2024-02-14 12:48:00,84,2885,mobile,Digital Goods,CA,Manual_Keyed
+8540,2024-02-14 12:56:00,189,7624,mobile,Electronics,AU,Chip
+8541,2024-02-14 13:02:00,49,2884,mobile,Digital Goods,UK,Contactless
+8542,2024-02-14 13:03:00,79,3212,mobile,Digital Goods,DE,Manual_Keyed
+8543,2024-02-14 13:03:00,51,3212,mobile,Digital Goods,UK,Manual_Keyed
+8544,2024-02-14 13:04:00,66,3212,mobile,Digital Goods,DE,Manual_Keyed
+8545,2024-02-14 13:05:00,59,3212,mobile,Digital Goods,AU,Manual_Keyed
+8546,2024-02-14 13:05:00,50,3212,mobile,Digital Goods,DE,Manual_Keyed
+8547,2024-02-14 13:06:00,57,3212,mobile,Digital Goods,UK,Manual_Keyed
+8548,2024-02-14 13:14:00,2901,4306,web,Travel,AU,Manual_Keyed
+8549,2024-02-14 13:24:00,237,6321,mobile,Fashion,US,Contactless
+8550,2024-02-14 13:33:00,87,7474,tablet,Electronics,US,Contactless
+8551,2024-02-14 13:44:00,489,1711,mobile,Travel,US,Chip
+8552,2024-02-14 13:58:00,390,4464,tablet,Digital Goods,US,Contactless
+8553,2024-02-14 14:10:00,246,4867,mobile,Fashion,UK,Contactless
+8554,2024-02-14 14:18:00,12,1550,web,Grocery,UK,Contactless
+8555,2024-02-14 14:29:00,493,7922,mobile,Grocery,AU,Contactless
+8556,2024-02-14 14:30:00,86,7951,mobile,Digital Goods,AU,Manual_Keyed
+8557,2024-02-14 14:31:00,73,7951,mobile,Digital Goods,CA,Manual_Keyed
+8558,2024-02-14 14:32:00,80,7951,mobile,Digital Goods,CA,Manual_Keyed
+8559,2024-02-14 14:39:00,287,7371,web,Digital Goods,AU,Chip
+8560,2024-02-14 14:45:00,482,1245,mobile,Grocery,UK,Chip
+8561,2024-02-14 14:57:00,349,2665,web,Fashion,AU,Chip
+8562,2024-02-14 15:00:00,195,2081,mobile,Fashion,CA,Contactless
+8563,2024-02-14 15:08:00,166,2713,mobile,Fashion,CA,Chip
+8564,2024-02-14 15:18:00,455,6438,web,Electronics,UK,Contactless
+8565,2024-02-14 15:19:00,59,2625,mobile,Digital Goods,UK,Manual_Keyed
+8566,2024-02-14 15:19:00,60,2625,mobile,Digital Goods,UK,Manual_Keyed
+8567,2024-02-14 15:20:00,61,2625,mobile,Digital Goods,AU,Manual_Keyed
+8568,2024-02-14 15:21:00,71,2625,mobile,Digital Goods,DE,Manual_Keyed
+8569,2024-02-14 15:21:00,77,2625,mobile,Digital Goods,CA,Manual_Keyed
+8570,2024-02-14 15:22:00,68,2945,mobile,Digital Goods,DE,Manual_Keyed
+8571,2024-02-14 15:23:00,54,2945,mobile,Digital Goods,CA,Manual_Keyed
+8572,2024-02-14 15:23:00,89,2945,mobile,Digital Goods,DE,Manual_Keyed
+8573,2024-02-14 15:24:00,63,2945,mobile,Digital Goods,CA,Manual_Keyed
+8574,2024-02-14 15:31:00,133,4506,web,Travel,CA,Chip
+8575,2024-02-14 15:35:00,172,6688,mobile,Fashion,AU,Chip
+8576,2024-02-14 15:39:00,293,1114,mobile,Travel,US,Chip
+8577,2024-02-14 15:44:00,278,1330,mobile,Digital Goods,CA,Contactless
+8578,2024-02-14 15:52:00,441,6537,web,Digital Goods,US,Contactless
+8579,2024-02-14 15:53:00,56,5449,mobile,Digital Goods,UK,Manual_Keyed
+8580,2024-02-14 15:54:00,64,5449,mobile,Digital Goods,DE,Manual_Keyed
+8581,2024-02-14 15:54:00,81,5449,mobile,Digital Goods,DE,Manual_Keyed
+8582,2024-02-14 15:55:00,87,5449,mobile,Digital Goods,CA,Manual_Keyed
+8583,2024-02-14 15:56:00,64,5449,mobile,Digital Goods,CA,Manual_Keyed
+8584,2024-02-14 15:56:00,84,5449,mobile,Digital Goods,UK,Manual_Keyed
+8585,2024-02-14 16:08:00,490,1959,web,Digital Goods,CA,Chip
+8586,2024-02-14 16:13:00,238,1941,tablet,Fashion,US,Contactless
+8587,2024-02-14 16:14:00,66,2726,mobile,Digital Goods,DE,Manual_Keyed
+8588,2024-02-14 16:15:00,71,2726,mobile,Digital Goods,UK,Manual_Keyed
+8589,2024-02-14 16:15:00,56,2726,mobile,Digital Goods,CA,Manual_Keyed
+8590,2024-02-14 16:16:00,69,2726,mobile,Digital Goods,AU,Manual_Keyed
+8591,2024-02-14 16:16:00,89,2726,mobile,Digital Goods,AU,Manual_Keyed
+8592,2024-02-14 16:17:00,61,2726,mobile,Digital Goods,AU,Manual_Keyed
+8593,2024-02-14 16:18:00,87,6958,mobile,Digital Goods,DE,Manual_Keyed
+8594,2024-02-14 16:18:00,72,6958,mobile,Digital Goods,DE,Manual_Keyed
+8595,2024-02-14 16:19:00,67,6958,mobile,Digital Goods,DE,Manual_Keyed
+8596,2024-02-14 16:20:00,83,6958,mobile,Digital Goods,AU,Manual_Keyed
+8597,2024-02-14 16:20:00,53,6958,mobile,Digital Goods,AU,Manual_Keyed
+8598,2024-02-14 16:21:00,88,6958,mobile,Digital Goods,UK,Manual_Keyed
+8599,2024-02-14 16:21:00,58,6958,mobile,Digital Goods,UK,Manual_Keyed
+8600,2024-02-14 16:22:00,77,5829,mobile,Digital Goods,UK,Manual_Keyed
+8601,2024-02-14 16:22:00,86,5829,mobile,Digital Goods,UK,Manual_Keyed
+8602,2024-02-14 16:23:00,83,5829,mobile,Digital Goods,DE,Manual_Keyed
+8603,2024-02-14 16:25:00,473,1842,web,Grocery,DE,Contactless
+8604,2024-02-14 16:33:00,176,4066,mobile,Travel,DE,Contactless
+8605,2024-02-14 16:36:00,192,3621,web,Digital Goods,DE,Chip
+8606,2024-02-14 16:42:00,257,7103,mobile,Grocery,DE,Chip
+8607,2024-02-14 16:50:00,388,3618,mobile,Electronics,US,Chip
+8608,2024-02-14 16:57:00,236,6372,mobile,Electronics,US,Contactless
+8609,2024-02-14 16:59:00,124,7091,mobile,Travel,US,Contactless
+8610,2024-02-14 17:05:00,100,7447,mobile,Fashion,US,Contactless
+8611,2024-02-14 17:20:00,520,5625,web,Travel,UK,Manual_Keyed
+8612,2024-02-14 17:29:00,245,3033,mobile,Digital Goods,US,Manual_Keyed
+8613,2024-02-14 17:38:00,97,3757,mobile,Fashion,CA,Chip
+8614,2024-02-14 17:39:00,59,5573,mobile,Digital Goods,DE,Manual_Keyed
+8615,2024-02-14 17:39:00,60,5573,mobile,Digital Goods,CA,Manual_Keyed
+8616,2024-02-14 17:40:00,60,5573,mobile,Digital Goods,DE,Manual_Keyed
+8617,2024-02-14 17:41:00,81,5573,mobile,Digital Goods,UK,Manual_Keyed
+8618,2024-02-14 17:44:00,244,2586,mobile,Travel,DE,Contactless
+8619,2024-02-14 17:49:00,175,3085,mobile,Travel,CA,Manual_Keyed
+8620,2024-02-14 17:54:00,111,1415,tablet,Grocery,US,Contactless
+8621,2024-02-14 18:00:00,373,6536,web,Fashion,AU,Manual_Keyed
+8622,2024-02-14 18:00:00,78,2555,mobile,Digital Goods,UK,Manual_Keyed
+8623,2024-02-14 18:01:00,89,2555,mobile,Digital Goods,UK,Manual_Keyed
+8624,2024-02-14 18:02:00,63,2555,mobile,Digital Goods,DE,Manual_Keyed
+8625,2024-02-14 18:02:00,67,2555,mobile,Digital Goods,CA,Manual_Keyed
+8626,2024-02-14 18:03:00,53,2555,mobile,Digital Goods,UK,Manual_Keyed
+8627,2024-02-14 18:04:00,82,2555,mobile,Digital Goods,DE,Manual_Keyed
+8628,2024-02-14 18:04:00,60,2555,mobile,Digital Goods,DE,Manual_Keyed
+8629,2024-02-14 18:11:00,18,4219,tablet,Grocery,DE,Contactless
+8630,2024-02-14 18:11:00,62,5617,mobile,Digital Goods,AU,Manual_Keyed
+8631,2024-02-14 18:12:00,68,5617,mobile,Digital Goods,DE,Manual_Keyed
+8632,2024-02-14 18:12:00,57,5617,mobile,Digital Goods,CA,Manual_Keyed
+8633,2024-02-14 18:13:00,75,5617,mobile,Digital Goods,CA,Manual_Keyed
+8634,2024-02-14 18:14:00,61,5617,mobile,Digital Goods,CA,Manual_Keyed
+8635,2024-02-14 18:15:00,72,5617,mobile,Digital Goods,AU,Manual_Keyed
+8636,2024-02-14 18:15:00,53,5617,mobile,Digital Goods,UK,Manual_Keyed
+8637,2024-02-14 18:15:00,85,5237,mobile,Digital Goods,AU,Manual_Keyed
+8638,2024-02-14 18:16:00,86,5237,mobile,Digital Goods,CA,Manual_Keyed
+8639,2024-02-14 18:17:00,54,5237,mobile,Digital Goods,DE,Manual_Keyed
+8640,2024-02-14 18:17:00,88,5237,mobile,Digital Goods,DE,Manual_Keyed
+8641,2024-02-14 18:18:00,62,5237,mobile,Digital Goods,AU,Manual_Keyed
+8642,2024-02-14 18:18:00,81,5237,mobile,Digital Goods,UK,Manual_Keyed
+8643,2024-02-14 18:25:00,324,1582,mobile,Fashion,US,Contactless
+8644,2024-02-14 18:25:00,56,1384,mobile,Digital Goods,DE,Manual_Keyed
+8645,2024-02-14 18:26:00,66,1384,mobile,Digital Goods,DE,Manual_Keyed
+8646,2024-02-14 18:26:00,84,1384,mobile,Digital Goods,AU,Manual_Keyed
+8647,2024-02-14 18:27:00,82,1384,mobile,Digital Goods,CA,Manual_Keyed
+8648,2024-02-14 18:28:00,62,1384,mobile,Digital Goods,UK,Manual_Keyed
+8649,2024-02-14 18:28:00,73,1384,mobile,Digital Goods,UK,Manual_Keyed
+8650,2024-02-14 18:31:00,476,1316,mobile,Travel,US,Contactless
+8651,2024-02-14 18:35:00,239,7145,mobile,Electronics,AU,Chip
+8652,2024-02-14 18:35:00,72,2246,mobile,Digital Goods,AU,Manual_Keyed
+8653,2024-02-14 18:36:00,78,2246,mobile,Digital Goods,CA,Manual_Keyed
+8654,2024-02-14 18:37:00,55,2246,mobile,Digital Goods,UK,Manual_Keyed
+8655,2024-02-14 18:38:00,83,2246,mobile,Digital Goods,CA,Manual_Keyed
+8656,2024-02-14 18:39:00,68,2246,mobile,Digital Goods,CA,Manual_Keyed
+8657,2024-02-14 18:48:00,91,2748,web,Electronics,UK,Chip
+8658,2024-02-14 18:49:00,54,5224,mobile,Digital Goods,CA,Manual_Keyed
+8659,2024-02-14 18:49:00,74,5224,mobile,Digital Goods,UK,Manual_Keyed
+8660,2024-02-14 18:50:00,57,5224,mobile,Digital Goods,AU,Manual_Keyed
+8661,2024-02-14 18:50:00,89,5224,mobile,Digital Goods,CA,Manual_Keyed
+8662,2024-02-14 18:51:00,63,5224,mobile,Digital Goods,AU,Manual_Keyed
+8663,2024-02-14 18:51:00,87,5224,mobile,Digital Goods,AU,Manual_Keyed
+8664,2024-02-14 19:06:00,83,5134,web,Electronics,DE,Contactless
+8665,2024-02-14 19:10:00,15,7001,mobile,Digital Goods,US,Chip
+8666,2024-02-14 19:18:00,387,7562,mobile,Electronics,US,Chip
+8667,2024-02-14 19:29:00,54,2577,tablet,Grocery,DE,Chip
+8668,2024-02-14 19:44:00,84,5102,mobile,Digital Goods,AU,Contactless
+8669,2024-02-14 19:53:00,474,6981,web,Grocery,CA,Contactless
+8670,2024-02-14 19:53:00,78,2649,mobile,Digital Goods,UK,Manual_Keyed
+8671,2024-02-14 19:54:00,79,2649,mobile,Digital Goods,DE,Manual_Keyed
+8672,2024-02-14 19:55:00,86,2649,mobile,Digital Goods,UK,Manual_Keyed
+8673,2024-02-14 19:55:00,67,2649,mobile,Digital Goods,UK,Manual_Keyed
+8674,2024-02-14 19:56:00,55,2649,mobile,Digital Goods,AU,Manual_Keyed
+8675,2024-02-14 19:56:00,71,2649,mobile,Digital Goods,UK,Manual_Keyed
+8676,2024-02-14 20:00:00,286,6720,mobile,Electronics,US,Chip
+8677,2024-02-14 20:04:00,257,6406,mobile,Digital Goods,DE,Chip
+8678,2024-02-14 20:11:00,207,5642,mobile,Electronics,CA,Chip
+8679,2024-02-14 20:20:00,126,4079,mobile,Electronics,DE,Contactless
+8680,2024-02-14 20:32:00,29,7010,mobile,Grocery,US,Contactless
+8681,2024-02-14 20:37:00,13,6863,web,Grocery,DE,Chip
+8682,2024-02-14 20:47:00,250,4775,mobile,Fashion,AU,Contactless
+8683,2024-02-14 21:02:00,92,3943,mobile,Grocery,UK,Chip
+8684,2024-02-14 21:10:00,217,2639,mobile,Digital Goods,US,Chip
+8685,2024-02-14 21:15:00,495,2916,mobile,Grocery,US,Contactless
+8686,2024-02-14 21:19:00,1904,5922,web,Travel,US,Manual_Keyed
+8687,2024-02-14 21:20:00,52,3043,mobile,Digital Goods,AU,Manual_Keyed
+8688,2024-02-14 21:20:00,71,3043,mobile,Digital Goods,UK,Manual_Keyed
+8689,2024-02-14 21:21:00,54,3043,mobile,Digital Goods,CA,Manual_Keyed
+8690,2024-02-14 21:21:00,67,3043,mobile,Digital Goods,DE,Manual_Keyed
+8691,2024-02-14 21:21:00,68,3043,mobile,Digital Goods,UK,Manual_Keyed
+8692,2024-02-14 21:22:00,57,3043,mobile,Digital Goods,DE,Manual_Keyed
+8693,2024-02-14 21:22:00,85,3043,mobile,Digital Goods,DE,Manual_Keyed
+8694,2024-02-14 21:36:00,16,4311,web,Grocery,UK,Chip
+8695,2024-02-14 21:37:00,68,5954,mobile,Digital Goods,AU,Manual_Keyed
+8696,2024-02-14 21:37:00,64,5954,mobile,Digital Goods,DE,Manual_Keyed
+8697,2024-02-14 21:38:00,88,5954,mobile,Digital Goods,AU,Manual_Keyed
+8698,2024-02-14 21:49:00,339,3086,web,Digital Goods,DE,Chip
+8699,2024-02-14 21:52:00,466,3939,web,Travel,UK,Contactless
+8700,2024-02-14 22:01:00,279,4550,mobile,Grocery,US,Chip
+8701,2024-02-14 22:02:00,54,6488,mobile,Digital Goods,UK,Manual_Keyed
+8702,2024-02-14 22:02:00,62,6488,mobile,Digital Goods,AU,Manual_Keyed
+8703,2024-02-14 22:03:00,79,6488,mobile,Digital Goods,CA,Manual_Keyed
+8704,2024-02-14 22:03:00,88,6488,mobile,Digital Goods,CA,Manual_Keyed
+8705,2024-02-14 22:04:00,68,6488,mobile,Digital Goods,CA,Manual_Keyed
+8706,2024-02-14 22:04:00,82,6488,mobile,Digital Goods,UK,Manual_Keyed
+8707,2024-02-14 22:05:00,63,6488,mobile,Digital Goods,AU,Manual_Keyed
+8708,2024-02-14 22:16:00,71,1793,mobile,Electronics,US,Chip
+8709,2024-02-14 22:27:00,489,4039,mobile,Fashion,UK,Contactless
+8710,2024-02-14 22:33:00,50,2257,mobile,Travel,US,Contactless
+8711,2024-02-14 22:35:00,44,1800,web,Fashion,CA,Chip
+8712,2024-02-14 22:48:00,249,6089,tablet,Travel,CA,Contactless
+8713,2024-02-14 22:48:00,69,1134,mobile,Digital Goods,AU,Manual_Keyed
+8714,2024-02-14 22:49:00,54,1134,mobile,Digital Goods,AU,Manual_Keyed
+8715,2024-02-14 22:49:00,83,1134,mobile,Digital Goods,DE,Manual_Keyed
+8716,2024-02-14 22:50:00,80,1134,mobile,Digital Goods,CA,Manual_Keyed
+8717,2024-02-14 22:51:00,53,1134,mobile,Digital Goods,UK,Manual_Keyed
+8718,2024-02-14 23:04:00,130,7463,web,Fashion,US,Contactless
+8719,2024-02-14 23:07:00,258,4362,web,Grocery,US,Manual_Keyed
+8720,2024-02-14 23:21:00,54,5335,mobile,Grocery,US,Chip
+8721,2024-02-14 23:36:00,115,7939,web,Travel,US,Chip
+8722,2024-02-14 23:48:00,105,7945,mobile,Grocery,CA,Chip
+8723,2024-02-14 23:50:00,157,3599,mobile,Digital Goods,US,Manual_Keyed
+8724,2024-02-14 23:53:00,60,3403,mobile,Travel,AU,Contactless
+8725,2024-02-15 00:06:00,52,5013,mobile,Electronics,US,Contactless
+8726,2024-02-15 00:06:00,58,3896,mobile,Digital Goods,DE,Manual_Keyed
+8727,2024-02-15 00:07:00,72,3896,mobile,Digital Goods,AU,Manual_Keyed
+8728,2024-02-15 00:07:00,88,3896,mobile,Digital Goods,UK,Manual_Keyed
+8729,2024-02-15 00:07:00,80,3896,mobile,Digital Goods,CA,Manual_Keyed
+8730,2024-02-15 00:08:00,71,3896,mobile,Digital Goods,AU,Manual_Keyed
+8731,2024-02-15 00:08:00,84,3896,mobile,Digital Goods,DE,Manual_Keyed
+8732,2024-02-15 00:13:00,374,4817,mobile,Grocery,US,Chip
+8733,2024-02-15 00:17:00,303,3445,mobile,Travel,UK,Chip
+8734,2024-02-15 00:24:00,438,3425,mobile,Fashion,US,Chip
+8735,2024-02-15 00:31:00,896,3768,web,Travel,UK,Manual_Keyed
+8736,2024-02-15 00:42:00,131,2600,web,Travel,US,Chip
+8737,2024-02-15 00:42:00,82,3675,mobile,Digital Goods,UK,Manual_Keyed
+8738,2024-02-15 00:43:00,79,3675,mobile,Digital Goods,UK,Manual_Keyed
+8739,2024-02-15 00:44:00,87,3675,mobile,Digital Goods,AU,Manual_Keyed
+8740,2024-02-15 00:44:00,54,3675,mobile,Digital Goods,AU,Manual_Keyed
+8741,2024-02-15 00:45:00,70,3675,mobile,Digital Goods,DE,Manual_Keyed
+8742,2024-02-15 00:56:00,108,4702,mobile,Grocery,UK,Manual_Keyed
+8743,2024-02-15 00:56:00,56,2532,mobile,Digital Goods,AU,Manual_Keyed
+8744,2024-02-15 00:57:00,65,2532,mobile,Digital Goods,UK,Manual_Keyed
+8745,2024-02-15 00:57:00,76,2532,mobile,Digital Goods,DE,Manual_Keyed
+8746,2024-02-15 00:58:00,72,4020,mobile,Digital Goods,AU,Manual_Keyed
+8747,2024-02-15 00:59:00,64,4020,mobile,Digital Goods,CA,Manual_Keyed
+8748,2024-02-15 01:00:00,58,4020,mobile,Digital Goods,AU,Manual_Keyed
+8749,2024-02-15 01:13:00,286,3401,mobile,Travel,US,Chip
+8750,2024-02-15 01:27:00,126,4856,tablet,Digital Goods,UK,Chip
+8751,2024-02-15 01:33:00,164,5575,mobile,Electronics,US,Manual_Keyed
+8752,2024-02-15 01:40:00,471,6808,web,Grocery,US,Chip
+8753,2024-02-15 01:43:00,313,6214,mobile,Fashion,US,Chip
+8754,2024-02-15 01:53:00,41,7474,mobile,Travel,US,Chip
+8755,2024-02-15 01:54:00,84,4785,mobile,Digital Goods,AU,Manual_Keyed
+8756,2024-02-15 01:55:00,81,4785,mobile,Digital Goods,AU,Manual_Keyed
+8757,2024-02-15 01:55:00,75,4785,mobile,Digital Goods,AU,Manual_Keyed
+8758,2024-02-15 01:56:00,76,4785,mobile,Digital Goods,CA,Manual_Keyed
+8759,2024-02-15 01:56:00,77,4785,mobile,Digital Goods,CA,Manual_Keyed
+8760,2024-02-15 02:02:00,255,2082,mobile,Digital Goods,US,Chip
+8761,2024-02-15 02:09:00,250,7594,web,Grocery,UK,Chip
+8762,2024-02-15 02:16:00,455,2454,mobile,Digital Goods,US,Chip
+8763,2024-02-15 02:25:00,306,4914,web,Electronics,US,Contactless
+8764,2024-02-15 02:26:00,62,4918,mobile,Digital Goods,DE,Manual_Keyed
+8765,2024-02-15 02:26:00,89,4918,mobile,Digital Goods,AU,Manual_Keyed
+8766,2024-02-15 02:27:00,65,4918,mobile,Digital Goods,AU,Manual_Keyed
+8767,2024-02-15 02:27:00,55,4918,mobile,Digital Goods,CA,Manual_Keyed
+8768,2024-02-15 02:28:00,60,1256,mobile,Digital Goods,DE,Manual_Keyed
+8769,2024-02-15 02:28:00,55,1256,mobile,Digital Goods,AU,Manual_Keyed
+8770,2024-02-15 02:29:00,71,1256,mobile,Digital Goods,CA,Manual_Keyed
+8771,2024-02-15 02:37:00,415,3153,mobile,Travel,US,Chip
+8772,2024-02-15 02:45:00,226,2110,mobile,Digital Goods,US,Contactless
+8773,2024-02-15 02:58:00,210,2324,tablet,Grocery,US,Contactless
+8774,2024-02-15 03:02:00,262,1981,mobile,Fashion,DE,Manual_Keyed
+8775,2024-02-15 03:02:00,53,3548,mobile,Digital Goods,UK,Manual_Keyed
+8776,2024-02-15 03:02:00,89,3548,mobile,Digital Goods,AU,Manual_Keyed
+8777,2024-02-15 03:03:00,72,3548,mobile,Digital Goods,AU,Manual_Keyed
+8778,2024-02-15 03:04:00,84,3548,mobile,Digital Goods,AU,Manual_Keyed
+8779,2024-02-15 03:04:00,89,3548,mobile,Digital Goods,DE,Manual_Keyed
+8780,2024-02-15 03:05:00,56,3548,mobile,Digital Goods,DE,Manual_Keyed
+8781,2024-02-15 03:06:00,60,3548,mobile,Digital Goods,UK,Manual_Keyed
+8782,2024-02-15 03:15:00,342,1224,mobile,Travel,CA,Manual_Keyed
+8783,2024-02-15 03:22:00,264,3085,web,Electronics,AU,Chip
+8784,2024-02-15 03:23:00,73,4335,mobile,Digital Goods,DE,Manual_Keyed
+8785,2024-02-15 03:24:00,82,4335,mobile,Digital Goods,DE,Manual_Keyed
+8786,2024-02-15 03:24:00,63,4335,mobile,Digital Goods,DE,Manual_Keyed
+8787,2024-02-15 03:25:00,78,4335,mobile,Digital Goods,AU,Manual_Keyed
+8788,2024-02-15 03:34:00,102,1930,mobile,Grocery,US,Contactless
+8789,2024-02-15 03:49:00,145,1701,mobile,Grocery,US,Chip
+8790,2024-02-15 04:02:00,385,1121,mobile,Fashion,US,Chip
+8791,2024-02-15 04:12:00,439,7238,mobile,Fashion,US,Contactless
+8792,2024-02-15 04:13:00,59,1044,mobile,Digital Goods,DE,Manual_Keyed
+8793,2024-02-15 04:14:00,72,1044,mobile,Digital Goods,CA,Manual_Keyed
+8794,2024-02-15 04:14:00,82,1044,mobile,Digital Goods,UK,Manual_Keyed
+8795,2024-02-15 04:15:00,81,1044,mobile,Digital Goods,UK,Manual_Keyed
+8796,2024-02-15 04:28:00,177,6548,mobile,Electronics,DE,Chip
+8797,2024-02-15 04:42:00,408,4667,mobile,Fashion,CA,Contactless
+8798,2024-02-15 04:52:00,344,1709,mobile,Digital Goods,US,Contactless
+8799,2024-02-15 04:57:00,488,3623,mobile,Travel,UK,Manual_Keyed
+8800,2024-02-15 04:58:00,71,7731,mobile,Digital Goods,DE,Manual_Keyed
+8801,2024-02-15 04:59:00,51,7731,mobile,Digital Goods,DE,Manual_Keyed
+8802,2024-02-15 04:59:00,66,7731,mobile,Digital Goods,UK,Manual_Keyed
+8803,2024-02-15 05:10:00,153,1376,mobile,Digital Goods,US,Contactless
+8804,2024-02-15 05:11:00,74,5127,mobile,Digital Goods,CA,Manual_Keyed
+8805,2024-02-15 05:11:00,84,5127,mobile,Digital Goods,UK,Manual_Keyed
+8806,2024-02-15 05:12:00,81,5127,mobile,Digital Goods,UK,Manual_Keyed
+8807,2024-02-15 05:13:00,71,5127,mobile,Digital Goods,UK,Manual_Keyed
+8808,2024-02-15 05:13:00,84,5127,mobile,Digital Goods,DE,Manual_Keyed
+8809,2024-02-15 05:14:00,81,5127,mobile,Digital Goods,UK,Manual_Keyed
+8810,2024-02-15 05:14:00,71,3843,mobile,Digital Goods,CA,Manual_Keyed
+8811,2024-02-15 05:15:00,67,3843,mobile,Digital Goods,UK,Manual_Keyed
+8812,2024-02-15 05:15:00,88,3843,mobile,Digital Goods,DE,Manual_Keyed
+8813,2024-02-15 05:15:00,83,3843,mobile,Digital Goods,UK,Manual_Keyed
+8814,2024-02-15 05:16:00,53,3843,mobile,Digital Goods,CA,Manual_Keyed
+8815,2024-02-15 05:17:00,62,3843,mobile,Digital Goods,UK,Manual_Keyed
+8816,2024-02-15 05:23:00,2930,1852,web,Travel,US,Manual_Keyed
+8817,2024-02-15 05:24:00,62,4824,mobile,Digital Goods,DE,Manual_Keyed
+8818,2024-02-15 05:25:00,58,4824,mobile,Digital Goods,AU,Manual_Keyed
+8819,2024-02-15 05:25:00,65,4824,mobile,Digital Goods,CA,Manual_Keyed
+8820,2024-02-15 05:26:00,79,4824,mobile,Digital Goods,AU,Manual_Keyed
+8821,2024-02-15 05:26:00,77,4824,mobile,Digital Goods,DE,Manual_Keyed
+8822,2024-02-15 05:27:00,57,4824,mobile,Digital Goods,AU,Manual_Keyed
+8823,2024-02-15 05:33:00,486,7144,mobile,Travel,DE,Chip
+8824,2024-02-15 05:34:00,72,2399,mobile,Digital Goods,CA,Manual_Keyed
+8825,2024-02-15 05:34:00,85,2399,mobile,Digital Goods,DE,Manual_Keyed
+8826,2024-02-15 05:35:00,59,2399,mobile,Digital Goods,AU,Manual_Keyed
+8827,2024-02-15 05:41:00,395,5050,web,Travel,US,Contactless
+8828,2024-02-15 05:46:00,266,7584,mobile,Grocery,US,Chip
+8829,2024-02-15 05:54:00,375,3999,mobile,Electronics,CA,Contactless
+8830,2024-02-15 05:54:00,57,4040,mobile,Digital Goods,CA,Manual_Keyed
+8831,2024-02-15 05:55:00,87,4040,mobile,Digital Goods,AU,Manual_Keyed
+8832,2024-02-15 05:55:00,61,4040,mobile,Digital Goods,DE,Manual_Keyed
+8833,2024-02-15 06:03:00,218,1207,tablet,Travel,US,Contactless
+8834,2024-02-15 06:04:00,81,7659,mobile,Digital Goods,AU,Manual_Keyed
+8835,2024-02-15 06:05:00,64,7659,mobile,Digital Goods,DE,Manual_Keyed
+8836,2024-02-15 06:05:00,78,7659,mobile,Digital Goods,AU,Manual_Keyed
+8837,2024-02-15 06:06:00,53,7659,mobile,Digital Goods,AU,Manual_Keyed
+8838,2024-02-15 06:08:00,247,1666,mobile,Fashion,US,Chip
+8839,2024-02-15 06:21:00,418,6955,mobile,Digital Goods,AU,Chip
+8840,2024-02-15 06:21:00,70,1611,mobile,Digital Goods,DE,Manual_Keyed
+8841,2024-02-15 06:22:00,72,1611,mobile,Digital Goods,UK,Manual_Keyed
+8842,2024-02-15 06:22:00,70,1611,mobile,Digital Goods,UK,Manual_Keyed
+8843,2024-02-15 06:23:00,60,1611,mobile,Digital Goods,DE,Manual_Keyed
+8844,2024-02-15 06:23:00,76,1611,mobile,Digital Goods,DE,Manual_Keyed
+8845,2024-02-15 06:24:00,67,1611,mobile,Digital Goods,UK,Manual_Keyed
+8846,2024-02-15 06:25:00,60,1611,mobile,Digital Goods,CA,Manual_Keyed
+8847,2024-02-15 06:34:00,205,4742,web,Electronics,US,Chip
+8848,2024-02-15 06:42:00,496,2643,mobile,Grocery,US,Chip
+8849,2024-02-15 06:43:00,79,6244,mobile,Digital Goods,UK,Manual_Keyed
+8850,2024-02-15 06:43:00,71,6244,mobile,Digital Goods,CA,Manual_Keyed
+8851,2024-02-15 06:44:00,73,6244,mobile,Digital Goods,UK,Manual_Keyed
+8852,2024-02-15 06:45:00,55,6244,mobile,Digital Goods,CA,Manual_Keyed
+8853,2024-02-15 06:45:00,69,6244,mobile,Digital Goods,DE,Manual_Keyed
+8854,2024-02-15 06:45:00,53,6244,mobile,Digital Goods,DE,Manual_Keyed
+8855,2024-02-15 06:51:00,110,2057,mobile,Electronics,US,Contactless
+8856,2024-02-15 06:51:00,87,7585,mobile,Digital Goods,DE,Manual_Keyed
+8857,2024-02-15 06:52:00,61,7585,mobile,Digital Goods,AU,Manual_Keyed
+8858,2024-02-15 06:53:00,67,7585,mobile,Digital Goods,DE,Manual_Keyed
+8859,2024-02-15 06:53:00,56,7585,mobile,Digital Goods,DE,Manual_Keyed
+8860,2024-02-15 06:53:00,57,7585,mobile,Digital Goods,CA,Manual_Keyed
+8861,2024-02-15 06:54:00,68,7585,mobile,Digital Goods,DE,Manual_Keyed
+8862,2024-02-15 06:55:00,76,7585,mobile,Digital Goods,DE,Manual_Keyed
+8863,2024-02-15 06:55:00,88,2091,mobile,Digital Goods,CA,Manual_Keyed
+8864,2024-02-15 06:56:00,69,2091,mobile,Digital Goods,UK,Manual_Keyed
+8865,2024-02-15 06:57:00,89,2091,mobile,Digital Goods,AU,Manual_Keyed
+8866,2024-02-15 06:58:00,65,2091,mobile,Digital Goods,UK,Manual_Keyed
+8867,2024-02-15 06:58:00,84,2091,mobile,Digital Goods,UK,Manual_Keyed
+8868,2024-02-15 06:59:00,85,2091,mobile,Digital Goods,CA,Manual_Keyed
+8869,2024-02-15 06:59:00,76,3884,mobile,Digital Goods,CA,Manual_Keyed
+8870,2024-02-15 06:59:00,85,3884,mobile,Digital Goods,UK,Manual_Keyed
+8871,2024-02-15 07:00:00,73,3884,mobile,Digital Goods,CA,Manual_Keyed
+8872,2024-02-15 07:01:00,69,3884,mobile,Digital Goods,UK,Manual_Keyed
+8873,2024-02-15 07:09:00,300,4151,tablet,Travel,US,Manual_Keyed
+8874,2024-02-15 07:15:00,255,6868,web,Travel,DE,Contactless
+8875,2024-02-15 07:27:00,82,6030,mobile,Electronics,UK,Contactless
+8876,2024-02-15 07:27:00,50,6340,mobile,Digital Goods,UK,Manual_Keyed
+8877,2024-02-15 07:28:00,50,6340,mobile,Digital Goods,DE,Manual_Keyed
+8878,2024-02-15 07:29:00,61,6340,mobile,Digital Goods,DE,Manual_Keyed
+8879,2024-02-15 07:30:00,50,6340,mobile,Digital Goods,AU,Manual_Keyed
+8880,2024-02-15 07:43:00,440,7965,web,Travel,UK,Contactless
+8881,2024-02-15 07:44:00,64,1522,mobile,Digital Goods,UK,Manual_Keyed
+8882,2024-02-15 07:44:00,65,1522,mobile,Digital Goods,UK,Manual_Keyed
+8883,2024-02-15 07:45:00,67,1522,mobile,Digital Goods,DE,Manual_Keyed
+8884,2024-02-15 07:45:00,69,4538,mobile,Digital Goods,DE,Manual_Keyed
+8885,2024-02-15 07:46:00,72,4538,mobile,Digital Goods,DE,Manual_Keyed
+8886,2024-02-15 07:47:00,52,4538,mobile,Digital Goods,CA,Manual_Keyed
+8887,2024-02-15 07:48:00,55,4538,mobile,Digital Goods,DE,Manual_Keyed
+8888,2024-02-15 07:48:00,50,4538,mobile,Digital Goods,DE,Manual_Keyed
+8889,2024-02-15 07:49:00,85,4538,mobile,Digital Goods,CA,Manual_Keyed
+8890,2024-02-15 08:03:00,133,5368,mobile,Grocery,UK,Manual_Keyed
+8891,2024-02-15 08:05:00,594,6830,mobile,Travel,US,Manual_Keyed
+8892,2024-02-15 08:08:00,248,5964,web,Travel,DE,Chip
+8893,2024-02-15 08:15:00,267,6153,tablet,Electronics,UK,Chip
+8894,2024-02-15 08:15:00,64,4324,mobile,Digital Goods,CA,Manual_Keyed
+8895,2024-02-15 08:16:00,64,4324,mobile,Digital Goods,UK,Manual_Keyed
+8896,2024-02-15 08:17:00,59,4324,mobile,Digital Goods,DE,Manual_Keyed
+8897,2024-02-15 08:18:00,71,4324,mobile,Digital Goods,CA,Manual_Keyed
+8898,2024-02-15 08:22:00,356,6529,mobile,Digital Goods,US,Chip
+8899,2024-02-15 08:23:00,57,6682,mobile,Digital Goods,UK,Manual_Keyed
+8900,2024-02-15 08:24:00,56,6682,mobile,Digital Goods,DE,Manual_Keyed
+8901,2024-02-15 08:24:00,74,6682,mobile,Digital Goods,AU,Manual_Keyed
+8902,2024-02-15 08:25:00,53,6682,mobile,Digital Goods,AU,Manual_Keyed
+8903,2024-02-15 08:26:00,58,6682,mobile,Digital Goods,DE,Manual_Keyed
+8904,2024-02-15 08:26:00,61,6682,mobile,Digital Goods,CA,Manual_Keyed
+8905,2024-02-15 08:38:00,110,1569,web,Travel,US,Contactless
+8906,2024-02-15 08:42:00,334,6101,web,Grocery,US,Contactless
+8907,2024-02-15 08:49:00,315,1514,web,Grocery,US,Chip
+8908,2024-02-15 09:01:00,278,6517,mobile,Grocery,AU,Contactless
+8909,2024-02-15 09:10:00,477,2314,web,Digital Goods,US,Contactless
+8910,2024-02-15 09:14:00,154,6153,mobile,Travel,US,Chip
+8911,2024-02-15 09:19:00,199,5339,mobile,Electronics,US,Manual_Keyed
+8912,2024-02-15 09:31:00,244,7755,mobile,Fashion,CA,Chip
+8913,2024-02-15 09:31:00,60,3326,mobile,Digital Goods,UK,Manual_Keyed
+8914,2024-02-15 09:32:00,72,3326,mobile,Digital Goods,CA,Manual_Keyed
+8915,2024-02-15 09:32:00,54,3326,mobile,Digital Goods,UK,Manual_Keyed
+8916,2024-02-15 09:33:00,61,3326,mobile,Digital Goods,AU,Manual_Keyed
+8917,2024-02-15 09:40:00,344,4555,web,Fashion,US,Chip
+8918,2024-02-15 09:40:00,62,3573,mobile,Digital Goods,AU,Manual_Keyed
+8919,2024-02-15 09:41:00,87,3573,mobile,Digital Goods,AU,Manual_Keyed
+8920,2024-02-15 09:41:00,64,3573,mobile,Digital Goods,DE,Manual_Keyed
+8921,2024-02-15 09:50:00,414,2396,web,Grocery,US,Chip
+8922,2024-02-15 09:51:00,61,1684,mobile,Digital Goods,UK,Manual_Keyed
+8923,2024-02-15 09:52:00,63,1684,mobile,Digital Goods,CA,Manual_Keyed
+8924,2024-02-15 09:52:00,74,1684,mobile,Digital Goods,UK,Manual_Keyed
+8925,2024-02-15 09:53:00,51,1684,mobile,Digital Goods,CA,Manual_Keyed
+8926,2024-02-15 09:53:00,69,1684,mobile,Digital Goods,CA,Manual_Keyed
+8927,2024-02-15 09:54:00,50,1684,mobile,Digital Goods,UK,Manual_Keyed
+8928,2024-02-15 09:55:00,51,4422,mobile,Digital Goods,UK,Manual_Keyed
+8929,2024-02-15 09:55:00,89,4422,mobile,Digital Goods,UK,Manual_Keyed
+8930,2024-02-15 09:55:00,60,4422,mobile,Digital Goods,DE,Manual_Keyed
+8931,2024-02-15 09:56:00,78,3665,mobile,Digital Goods,AU,Manual_Keyed
+8932,2024-02-15 09:57:00,68,3665,mobile,Digital Goods,AU,Manual_Keyed
+8933,2024-02-15 09:57:00,52,3665,mobile,Digital Goods,UK,Manual_Keyed
+8934,2024-02-15 09:58:00,74,3665,mobile,Digital Goods,UK,Manual_Keyed
+8935,2024-02-15 09:58:00,55,3665,mobile,Digital Goods,UK,Manual_Keyed
+8936,2024-02-15 09:59:00,78,3665,mobile,Digital Goods,CA,Manual_Keyed
+8937,2024-02-15 09:59:00,52,3665,mobile,Digital Goods,CA,Manual_Keyed
+8938,2024-02-15 10:09:00,241,6539,mobile,Electronics,US,Contactless
+8939,2024-02-15 10:15:00,176,5285,mobile,Grocery,US,Contactless
+8940,2024-02-15 10:26:00,312,7087,web,Electronics,UK,Contactless
+8941,2024-02-15 10:27:00,69,2148,mobile,Digital Goods,AU,Manual_Keyed
+8942,2024-02-15 10:28:00,71,2148,mobile,Digital Goods,CA,Manual_Keyed
+8943,2024-02-15 10:29:00,55,2148,mobile,Digital Goods,CA,Manual_Keyed
+8944,2024-02-15 10:35:00,448,6650,mobile,Travel,AU,Contactless
+8945,2024-02-15 10:35:00,62,4807,mobile,Digital Goods,UK,Manual_Keyed
+8946,2024-02-15 10:36:00,78,4807,mobile,Digital Goods,DE,Manual_Keyed
+8947,2024-02-15 10:36:00,85,4807,mobile,Digital Goods,AU,Manual_Keyed
+8948,2024-02-15 10:37:00,74,4807,mobile,Digital Goods,AU,Manual_Keyed
+8949,2024-02-15 10:38:00,57,4807,mobile,Digital Goods,DE,Manual_Keyed
+8950,2024-02-15 10:45:00,163,5110,mobile,Electronics,US,Chip
+8951,2024-02-15 10:56:00,208,5665,mobile,Fashion,AU,Chip
+8952,2024-02-15 11:09:00,323,3180,web,Electronics,US,Contactless
+8953,2024-02-15 11:23:00,234,6475,mobile,Travel,UK,Contactless
+8954,2024-02-15 11:28:00,412,6143,web,Grocery,AU,Chip
+8955,2024-02-15 11:36:00,63,3552,tablet,Digital Goods,US,Chip
+8956,2024-02-15 11:37:00,73,3569,mobile,Digital Goods,AU,Manual_Keyed
+8957,2024-02-15 11:37:00,74,3569,mobile,Digital Goods,AU,Manual_Keyed
+8958,2024-02-15 11:38:00,63,3569,mobile,Digital Goods,DE,Manual_Keyed
+8959,2024-02-15 11:38:00,60,3569,mobile,Digital Goods,AU,Manual_Keyed
+8960,2024-02-15 11:39:00,72,3569,mobile,Digital Goods,CA,Manual_Keyed
+8961,2024-02-15 11:46:00,118,4602,tablet,Travel,US,Chip
+8962,2024-02-15 11:47:00,70,6287,mobile,Digital Goods,UK,Manual_Keyed
+8963,2024-02-15 11:47:00,66,6287,mobile,Digital Goods,DE,Manual_Keyed
+8964,2024-02-15 11:48:00,70,6287,mobile,Digital Goods,DE,Manual_Keyed
+8965,2024-02-15 11:49:00,86,6287,mobile,Digital Goods,AU,Manual_Keyed
+8966,2024-02-15 11:50:00,64,6287,mobile,Digital Goods,UK,Manual_Keyed
+8967,2024-02-15 11:58:00,15,4630,mobile,Grocery,DE,Contactless
+8968,2024-02-15 11:58:00,70,5050,mobile,Digital Goods,UK,Manual_Keyed
+8969,2024-02-15 11:59:00,50,5050,mobile,Digital Goods,UK,Manual_Keyed
+8970,2024-02-15 11:59:00,54,5050,mobile,Digital Goods,CA,Manual_Keyed
+8971,2024-02-15 12:00:00,78,5050,mobile,Digital Goods,CA,Manual_Keyed
+8972,2024-02-15 12:01:00,57,5050,mobile,Digital Goods,DE,Manual_Keyed
+8973,2024-02-15 12:02:00,85,5050,mobile,Digital Goods,DE,Manual_Keyed
+8974,2024-02-15 12:02:00,87,5050,mobile,Digital Goods,DE,Manual_Keyed
+8975,2024-02-15 12:07:00,155,7436,mobile,Digital Goods,US,Chip
+8976,2024-02-15 12:21:00,13,2481,mobile,Travel,UK,Chip
+8977,2024-02-15 12:33:00,173,4199,web,Grocery,AU,Contactless
+8978,2024-02-15 12:40:00,349,5798,mobile,Digital Goods,CA,Contactless
+8979,2024-02-15 12:48:00,258,6864,mobile,Digital Goods,US,Chip
+8980,2024-02-15 13:03:00,63,5991,mobile,Electronics,AU,Chip
+8981,2024-02-15 13:10:00,366,5470,web,Grocery,US,Chip
+8982,2024-02-15 13:23:00,364,1553,mobile,Digital Goods,US,Contactless
+8983,2024-02-15 13:28:00,266,5362,mobile,Grocery,US,Contactless
+8984,2024-02-15 13:36:00,450,4641,mobile,Electronics,AU,Contactless
+8985,2024-02-15 13:37:00,53,2529,mobile,Digital Goods,AU,Manual_Keyed
+8986,2024-02-15 13:37:00,67,2529,mobile,Digital Goods,DE,Manual_Keyed
+8987,2024-02-15 13:37:00,82,2529,mobile,Digital Goods,AU,Manual_Keyed
+8988,2024-02-15 13:38:00,78,2529,mobile,Digital Goods,DE,Manual_Keyed
+8989,2024-02-15 13:38:00,54,2529,mobile,Digital Goods,DE,Manual_Keyed
+8990,2024-02-15 13:39:00,71,2529,mobile,Digital Goods,CA,Manual_Keyed
+8991,2024-02-15 13:40:00,79,2529,mobile,Digital Goods,CA,Manual_Keyed
+8992,2024-02-15 13:40:00,77,3149,mobile,Digital Goods,UK,Manual_Keyed
+8993,2024-02-15 13:40:00,54,3149,mobile,Digital Goods,AU,Manual_Keyed
+8994,2024-02-15 13:41:00,63,3149,mobile,Digital Goods,DE,Manual_Keyed
+8995,2024-02-15 13:42:00,73,3149,mobile,Digital Goods,UK,Manual_Keyed
+8996,2024-02-15 13:43:00,76,3149,mobile,Digital Goods,DE,Manual_Keyed
+8997,2024-02-15 13:43:00,67,3149,mobile,Digital Goods,UK,Manual_Keyed
+8998,2024-02-15 13:46:00,46,2845,web,Digital Goods,US,Chip
+8999,2024-02-15 13:49:00,78,5132,mobile,Travel,UK,Chip
+9000,2024-02-15 14:02:00,204,5818,mobile,Electronics,US,Contactless
+9001,2024-02-15 14:07:00,429,6035,web,Fashion,DE,Contactless
+9002,2024-02-15 14:08:00,66,4254,mobile,Digital Goods,AU,Manual_Keyed
+9003,2024-02-15 14:09:00,66,4254,mobile,Digital Goods,DE,Manual_Keyed
+9004,2024-02-15 14:09:00,53,4254,mobile,Digital Goods,UK,Manual_Keyed
+9005,2024-02-15 14:10:00,56,4254,mobile,Digital Goods,DE,Manual_Keyed
+9006,2024-02-15 14:10:00,81,4254,mobile,Digital Goods,CA,Manual_Keyed
+9007,2024-02-15 14:14:00,77,3668,mobile,Travel,UK,Manual_Keyed
+9008,2024-02-15 14:28:00,344,1224,mobile,Grocery,US,Manual_Keyed
+9009,2024-02-15 14:36:00,421,6452,mobile,Digital Goods,AU,Chip
+9010,2024-02-15 14:41:00,170,6697,mobile,Electronics,US,Contactless
+9011,2024-02-15 14:48:00,392,2822,web,Digital Goods,UK,Chip
+9012,2024-02-15 14:48:00,85,6795,mobile,Digital Goods,CA,Manual_Keyed
+9013,2024-02-15 14:49:00,51,6795,mobile,Digital Goods,UK,Manual_Keyed
+9014,2024-02-15 14:50:00,85,6795,mobile,Digital Goods,AU,Manual_Keyed
+9015,2024-02-15 14:50:00,86,6795,mobile,Digital Goods,CA,Manual_Keyed
+9016,2024-02-15 14:51:00,55,6795,mobile,Digital Goods,CA,Manual_Keyed
+9017,2024-02-15 15:05:00,269,6856,mobile,Digital Goods,US,Contactless
+9018,2024-02-15 15:14:00,375,5936,web,Digital Goods,UK,Chip
+9019,2024-02-15 15:27:00,108,2355,tablet,Grocery,US,Manual_Keyed
+9020,2024-02-15 15:27:00,50,4584,mobile,Digital Goods,AU,Manual_Keyed
+9021,2024-02-15 15:28:00,86,4584,mobile,Digital Goods,UK,Manual_Keyed
+9022,2024-02-15 15:28:00,82,4584,mobile,Digital Goods,UK,Manual_Keyed
+9023,2024-02-15 15:34:00,71,3297,web,Grocery,US,Chip
+9024,2024-02-15 15:41:00,374,3898,mobile,Digital Goods,CA,Chip
+9025,2024-02-15 15:50:00,397,5849,mobile,Grocery,US,Contactless
+9026,2024-02-15 15:50:00,70,4941,mobile,Digital Goods,AU,Manual_Keyed
+9027,2024-02-15 15:51:00,73,4941,mobile,Digital Goods,DE,Manual_Keyed
+9028,2024-02-15 15:51:00,75,4941,mobile,Digital Goods,DE,Manual_Keyed
+9029,2024-02-15 15:52:00,68,4941,mobile,Digital Goods,UK,Manual_Keyed
+9030,2024-02-15 15:53:00,74,4941,mobile,Digital Goods,AU,Manual_Keyed
+9031,2024-02-15 16:00:00,385,5879,web,Travel,UK,Chip
+9032,2024-02-15 16:14:00,109,5395,mobile,Digital Goods,US,Manual_Keyed
+9033,2024-02-15 16:15:00,79,5161,mobile,Digital Goods,DE,Manual_Keyed
+9034,2024-02-15 16:16:00,59,5161,mobile,Digital Goods,CA,Manual_Keyed
+9035,2024-02-15 16:16:00,88,5161,mobile,Digital Goods,AU,Manual_Keyed
+9036,2024-02-15 16:17:00,85,5161,mobile,Digital Goods,AU,Manual_Keyed
+9037,2024-02-15 16:17:00,85,5161,mobile,Digital Goods,UK,Manual_Keyed
+9038,2024-02-15 16:18:00,82,5161,mobile,Digital Goods,DE,Manual_Keyed
+9039,2024-02-15 16:19:00,69,5161,mobile,Digital Goods,UK,Manual_Keyed
+9040,2024-02-15 16:25:00,261,5352,mobile,Electronics,US,Contactless
+9041,2024-02-15 16:30:00,2244,3299,web,Travel,US,Manual_Keyed
+9042,2024-02-15 16:31:00,79,5667,mobile,Digital Goods,DE,Manual_Keyed
+9043,2024-02-15 16:32:00,61,5667,mobile,Digital Goods,CA,Manual_Keyed
+9044,2024-02-15 16:33:00,75,5667,mobile,Digital Goods,UK,Manual_Keyed
+9045,2024-02-15 16:34:00,67,5667,mobile,Digital Goods,AU,Manual_Keyed
+9046,2024-02-15 16:34:00,81,5667,mobile,Digital Goods,DE,Manual_Keyed
+9047,2024-02-15 16:35:00,70,5667,mobile,Digital Goods,UK,Manual_Keyed
+9048,2024-02-15 16:37:00,382,7866,mobile,Digital Goods,DE,Chip
+9049,2024-02-15 16:41:00,40,1458,web,Travel,US,Chip
+9050,2024-02-15 16:48:00,416,1677,web,Fashion,US,Contactless
+9051,2024-02-15 16:58:00,480,7321,mobile,Fashion,US,Contactless
+9052,2024-02-15 17:08:00,487,4988,mobile,Travel,DE,Contactless
+9053,2024-02-15 17:15:00,476,5127,tablet,Fashion,CA,Contactless
+9054,2024-02-15 17:18:00,427,6400,web,Fashion,AU,Chip
+9055,2024-02-15 17:30:00,347,4502,web,Fashion,DE,Manual_Keyed
+9056,2024-02-15 17:45:00,468,6390,web,Grocery,UK,Chip
+9057,2024-02-15 17:49:00,195,2115,web,Grocery,US,Chip
+9058,2024-02-15 18:03:00,109,1505,tablet,Travel,US,Chip
+9059,2024-02-15 18:04:00,70,2776,mobile,Digital Goods,UK,Manual_Keyed
+9060,2024-02-15 18:04:00,72,2776,mobile,Digital Goods,CA,Manual_Keyed
+9061,2024-02-15 18:04:00,85,2776,mobile,Digital Goods,DE,Manual_Keyed
+9062,2024-02-15 18:05:00,83,2776,mobile,Digital Goods,DE,Manual_Keyed
+9063,2024-02-15 18:08:00,205,1316,mobile,Digital Goods,US,Chip
+9064,2024-02-15 18:22:00,82,5823,web,Electronics,DE,Contactless
+9065,2024-02-15 18:23:00,78,3612,mobile,Digital Goods,AU,Manual_Keyed
+9066,2024-02-15 18:23:00,78,3612,mobile,Digital Goods,AU,Manual_Keyed
+9067,2024-02-15 18:24:00,50,3612,mobile,Digital Goods,CA,Manual_Keyed
+9068,2024-02-15 18:24:00,67,3612,mobile,Digital Goods,DE,Manual_Keyed
+9069,2024-02-15 18:25:00,78,3612,mobile,Digital Goods,DE,Manual_Keyed
+9070,2024-02-15 18:25:00,62,3612,mobile,Digital Goods,CA,Manual_Keyed
+9071,2024-02-15 18:26:00,68,3612,mobile,Digital Goods,DE,Manual_Keyed
+9072,2024-02-15 18:40:00,291,2708,mobile,Grocery,US,Chip
+9073,2024-02-15 18:46:00,128,1951,mobile,Electronics,UK,Chip
+9074,2024-02-15 19:00:00,461,5385,mobile,Grocery,UK,Chip
+9075,2024-02-15 19:13:00,256,5614,mobile,Fashion,CA,Contactless
+9076,2024-02-15 19:17:00,458,5980,mobile,Grocery,CA,Manual_Keyed
+9077,2024-02-15 19:26:00,380,6788,mobile,Fashion,UK,Contactless
+9078,2024-02-15 19:26:00,86,5452,mobile,Digital Goods,CA,Manual_Keyed
+9079,2024-02-15 19:27:00,83,5452,mobile,Digital Goods,DE,Manual_Keyed
+9080,2024-02-15 19:28:00,60,5452,mobile,Digital Goods,AU,Manual_Keyed
+9081,2024-02-15 19:28:00,53,5452,mobile,Digital Goods,AU,Manual_Keyed
+9082,2024-02-15 19:29:00,83,4895,mobile,Digital Goods,AU,Manual_Keyed
+9083,2024-02-15 19:29:00,76,4895,mobile,Digital Goods,DE,Manual_Keyed
+9084,2024-02-15 19:30:00,79,4895,mobile,Digital Goods,AU,Manual_Keyed
+9085,2024-02-15 19:31:00,71,4895,mobile,Digital Goods,UK,Manual_Keyed
+9086,2024-02-15 19:31:00,80,4895,mobile,Digital Goods,CA,Manual_Keyed
+9087,2024-02-15 19:32:00,84,4895,mobile,Digital Goods,UK,Manual_Keyed
+9088,2024-02-15 19:32:00,77,6467,mobile,Digital Goods,UK,Manual_Keyed
+9089,2024-02-15 19:33:00,68,6467,mobile,Digital Goods,UK,Manual_Keyed
+9090,2024-02-15 19:33:00,51,6467,mobile,Digital Goods,CA,Manual_Keyed
+9091,2024-02-15 19:34:00,51,6467,mobile,Digital Goods,UK,Manual_Keyed
+9092,2024-02-15 19:35:00,71,6467,mobile,Digital Goods,UK,Manual_Keyed
+9093,2024-02-15 19:35:00,75,6467,mobile,Digital Goods,UK,Manual_Keyed
+9094,2024-02-15 19:38:00,16,1289,mobile,Electronics,US,Contactless
+9095,2024-02-15 19:39:00,64,6711,mobile,Digital Goods,DE,Manual_Keyed
+9096,2024-02-15 19:40:00,89,6711,mobile,Digital Goods,DE,Manual_Keyed
+9097,2024-02-15 19:41:00,54,6711,mobile,Digital Goods,UK,Manual_Keyed
+9098,2024-02-15 19:41:00,89,6711,mobile,Digital Goods,CA,Manual_Keyed
+9099,2024-02-15 19:42:00,67,6711,mobile,Digital Goods,CA,Manual_Keyed
+9100,2024-02-15 19:42:00,80,6711,mobile,Digital Goods,DE,Manual_Keyed
+9101,2024-02-15 19:43:00,74,6711,mobile,Digital Goods,UK,Manual_Keyed
+9102,2024-02-15 19:45:00,312,3208,mobile,Grocery,US,Contactless
+9103,2024-02-15 19:46:00,66,6458,mobile,Digital Goods,CA,Manual_Keyed
+9104,2024-02-15 19:47:00,56,6458,mobile,Digital Goods,CA,Manual_Keyed
+9105,2024-02-15 19:48:00,78,6458,mobile,Digital Goods,CA,Manual_Keyed
+9106,2024-02-15 19:48:00,85,6458,mobile,Digital Goods,DE,Manual_Keyed
+9107,2024-02-15 19:48:00,86,6458,mobile,Digital Goods,AU,Manual_Keyed
+9108,2024-02-15 19:49:00,58,6458,mobile,Digital Goods,UK,Manual_Keyed
+9109,2024-02-15 19:50:00,71,6458,mobile,Digital Goods,DE,Manual_Keyed
+9110,2024-02-15 19:52:00,177,5444,mobile,Electronics,UK,Contactless
+9111,2024-02-15 19:56:00,131,5723,mobile,Travel,UK,Chip
+9112,2024-02-15 20:05:00,480,6707,tablet,Digital Goods,UK,Contactless
+9113,2024-02-15 20:19:00,327,5853,mobile,Fashion,DE,Manual_Keyed
+9114,2024-02-15 20:28:00,57,6681,mobile,Electronics,DE,Chip
+9115,2024-02-15 20:28:00,87,7053,mobile,Digital Goods,CA,Manual_Keyed
+9116,2024-02-15 20:28:00,72,7053,mobile,Digital Goods,UK,Manual_Keyed
+9117,2024-02-15 20:29:00,67,7053,mobile,Digital Goods,DE,Manual_Keyed
+9118,2024-02-15 20:34:00,380,7106,mobile,Grocery,CA,Chip
+9119,2024-02-15 20:35:00,83,5127,mobile,Digital Goods,CA,Manual_Keyed
+9120,2024-02-15 20:36:00,80,5127,mobile,Digital Goods,DE,Manual_Keyed
+9121,2024-02-15 20:36:00,78,5127,mobile,Digital Goods,DE,Manual_Keyed
+9122,2024-02-15 20:36:00,70,5127,mobile,Digital Goods,AU,Manual_Keyed
+9123,2024-02-15 20:36:00,51,5127,mobile,Digital Goods,DE,Manual_Keyed
+9124,2024-02-15 20:37:00,79,5127,mobile,Digital Goods,UK,Manual_Keyed
+9125,2024-02-15 20:38:00,72,2092,mobile,Digital Goods,UK,Manual_Keyed
+9126,2024-02-15 20:38:00,63,2092,mobile,Digital Goods,UK,Manual_Keyed
+9127,2024-02-15 20:39:00,81,2092,mobile,Digital Goods,CA,Manual_Keyed
+9128,2024-02-15 20:52:00,475,1960,mobile,Electronics,US,Contactless
+9129,2024-02-15 20:59:00,1618,3881,mobile,Travel,US,Manual_Keyed
+9130,2024-02-15 21:05:00,647,1178,mobile,Travel,AU,Manual_Keyed
+9131,2024-02-15 21:09:00,401,4554,web,Travel,DE,Manual_Keyed
+9132,2024-02-15 21:18:00,419,3192,tablet,Electronics,US,Chip
+9133,2024-02-15 21:29:00,39,4011,tablet,Travel,AU,Chip
+9134,2024-02-15 21:39:00,135,3225,mobile,Grocery,US,Contactless
+9135,2024-02-15 21:49:00,424,5806,mobile,Electronics,US,Contactless
+9136,2024-02-15 22:03:00,297,5759,mobile,Fashion,UK,Contactless
+9137,2024-02-15 22:04:00,64,5969,mobile,Digital Goods,DE,Manual_Keyed
+9138,2024-02-15 22:05:00,67,5969,mobile,Digital Goods,DE,Manual_Keyed
+9139,2024-02-15 22:05:00,85,5969,mobile,Digital Goods,UK,Manual_Keyed
+9140,2024-02-15 22:06:00,68,4545,mobile,Digital Goods,DE,Manual_Keyed
+9141,2024-02-15 22:07:00,71,4545,mobile,Digital Goods,CA,Manual_Keyed
+9142,2024-02-15 22:07:00,53,4545,mobile,Digital Goods,UK,Manual_Keyed
+9143,2024-02-15 22:08:00,55,4545,mobile,Digital Goods,CA,Manual_Keyed
+9144,2024-02-15 22:09:00,67,4027,mobile,Digital Goods,CA,Manual_Keyed
+9145,2024-02-15 22:10:00,50,4027,mobile,Digital Goods,AU,Manual_Keyed
+9146,2024-02-15 22:10:00,58,4027,mobile,Digital Goods,DE,Manual_Keyed
+9147,2024-02-15 22:11:00,54,4027,mobile,Digital Goods,DE,Manual_Keyed
+9148,2024-02-15 22:12:00,85,4027,mobile,Digital Goods,UK,Manual_Keyed
+9149,2024-02-15 22:20:00,170,6530,tablet,Grocery,UK,Chip
+9150,2024-02-15 22:35:00,130,7765,tablet,Travel,US,Contactless
+9151,2024-02-15 22:49:00,426,1756,mobile,Electronics,US,Chip
+9152,2024-02-15 22:58:00,239,7055,web,Digital Goods,AU,Chip
+9153,2024-02-15 22:58:00,50,3055,mobile,Digital Goods,UK,Manual_Keyed
+9154,2024-02-15 22:59:00,88,3055,mobile,Digital Goods,AU,Manual_Keyed
+9155,2024-02-15 23:00:00,61,3055,mobile,Digital Goods,CA,Manual_Keyed
+9156,2024-02-15 23:00:00,79,3055,mobile,Digital Goods,DE,Manual_Keyed
+9157,2024-02-15 23:01:00,68,3055,mobile,Digital Goods,DE,Manual_Keyed
+9158,2024-02-15 23:02:00,79,3055,mobile,Digital Goods,CA,Manual_Keyed
+9159,2024-02-15 23:17:00,177,6703,web,Travel,AU,Chip
+9160,2024-02-15 23:22:00,384,1399,mobile,Electronics,US,Contactless
+9161,2024-02-15 23:23:00,89,1533,mobile,Digital Goods,UK,Manual_Keyed
+9162,2024-02-15 23:23:00,74,1533,mobile,Digital Goods,UK,Manual_Keyed
+9163,2024-02-15 23:24:00,83,1533,mobile,Digital Goods,CA,Manual_Keyed
+9164,2024-02-15 23:25:00,89,1533,mobile,Digital Goods,CA,Manual_Keyed
+9165,2024-02-15 23:26:00,70,1533,mobile,Digital Goods,DE,Manual_Keyed
+9166,2024-02-15 23:26:00,81,1533,mobile,Digital Goods,CA,Manual_Keyed
+9167,2024-02-15 23:26:00,85,1533,mobile,Digital Goods,AU,Manual_Keyed
+9168,2024-02-15 23:39:00,467,5736,mobile,Digital Goods,US,Chip
+9169,2024-02-15 23:45:00,77,2516,mobile,Electronics,US,Chip
+9170,2024-02-15 23:54:00,304,3110,mobile,Digital Goods,US,Chip
+9171,2024-02-15 23:59:00,326,6696,mobile,Travel,US,Contactless
+9172,2024-02-16 00:12:00,385,5796,mobile,Electronics,US,Chip
+9173,2024-02-16 00:23:00,490,4406,web,Digital Goods,US,Chip
+9174,2024-02-16 00:34:00,317,7273,mobile,Grocery,US,Contactless
+9175,2024-02-16 00:34:00,88,7771,mobile,Digital Goods,UK,Manual_Keyed
+9176,2024-02-16 00:35:00,88,7771,mobile,Digital Goods,CA,Manual_Keyed
+9177,2024-02-16 00:35:00,82,7771,mobile,Digital Goods,DE,Manual_Keyed
+9178,2024-02-16 00:35:00,70,7771,mobile,Digital Goods,UK,Manual_Keyed
+9179,2024-02-16 00:36:00,80,7771,mobile,Digital Goods,CA,Manual_Keyed
+9180,2024-02-16 00:37:00,85,7771,mobile,Digital Goods,DE,Manual_Keyed
+9181,2024-02-16 00:37:00,79,7771,mobile,Digital Goods,UK,Manual_Keyed
+9182,2024-02-16 00:49:00,411,2064,mobile,Grocery,US,Contactless
+9183,2024-02-16 01:03:00,271,2096,mobile,Digital Goods,AU,Chip
+9184,2024-02-16 01:12:00,169,2441,web,Digital Goods,UK,Chip
+9185,2024-02-16 01:12:00,89,1705,mobile,Digital Goods,UK,Manual_Keyed
+9186,2024-02-16 01:13:00,61,1705,mobile,Digital Goods,UK,Manual_Keyed
+9187,2024-02-16 01:13:00,72,1705,mobile,Digital Goods,CA,Manual_Keyed
+9188,2024-02-16 01:14:00,69,1705,mobile,Digital Goods,CA,Manual_Keyed
+9189,2024-02-16 01:14:00,70,3855,mobile,Digital Goods,DE,Manual_Keyed
+9190,2024-02-16 01:15:00,86,3855,mobile,Digital Goods,DE,Manual_Keyed
+9191,2024-02-16 01:16:00,55,3855,mobile,Digital Goods,CA,Manual_Keyed
+9192,2024-02-16 01:17:00,84,3855,mobile,Digital Goods,UK,Manual_Keyed
+9193,2024-02-16 01:17:00,51,7102,mobile,Digital Goods,DE,Manual_Keyed
+9194,2024-02-16 01:18:00,73,7102,mobile,Digital Goods,DE,Manual_Keyed
+9195,2024-02-16 01:18:00,78,7102,mobile,Digital Goods,UK,Manual_Keyed
+9196,2024-02-16 01:19:00,72,7102,mobile,Digital Goods,CA,Manual_Keyed
+9197,2024-02-16 01:20:00,64,7102,mobile,Digital Goods,UK,Manual_Keyed
+9198,2024-02-16 01:21:00,69,7102,mobile,Digital Goods,CA,Manual_Keyed
+9199,2024-02-16 01:23:00,474,1407,mobile,Digital Goods,US,Contactless
+9200,2024-02-16 01:26:00,160,4025,web,Fashion,AU,Chip
+9201,2024-02-16 01:33:00,259,1600,mobile,Travel,US,Chip
+9202,2024-02-16 01:40:00,269,5079,mobile,Travel,CA,Contactless
+9203,2024-02-16 01:46:00,93,5895,web,Grocery,US,Chip
+9204,2024-02-16 01:56:00,412,5741,web,Electronics,DE,Chip
+9205,2024-02-16 02:05:00,111,3551,mobile,Travel,DE,Chip
+9206,2024-02-16 02:14:00,449,3958,mobile,Grocery,US,Manual_Keyed
+9207,2024-02-16 02:17:00,57,6131,mobile,Electronics,CA,Chip
+9208,2024-02-16 02:17:00,57,4101,mobile,Digital Goods,DE,Manual_Keyed
+9209,2024-02-16 02:18:00,62,4101,mobile,Digital Goods,AU,Manual_Keyed
+9210,2024-02-16 02:18:00,86,4101,mobile,Digital Goods,AU,Manual_Keyed
+9211,2024-02-16 02:19:00,53,4101,mobile,Digital Goods,AU,Manual_Keyed
+9212,2024-02-16 02:30:00,324,6347,mobile,Fashion,US,Contactless
+9213,2024-02-16 02:31:00,63,2149,mobile,Digital Goods,AU,Manual_Keyed
+9214,2024-02-16 02:31:00,56,2149,mobile,Digital Goods,CA,Manual_Keyed
+9215,2024-02-16 02:32:00,62,2149,mobile,Digital Goods,DE,Manual_Keyed
+9216,2024-02-16 02:33:00,84,2149,mobile,Digital Goods,UK,Manual_Keyed
+9217,2024-02-16 02:33:00,89,2149,mobile,Digital Goods,UK,Manual_Keyed
+9218,2024-02-16 02:33:00,62,2149,mobile,Digital Goods,UK,Manual_Keyed
+9219,2024-02-16 02:34:00,56,2149,mobile,Digital Goods,UK,Manual_Keyed
+9220,2024-02-16 02:38:00,186,3531,mobile,Fashion,US,Chip
+9221,2024-02-16 02:52:00,328,6395,mobile,Grocery,US,Chip
+9222,2024-02-16 03:04:00,43,4519,mobile,Fashion,UK,Manual_Keyed
+9223,2024-02-16 03:12:00,1731,2295,mobile,Travel,US,Manual_Keyed
+9224,2024-02-16 03:13:00,66,7703,mobile,Digital Goods,DE,Manual_Keyed
+9225,2024-02-16 03:14:00,57,7703,mobile,Digital Goods,AU,Manual_Keyed
+9226,2024-02-16 03:15:00,88,7703,mobile,Digital Goods,AU,Manual_Keyed
+9227,2024-02-16 03:15:00,58,7703,mobile,Digital Goods,DE,Manual_Keyed
+9228,2024-02-16 03:15:00,66,7703,mobile,Digital Goods,DE,Manual_Keyed
+9229,2024-02-16 03:16:00,82,7703,mobile,Digital Goods,DE,Manual_Keyed
+9230,2024-02-16 03:20:00,421,3328,mobile,Grocery,US,Contactless
+9231,2024-02-16 03:26:00,430,4765,mobile,Digital Goods,US,Contactless
+9232,2024-02-16 03:39:00,14,4332,web,Travel,US,Contactless
+9233,2024-02-16 03:52:00,430,2064,mobile,Travel,US,Contactless
+9234,2024-02-16 03:53:00,60,7804,mobile,Digital Goods,CA,Manual_Keyed
+9235,2024-02-16 03:53:00,81,7804,mobile,Digital Goods,CA,Manual_Keyed
+9236,2024-02-16 03:54:00,87,7804,mobile,Digital Goods,UK,Manual_Keyed
+9237,2024-02-16 04:00:00,248,3475,mobile,Grocery,US,Chip
+9238,2024-02-16 04:10:00,469,4148,mobile,Fashion,UK,Chip
+9239,2024-02-16 04:23:00,111,1493,mobile,Grocery,UK,Contactless
+9240,2024-02-16 04:38:00,997,4477,tablet,Travel,AU,Manual_Keyed
+9241,2024-02-16 04:47:00,368,4473,tablet,Digital Goods,US,Manual_Keyed
+9242,2024-02-16 04:58:00,349,6445,tablet,Grocery,US,Chip
+9243,2024-02-16 05:08:00,34,1560,mobile,Travel,AU,Contactless
+9244,2024-02-16 05:16:00,351,6675,web,Digital Goods,UK,Chip
+9245,2024-02-16 05:16:00,56,2137,mobile,Digital Goods,CA,Manual_Keyed
+9246,2024-02-16 05:17:00,78,2137,mobile,Digital Goods,CA,Manual_Keyed
+9247,2024-02-16 05:17:00,66,2137,mobile,Digital Goods,AU,Manual_Keyed
+9248,2024-02-16 05:25:00,15,5384,web,Electronics,AU,Contactless
+9249,2024-02-16 05:28:00,365,6663,mobile,Grocery,US,Chip
+9250,2024-02-16 05:31:00,107,3410,mobile,Electronics,US,Manual_Keyed
+9251,2024-02-16 05:41:00,256,2036,web,Digital Goods,DE,Chip
+9252,2024-02-16 05:55:00,462,4080,mobile,Electronics,AU,Chip
+9253,2024-02-16 05:55:00,81,7427,mobile,Digital Goods,CA,Manual_Keyed
+9254,2024-02-16 05:56:00,60,7427,mobile,Digital Goods,DE,Manual_Keyed
+9255,2024-02-16 05:56:00,74,7427,mobile,Digital Goods,UK,Manual_Keyed
+9256,2024-02-16 05:57:00,71,7427,mobile,Digital Goods,UK,Manual_Keyed
+9257,2024-02-16 05:57:00,70,7427,mobile,Digital Goods,CA,Manual_Keyed
+9258,2024-02-16 06:02:00,156,1375,web,Fashion,US,Chip
+9259,2024-02-16 06:04:00,61,1310,web,Fashion,UK,Chip
+9260,2024-02-16 06:17:00,141,4074,mobile,Fashion,US,Chip
+9261,2024-02-16 06:17:00,75,2068,mobile,Digital Goods,CA,Manual_Keyed
+9262,2024-02-16 06:18:00,53,2068,mobile,Digital Goods,AU,Manual_Keyed
+9263,2024-02-16 06:18:00,57,2068,mobile,Digital Goods,CA,Manual_Keyed
+9264,2024-02-16 06:19:00,77,2068,mobile,Digital Goods,AU,Manual_Keyed
+9265,2024-02-16 06:19:00,63,5340,mobile,Digital Goods,DE,Manual_Keyed
+9266,2024-02-16 06:20:00,70,5340,mobile,Digital Goods,AU,Manual_Keyed
+9267,2024-02-16 06:21:00,79,5340,mobile,Digital Goods,CA,Manual_Keyed
+9268,2024-02-16 06:21:00,76,5340,mobile,Digital Goods,UK,Manual_Keyed
+9269,2024-02-16 06:22:00,73,5340,mobile,Digital Goods,CA,Manual_Keyed
+9270,2024-02-16 06:22:00,50,5340,mobile,Digital Goods,UK,Manual_Keyed
+9271,2024-02-16 06:37:00,213,4212,mobile,Digital Goods,CA,Chip
+9272,2024-02-16 06:51:00,235,3325,tablet,Fashion,US,Contactless
+9273,2024-02-16 06:58:00,370,1543,web,Electronics,DE,Manual_Keyed
+9274,2024-02-16 07:08:00,472,5590,mobile,Grocery,US,Chip
+9275,2024-02-16 07:19:00,108,4058,mobile,Grocery,US,Chip
+9276,2024-02-16 07:26:00,396,4014,web,Travel,DE,Contactless
+9277,2024-02-16 07:27:00,88,5412,mobile,Digital Goods,DE,Manual_Keyed
+9278,2024-02-16 07:27:00,54,5412,mobile,Digital Goods,CA,Manual_Keyed
+9279,2024-02-16 07:28:00,72,5412,mobile,Digital Goods,DE,Manual_Keyed
+9280,2024-02-16 07:29:00,81,5412,mobile,Digital Goods,DE,Manual_Keyed
+9281,2024-02-16 07:29:00,86,5412,mobile,Digital Goods,DE,Manual_Keyed
+9282,2024-02-16 07:30:00,51,5412,mobile,Digital Goods,DE,Manual_Keyed
+9283,2024-02-16 07:32:00,326,5970,web,Digital Goods,US,Chip
+9284,2024-02-16 07:40:00,170,3047,mobile,Fashion,AU,Chip
+9285,2024-02-16 07:51:00,92,7745,mobile,Grocery,UK,Chip
+9286,2024-02-16 07:55:00,411,6612,mobile,Travel,UK,Contactless
+9287,2024-02-16 07:55:00,50,4430,mobile,Digital Goods,DE,Manual_Keyed
+9288,2024-02-16 07:56:00,84,4430,mobile,Digital Goods,CA,Manual_Keyed
+9289,2024-02-16 07:56:00,72,4430,mobile,Digital Goods,AU,Manual_Keyed
+9290,2024-02-16 08:03:00,471,6757,web,Grocery,US,Chip
+9291,2024-02-16 08:12:00,213,6397,mobile,Grocery,US,Chip
+9292,2024-02-16 08:24:00,431,7479,mobile,Digital Goods,CA,Chip
+9293,2024-02-16 08:28:00,375,2141,web,Fashion,CA,Contactless
+9294,2024-02-16 08:29:00,80,5908,mobile,Digital Goods,CA,Manual_Keyed
+9295,2024-02-16 08:29:00,71,5908,mobile,Digital Goods,UK,Manual_Keyed
+9296,2024-02-16 08:30:00,69,5908,mobile,Digital Goods,CA,Manual_Keyed
+9297,2024-02-16 08:30:00,70,5908,mobile,Digital Goods,AU,Manual_Keyed
+9298,2024-02-16 08:31:00,59,5908,mobile,Digital Goods,UK,Manual_Keyed
+9299,2024-02-16 08:31:00,70,5908,mobile,Digital Goods,CA,Manual_Keyed
+9300,2024-02-16 08:46:00,309,4759,web,Electronics,UK,Contactless
+9301,2024-02-16 08:51:00,157,5958,web,Fashion,US,Contactless
+9302,2024-02-16 09:01:00,46,5374,web,Travel,UK,Contactless
+9303,2024-02-16 09:16:00,92,1677,web,Electronics,CA,Chip
+9304,2024-02-16 09:16:00,80,5285,mobile,Digital Goods,CA,Manual_Keyed
+9305,2024-02-16 09:16:00,67,5285,mobile,Digital Goods,AU,Manual_Keyed
+9306,2024-02-16 09:17:00,72,5285,mobile,Digital Goods,AU,Manual_Keyed
+9307,2024-02-16 09:17:00,54,5285,mobile,Digital Goods,UK,Manual_Keyed
+9308,2024-02-16 09:17:00,66,5285,mobile,Digital Goods,CA,Manual_Keyed
+9309,2024-02-16 09:21:00,489,1603,mobile,Fashion,US,Contactless
+9310,2024-02-16 09:21:00,83,4661,mobile,Digital Goods,AU,Manual_Keyed
+9311,2024-02-16 09:22:00,63,4661,mobile,Digital Goods,UK,Manual_Keyed
+9312,2024-02-16 09:23:00,63,4661,mobile,Digital Goods,CA,Manual_Keyed
+9313,2024-02-16 09:24:00,70,4661,mobile,Digital Goods,CA,Manual_Keyed
+9314,2024-02-16 09:24:00,74,4661,mobile,Digital Goods,UK,Manual_Keyed
+9315,2024-02-16 09:25:00,63,4661,mobile,Digital Goods,AU,Manual_Keyed
+9316,2024-02-16 09:39:00,400,2718,mobile,Fashion,US,Chip
+9317,2024-02-16 09:45:00,362,3544,web,Electronics,DE,Chip
+9318,2024-02-16 09:49:00,260,4839,mobile,Digital Goods,US,Contactless
+9319,2024-02-16 09:57:00,381,1655,web,Grocery,US,Contactless
+9320,2024-02-16 10:01:00,282,5492,mobile,Digital Goods,UK,Manual_Keyed
+9321,2024-02-16 10:01:00,88,5576,mobile,Digital Goods,DE,Manual_Keyed
+9322,2024-02-16 10:02:00,59,5576,mobile,Digital Goods,AU,Manual_Keyed
+9323,2024-02-16 10:03:00,75,5576,mobile,Digital Goods,UK,Manual_Keyed
+9324,2024-02-16 10:03:00,77,5576,mobile,Digital Goods,DE,Manual_Keyed
+9325,2024-02-16 10:04:00,84,5576,mobile,Digital Goods,CA,Manual_Keyed
+9326,2024-02-16 10:05:00,80,5576,mobile,Digital Goods,CA,Manual_Keyed
+9327,2024-02-16 10:11:00,69,3927,mobile,Electronics,AU,Chip
+9328,2024-02-16 10:23:00,493,2128,mobile,Electronics,DE,Chip
+9329,2024-02-16 10:23:00,74,1087,mobile,Digital Goods,AU,Manual_Keyed
+9330,2024-02-16 10:24:00,55,1087,mobile,Digital Goods,UK,Manual_Keyed
+9331,2024-02-16 10:25:00,71,1087,mobile,Digital Goods,AU,Manual_Keyed
+9332,2024-02-16 10:26:00,71,1087,mobile,Digital Goods,UK,Manual_Keyed
+9333,2024-02-16 10:28:00,17,1734,mobile,Fashion,US,Contactless
+9334,2024-02-16 10:36:00,306,2235,mobile,Fashion,US,Contactless
+9335,2024-02-16 10:40:00,424,5874,tablet,Grocery,US,Chip
+9336,2024-02-16 10:55:00,368,1315,web,Travel,US,Chip
+9337,2024-02-16 10:57:00,489,1951,web,Electronics,UK,Contactless
+9338,2024-02-16 11:12:00,422,5004,tablet,Grocery,CA,Chip
+9339,2024-02-16 11:13:00,52,6102,mobile,Digital Goods,UK,Manual_Keyed
+9340,2024-02-16 11:13:00,89,6102,mobile,Digital Goods,AU,Manual_Keyed
+9341,2024-02-16 11:14:00,78,6102,mobile,Digital Goods,DE,Manual_Keyed
+9342,2024-02-16 11:16:00,456,4808,mobile,Grocery,US,Manual_Keyed
+9343,2024-02-16 11:21:00,190,6161,web,Electronics,US,Contactless
+9344,2024-02-16 11:21:00,82,2847,mobile,Digital Goods,CA,Manual_Keyed
+9345,2024-02-16 11:22:00,55,2847,mobile,Digital Goods,DE,Manual_Keyed
+9346,2024-02-16 11:23:00,62,2847,mobile,Digital Goods,DE,Manual_Keyed
+9347,2024-02-16 11:23:00,63,5366,mobile,Digital Goods,AU,Manual_Keyed
+9348,2024-02-16 11:24:00,55,5366,mobile,Digital Goods,DE,Manual_Keyed
+9349,2024-02-16 11:25:00,56,5366,mobile,Digital Goods,UK,Manual_Keyed
+9350,2024-02-16 11:26:00,67,5876,mobile,Digital Goods,DE,Manual_Keyed
+9351,2024-02-16 11:27:00,79,5876,mobile,Digital Goods,AU,Manual_Keyed
+9352,2024-02-16 11:27:00,68,5876,mobile,Digital Goods,AU,Manual_Keyed
+9353,2024-02-16 11:38:00,379,2879,mobile,Grocery,UK,Chip
+9354,2024-02-16 11:45:00,402,2017,web,Travel,AU,Chip
+9355,2024-02-16 11:51:00,468,5530,web,Travel,US,Chip
+9356,2024-02-16 11:57:00,54,5657,mobile,Travel,US,Chip
+9357,2024-02-16 12:09:00,499,2560,mobile,Grocery,CA,Contactless
+9358,2024-02-16 12:11:00,1940,7291,web,Travel,AU,Manual_Keyed
+9359,2024-02-16 12:25:00,149,3786,mobile,Grocery,US,Contactless
+9360,2024-02-16 12:32:00,328,1589,tablet,Grocery,DE,Manual_Keyed
+9361,2024-02-16 12:35:00,174,1078,mobile,Travel,DE,Contactless
+9362,2024-02-16 12:38:00,343,2143,mobile,Travel,US,Contactless
+9363,2024-02-16 12:38:00,50,4558,mobile,Digital Goods,DE,Manual_Keyed
+9364,2024-02-16 12:39:00,60,4558,mobile,Digital Goods,AU,Manual_Keyed
+9365,2024-02-16 12:40:00,50,4558,mobile,Digital Goods,CA,Manual_Keyed
+9366,2024-02-16 12:41:00,68,4558,mobile,Digital Goods,CA,Manual_Keyed
+9367,2024-02-16 12:41:00,76,4558,mobile,Digital Goods,DE,Manual_Keyed
+9368,2024-02-16 12:42:00,77,4558,mobile,Digital Goods,DE,Manual_Keyed
+9369,2024-02-16 12:45:00,300,1152,mobile,Digital Goods,US,Chip
+9370,2024-02-16 12:45:00,78,1977,mobile,Digital Goods,UK,Manual_Keyed
+9371,2024-02-16 12:46:00,78,1977,mobile,Digital Goods,UK,Manual_Keyed
+9372,2024-02-16 12:46:00,85,1977,mobile,Digital Goods,UK,Manual_Keyed
+9373,2024-02-16 12:47:00,62,1977,mobile,Digital Goods,UK,Manual_Keyed
+9374,2024-02-16 12:47:00,50,1977,mobile,Digital Goods,AU,Manual_Keyed
+9375,2024-02-16 12:48:00,54,1977,mobile,Digital Goods,DE,Manual_Keyed
+9376,2024-02-16 12:48:00,73,1977,mobile,Digital Goods,UK,Manual_Keyed
+9377,2024-02-16 13:00:00,89,6026,web,Digital Goods,UK,Chip
+9378,2024-02-16 13:02:00,77,4546,web,Digital Goods,US,Chip
+9379,2024-02-16 13:08:00,307,7696,mobile,Travel,AU,Chip
+9380,2024-02-16 13:08:00,77,1242,mobile,Digital Goods,CA,Manual_Keyed
+9381,2024-02-16 13:08:00,50,1242,mobile,Digital Goods,AU,Manual_Keyed
+9382,2024-02-16 13:09:00,68,1242,mobile,Digital Goods,UK,Manual_Keyed
+9383,2024-02-16 13:09:00,70,1242,mobile,Digital Goods,DE,Manual_Keyed
+9384,2024-02-16 13:10:00,51,1242,mobile,Digital Goods,DE,Manual_Keyed
+9385,2024-02-16 13:11:00,51,1242,mobile,Digital Goods,DE,Manual_Keyed
+9386,2024-02-16 13:12:00,88,1242,mobile,Digital Goods,UK,Manual_Keyed
+9387,2024-02-16 13:25:00,208,4297,mobile,Travel,AU,Contactless
+9388,2024-02-16 13:30:00,152,2923,mobile,Grocery,AU,Chip
+9389,2024-02-16 13:30:00,78,6078,mobile,Digital Goods,AU,Manual_Keyed
+9390,2024-02-16 13:31:00,80,6078,mobile,Digital Goods,CA,Manual_Keyed
+9391,2024-02-16 13:31:00,61,6078,mobile,Digital Goods,UK,Manual_Keyed
+9392,2024-02-16 13:32:00,61,6078,mobile,Digital Goods,AU,Manual_Keyed
+9393,2024-02-16 13:32:00,78,6078,mobile,Digital Goods,AU,Manual_Keyed
+9394,2024-02-16 13:33:00,66,6078,mobile,Digital Goods,AU,Manual_Keyed
+9395,2024-02-16 13:33:00,63,6078,mobile,Digital Goods,DE,Manual_Keyed
+9396,2024-02-16 13:34:00,86,3986,mobile,Digital Goods,DE,Manual_Keyed
+9397,2024-02-16 13:34:00,55,3986,mobile,Digital Goods,DE,Manual_Keyed
+9398,2024-02-16 13:35:00,76,3986,mobile,Digital Goods,AU,Manual_Keyed
+9399,2024-02-16 13:36:00,66,3986,mobile,Digital Goods,AU,Manual_Keyed
+9400,2024-02-16 13:42:00,291,6226,tablet,Digital Goods,US,Contactless
+9401,2024-02-16 13:54:00,1891,5919,mobile,Travel,DE,Manual_Keyed
+9402,2024-02-16 13:59:00,26,1358,web,Fashion,US,Chip
+9403,2024-02-16 14:00:00,83,6925,mobile,Digital Goods,UK,Manual_Keyed
+9404,2024-02-16 14:00:00,54,6925,mobile,Digital Goods,CA,Manual_Keyed
+9405,2024-02-16 14:00:00,76,6925,mobile,Digital Goods,UK,Manual_Keyed
+9406,2024-02-16 14:01:00,72,6925,mobile,Digital Goods,AU,Manual_Keyed
+9407,2024-02-16 14:02:00,65,6925,mobile,Digital Goods,AU,Manual_Keyed
+9408,2024-02-16 14:03:00,58,6925,mobile,Digital Goods,AU,Manual_Keyed
+9409,2024-02-16 14:04:00,63,1288,mobile,Digital Goods,UK,Manual_Keyed
+9410,2024-02-16 14:04:00,72,1288,mobile,Digital Goods,UK,Manual_Keyed
+9411,2024-02-16 14:04:00,76,1288,mobile,Digital Goods,AU,Manual_Keyed
+9412,2024-02-16 14:05:00,52,1288,mobile,Digital Goods,UK,Manual_Keyed
+9413,2024-02-16 14:06:00,71,1288,mobile,Digital Goods,UK,Manual_Keyed
+9414,2024-02-16 14:06:00,70,1288,mobile,Digital Goods,CA,Manual_Keyed
+9415,2024-02-16 14:07:00,58,1288,mobile,Digital Goods,AU,Manual_Keyed
+9416,2024-02-16 14:08:00,66,2036,mobile,Digital Goods,AU,Manual_Keyed
+9417,2024-02-16 14:09:00,81,2036,mobile,Digital Goods,CA,Manual_Keyed
+9418,2024-02-16 14:10:00,59,2036,mobile,Digital Goods,DE,Manual_Keyed
+9419,2024-02-16 14:23:00,475,6117,web,Electronics,AU,Contactless
+9420,2024-02-16 14:26:00,256,7224,mobile,Travel,US,Chip
+9421,2024-02-16 14:34:00,29,4971,web,Grocery,AU,Chip
+9422,2024-02-16 14:48:00,242,2939,mobile,Travel,US,Contactless
+9423,2024-02-16 14:49:00,50,2891,mobile,Digital Goods,CA,Manual_Keyed
+9424,2024-02-16 14:49:00,73,2891,mobile,Digital Goods,CA,Manual_Keyed
+9425,2024-02-16 14:50:00,60,2891,mobile,Digital Goods,AU,Manual_Keyed
+9426,2024-02-16 14:51:00,84,2891,mobile,Digital Goods,UK,Manual_Keyed
+9427,2024-02-16 14:52:00,51,2891,mobile,Digital Goods,AU,Manual_Keyed
+9428,2024-02-16 14:53:00,75,2891,mobile,Digital Goods,AU,Manual_Keyed
+9429,2024-02-16 15:03:00,351,3453,web,Fashion,AU,Manual_Keyed
+9430,2024-02-16 15:12:00,229,4860,mobile,Travel,CA,Contactless
+9431,2024-02-16 15:21:00,61,2814,web,Fashion,US,Chip
+9432,2024-02-16 15:34:00,464,5830,mobile,Grocery,US,Chip
+9433,2024-02-16 15:34:00,88,6865,mobile,Digital Goods,UK,Manual_Keyed
+9434,2024-02-16 15:34:00,59,6865,mobile,Digital Goods,AU,Manual_Keyed
+9435,2024-02-16 15:35:00,61,6865,mobile,Digital Goods,DE,Manual_Keyed
+9436,2024-02-16 15:35:00,74,6865,mobile,Digital Goods,DE,Manual_Keyed
+9437,2024-02-16 15:36:00,79,6865,mobile,Digital Goods,AU,Manual_Keyed
+9438,2024-02-16 15:36:00,87,6865,mobile,Digital Goods,UK,Manual_Keyed
+9439,2024-02-16 15:45:00,376,7880,mobile,Digital Goods,US,Chip
+9440,2024-02-16 15:46:00,68,2920,mobile,Digital Goods,CA,Manual_Keyed
+9441,2024-02-16 15:47:00,68,2920,mobile,Digital Goods,UK,Manual_Keyed
+9442,2024-02-16 15:47:00,80,2920,mobile,Digital Goods,CA,Manual_Keyed
+9443,2024-02-16 15:47:00,70,2920,mobile,Digital Goods,DE,Manual_Keyed
+9444,2024-02-16 15:48:00,82,2920,mobile,Digital Goods,AU,Manual_Keyed
+9445,2024-02-16 15:49:00,64,2920,mobile,Digital Goods,AU,Manual_Keyed
+9446,2024-02-16 15:49:00,83,2920,mobile,Digital Goods,UK,Manual_Keyed
+9447,2024-02-16 15:50:00,58,1325,mobile,Digital Goods,CA,Manual_Keyed
+9448,2024-02-16 15:50:00,75,1325,mobile,Digital Goods,UK,Manual_Keyed
+9449,2024-02-16 15:51:00,75,1325,mobile,Digital Goods,UK,Manual_Keyed
+9450,2024-02-16 15:52:00,83,1325,mobile,Digital Goods,UK,Manual_Keyed
+9451,2024-02-16 15:53:00,67,1325,mobile,Digital Goods,AU,Manual_Keyed
+9452,2024-02-16 15:58:00,492,2146,mobile,Fashion,UK,Manual_Keyed
+9453,2024-02-16 16:01:00,489,7993,mobile,Travel,UK,Contactless
+9454,2024-02-16 16:12:00,2732,5734,tablet,Travel,US,Manual_Keyed
+9455,2024-02-16 16:19:00,76,1182,mobile,Digital Goods,UK,Chip
+9456,2024-02-16 16:19:00,70,7537,mobile,Digital Goods,UK,Manual_Keyed
+9457,2024-02-16 16:20:00,75,7537,mobile,Digital Goods,CA,Manual_Keyed
+9458,2024-02-16 16:21:00,62,7537,mobile,Digital Goods,UK,Manual_Keyed
+9459,2024-02-16 16:21:00,69,7537,mobile,Digital Goods,UK,Manual_Keyed
+9460,2024-02-16 16:22:00,78,7537,mobile,Digital Goods,CA,Manual_Keyed
+9461,2024-02-16 16:23:00,52,7537,mobile,Digital Goods,CA,Manual_Keyed
+9462,2024-02-16 16:23:00,85,7537,mobile,Digital Goods,CA,Manual_Keyed
+9463,2024-02-16 16:24:00,87,2743,mobile,Digital Goods,UK,Manual_Keyed
+9464,2024-02-16 16:24:00,59,2743,mobile,Digital Goods,DE,Manual_Keyed
+9465,2024-02-16 16:25:00,78,2743,mobile,Digital Goods,UK,Manual_Keyed
+9466,2024-02-16 16:25:00,64,2743,mobile,Digital Goods,CA,Manual_Keyed
+9467,2024-02-16 16:26:00,77,2743,mobile,Digital Goods,DE,Manual_Keyed
+9468,2024-02-16 16:26:00,76,2743,mobile,Digital Goods,DE,Manual_Keyed
+9469,2024-02-16 16:27:00,52,2743,mobile,Digital Goods,UK,Manual_Keyed
+9470,2024-02-16 16:34:00,479,7250,web,Travel,DE,Contactless
+9471,2024-02-16 16:46:00,170,5943,web,Digital Goods,DE,Contactless
+9472,2024-02-16 16:52:00,466,5867,web,Digital Goods,AU,Contactless
+9473,2024-02-16 16:59:00,271,4978,mobile,Digital Goods,US,Chip
+9474,2024-02-16 17:04:00,212,2385,mobile,Grocery,US,Contactless
+9475,2024-02-16 17:14:00,35,3400,mobile,Digital Goods,US,Chip
+9476,2024-02-16 17:22:00,235,3212,tablet,Travel,US,Chip
+9477,2024-02-16 17:31:00,184,1689,mobile,Fashion,DE,Chip
+9478,2024-02-16 17:36:00,439,5704,mobile,Travel,US,Chip
+9479,2024-02-16 17:48:00,392,1522,web,Grocery,US,Chip
+9480,2024-02-16 17:59:00,33,4148,web,Travel,US,Chip
+9481,2024-02-16 18:09:00,137,6373,tablet,Grocery,US,Chip
+9482,2024-02-16 18:10:00,75,1703,mobile,Digital Goods,AU,Manual_Keyed
+9483,2024-02-16 18:10:00,59,1703,mobile,Digital Goods,DE,Manual_Keyed
+9484,2024-02-16 18:11:00,57,1703,mobile,Digital Goods,AU,Manual_Keyed
+9485,2024-02-16 18:12:00,67,1703,mobile,Digital Goods,UK,Manual_Keyed
+9486,2024-02-16 18:13:00,81,1703,mobile,Digital Goods,UK,Manual_Keyed
+9487,2024-02-16 18:13:00,77,1703,mobile,Digital Goods,UK,Manual_Keyed
+9488,2024-02-16 18:14:00,83,1703,mobile,Digital Goods,UK,Manual_Keyed
+9489,2024-02-16 18:24:00,458,7542,mobile,Digital Goods,AU,Contactless
+9490,2024-02-16 18:25:00,56,3715,mobile,Digital Goods,DE,Manual_Keyed
+9491,2024-02-16 18:25:00,64,3715,mobile,Digital Goods,AU,Manual_Keyed
+9492,2024-02-16 18:26:00,85,3715,mobile,Digital Goods,AU,Manual_Keyed
+9493,2024-02-16 18:27:00,64,5434,mobile,Digital Goods,AU,Manual_Keyed
+9494,2024-02-16 18:27:00,61,5434,mobile,Digital Goods,CA,Manual_Keyed
+9495,2024-02-16 18:28:00,69,5434,mobile,Digital Goods,CA,Manual_Keyed
+9496,2024-02-16 18:29:00,70,5434,mobile,Digital Goods,DE,Manual_Keyed
+9497,2024-02-16 18:29:00,89,5434,mobile,Digital Goods,DE,Manual_Keyed
+9498,2024-02-16 18:42:00,187,4667,web,Fashion,UK,Chip
+9499,2024-02-16 18:43:00,53,7811,mobile,Digital Goods,CA,Manual_Keyed
+9500,2024-02-16 18:44:00,66,7811,mobile,Digital Goods,AU,Manual_Keyed
+9501,2024-02-16 18:45:00,54,7811,mobile,Digital Goods,CA,Manual_Keyed
+9502,2024-02-16 18:45:00,57,7811,mobile,Digital Goods,DE,Manual_Keyed
+9503,2024-02-16 18:46:00,77,7811,mobile,Digital Goods,AU,Manual_Keyed
+9504,2024-02-16 18:55:00,12,7360,web,Grocery,US,Chip
+9505,2024-02-16 19:04:00,2185,5073,mobile,Travel,US,Manual_Keyed
+9506,2024-02-16 19:17:00,171,3918,mobile,Electronics,US,Manual_Keyed
+9507,2024-02-16 19:18:00,51,2330,mobile,Digital Goods,CA,Manual_Keyed
+9508,2024-02-16 19:18:00,67,2330,mobile,Digital Goods,DE,Manual_Keyed
+9509,2024-02-16 19:19:00,73,2330,mobile,Digital Goods,AU,Manual_Keyed
+9510,2024-02-16 19:20:00,57,2330,mobile,Digital Goods,DE,Manual_Keyed
+9511,2024-02-16 19:21:00,60,2330,mobile,Digital Goods,AU,Manual_Keyed
+9512,2024-02-16 19:22:00,56,2330,mobile,Digital Goods,CA,Manual_Keyed
+9513,2024-02-16 19:22:00,86,2330,mobile,Digital Goods,AU,Manual_Keyed
+9514,2024-02-16 19:30:00,146,2405,web,Digital Goods,DE,Chip
+9515,2024-02-16 19:40:00,225,5249,tablet,Grocery,US,Contactless
+9516,2024-02-16 19:48:00,132,4252,mobile,Digital Goods,AU,Chip
+9517,2024-02-16 20:02:00,228,2475,mobile,Electronics,US,Manual_Keyed
+9518,2024-02-16 20:16:00,335,5112,mobile,Fashion,US,Chip
+9519,2024-02-16 20:31:00,248,5125,mobile,Electronics,US,Chip
+9520,2024-02-16 20:31:00,68,1966,mobile,Digital Goods,UK,Manual_Keyed
+9521,2024-02-16 20:32:00,56,1966,mobile,Digital Goods,AU,Manual_Keyed
+9522,2024-02-16 20:33:00,77,1966,mobile,Digital Goods,DE,Manual_Keyed
+9523,2024-02-16 20:33:00,77,1966,mobile,Digital Goods,CA,Manual_Keyed
+9524,2024-02-16 20:33:00,68,1966,mobile,Digital Goods,CA,Manual_Keyed
+9525,2024-02-16 20:34:00,74,1966,mobile,Digital Goods,DE,Manual_Keyed
+9526,2024-02-16 20:34:00,75,7940,mobile,Digital Goods,CA,Manual_Keyed
+9527,2024-02-16 20:35:00,75,7940,mobile,Digital Goods,CA,Manual_Keyed
+9528,2024-02-16 20:35:00,50,7940,mobile,Digital Goods,CA,Manual_Keyed
+9529,2024-02-16 20:36:00,62,7940,mobile,Digital Goods,UK,Manual_Keyed
+9530,2024-02-16 20:37:00,62,7940,mobile,Digital Goods,DE,Manual_Keyed
+9531,2024-02-16 20:37:00,68,7940,mobile,Digital Goods,AU,Manual_Keyed
+9532,2024-02-16 20:51:00,485,1090,web,Travel,UK,Contactless
+9533,2024-02-16 21:00:00,282,4410,mobile,Fashion,US,Contactless
+9534,2024-02-16 21:04:00,223,6573,mobile,Fashion,DE,Chip
+9535,2024-02-16 21:13:00,137,4527,web,Electronics,CA,Chip
+9536,2024-02-16 21:25:00,50,3469,mobile,Grocery,US,Chip
+9537,2024-02-16 21:25:00,57,1986,mobile,Digital Goods,AU,Manual_Keyed
+9538,2024-02-16 21:26:00,83,1986,mobile,Digital Goods,CA,Manual_Keyed
+9539,2024-02-16 21:26:00,80,1986,mobile,Digital Goods,DE,Manual_Keyed
+9540,2024-02-16 21:27:00,70,5557,mobile,Digital Goods,DE,Manual_Keyed
+9541,2024-02-16 21:27:00,65,5557,mobile,Digital Goods,AU,Manual_Keyed
+9542,2024-02-16 21:28:00,75,5557,mobile,Digital Goods,UK,Manual_Keyed
+9543,2024-02-16 21:29:00,52,5557,mobile,Digital Goods,UK,Manual_Keyed
+9544,2024-02-16 21:29:00,51,5557,mobile,Digital Goods,CA,Manual_Keyed
+9545,2024-02-16 21:33:00,344,2806,mobile,Digital Goods,US,Contactless
+9546,2024-02-16 21:38:00,29,2632,mobile,Fashion,US,Contactless
+9547,2024-02-16 21:39:00,71,3839,mobile,Digital Goods,CA,Manual_Keyed
+9548,2024-02-16 21:40:00,88,3839,mobile,Digital Goods,AU,Manual_Keyed
+9549,2024-02-16 21:40:00,69,3839,mobile,Digital Goods,UK,Manual_Keyed
+9550,2024-02-16 21:40:00,67,3839,mobile,Digital Goods,CA,Manual_Keyed
+9551,2024-02-16 21:41:00,62,3839,mobile,Digital Goods,DE,Manual_Keyed
+9552,2024-02-16 21:41:00,52,3839,mobile,Digital Goods,DE,Manual_Keyed
+9553,2024-02-16 21:55:00,330,1744,web,Grocery,US,Contactless
+9554,2024-02-16 21:55:00,88,4482,mobile,Digital Goods,UK,Manual_Keyed
+9555,2024-02-16 21:56:00,85,4482,mobile,Digital Goods,UK,Manual_Keyed
+9556,2024-02-16 21:57:00,59,4482,mobile,Digital Goods,CA,Manual_Keyed
+9557,2024-02-16 21:57:00,76,4482,mobile,Digital Goods,DE,Manual_Keyed
+9558,2024-02-16 21:58:00,76,4482,mobile,Digital Goods,AU,Manual_Keyed
+9559,2024-02-16 21:59:00,71,5287,mobile,Digital Goods,DE,Manual_Keyed
+9560,2024-02-16 22:00:00,56,5287,mobile,Digital Goods,UK,Manual_Keyed
+9561,2024-02-16 22:00:00,81,5287,mobile,Digital Goods,UK,Manual_Keyed
+9562,2024-02-16 22:01:00,64,5287,mobile,Digital Goods,AU,Manual_Keyed
+9563,2024-02-16 22:02:00,82,5902,mobile,Digital Goods,UK,Manual_Keyed
+9564,2024-02-16 22:03:00,79,5902,mobile,Digital Goods,CA,Manual_Keyed
+9565,2024-02-16 22:03:00,65,5902,mobile,Digital Goods,CA,Manual_Keyed
+9566,2024-02-16 22:11:00,363,1311,mobile,Digital Goods,US,Chip
+9567,2024-02-16 22:19:00,68,4481,mobile,Digital Goods,DE,Contactless
+9568,2024-02-16 22:22:00,421,5420,mobile,Travel,DE,Contactless
+9569,2024-02-16 22:22:00,57,1632,mobile,Digital Goods,DE,Manual_Keyed
+9570,2024-02-16 22:23:00,84,1632,mobile,Digital Goods,DE,Manual_Keyed
+9571,2024-02-16 22:23:00,79,1632,mobile,Digital Goods,UK,Manual_Keyed
+9572,2024-02-16 22:24:00,61,1632,mobile,Digital Goods,DE,Manual_Keyed
+9573,2024-02-16 22:31:00,210,4822,web,Digital Goods,US,Chip
+9574,2024-02-16 22:36:00,49,3775,tablet,Grocery,US,Contactless
+9575,2024-02-16 22:41:00,487,3117,mobile,Electronics,US,Manual_Keyed
+9576,2024-02-16 22:53:00,28,7790,web,Electronics,DE,Chip
+9577,2024-02-16 23:06:00,164,7409,mobile,Electronics,UK,Chip
+9578,2024-02-16 23:16:00,1393,2257,mobile,Travel,US,Manual_Keyed
+9579,2024-02-16 23:17:00,57,6962,mobile,Digital Goods,AU,Manual_Keyed
+9580,2024-02-16 23:18:00,88,6962,mobile,Digital Goods,AU,Manual_Keyed
+9581,2024-02-16 23:18:00,86,6962,mobile,Digital Goods,DE,Manual_Keyed
+9582,2024-02-16 23:19:00,64,6962,mobile,Digital Goods,CA,Manual_Keyed
+9583,2024-02-16 23:19:00,83,6962,mobile,Digital Goods,DE,Manual_Keyed
+9584,2024-02-16 23:20:00,56,6962,mobile,Digital Goods,UK,Manual_Keyed
+9585,2024-02-16 23:31:00,416,6743,mobile,Fashion,US,Chip
+9586,2024-02-16 23:39:00,32,7500,mobile,Grocery,US,Chip
+9587,2024-02-16 23:44:00,352,6011,web,Digital Goods,AU,Chip
+9588,2024-02-16 23:50:00,427,4209,mobile,Grocery,US,Chip
+9589,2024-02-17 00:01:00,99,1464,web,Digital Goods,DE,Contactless
+9590,2024-02-17 00:01:00,68,1039,mobile,Digital Goods,UK,Manual_Keyed
+9591,2024-02-17 00:02:00,63,1039,mobile,Digital Goods,AU,Manual_Keyed
+9592,2024-02-17 00:02:00,79,1039,mobile,Digital Goods,DE,Manual_Keyed
+9593,2024-02-17 00:03:00,51,1039,mobile,Digital Goods,CA,Manual_Keyed
+9594,2024-02-17 00:13:00,1197,1778,mobile,Travel,DE,Manual_Keyed
+9595,2024-02-17 00:18:00,45,3877,mobile,Electronics,US,Contactless
+9596,2024-02-17 00:30:00,228,6328,web,Digital Goods,US,Chip
+9597,2024-02-17 00:42:00,339,7038,mobile,Travel,US,Chip
+9598,2024-02-17 00:48:00,238,6135,mobile,Grocery,AU,Contactless
+9599,2024-02-17 00:53:00,304,6638,web,Fashion,US,Contactless
+9600,2024-02-17 01:01:00,2900,4732,mobile,Travel,US,Manual_Keyed
+9601,2024-02-17 01:06:00,160,3924,web,Electronics,DE,Contactless
+9602,2024-02-17 01:20:00,366,6904,tablet,Digital Goods,US,Contactless
+9603,2024-02-17 01:21:00,78,3832,mobile,Digital Goods,UK,Manual_Keyed
+9604,2024-02-17 01:21:00,73,3832,mobile,Digital Goods,AU,Manual_Keyed
+9605,2024-02-17 01:22:00,59,3832,mobile,Digital Goods,DE,Manual_Keyed
+9606,2024-02-17 01:23:00,76,3832,mobile,Digital Goods,CA,Manual_Keyed
+9607,2024-02-17 01:24:00,57,3832,mobile,Digital Goods,CA,Manual_Keyed
+9608,2024-02-17 01:24:00,76,3832,mobile,Digital Goods,DE,Manual_Keyed
+9609,2024-02-17 01:36:00,436,5508,web,Fashion,US,Manual_Keyed
+9610,2024-02-17 01:46:00,419,6145,web,Electronics,CA,Chip
+9611,2024-02-17 02:00:00,1004,1059,mobile,Travel,CA,Manual_Keyed
+9612,2024-02-17 02:08:00,91,1606,mobile,Grocery,UK,Contactless
+9613,2024-02-17 02:09:00,87,2894,mobile,Digital Goods,AU,Manual_Keyed
+9614,2024-02-17 02:10:00,73,2894,mobile,Digital Goods,AU,Manual_Keyed
+9615,2024-02-17 02:11:00,68,2894,mobile,Digital Goods,UK,Manual_Keyed
+9616,2024-02-17 02:11:00,80,2894,mobile,Digital Goods,DE,Manual_Keyed
+9617,2024-02-17 02:11:00,56,2894,mobile,Digital Goods,AU,Manual_Keyed
+9618,2024-02-17 02:12:00,81,2894,mobile,Digital Goods,UK,Manual_Keyed
+9619,2024-02-17 02:12:00,51,2894,mobile,Digital Goods,UK,Manual_Keyed
+9620,2024-02-17 02:13:00,58,3144,mobile,Digital Goods,UK,Manual_Keyed
+9621,2024-02-17 02:14:00,79,3144,mobile,Digital Goods,AU,Manual_Keyed
+9622,2024-02-17 02:15:00,69,3144,mobile,Digital Goods,AU,Manual_Keyed
+9623,2024-02-17 02:15:00,85,3144,mobile,Digital Goods,CA,Manual_Keyed
+9624,2024-02-17 02:28:00,320,4341,mobile,Travel,CA,Chip
+9625,2024-02-17 02:33:00,368,1611,mobile,Electronics,US,Contactless
+9626,2024-02-17 02:39:00,327,4538,web,Fashion,AU,Chip
+9627,2024-02-17 02:48:00,296,1555,mobile,Grocery,UK,Contactless
+9628,2024-02-17 02:59:00,387,4262,mobile,Electronics,UK,Contactless
+9629,2024-02-17 03:03:00,465,7778,web,Digital Goods,AU,Chip
+9630,2024-02-17 03:04:00,89,5149,mobile,Digital Goods,CA,Manual_Keyed
+9631,2024-02-17 03:04:00,78,5149,mobile,Digital Goods,AU,Manual_Keyed
+9632,2024-02-17 03:05:00,87,5149,mobile,Digital Goods,UK,Manual_Keyed
+9633,2024-02-17 03:05:00,57,5149,mobile,Digital Goods,CA,Manual_Keyed
+9634,2024-02-17 03:17:00,1770,6327,tablet,Travel,US,Manual_Keyed
+9635,2024-02-17 03:22:00,402,5806,web,Grocery,DE,Contactless
+9636,2024-02-17 03:26:00,162,3055,mobile,Travel,US,Chip
+9637,2024-02-17 03:40:00,127,7914,mobile,Digital Goods,US,Chip
+9638,2024-02-17 03:41:00,52,1669,mobile,Digital Goods,AU,Manual_Keyed
+9639,2024-02-17 03:42:00,74,1669,mobile,Digital Goods,DE,Manual_Keyed
+9640,2024-02-17 03:43:00,86,1669,mobile,Digital Goods,AU,Manual_Keyed
+9641,2024-02-17 03:43:00,75,1669,mobile,Digital Goods,UK,Manual_Keyed
+9642,2024-02-17 03:46:00,379,7099,web,Digital Goods,US,Contactless
+9643,2024-02-17 03:48:00,427,7550,mobile,Digital Goods,US,Chip
+9644,2024-02-17 04:01:00,372,5208,mobile,Digital Goods,US,Chip
+9645,2024-02-17 04:02:00,78,4438,mobile,Digital Goods,AU,Manual_Keyed
+9646,2024-02-17 04:03:00,89,4438,mobile,Digital Goods,DE,Manual_Keyed
+9647,2024-02-17 04:03:00,86,4438,mobile,Digital Goods,AU,Manual_Keyed
+9648,2024-02-17 04:09:00,493,1538,mobile,Grocery,AU,Contactless
+9649,2024-02-17 04:23:00,302,6485,mobile,Electronics,US,Chip
+9650,2024-02-17 04:38:00,144,6811,mobile,Travel,UK,Contactless
+9651,2024-02-17 04:38:00,83,5568,mobile,Digital Goods,CA,Manual_Keyed
+9652,2024-02-17 04:39:00,60,5568,mobile,Digital Goods,CA,Manual_Keyed
+9653,2024-02-17 04:40:00,61,5568,mobile,Digital Goods,AU,Manual_Keyed
+9654,2024-02-17 04:40:00,83,5568,mobile,Digital Goods,UK,Manual_Keyed
+9655,2024-02-17 04:41:00,52,5568,mobile,Digital Goods,DE,Manual_Keyed
+9656,2024-02-17 04:41:00,71,5568,mobile,Digital Goods,DE,Manual_Keyed
+9657,2024-02-17 04:42:00,79,5568,mobile,Digital Goods,CA,Manual_Keyed
+9658,2024-02-17 04:42:00,72,3419,mobile,Digital Goods,CA,Manual_Keyed
+9659,2024-02-17 04:43:00,80,3419,mobile,Digital Goods,UK,Manual_Keyed
+9660,2024-02-17 04:43:00,60,3419,mobile,Digital Goods,DE,Manual_Keyed
+9661,2024-02-17 04:44:00,70,3419,mobile,Digital Goods,CA,Manual_Keyed
+9662,2024-02-17 04:45:00,64,3419,mobile,Digital Goods,UK,Manual_Keyed
+9663,2024-02-17 04:52:00,215,1315,mobile,Travel,AU,Chip
+9664,2024-02-17 05:00:00,427,5288,tablet,Grocery,US,Chip
+9665,2024-02-17 05:06:00,308,2932,mobile,Electronics,US,Chip
+9666,2024-02-17 05:16:00,182,2280,mobile,Grocery,AU,Chip
+9667,2024-02-17 05:22:00,427,6580,tablet,Electronics,DE,Chip
+9668,2024-02-17 05:31:00,895,4493,web,Travel,AU,Manual_Keyed
+9669,2024-02-17 05:35:00,339,5590,mobile,Grocery,DE,Contactless
+9670,2024-02-17 05:47:00,186,1772,web,Digital Goods,CA,Manual_Keyed
+9671,2024-02-17 05:59:00,293,6042,mobile,Fashion,US,Chip
+9672,2024-02-17 06:00:00,76,1438,mobile,Digital Goods,AU,Manual_Keyed
+9673,2024-02-17 06:01:00,81,1438,mobile,Digital Goods,AU,Manual_Keyed
+9674,2024-02-17 06:01:00,60,1438,mobile,Digital Goods,UK,Manual_Keyed
+9675,2024-02-17 06:01:00,67,1438,mobile,Digital Goods,CA,Manual_Keyed
+9676,2024-02-17 06:02:00,74,1438,mobile,Digital Goods,AU,Manual_Keyed
+9677,2024-02-17 06:02:00,58,1438,mobile,Digital Goods,DE,Manual_Keyed
+9678,2024-02-17 06:03:00,65,1438,mobile,Digital Goods,UK,Manual_Keyed
+9679,2024-02-17 06:14:00,69,6838,web,Fashion,UK,Manual_Keyed
+9680,2024-02-17 06:22:00,144,6057,web,Digital Goods,DE,Contactless
+9681,2024-02-17 06:22:00,86,7844,mobile,Digital Goods,DE,Manual_Keyed
+9682,2024-02-17 06:22:00,53,7844,mobile,Digital Goods,CA,Manual_Keyed
+9683,2024-02-17 06:23:00,80,7844,mobile,Digital Goods,DE,Manual_Keyed
+9684,2024-02-17 06:24:00,79,7844,mobile,Digital Goods,AU,Manual_Keyed
+9685,2024-02-17 06:24:00,50,7844,mobile,Digital Goods,DE,Manual_Keyed
+9686,2024-02-17 06:25:00,82,7844,mobile,Digital Goods,AU,Manual_Keyed
+9687,2024-02-17 06:26:00,80,7844,mobile,Digital Goods,CA,Manual_Keyed
+9688,2024-02-17 06:38:00,232,5028,web,Digital Goods,US,Chip
+9689,2024-02-17 06:40:00,479,1982,mobile,Fashion,CA,Contactless
+9690,2024-02-17 06:48:00,54,1971,mobile,Fashion,DE,Contactless
+9691,2024-02-17 07:01:00,383,5660,web,Electronics,US,Manual_Keyed
+9692,2024-02-17 07:02:00,86,2568,mobile,Digital Goods,DE,Manual_Keyed
+9693,2024-02-17 07:02:00,74,2568,mobile,Digital Goods,DE,Manual_Keyed
+9694,2024-02-17 07:03:00,85,2568,mobile,Digital Goods,DE,Manual_Keyed
+9695,2024-02-17 07:04:00,68,2568,mobile,Digital Goods,UK,Manual_Keyed
+9696,2024-02-17 07:04:00,73,3253,mobile,Digital Goods,UK,Manual_Keyed
+9697,2024-02-17 07:05:00,64,3253,mobile,Digital Goods,AU,Manual_Keyed
+9698,2024-02-17 07:05:00,78,3253,mobile,Digital Goods,CA,Manual_Keyed
+9699,2024-02-17 07:06:00,82,3253,mobile,Digital Goods,CA,Manual_Keyed
+9700,2024-02-17 07:11:00,213,3663,mobile,Travel,UK,Contactless
+9701,2024-02-17 07:18:00,13,4229,web,Grocery,AU,Chip
+9702,2024-02-17 07:19:00,88,1142,mobile,Digital Goods,CA,Manual_Keyed
+9703,2024-02-17 07:20:00,79,1142,mobile,Digital Goods,DE,Manual_Keyed
+9704,2024-02-17 07:20:00,80,1142,mobile,Digital Goods,UK,Manual_Keyed
+9705,2024-02-17 07:21:00,79,1142,mobile,Digital Goods,AU,Manual_Keyed
+9706,2024-02-17 07:22:00,84,1142,mobile,Digital Goods,UK,Manual_Keyed
+9707,2024-02-17 07:22:00,77,1142,mobile,Digital Goods,CA,Manual_Keyed
+9708,2024-02-17 07:22:00,68,1142,mobile,Digital Goods,CA,Manual_Keyed
+9709,2024-02-17 07:26:00,147,5915,tablet,Electronics,UK,Chip
+9710,2024-02-17 07:32:00,478,3995,mobile,Travel,AU,Chip
+9711,2024-02-17 07:40:00,178,7139,tablet,Grocery,CA,Chip
+9712,2024-02-17 07:47:00,271,6415,web,Digital Goods,US,Chip
+9713,2024-02-17 07:48:00,85,2579,mobile,Digital Goods,UK,Manual_Keyed
+9714,2024-02-17 07:48:00,54,2579,mobile,Digital Goods,UK,Manual_Keyed
+9715,2024-02-17 07:49:00,77,2579,mobile,Digital Goods,DE,Manual_Keyed
+9716,2024-02-17 07:50:00,67,2579,mobile,Digital Goods,AU,Manual_Keyed
+9717,2024-02-17 07:53:00,256,3826,mobile,Grocery,AU,Chip
+9718,2024-02-17 08:01:00,492,7205,mobile,Electronics,CA,Contactless
+9719,2024-02-17 08:12:00,414,1181,mobile,Digital Goods,US,Contactless
+9720,2024-02-17 08:19:00,276,4668,mobile,Travel,US,Contactless
+9721,2024-02-17 08:23:00,368,1615,mobile,Grocery,AU,Contactless
+9722,2024-02-17 08:33:00,79,5988,web,Electronics,CA,Chip
+9723,2024-02-17 08:35:00,265,7818,tablet,Digital Goods,US,Manual_Keyed
+9724,2024-02-17 08:43:00,177,1146,web,Travel,US,Chip
+9725,2024-02-17 08:53:00,116,1878,mobile,Grocery,US,Contactless
+9726,2024-02-17 09:02:00,393,7751,web,Digital Goods,US,Contactless
+9727,2024-02-17 09:05:00,266,1436,mobile,Electronics,US,Chip
+9728,2024-02-17 09:10:00,420,2278,web,Fashion,DE,Contactless
+9729,2024-02-17 09:15:00,2215,3401,tablet,Travel,US,Manual_Keyed
+9730,2024-02-17 09:23:00,463,1641,tablet,Digital Goods,UK,Contactless
+9731,2024-02-17 09:23:00,52,7047,mobile,Digital Goods,DE,Manual_Keyed
+9732,2024-02-17 09:24:00,65,7047,mobile,Digital Goods,UK,Manual_Keyed
+9733,2024-02-17 09:25:00,61,7047,mobile,Digital Goods,CA,Manual_Keyed
+9734,2024-02-17 09:26:00,50,7047,mobile,Digital Goods,AU,Manual_Keyed
+9735,2024-02-17 09:30:00,421,2684,mobile,Digital Goods,UK,Contactless
+9736,2024-02-17 09:42:00,10,1317,mobile,Digital Goods,DE,Contactless
+9737,2024-02-17 09:43:00,82,1742,mobile,Digital Goods,DE,Manual_Keyed
+9738,2024-02-17 09:44:00,67,1742,mobile,Digital Goods,CA,Manual_Keyed
+9739,2024-02-17 09:44:00,75,1742,mobile,Digital Goods,DE,Manual_Keyed
+9740,2024-02-17 09:45:00,65,1742,mobile,Digital Goods,DE,Manual_Keyed
+9741,2024-02-17 09:46:00,67,1742,mobile,Digital Goods,UK,Manual_Keyed
+9742,2024-02-17 09:49:00,498,1930,web,Fashion,US,Chip
+9743,2024-02-17 09:54:00,461,7540,mobile,Grocery,CA,Contactless
+9744,2024-02-17 10:01:00,2922,5668,mobile,Travel,US,Manual_Keyed
+9745,2024-02-17 10:04:00,363,4954,web,Travel,UK,Manual_Keyed
+9746,2024-02-17 10:09:00,222,2709,web,Fashion,UK,Chip
+9747,2024-02-17 10:17:00,162,5974,mobile,Travel,UK,Manual_Keyed
+9748,2024-02-17 10:28:00,148,5097,mobile,Travel,DE,Chip
+9749,2024-02-17 10:29:00,80,4947,mobile,Digital Goods,CA,Manual_Keyed
+9750,2024-02-17 10:29:00,54,4947,mobile,Digital Goods,UK,Manual_Keyed
+9751,2024-02-17 10:30:00,85,4947,mobile,Digital Goods,UK,Manual_Keyed
+9752,2024-02-17 10:31:00,74,4947,mobile,Digital Goods,CA,Manual_Keyed
+9753,2024-02-17 10:31:00,57,4947,mobile,Digital Goods,DE,Manual_Keyed
+9754,2024-02-17 10:32:00,57,4947,mobile,Digital Goods,DE,Manual_Keyed
+9755,2024-02-17 10:42:00,130,6870,web,Digital Goods,AU,Manual_Keyed
+9756,2024-02-17 10:55:00,205,3943,mobile,Digital Goods,CA,Chip
+9757,2024-02-17 10:56:00,74,4298,mobile,Digital Goods,UK,Manual_Keyed
+9758,2024-02-17 10:56:00,78,4298,mobile,Digital Goods,DE,Manual_Keyed
+9759,2024-02-17 10:57:00,83,4298,mobile,Digital Goods,UK,Manual_Keyed
+9760,2024-02-17 10:58:00,54,4298,mobile,Digital Goods,AU,Manual_Keyed
+9761,2024-02-17 10:59:00,82,4298,mobile,Digital Goods,CA,Manual_Keyed
+9762,2024-02-17 10:59:00,77,6207,mobile,Digital Goods,DE,Manual_Keyed
+9763,2024-02-17 11:00:00,69,6207,mobile,Digital Goods,CA,Manual_Keyed
+9764,2024-02-17 11:00:00,60,6207,mobile,Digital Goods,AU,Manual_Keyed
+9765,2024-02-17 11:01:00,79,6207,mobile,Digital Goods,UK,Manual_Keyed
+9766,2024-02-17 11:02:00,78,6207,mobile,Digital Goods,DE,Manual_Keyed
+9767,2024-02-17 11:02:00,82,6207,mobile,Digital Goods,UK,Manual_Keyed
+9768,2024-02-17 11:03:00,74,6207,mobile,Digital Goods,UK,Manual_Keyed
+9769,2024-02-17 11:17:00,32,7511,web,Grocery,DE,Chip
+9770,2024-02-17 11:21:00,412,1025,mobile,Fashion,DE,Chip
+9771,2024-02-17 11:33:00,136,5936,mobile,Electronics,UK,Chip
+9772,2024-02-17 11:37:00,191,4241,mobile,Travel,US,Chip
+9773,2024-02-17 11:50:00,126,3826,web,Grocery,US,Chip
+9774,2024-02-17 12:05:00,152,1504,web,Grocery,US,Contactless
+9775,2024-02-17 12:13:00,74,3853,web,Fashion,US,Chip
+9776,2024-02-17 12:13:00,57,4159,mobile,Digital Goods,AU,Manual_Keyed
+9777,2024-02-17 12:14:00,70,4159,mobile,Digital Goods,AU,Manual_Keyed
+9778,2024-02-17 12:14:00,52,4159,mobile,Digital Goods,UK,Manual_Keyed
+9779,2024-02-17 12:27:00,491,4712,mobile,Electronics,DE,Chip
+9780,2024-02-17 12:34:00,455,7111,web,Digital Goods,US,Contactless
+9781,2024-02-17 12:45:00,340,6026,mobile,Fashion,US,Chip
+9782,2024-02-17 12:59:00,492,7307,mobile,Fashion,AU,Chip
+9783,2024-02-17 13:04:00,361,3298,mobile,Grocery,CA,Contactless
+9784,2024-02-17 13:09:00,81,5450,mobile,Travel,DE,Chip
+9785,2024-02-17 13:10:00,58,2649,mobile,Digital Goods,AU,Manual_Keyed
+9786,2024-02-17 13:10:00,87,2649,mobile,Digital Goods,CA,Manual_Keyed
+9787,2024-02-17 13:10:00,81,2649,mobile,Digital Goods,AU,Manual_Keyed
+9788,2024-02-17 13:11:00,50,2649,mobile,Digital Goods,CA,Manual_Keyed
+9789,2024-02-17 13:12:00,76,2649,mobile,Digital Goods,UK,Manual_Keyed
+9790,2024-02-17 13:13:00,89,2649,mobile,Digital Goods,UK,Manual_Keyed
+9791,2024-02-17 13:23:00,124,7291,web,Electronics,US,Chip
+9792,2024-02-17 13:37:00,458,3327,mobile,Electronics,DE,Contactless
+9793,2024-02-17 13:38:00,78,1140,mobile,Digital Goods,DE,Manual_Keyed
+9794,2024-02-17 13:38:00,81,1140,mobile,Digital Goods,AU,Manual_Keyed
+9795,2024-02-17 13:39:00,65,1140,mobile,Digital Goods,AU,Manual_Keyed
+9796,2024-02-17 13:40:00,53,1140,mobile,Digital Goods,DE,Manual_Keyed
+9797,2024-02-17 13:40:00,67,1140,mobile,Digital Goods,AU,Manual_Keyed
+9798,2024-02-17 13:55:00,10,3274,mobile,Electronics,US,Chip
+9799,2024-02-17 14:04:00,233,6876,mobile,Travel,US,Manual_Keyed
+9800,2024-02-17 14:12:00,259,6993,tablet,Digital Goods,US,Contactless
+9801,2024-02-17 14:20:00,39,1900,web,Fashion,CA,Contactless
+9802,2024-02-17 14:21:00,89,4388,mobile,Digital Goods,DE,Manual_Keyed
+9803,2024-02-17 14:21:00,76,4388,mobile,Digital Goods,DE,Manual_Keyed
+9804,2024-02-17 14:21:00,52,4388,mobile,Digital Goods,AU,Manual_Keyed
+9805,2024-02-17 14:22:00,58,4388,mobile,Digital Goods,UK,Manual_Keyed
+9806,2024-02-17 14:23:00,78,4388,mobile,Digital Goods,AU,Manual_Keyed
+9807,2024-02-17 14:23:00,55,4388,mobile,Digital Goods,DE,Manual_Keyed
+9808,2024-02-17 14:25:00,246,4338,web,Electronics,DE,Chip
+9809,2024-02-17 14:36:00,364,6927,mobile,Travel,US,Manual_Keyed
+9810,2024-02-17 14:39:00,337,6429,mobile,Grocery,US,Chip
+9811,2024-02-17 14:46:00,420,3547,web,Electronics,AU,Contactless
+9812,2024-02-17 14:55:00,382,7605,mobile,Digital Goods,US,Chip
+9813,2024-02-17 14:57:00,436,5701,web,Travel,UK,Contactless
+9814,2024-02-17 15:01:00,53,1764,mobile,Grocery,AU,Chip
+9815,2024-02-17 15:01:00,71,5251,mobile,Digital Goods,DE,Manual_Keyed
+9816,2024-02-17 15:01:00,71,5251,mobile,Digital Goods,CA,Manual_Keyed
+9817,2024-02-17 15:02:00,67,5251,mobile,Digital Goods,CA,Manual_Keyed
+9818,2024-02-17 15:03:00,67,5251,mobile,Digital Goods,UK,Manual_Keyed
+9819,2024-02-17 15:03:00,57,5251,mobile,Digital Goods,CA,Manual_Keyed
+9820,2024-02-17 15:04:00,77,5517,mobile,Digital Goods,CA,Manual_Keyed
+9821,2024-02-17 15:04:00,83,5517,mobile,Digital Goods,AU,Manual_Keyed
+9822,2024-02-17 15:05:00,59,5517,mobile,Digital Goods,DE,Manual_Keyed
+9823,2024-02-17 15:06:00,84,5517,mobile,Digital Goods,UK,Manual_Keyed
+9824,2024-02-17 15:06:00,87,5517,mobile,Digital Goods,DE,Manual_Keyed
+9825,2024-02-17 15:07:00,62,7514,mobile,Digital Goods,CA,Manual_Keyed
+9826,2024-02-17 15:08:00,76,7514,mobile,Digital Goods,CA,Manual_Keyed
+9827,2024-02-17 15:08:00,88,7514,mobile,Digital Goods,UK,Manual_Keyed
+9828,2024-02-17 15:18:00,213,7955,mobile,Electronics,US,Contactless
+9829,2024-02-17 15:24:00,184,2130,mobile,Travel,US,Manual_Keyed
+9830,2024-02-17 15:31:00,356,4018,mobile,Grocery,AU,Contactless
+9831,2024-02-17 15:32:00,66,7900,mobile,Digital Goods,CA,Manual_Keyed
+9832,2024-02-17 15:32:00,70,7900,mobile,Digital Goods,UK,Manual_Keyed
+9833,2024-02-17 15:32:00,53,7900,mobile,Digital Goods,UK,Manual_Keyed
+9834,2024-02-17 15:33:00,79,7900,mobile,Digital Goods,DE,Manual_Keyed
+9835,2024-02-17 15:33:00,79,7900,mobile,Digital Goods,DE,Manual_Keyed
+9836,2024-02-17 15:42:00,252,6156,web,Grocery,AU,Contactless
+9837,2024-02-17 15:48:00,101,3225,web,Travel,US,Chip
+9838,2024-02-17 16:01:00,175,1570,web,Electronics,US,Chip
+9839,2024-02-17 16:12:00,296,3808,mobile,Grocery,DE,Chip
+9840,2024-02-17 16:21:00,286,5269,mobile,Travel,DE,Contactless
+9841,2024-02-17 16:23:00,284,3769,web,Electronics,DE,Contactless
+9842,2024-02-17 16:33:00,379,1673,tablet,Travel,US,Contactless
+9843,2024-02-17 16:39:00,452,5677,mobile,Electronics,US,Chip
+9844,2024-02-17 16:44:00,423,2163,mobile,Fashion,US,Chip
+9845,2024-02-17 16:44:00,59,2887,mobile,Digital Goods,AU,Manual_Keyed
+9846,2024-02-17 16:45:00,52,2887,mobile,Digital Goods,CA,Manual_Keyed
+9847,2024-02-17 16:46:00,72,2887,mobile,Digital Goods,UK,Manual_Keyed
+9848,2024-02-17 16:46:00,55,4747,mobile,Digital Goods,AU,Manual_Keyed
+9849,2024-02-17 16:47:00,68,4747,mobile,Digital Goods,DE,Manual_Keyed
+9850,2024-02-17 16:48:00,53,4747,mobile,Digital Goods,UK,Manual_Keyed
+9851,2024-02-17 16:48:00,67,4747,mobile,Digital Goods,AU,Manual_Keyed
+9852,2024-02-17 16:49:00,67,4747,mobile,Digital Goods,AU,Manual_Keyed
+9853,2024-02-17 16:50:00,57,1709,mobile,Digital Goods,CA,Manual_Keyed
+9854,2024-02-17 16:51:00,62,1709,mobile,Digital Goods,AU,Manual_Keyed
+9855,2024-02-17 16:51:00,64,1709,mobile,Digital Goods,UK,Manual_Keyed
+9856,2024-02-17 16:52:00,86,1709,mobile,Digital Goods,DE,Manual_Keyed
+9857,2024-02-17 16:53:00,81,1709,mobile,Digital Goods,AU,Manual_Keyed
+9858,2024-02-17 16:54:00,87,1709,mobile,Digital Goods,CA,Manual_Keyed
+9859,2024-02-17 16:54:00,71,1709,mobile,Digital Goods,DE,Manual_Keyed
+9860,2024-02-17 16:58:00,301,3882,tablet,Fashion,CA,Contactless
+9861,2024-02-17 17:02:00,425,3412,mobile,Grocery,US,Contactless
+9862,2024-02-17 17:13:00,222,2750,mobile,Grocery,US,Contactless
+9863,2024-02-17 17:21:00,1968,2346,tablet,Travel,US,Manual_Keyed
+9864,2024-02-17 17:29:00,427,5153,web,Digital Goods,US,Chip
+9865,2024-02-17 17:30:00,52,2160,mobile,Digital Goods,UK,Manual_Keyed
+9866,2024-02-17 17:31:00,67,2160,mobile,Digital Goods,UK,Manual_Keyed
+9867,2024-02-17 17:31:00,83,2160,mobile,Digital Goods,UK,Manual_Keyed
+9868,2024-02-17 17:32:00,66,2160,mobile,Digital Goods,DE,Manual_Keyed
+9869,2024-02-17 17:41:00,217,1431,tablet,Electronics,AU,Manual_Keyed
+9870,2024-02-17 17:54:00,144,6041,mobile,Digital Goods,US,Contactless
+9871,2024-02-17 17:58:00,140,3129,mobile,Grocery,CA,Contactless
+9872,2024-02-17 18:04:00,317,7673,web,Electronics,DE,Chip
+9873,2024-02-17 18:06:00,390,2899,mobile,Fashion,US,Contactless
+9874,2024-02-17 18:13:00,379,5126,tablet,Fashion,US,Chip
+9875,2024-02-17 18:14:00,50,7987,mobile,Digital Goods,CA,Manual_Keyed
+9876,2024-02-17 18:14:00,76,7987,mobile,Digital Goods,AU,Manual_Keyed
+9877,2024-02-17 18:15:00,70,7987,mobile,Digital Goods,UK,Manual_Keyed
+9878,2024-02-17 18:16:00,74,7987,mobile,Digital Goods,CA,Manual_Keyed
+9879,2024-02-17 18:16:00,66,7987,mobile,Digital Goods,DE,Manual_Keyed
+9880,2024-02-17 18:17:00,68,7987,mobile,Digital Goods,AU,Manual_Keyed
+9881,2024-02-17 18:27:00,212,3675,mobile,Fashion,US,Contactless
+9882,2024-02-17 18:27:00,89,2855,mobile,Digital Goods,DE,Manual_Keyed
+9883,2024-02-17 18:28:00,77,2855,mobile,Digital Goods,UK,Manual_Keyed
+9884,2024-02-17 18:28:00,61,2855,mobile,Digital Goods,AU,Manual_Keyed
+9885,2024-02-17 18:28:00,50,2855,mobile,Digital Goods,AU,Manual_Keyed
+9886,2024-02-17 18:29:00,52,2357,mobile,Digital Goods,DE,Manual_Keyed
+9887,2024-02-17 18:30:00,65,2357,mobile,Digital Goods,UK,Manual_Keyed
+9888,2024-02-17 18:30:00,58,2357,mobile,Digital Goods,CA,Manual_Keyed
+9889,2024-02-17 18:31:00,78,2357,mobile,Digital Goods,DE,Manual_Keyed
+9890,2024-02-17 18:32:00,58,2357,mobile,Digital Goods,UK,Manual_Keyed
+9891,2024-02-17 18:33:00,81,2357,mobile,Digital Goods,UK,Manual_Keyed
+9892,2024-02-17 18:41:00,474,7202,web,Travel,AU,Contactless
+9893,2024-02-17 18:52:00,38,6307,mobile,Travel,AU,Contactless
+9894,2024-02-17 18:57:00,68,3335,mobile,Grocery,CA,Manual_Keyed
+9895,2024-02-17 19:08:00,119,7986,tablet,Grocery,US,Contactless
+9896,2024-02-17 19:16:00,370,2376,mobile,Fashion,AU,Manual_Keyed
+9897,2024-02-17 19:23:00,273,3159,mobile,Fashion,UK,Contactless
+9898,2024-02-17 19:35:00,124,1121,mobile,Electronics,UK,Contactless
+9899,2024-02-17 19:36:00,78,7927,mobile,Digital Goods,CA,Manual_Keyed
+9900,2024-02-17 19:36:00,89,7927,mobile,Digital Goods,DE,Manual_Keyed
+9901,2024-02-17 19:37:00,84,7927,mobile,Digital Goods,DE,Manual_Keyed
+9902,2024-02-17 19:37:00,50,7927,mobile,Digital Goods,DE,Manual_Keyed
+9903,2024-02-17 19:38:00,64,7927,mobile,Digital Goods,DE,Manual_Keyed
+9904,2024-02-17 19:38:00,77,7927,mobile,Digital Goods,AU,Manual_Keyed
+9905,2024-02-17 19:39:00,73,7927,mobile,Digital Goods,AU,Manual_Keyed
+9906,2024-02-17 19:40:00,57,2130,mobile,Digital Goods,AU,Manual_Keyed
+9907,2024-02-17 19:40:00,55,2130,mobile,Digital Goods,AU,Manual_Keyed
+9908,2024-02-17 19:41:00,70,2130,mobile,Digital Goods,AU,Manual_Keyed
+9909,2024-02-17 19:42:00,66,2130,mobile,Digital Goods,DE,Manual_Keyed
+9910,2024-02-17 19:42:00,84,2130,mobile,Digital Goods,DE,Manual_Keyed
+9911,2024-02-17 19:43:00,83,2130,mobile,Digital Goods,UK,Manual_Keyed
+9912,2024-02-17 19:43:00,76,2130,mobile,Digital Goods,DE,Manual_Keyed
+9913,2024-02-17 19:44:00,73,4420,mobile,Digital Goods,AU,Manual_Keyed
+9914,2024-02-17 19:45:00,78,4420,mobile,Digital Goods,UK,Manual_Keyed
+9915,2024-02-17 19:46:00,52,4420,mobile,Digital Goods,DE,Manual_Keyed
+9916,2024-02-17 19:57:00,88,7217,web,Electronics,UK,Chip
+9917,2024-02-17 19:57:00,76,3976,mobile,Digital Goods,AU,Manual_Keyed
+9918,2024-02-17 19:58:00,71,3976,mobile,Digital Goods,DE,Manual_Keyed
+9919,2024-02-17 19:58:00,76,3976,mobile,Digital Goods,UK,Manual_Keyed
+9920,2024-02-17 19:59:00,58,3976,mobile,Digital Goods,UK,Manual_Keyed
+9921,2024-02-17 20:00:00,67,3976,mobile,Digital Goods,UK,Manual_Keyed
+9922,2024-02-17 20:01:00,78,7068,mobile,Digital Goods,AU,Manual_Keyed
+9923,2024-02-17 20:02:00,74,7068,mobile,Digital Goods,DE,Manual_Keyed
+9924,2024-02-17 20:02:00,88,7068,mobile,Digital Goods,UK,Manual_Keyed
+9925,2024-02-17 20:03:00,76,7068,mobile,Digital Goods,CA,Manual_Keyed
+9926,2024-02-17 20:04:00,79,7068,mobile,Digital Goods,DE,Manual_Keyed
+9927,2024-02-17 20:04:00,60,7068,mobile,Digital Goods,CA,Manual_Keyed
+9928,2024-02-17 20:10:00,21,5382,mobile,Digital Goods,DE,Contactless
+9929,2024-02-17 20:19:00,256,4212,mobile,Grocery,US,Chip
+9930,2024-02-17 20:19:00,89,5050,mobile,Digital Goods,AU,Manual_Keyed
+9931,2024-02-17 20:20:00,83,5050,mobile,Digital Goods,CA,Manual_Keyed
+9932,2024-02-17 20:20:00,63,5050,mobile,Digital Goods,UK,Manual_Keyed
+9933,2024-02-17 20:21:00,86,5050,mobile,Digital Goods,UK,Manual_Keyed
+9934,2024-02-17 20:21:00,62,5050,mobile,Digital Goods,UK,Manual_Keyed
+9935,2024-02-17 20:21:00,83,5050,mobile,Digital Goods,CA,Manual_Keyed
+9936,2024-02-17 20:29:00,354,6953,mobile,Grocery,AU,Chip
+9937,2024-02-17 20:38:00,264,3093,mobile,Grocery,UK,Contactless
+9938,2024-02-17 20:51:00,67,3322,mobile,Travel,UK,Chip
+9939,2024-02-17 20:52:00,67,6720,mobile,Digital Goods,CA,Manual_Keyed
+9940,2024-02-17 20:52:00,57,6720,mobile,Digital Goods,CA,Manual_Keyed
+9941,2024-02-17 20:53:00,71,6720,mobile,Digital Goods,DE,Manual_Keyed
+9942,2024-02-17 20:54:00,57,6720,mobile,Digital Goods,CA,Manual_Keyed
+9943,2024-02-17 20:55:00,64,3548,mobile,Digital Goods,AU,Manual_Keyed
+9944,2024-02-17 20:56:00,57,3548,mobile,Digital Goods,AU,Manual_Keyed
+9945,2024-02-17 20:56:00,65,3548,mobile,Digital Goods,AU,Manual_Keyed
+9946,2024-02-17 20:57:00,53,3548,mobile,Digital Goods,UK,Manual_Keyed
+9947,2024-02-17 20:57:00,56,3548,mobile,Digital Goods,CA,Manual_Keyed
+9948,2024-02-17 20:58:00,66,3548,mobile,Digital Goods,DE,Manual_Keyed
+9949,2024-02-17 20:59:00,56,3548,mobile,Digital Goods,CA,Manual_Keyed
+9950,2024-02-17 21:10:00,229,5032,mobile,Travel,US,Contactless
+9951,2024-02-17 21:14:00,424,6552,web,Fashion,UK,Contactless
+9952,2024-02-17 21:26:00,200,1302,web,Travel,UK,Contactless
+9953,2024-02-17 21:35:00,362,6835,web,Electronics,AU,Chip
+9954,2024-02-17 21:36:00,88,2267,mobile,Digital Goods,UK,Manual_Keyed
+9955,2024-02-17 21:37:00,80,2267,mobile,Digital Goods,AU,Manual_Keyed
+9956,2024-02-17 21:37:00,78,2267,mobile,Digital Goods,AU,Manual_Keyed
+9957,2024-02-17 21:38:00,73,2267,mobile,Digital Goods,DE,Manual_Keyed
+9958,2024-02-17 21:52:00,437,1721,web,Digital Goods,US,Chip
+9959,2024-02-17 21:52:00,67,4469,mobile,Digital Goods,AU,Manual_Keyed
+9960,2024-02-17 21:53:00,84,4469,mobile,Digital Goods,CA,Manual_Keyed
+9961,2024-02-17 21:54:00,52,4469,mobile,Digital Goods,UK,Manual_Keyed
+9962,2024-02-17 21:54:00,61,4469,mobile,Digital Goods,DE,Manual_Keyed
+9963,2024-02-17 21:55:00,86,3314,mobile,Digital Goods,AU,Manual_Keyed
+9964,2024-02-17 21:56:00,54,3314,mobile,Digital Goods,DE,Manual_Keyed
+9965,2024-02-17 21:57:00,76,3314,mobile,Digital Goods,AU,Manual_Keyed
+9966,2024-02-17 21:57:00,68,3314,mobile,Digital Goods,AU,Manual_Keyed
+9967,2024-02-17 21:58:00,67,3314,mobile,Digital Goods,CA,Manual_Keyed
+9968,2024-02-17 21:59:00,81,3314,mobile,Digital Goods,DE,Manual_Keyed
+9969,2024-02-17 22:01:00,459,3733,web,Grocery,US,Contactless
+9970,2024-02-17 22:05:00,349,4291,mobile,Digital Goods,CA,Manual_Keyed
+9971,2024-02-17 22:15:00,52,5555,mobile,Grocery,UK,Contactless
+9972,2024-02-17 22:15:00,66,2274,mobile,Digital Goods,DE,Manual_Keyed
+9973,2024-02-17 22:16:00,80,2274,mobile,Digital Goods,UK,Manual_Keyed
+9974,2024-02-17 22:17:00,85,2274,mobile,Digital Goods,CA,Manual_Keyed
+9975,2024-02-17 22:17:00,86,2274,mobile,Digital Goods,UK,Manual_Keyed
+9976,2024-02-17 22:17:00,56,2274,mobile,Digital Goods,DE,Manual_Keyed
+9977,2024-02-17 22:18:00,70,2274,mobile,Digital Goods,CA,Manual_Keyed
+9978,2024-02-17 22:19:00,78,2274,mobile,Digital Goods,CA,Manual_Keyed
+9979,2024-02-17 22:27:00,1855,1490,mobile,Travel,UK,Manual_Keyed
+9980,2024-02-17 22:31:00,76,6729,web,Electronics,US,Contactless
+9981,2024-02-17 22:36:00,46,5092,web,Travel,AU,Contactless
+9982,2024-02-17 22:37:00,67,1089,mobile,Digital Goods,CA,Manual_Keyed
+9983,2024-02-17 22:38:00,74,1089,mobile,Digital Goods,DE,Manual_Keyed
+9984,2024-02-17 22:39:00,61,1089,mobile,Digital Goods,CA,Manual_Keyed
+9985,2024-02-17 22:39:00,72,1089,mobile,Digital Goods,UK,Manual_Keyed
+9986,2024-02-17 22:40:00,56,1089,mobile,Digital Goods,UK,Manual_Keyed
+9987,2024-02-17 22:41:00,87,1089,mobile,Digital Goods,CA,Manual_Keyed
+9988,2024-02-17 22:41:00,81,1089,mobile,Digital Goods,AU,Manual_Keyed
+9989,2024-02-17 22:43:00,252,2053,web,Electronics,CA,Contactless
+9990,2024-02-17 22:53:00,2881,2737,web,Travel,CA,Manual_Keyed
+9991,2024-02-17 23:08:00,234,4122,tablet,Electronics,AU,Chip
+9992,2024-02-17 23:08:00,72,1580,mobile,Digital Goods,UK,Manual_Keyed
+9993,2024-02-17 23:08:00,68,1580,mobile,Digital Goods,UK,Manual_Keyed
+9994,2024-02-17 23:09:00,56,1580,mobile,Digital Goods,UK,Manual_Keyed
+9995,2024-02-17 23:09:00,77,1580,mobile,Digital Goods,AU,Manual_Keyed
+9996,2024-02-17 23:10:00,87,1580,mobile,Digital Goods,CA,Manual_Keyed
+9997,2024-02-17 23:13:00,294,5256,mobile,Grocery,US,Chip
+9998,2024-02-17 23:20:00,115,5577,mobile,Grocery,US,Contactless
+9999,2024-02-17 23:28:00,347,7595,web,Travel,US,Contactless
+10000,2024-02-17 23:37:00,330,2461,mobile,Digital Goods,AU,Contactless

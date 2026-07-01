@@ -1,0 +1,4 @@
+Error_Reason,Failure_Count,Pct_of_Failures
+51: Insufficient Funds,3425,51.74
+59: Suspected Fraud,2092,31.61
+91: Issuer System Timeout,1102,16.65
