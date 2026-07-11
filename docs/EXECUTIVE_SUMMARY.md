@@ -30,6 +30,32 @@ The same canonical retry metrics are used in the [Excel analysis workbook](../de
 
 ---
 
+## Retry Timing Curve (when, not just whether, recovery happens)
+
+Intent-matched insufficient-funds recoveries, bucketed by minutes between the original decline and the matched success (`retry_timing_analysis.py` → `data/sql_exports/retry_timing_windows.csv`):
+
+| Time since decline | Share of eventual 24h recoveries | Cumulative share |
+| --- | ---: | ---: |
+| 0–2 hours | 8.3% | 8.3% |
+| 2–6 hours | 16.0% | 24.3% |
+| 6–24 hours | 75.7% | 100.0% |
+
+**Takeaway:** almost none of the eventual recovery shows up before hour 6. A retry policy that fires within the first couple of hours is retrying before the outcome is knowable for ~92% of eventual recoveries — this is the basis for the minimum-delay specification in P1 below, replacing the earlier "test 1–24h" range with a data-backed floor.
+
+## Interchange-Style Processing Cost by Decline Reason
+
+`outputs/interchange_cost_exposure.csv` — observed cost, not a modeled placeholder (see [Operational Impact](#operational-impact-modeled-not-measured) below for the placeholder-based figures):
+
+| Decline reason | Attempts | Processing cost | Recovered | Retry-eligible per policy? |
+| --- | ---: | ---: | ---: | --- |
+| Suspected fraud | 2,092 | $3,327.09 | 0 | No |
+| Issuer system timeout | 1,102 | $1,518.01 | 0 | Yes — but 0% observed recovery |
+| Insufficient funds | 3,043 | $4,486.05 | 855 | Yes |
+
+**Takeaway:** blocking fraud from auto-retry avoids $3,327.09 in processing cost on transactions with a structural 0% recovery rate. Issuer timeout is currently classified as retry-eligible in the policy dimension (`data/reference/dim_decline_code.csv`, `technical_retry` class), but this snapshot shows 0 of 1,102 attempts recovering — $1,518.01 in processing cost sitting on a decline type behaving like a hard decline here. Flagged in P3 below as a policy assumption to test, not a settled conclusion (single-snapshot observation).
+
+---
+
 ## Top 3 Retry Opportunities (by unrecovered dollars)
 
 Using `outputs/recovery_scenarios.csv` at a conservative **10% incremental lift** on the unrecovered pool:
@@ -62,9 +88,9 @@ Portfolio-wide at 10% lift on the policy-eligible pool: **~$23,233** estimated i
 
 | Priority | Recommendation | Value driver | Effort | Risk | Owner | Measurement window |
 | --- | --- | --- | --- | --- | --- | --- |
-| P1 | Retry policy for insufficient funds — prioritize Bank of America / Capital One Visa paths (observed recovery >30%); test delayed retry windows (1–24h) | Largest unrecovered pool ($26K+ top segment); highest natural recovery signal | Medium (requires retry-orchestration change + holdout design) | Low — retry-eligible codes only, no fraud/customer-action declines touched | Payments ops / retry engineering | 4–6 week A/B test, min. sample sized per experiment table below |
-| P2 | Decline-reason triage — exclude suspected fraud and customer-action declines from any automated retry; route to verification flows | Prevents false "recovery" attempts and compliance/chargeback exposure | Low (policy/config change) | Low | Payments ops | Immediate; monitor false-retry rate monthly |
-| P3 | Issuer timeout monitoring — investigate bank/time heatmaps for systemic timeout clusters | Second-largest failure share (17.7%); root-cause fix vs. retry workaround | Medium (needs issuer/infra coordination) | Medium — outside internal control | Payments infra / issuer relations | Ongoing; monthly heatmap review |
+| P1 | Retry policy for insufficient funds — set a **minimum 6-hour retry delay** (76% of eventual recoveries land in the 6–24h window; only 8.3% recover in the first 2 hours), prioritizing Bank of America / Capital One Visa paths (observed recovery >30%) | Largest unrecovered pool ($26K+ top segment); timing curve shows early retries fail predictably, not randomly | Medium (requires retry-orchestration change + holdout design) | Low — retry-eligible codes only, no fraud/customer-action declines touched | Payments ops / retry engineering | 4–6 week A/B test comparing immediate vs. 6h-delayed retry, min. sample sized per experiment table below |
+| P2 | Decline-reason triage — exclude suspected fraud and customer-action declines from any automated retry; route to verification flows | Prevents false "recovery" attempts and compliance/chargeback exposure; avoids $3,327.09 in processing cost on transactions with 0% observed recovery | Low (policy/config change) | Low | Payments ops | Immediate; monitor false-retry rate monthly |
+| P3 | Issuer timeout — re-test the `automatic_retry_allowed = true` policy classification. This snapshot shows 0 of 1,102 timeout attempts recovering ($1,518.01 in processing cost with zero return), despite policy currently treating it as a technical retry class. Investigate bank/time heatmaps for systemic timeout clusters in parallel. | Second-largest failure share (17.7%); a policy-vs-observed-data mismatch worth resolving before the next retry-config release | Medium (needs issuer/infra coordination + policy review) | Medium — outside internal control; retry misclassification risk | Payments infra / issuer relations | Pull a 90-day sample before changing the policy flag; monthly heatmap review in the meantime |
 | P4 | Fraud operations — review `High`/`Critical` buckets first from daily scored output; hold queue at capacity-limited top 10% | Concentrates limited review capacity (1.7× baseline precision) | Low (workflow adoption, no model change) | Low | Fraud ops | Weekly queue-size and precision tracking |
 
 **Note:** priority, effort, and risk are directional judgment calls based on the data patterns above, not a formal RICE/ICE scoring exercise — flag this if presenting to a stakeholder who expects a quantified prioritization model.
@@ -93,7 +119,7 @@ The dollar and rate figures above are observed in the data. Analyst-hours and ne
 
 ### Validating the 10% recovery assumption
 
-The 10% uplift is an assumption, not an observed effect. To turn it into a measured result would require a controlled experiment: randomly assign eligible insufficient-funds declines to a delayed-retry treatment window (e.g., 4h) versus the current immediate-retry control, size the sample using the existing 28.1% baseline recovery rate to detect a meaningful lift (roughly low thousands of transactions per arm at conventional power/significance thresholds, refined once a true baseline variance is available), and measure incremental authorization rate over a 4–6 week window while monitoring chargeback and complaint-rate guardrails. Until that test runs, the recovery scenario stays labeled as a scenario.
+The 10% uplift is an assumption, not an observed effect. To turn it into a measured result would require a controlled experiment: randomly assign eligible insufficient-funds declines to a delayed-retry treatment window (6h, per the retry-timing curve above) versus the current immediate-retry control, size the sample using the existing 28.1% baseline recovery rate to detect a meaningful lift (roughly low thousands of transactions per arm at conventional power/significance thresholds, refined once a true baseline variance is available), and measure incremental authorization rate over a 4–6 week window while monitoring chargeback and complaint-rate guardrails. Until that test runs, the recovery scenario stays labeled as a scenario — the 6h delay is a data-backed starting point for the experiment, not a claim it's already been validated.
 
 ---
 

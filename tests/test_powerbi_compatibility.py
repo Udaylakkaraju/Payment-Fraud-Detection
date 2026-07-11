@@ -3,7 +3,7 @@ from pathlib import Path
 import pandas as pd
 import pytest
 
-from prepare_powerbi_tables import write_standardized_csv
+from prepare_powerbi_tables import build_payment_action_matrix, write_standardized_csv
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -72,3 +72,14 @@ def test_powerbi_payments_matches_legacy_source_row_count() -> None:
     powerbi = pd.read_csv(ROOT / "powerbi-data" / "payments.csv")
     assert len(powerbi) == len(legacy) == 51_237
     assert powerbi["transaction_id"].is_unique
+
+
+def test_payment_action_matrix_is_decline_level_and_policy_backed(tmp_path: Path) -> None:
+    output = tmp_path / "payment_action_matrix.csv"
+    build_payment_action_matrix(output_path=output)
+    matrix = pd.read_csv(output)
+
+    assert matrix["decline_reason"].is_unique
+    assert "ALL_DECLINES" not in set(matrix["decline_reason"])
+    assert matrix["operational_action"].notna().all()
+    assert matrix["automatic_retry_allowed"].notna().all()

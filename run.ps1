@@ -1,6 +1,6 @@
 param(
     [Parameter(Mandatory = $true)]
-    [ValidateSet("train", "infer", "scenario", "powerbi", "all")]
+    [ValidateSet("train", "infer", "scenario", "timing", "powerbi", "all")]
     [string]$Task,
 
     [string]$InputPath = ""
@@ -8,6 +8,8 @@ param(
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
+# Avoid joblib hardware-detection warnings in portable Windows environments.
+$env:LOKY_MAX_CPU_COUNT = [Environment]::ProcessorCount.ToString()
 
 if (!(Test-Path "outputs")) {
     New-Item -ItemType Directory -Path "outputs" | Out-Null
@@ -49,7 +51,7 @@ switch ($Task) {
             "--output", "outputs/fraud_scored_transactions.csv",
             "--model-out", "outputs/fraud_model.joblib",
             "--model-type", "hist_gradient_boosting",
-            "--evaluation-mode", "time", "--review-rate", "0.10",
+            "--review-rate", "0.10",
             "--calibration-size", "0.20", "--test-size", "0.20",
             "--metrics-out", "outputs/train_metrics_report.csv")
     }
@@ -62,12 +64,16 @@ switch ($Task) {
         Invoke-CheckedPython @("scenario_simulator.py", "--input", "powerbi-data/payments.csv",
             "--output", "outputs/recovery_scenarios.csv")
     }
+    "timing" {
+        Invoke-CheckedPython @("retry_timing_analysis.py", "--input", "powerbi-data/payments.csv")
+    }
     "powerbi" {
         Invoke-CheckedPython @("prepare_powerbi_tables.py")
     }
     "all" {
         Invoke-CheckedTask "train"
         Invoke-CheckedTask "scenario"
+        Invoke-CheckedTask "timing"
         Invoke-CheckedTask "powerbi"
     }
 }

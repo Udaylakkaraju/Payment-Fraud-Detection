@@ -108,8 +108,9 @@ Folder: `powerbi-data/`
 | `hourly_auth_rate.csv` | Day/hour/bank authorization heatmap source. |
 | `daily_auth_rate_trend.csv` | Daily auth rate and rolling 3-day trend. |
 | `global_auth_rate.csv` | Single-row global authorization summary. |
-| `card_brand_profitability.csv` | Card-brand TPV, fees, net profit, and margin. |
 | `fraud_scored_transactions.csv` | Fraud review queue and risk bucket source. |
 | `feature_importance.csv` | Fraud model feature importance source. |
+| `review_capacity_curve.csv` | Precision, recall, and workload trade-off across review capacities. |
+| `payment_action_matrix.csv` | Decline-level recovery evidence, retry policy, and operations action. |
 | `fraud_model_holdout_metrics.csv` | Focused holdout model metrics. |
 | `recovery_scenarios.csv` | Retry recovery scenario estimates. |

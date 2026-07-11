@@ -1,0 +1,5 @@
+review_capacity_pct,queue_size,fraud_caught,clean_transactions_reviewed,precision_pct,recall_pct,baseline_fraud_rate_pct,precision_lift_vs_baseline
+5.0,100,7,93,7.0,6.36,5.5,1.27
+10.0,200,19,181,9.5,17.27,5.5,1.73
+15.0,300,20,280,6.67,18.18,5.5,1.21
+20.0,400,30,370,7.5,27.27,5.5,1.36

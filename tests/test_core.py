@@ -7,7 +7,11 @@ import pytest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from fintech import apply_vocab, split_train_calibration_test  # noqa: E402
+from fintech import (  # noqa: E402
+    apply_vocab,
+    build_review_capacity_curve,
+    split_train_calibration_test,
+)
 from payments_io import normalize_payments_columns, to_legacy_payments_frame  # noqa: E402
 from scenario_simulator import build_failed_journeys, summarize_scenarios  # noqa: E402
 
@@ -119,7 +123,6 @@ def test_train_calibration_test_split_preserves_time_order() -> None:
     )
     train_df, calibration_df, test_df = split_train_calibration_test(
         df,
-        evaluation_mode="time",
         calibration_size=0.20,
         test_size=0.20,
     )
@@ -128,3 +131,19 @@ def test_train_calibration_test_split_preserves_time_order() -> None:
     assert len(test_df) == 2
     assert train_df["transaction_time"].max() <= calibration_df["transaction_time"].min()
     assert calibration_df["transaction_time"].max() <= test_df["transaction_time"].min()
+
+
+def test_review_capacity_curve_reports_queue_tradeoffs() -> None:
+    scored = pd.DataFrame(
+        {
+            "is_fraud": [1, 0, 1, 0, 0, 0, 0, 0, 0, 0],
+            "fraud_probability": [0.99, 0.90, 0.80, 0.70, 0.60, 0.50, 0.40, 0.30, 0.20, 0.10],
+        }
+    )
+
+    curve = build_review_capacity_curve(scored, (0.10, 0.20))
+
+    assert curve["queue_size"].tolist() == [1, 2]
+    assert curve["fraud_caught"].tolist() == [1, 1]
+    assert curve["precision_pct"].tolist() == [100.0, 50.0]
+    assert curve["recall_pct"].tolist() == [50.0, 50.0]

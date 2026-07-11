@@ -1,0 +1,7 @@
+decline_reason,retry_window,failed_txns,failed_amount,pct_of_decline_reason
+51: Insufficient Funds,31-120 min,71,6135.17,2.33
+51: Insufficient Funds,2-6 hours,137,9742.01,4.5
+51: Insufficient Funds,6-24 hours,647,51435.41,21.26
+51: Insufficient Funds,Not recovered within 24h,2188,157861.68,71.9
+59: Suspected Fraud,Not recovered within 24h,2092,171160.48,100.0
+91: Issuer System Timeout,Not recovered within 24h,1102,74466.3,100.0

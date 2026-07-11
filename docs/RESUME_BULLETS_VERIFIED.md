@@ -9,18 +9,22 @@ All numbers are from this project's current outputs.
 
 - Analyzed `51,237` payment transactions using SQL and identified a `12.92%` failure rate with `$500K+` failed transaction value as an optimization opportunity pool.
 - Matched retry attempts through payment-intent lineage and measured `855` recoveries across `6,237` initially failed intents (`13.71%`) within 24 hours.
+- Built a minutes-to-recovery timing curve on intent-matched retries, finding `75.7%` of eventual recoveries occur only after the `6-hour` mark, versus `8.3%` within the first `2 hours`.
 - Built a chronological train/calibration/test fraud workflow whose top-10% review queue reached `9.5%` precision versus a `5.5%` test baseline (`1.7×` lift).
 
 ## Balanced (Recommended)
 
 - Built an end-to-end payments optimization and fraud analytics pipeline using SQL + Python across `51K+` transactions, quantifying failure leakage and priority fix areas.
 - Measured a `13.71%` same-intent 24-hour recovery rate (`855/6,237`) and isolated `$232K` of policy-eligible unrecovered value for scenario analysis.
+- Designed a time-bucketed recovery-curve analysis (not just a recovery rate) to convert a `24-hour` retry policy into a `6-hour` minimum-delay recommendation, backed by the observed timing distribution of `855` matched recoveries.
+- Quantified `$4,845` in interchange-style processing cost tied to non-recoverable declines and surfaced a policy-vs-data mismatch — a decline code marked retry-eligible with `0%` observed recovery across `1,102` attempts.
 - Implemented reusable model training/inference with artifact persistence and daily risk scoring, enabling focused fraud review on ranked high-risk transactions.
 
 ## Impact-Focused
 
 - Quantified `$500K+` in failed payment value opportunity and mapped top failure drivers, creating an action-ready optimization backlog.
 - Identified same-intent retry recovery (`13.71%`) and excluded hard declines from automated-retry opportunity estimates.
+- Replaced a generic "retry within 24h" policy with a data-backed `6-hour` minimum delay by building a time-to-recovery curve, and flagged `$1,518` in processing cost being spent on a decline code with `0%` observed recovery despite being policy-eligible for retry.
 - Improved fraud operations readiness with holdout-based risk scoring and automated daily predictions for prioritized investigation workflows.
 
 ## Language Guidelines

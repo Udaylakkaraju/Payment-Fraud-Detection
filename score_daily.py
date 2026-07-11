@@ -19,12 +19,6 @@ def parse_args() -> argparse.Namespace:
         default="outputs/daily_scored_transactions.csv",
         help="Path to write scored daily output.",
     )
-    parser.add_argument(
-        "--rapid-threshold-minutes",
-        type=float,
-        default=2.0,
-        help="Threshold for rapid transaction stats.",
-    )
     return parser.parse_args()
 
 
@@ -34,7 +28,6 @@ def main() -> None:
         input_path=Path(args.input),
         model_path=Path(args.model),
         output_path=Path(args.output),
-        rapid_threshold_minutes=args.rapid_threshold_minutes,
     )
 
 

@@ -1,0 +1,4 @@
+decline_code,decline_reason,attempts,total_interchange_fee,recovered_txns,automatic_retry_allowed,avg_interchange_fee_per_attempt,cost_with_zero_recovery
+51,51: Insufficient Funds,3043,4486.05,855,True,1.4742,False
+59,59: Suspected Fraud,2092,3327.09,0,False,1.5904,True
+91,91: Issuer System Timeout,1102,1518.01,0,True,1.3775,False

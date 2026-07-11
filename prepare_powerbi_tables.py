@@ -7,6 +7,7 @@ from payments_io import LEGACY_PAYMENTS_PATH
 
 
 OUTPUT_DIR = Path("powerbi-data")
+ACTION_MATRIX_OUTPUT = Path("outputs/payment_action_matrix.csv")
 
 TABLES = [
     {
@@ -94,60 +95,6 @@ TABLES = [
         "purpose": "Portfolio-wide authorization rate.",
     },
     {
-        "source": Path("data/sql_exports/card_brand_profitability.csv"),
-        "target": "card_brand_profitability.csv",
-        "columns": {
-            "Card_Brand": "card_brand",
-            "Gross_TPV": "gross_payment_volume",
-            "Total_Fees": "total_fees",
-            "Net_Profit": "net_profit",
-            "Margin_Pct": "margin_pct",
-        },
-        "purpose": "Card brand profitability summary.",
-    },
-    {
-        "source": Path("data/sql_exports/customer_segments.csv"),
-        "target": "customer_segments.csv",
-        "columns": {
-            "Customer_Segment": "customer_segment",
-            "User_Count": "user_count",
-            "Pct_of_Total": "pct_of_users",
-        },
-        "purpose": "Customer segment distribution.",
-    },
-    {
-        "source": Path("data/sql_exports/cohort_failure_rate.csv"),
-        "target": "cohort_failure_rate.csv",
-        "columns": {
-            "Cohort_Month": "cohort_month",
-            "Total_Txns": "total_transactions",
-            "Failure_Rate_Pct": "failure_rate_pct",
-        },
-        "purpose": "Failure rate by signup cohort.",
-    },
-    {
-        "source": Path("data/sql_exports/high_maintenance_users.csv"),
-        "target": "high_maintenance_users.csv",
-        "columns": {
-            "User_ID": "user_id",
-            "Total_Attempts": "total_attempts",
-            "Failure_Count": "failed_attempts",
-            "User_Failure_Rate": "user_failure_rate_pct",
-        },
-        "purpose": "Users with elevated payment failure rates.",
-    },
-    {
-        "source": Path("data/sql_exports/bank_performance_bucket_summary.csv"),
-        "target": "bank_performance_bucket_summary.csv",
-        "columns": {
-            "Issuer_Bank": "issuer_bank",
-            "Performance_Bucket": "performance_bucket",
-            "Hours_Count": "hours_count",
-            "Pct_of_Total_Hours": "pct_of_total_hours",
-        },
-        "purpose": "Bank performance bucket summary for heatmaps.",
-    },
-    {
         "source": Path("data/sql_exports/decline_reason_cleaning_summary.csv"),
         "target": "decline_reason_cleaning_summary.csv",
         "columns": {
@@ -162,6 +109,32 @@ TABLES = [
         "target": "recovery_scenarios.csv",
         "columns": {},
         "purpose": "Same-payment-intent recovery and policy-eligible scenario estimates.",
+    },
+    {
+        "source": Path("data/sql_exports/retry_timing_windows.csv"),
+        "target": "retry_timing_windows.csv",
+        "columns": {
+            "decline_reason": "decline_reason",
+            "retry_window": "retry_window",
+            "failed_txns": "failed_transactions",
+            "failed_amount": "failed_amount",
+            "pct_of_decline_reason": "pct_of_decline_reason",
+        },
+        "purpose": "When intent-matched recoveries actually happen, bucketed by minutes-to-recovery.",
+        "optional": True,
+    },
+    {
+        "source": Path("outputs/interchange_cost_exposure.csv"),
+        "target": "interchange_cost_exposure.csv",
+        "columns": {},
+        "purpose": "Interchange-style processing cost by decline reason, flagging cost sunk on non-recoverable declines.",
+        "optional": True,
+    },
+    {
+        "source": ACTION_MATRIX_OUTPUT,
+        "target": "payment_action_matrix.csv",
+        "columns": {},
+        "purpose": "Decline-level evidence, retry policy, and recommended operations action.",
     },
     {
         "source": Path("outputs/fraud_scored_transactions.csv"),
@@ -187,6 +160,13 @@ TABLES = [
         "optional": True,
     },
     {
+        "source": Path("outputs/review_capacity_curve.csv"),
+        "target": "review_capacity_curve.csv",
+        "columns": {},
+        "purpose": "Human-review precision and recall trade-off by queue capacity.",
+        "optional": True,
+    },
+    {
         "source": Path("outputs/train_metrics_report.csv"),
         "target": "fraud_model_holdout_metrics.csv",
         "columns": {
@@ -206,6 +186,72 @@ TABLES = [
         "optional": True,
     },
 ]
+
+
+def build_payment_action_matrix(
+    scenarios_path: Path = Path("outputs/recovery_scenarios.csv"),
+    policy_path: Path = Path("data/reference/dim_decline_code.csv"),
+    output_path: Path = ACTION_MATRIX_OUTPUT,
+) -> None:
+    """Create one decision-ready row per decline reason from existing outputs."""
+    scenarios = pd.read_csv(scenarios_path)
+    policy = pd.read_csv(policy_path)
+
+    detail = scenarios.loc[
+        (scenarios["scenario_recovery_lift_pct"] == 10.0)
+        & (scenarios["decline_reason"] != "ALL_DECLINES")
+    ].copy()
+    if detail.empty:
+        raise ValueError("No decline-level 10% scenario rows were found.")
+
+    matrix = (
+        detail.groupby(["decline_code", "decline_reason"], as_index=False)
+        .agg(
+            failed_transactions=("failed_txns", "sum"),
+            failed_value=("failed_amount", "sum"),
+            recovered_transactions_24h=("recovered_txns_observed", "sum"),
+            recovered_value_24h=("recovered_amount_observed", "sum"),
+            policy_eligible_unrecovered_value=(
+                "scenario_eligible_unrecovered_amount",
+                "sum",
+            ),
+            estimated_recovery_at_10pct=(
+                "estimated_incremental_recovered_amount",
+                "sum",
+            ),
+        )
+    )
+    matrix["observed_recovery_rate_pct"] = (
+        matrix["recovered_transactions_24h"]
+        .div(matrix["failed_transactions"])
+        .mul(100)
+        .round(2)
+    )
+
+    policy_columns = [
+        "decline_code",
+        "policy_class",
+        "automatic_retry_allowed",
+        "recommended_wait_min_minutes",
+        "recommended_wait_max_minutes",
+        "operational_action",
+        "customer_action",
+        "policy_note",
+    ]
+    matrix["decline_code"] = matrix["decline_code"].astype(str)
+    policy["decline_code"] = policy["decline_code"].astype(str)
+    matrix = matrix.merge(policy[policy_columns], on="decline_code", how="left")
+    matrix = matrix.sort_values("failed_value", ascending=False)
+
+    money_columns = [
+        "failed_value",
+        "recovered_value_24h",
+        "policy_eligible_unrecovered_value",
+        "estimated_recovery_at_10pct",
+    ]
+    matrix[money_columns] = matrix[money_columns].round(2)
+    output_path.parent.mkdir(exist_ok=True)
+    matrix.to_csv(output_path, index=False)
 
 
 def write_standardized_csv(source: Path, target: Path, column_map: dict[str, str]) -> None:
@@ -264,6 +310,7 @@ def write_readme(table_rows: list[dict[str, str]]) -> None:
 
 def main() -> None:
     OUTPUT_DIR.mkdir(exist_ok=True)
+    build_payment_action_matrix()
     readme_rows = []
     for table in TABLES:
         try:
