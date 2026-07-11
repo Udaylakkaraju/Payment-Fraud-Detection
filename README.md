@@ -1,176 +1,126 @@
 # Payment Recovery and Operations Analytics
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-BigQuery-4285F4?style=flat&logo=googlecloud&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat&logo=powerbi&logoColor=black)
 ![Excel](https://img.shields.io/badge/Excel-217346?style=flat&logo=microsoftexcel&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-BigQuery-4285F4?style=flat&logo=googlecloud&logoColor=white)
 
-**When a card payment fails, which declines are worth retrying — and how long should you wait?**
+**When a payment fails, should we retry it — and how long should we wait?**
 
-Most teams see one failure-rate number. That hides the real operating problem: some declines recover on a predictable schedule, others never should be retried, and fraud review capacity is finite. This project turns a **synthetic 51,237-attempt** payment snapshot into a decision view — decline triage, a minutes-to-recovery curve, processing-cost exposure, and a capacity-limited fraud review queue.
+A single “failure rate” hides three different decisions: which declines are worth another try, when that try should fire, and which fraud cases a limited review team should see first. This analysis turns a **synthetic 51,237-payment** snapshot into those decisions — sized in dollars, timing, and review capacity.
 
-*Synthetic portfolio data for method demonstration. Dollar figures are opportunity pools and scenario estimates, not claimed production savings.*
+*Synthetic data for method demonstration. Dollar figures are opportunity sizes and scenarios, not claimed production savings.*
 
-### What you get
+**In short:** **12.9%** fail · **~$500K** failed value · **~84%** of that sits in insufficient funds + fraud · **3 in 4** NSF recoveries land after **6 hours** · **$232K** still eligible to recover · **~$23K** at a conservative 10% scenario · fraud queue finds fraud **1.7×** better than random review
 
-| Deliverable | In plain terms |
+---
+
+## Dashboard snapshot
+
+Stakeholder view of the same numbers — authorization health, where failures concentrate, and what is still recoverable.
+
+![Power BI — Executive summary](powerbi-screenshots/01-executive-summary.png)
+
+![Power BI — Retry and failures](powerbi-screenshots/02-retry-and-failures.png)
+
+| Open this | What you’ll see |
 |---|---|
-| **Retry timing curve** | When NSF recoveries actually land (not just whether they recover) |
-| **Payment action matrix** | Decline-level policy, recovery evidence, and recommended ops action |
-| **Excel analysis workbook** | Executive dashboard, quality checks, pivots, and scenario model |
-| **Power BI report** | Failure analysis, retry opportunity, and fraud-review monitoring |
-| **Fraud review queue** | Fixed-capacity ranking so reviewers see the densest fraud first |
-
-**Excel workbook — Executive dashboard**
-
-![Excel executive dashboard](docs/assets/excel-dashboard.png)
-
-**In short:** **12.92%** of attempts fail · **~84%** of failed value sits in NSF + fraud · **75.7%** of NSF recoveries arrive after **6 hours** · **$232K** policy-eligible unrecovered pool · **~$23K** at a conservative 10% scenario · fraud queue **9.5%** precision vs **5.5%** baseline (**1.73×**)
+| [`Payments_Optimization_Dashboard.pbix`](Payments_Optimization_Dashboard.pbix) | Interactive Power BI report |
+| [`deliverables/Payments_Optimization_Excel_Analysis.xlsx`](deliverables/Payments_Optimization_Excel_Analysis.xlsx) | Executive dashboard, pivots, and scenario model |
+| [`docs/EXECUTIVE_SUMMARY.md`](docs/EXECUTIVE_SUMMARY.md) | Full findings, priorities, and test guardrails |
 
 ---
 
 ## The problem
 
-Failed payments look like a single “authorization rate” problem. Operationally they are three different problems:
+Failed payments look like one metric. Day to day they are three operating questions:
 
-1. **Which decline codes are recoverable?** Soft declines (insufficient funds) behave differently from hard declines (suspected fraud).
-2. **When should a retry fire?** A recovery *rate* does not tell orchestration when to wait; a recovery *curve* does.
-3. **Where should limited fraud review capacity go?** Scoring only helps if the queue design matches headcount.
+1. **Which declines come back?** Insufficient funds often recovers; suspected fraud almost never should be auto-retried.
+2. **When should we retry?** Knowing *that* something recovers is not enough — operations need to know *when*.
+3. **Where should scarce fraud review go?** Teams cannot review everything; they need the densest queue first.
 
-This work answers those questions with lineage-matched retries (`TXN-123` → `TXN-123-RETRY`), decline-policy joins, and a chronological fraud evaluation split.
+Without that split, teams either retry too aggressively (wasted cost, customer friction) or leave recoverable revenue on the table.
 
-## Key findings
+---
 
-**1. Two decline reasons drive most of the money at risk.**  
-Insufficient funds (**$225K**) and suspected fraud (**$171K**) account for about **84%** of failed payment value. Retry policy only needs to get a few codes right.
+## What the data shows
 
-*Chart: Failed payment value by decline reason*
+**Most of the money at risk sits in two places.**  
+Insufficient funds (**$225K**) and suspected fraud (**$171K**) make up about **84%** of failed payment value. Get those two policies right and the rest of the portfolio moves with them.
 
-![Chart — Decline concentration](outputs/readme_assets/01_decline_concentration.png)
+**Recovery is late, not early.**  
+**28%** of insufficient-funds declines recover within 24 hours — but **76%** of those recoveries do not show up until the **6–24 hour** window. Only **8%** land in the first two hours. A retry that fires immediately is usually asking before the outcome is knowable.
 
-**2. Recovery is a timing problem, not only a yes/no.**  
-**28.1%** of NSF declines recover within 24 hours, but only **8.3%** of those eventual recoveries land in the first 2 hours — **75.7%** show up in the **6–24 hour** window. Early retries fail predictably for most recoverable volume.
+![When NSF recoveries actually arrive](outputs/readme_assets/02_retry_timing_curve.png)
 
-*Chart: Share of eventual NSF recoveries by time since decline*
+**Some declines should never be auto-retried.**  
+Suspected fraud and issuer timeout show **0%** recovery here. Together they carry **~$4,800** in processing cost with no return. Fraud is already blocked from auto-retry; issuer timeout is still marked “retry allowed” in policy despite **0 of 1,102** recoveries — a config flag to re-test.
 
-![Chart — Retry timing curve](outputs/readme_assets/02_retry_timing_curve.png)
+**The recoverable pool is still large.**  
+After excluding codes that should not auto-retry, **$232K** remains policy-eligible. A conservative **10%** lift on that pool is about **$23K** on this snapshot — a sized pilot, not booked revenue.
 
-**3. Hard declines burn processing cost with zero return.**  
-Suspected fraud and issuer timeout show **0%** observed recovery. Together they carry **$4,845** in interchange-style processing cost on this snapshot. Fraud is correctly blocked from auto-retry (**$3,327** avoided). Issuer timeout is still marked retry-eligible in policy despite **0 / 1,102** recoveries — a policy-vs-data flag to test, not a settled ban.
+**Fraud review works best as a short, ranked queue.**  
+Reviewing the top **10%** of scored volume reaches **9.5%** precision versus a **5.5%** baseline (**1.7×** denser fraud). Wider queues (15–20%) dilute the hit rate.
 
-*Chart: Processing cost by decline reason*
+---
 
-![Chart — Retry cost exposure](outputs/readme_assets/03_retry_cost_exposure.png)
+## What to do next
 
-**4. A conservative recovery scenario is material — and measurable.**  
-**$232,328** of unrecovered value sits on policy-eligible codes. A **10%** incremental recovery scenario sizes to **~$23,233** on this snapshot. That figure is a test design input, not revenue already booked.
+These are **pilots sized from the data** — not money already saved.
 
-**5. A 10% fraud review queue concentrates risk without extra headcount.**  
-On chronological holdout scoring, a top-**10%** queue reaches **9.5%** precision versus a **5.5%** baseline (**1.73×** lift). Among 5% / 10% / 15% / 20% capacities tested, **10%** is the strongest operating point.
-
-*Chart: Precision and lift by review capacity*
-
-![Chart — Review capacity](outputs/readme_assets/04_review_capacity.png)
-
-## Recommendations
-
-Modeled operating changes sized from the data — not money already saved. Each row is something payments or fraud ops could pilot.
-
-| Priority | What to do | Evidence | What it is worth (modeled) |
+| # | Recommendation | Why it holds | Sized impact |
 |---|---|---|---|
-| **1** | Set a **minimum 6-hour retry delay** on insufficient funds; prioritize high-recovery bank/brand paths (e.g. BoA / Capital One Visa >30% observed) | **75.7%** of eventual NSF recoveries land in 6–24h; only **8.3%** in 0–2h | Focuses orchestration on the window where recovery is knowable; tops NSF unrecovered segments start at **$26K+** |
-| **2** | Keep suspected fraud and customer-action codes out of auto-retry; route to verification | **0%** recovery on fraud; **$3,327** processing cost with no return if retried | Stops false recovery attempts and compliance/chargeback exposure |
-| **3** | Re-test issuer timeout `automatic_retry_allowed = true` before the next config release | **0 / 1,102** recoveries; **$1,518** processing cost; **17.7%** of failures | Clears a policy-vs-data mismatch before more spend on dead retries |
-| **4** | Hold fraud review at capacity-limited **top 10%** of daily scored volume | **9.5%** precision vs **5.5%** baseline (**1.73×**); weaker precision at 15–20% | More fraud per reviewer hour without growing the queue |
+| **1** | Wait **at least 6 hours** before retrying insufficient funds; prioritize bank/brand paths that already recover above ~30% | **76%** of NSF recoveries arrive after hour 6; early retries mostly fail on schedule | Puts orchestration on the window that works; top unrecovered NSF segments start at **$26K+** |
+| **2** | Never auto-retry suspected fraud — send those to verification | **0%** recovery; **~$3.3K** processing cost with no return if retried | Cuts wasted retries and chargeback / compliance risk |
+| **3** | Re-test the “retry allowed” flag on issuer timeouts before the next release | **0 / 1,102** recoveries; **~$1.5K** processing cost; **~18%** of failures | Stops spending on a decline type that behaves like a hard decline here |
+| **4** | Keep fraud review at the **top 10%** of daily scored volume | Strongest tested capacity: **9.5%** precision, **1.7×** vs baseline | More fraud caught per reviewer hour without growing the queue |
 
-Portfolio-wide scenario at 10% lift on the eligible pool: **~$23K** incremental recovery on this snapshot — validate with a 4–6 week A/B (delayed vs immediate retry) before treating it as realized uplift.
+**Bottom line for a pilot:** a controlled 4–6 week test of delayed vs immediate NSF retry is the path from the **~$23K** scenario to a measured result.
+
+---
 
 ## How it was built
 
 ```mermaid
 flowchart LR
-    A["Synthetic payment\nattempts"] --> B["SQL diagnostics\n+ decline policy"]
-    B --> C["Intent-matched\n24h recovery"]
-    C --> D["Retry-timing curve\n+ cost exposure"]
-    E["Synthetic fraud\ntransactions"] --> F["Chronological\nrisk evaluation"]
-    F --> G["Capacity-limited\nreview queue"]
-    D --> H["Excel + Power BI\ndecision views"]
-    G --> H
+    A["Payment attempts"] --> B["Find where\napprovals fail"]
+    B --> C["Match retries\nto original declines"]
+    C --> D["Time the recovery\n+ cost of trying"]
+    E["Fraud sample"] --> F["Rank a fixed\nreview queue"]
+    D --> G["Excel + Power BI\nfor decisions"]
+    F --> G
 ```
 
-| Step | What it does for the business |
+| Step | Business outcome |
 |---|---|
-| **1. Diagnose failures** | Auth rate, decline concentration, and issuer patterns — where approvals are lost |
-| **2. Match recoveries** | Same-intent lineage links declines to successful `-RETRY` attempts within 24 hours |
-| **3. Time the curve** | Minutes-to-recovery buckets plus interchange-style cost-of-attempt by decline reason |
-| **4. Decide the action** | Action matrix joins evidence to policy: retry later, block, backoff, or investigate |
-| **5. Rank the fraud queue** | Chronological train/calibration/test split; top 10% flagged for fixed review capacity |
-| **6. Package for ops** | Excel and Power BI read the same `powerbi-data/` contracts as the analysis layer |
+| Diagnose declines | See which failure reasons and issuers drive lost approvals |
+| Match same-payment retries | Measure true 24-hour recovery — not a generic second attempt |
+| Time the curve | Decide *when* to retry, not only *whether* |
+| Apply decline policy | Separate “retry later” from “block / verify / investigate” |
+| Rank fraud review | Fill limited analyst capacity with the densest cases first |
+| Package for stakeholders | Excel and Power BI read the same trusted tables |
 
-**Open and explore:**
+**Tools:** SQL · Python · Excel · Power BI
 
-| File | What you’ll see |
-|---|---|
-| [`deliverables/Payments_Optimization_Excel_Analysis.xlsx`](deliverables/Payments_Optimization_Excel_Analysis.xlsx) | Executive dashboard, cleaning, pivots, scenarios |
-| [`Payments_Optimization_Dashboard.pbix`](Payments_Optimization_Dashboard.pbix) | Interactive Power BI report |
-| [`powerbi-data/payment_action_matrix.csv`](powerbi-data/payment_action_matrix.csv) | Decline-level actions with recovery evidence |
-| [`docs/EXECUTIVE_SUMMARY.md`](docs/EXECUTIVE_SUMMARY.md) | Stakeholder findings, priorities, and experiment guardrails |
-
-**Power BI — Executive summary**
-
-![Power BI executive summary](powerbi-screenshots/01-executive-summary.png)
-
-**Power BI — Retry and failures**
-
-![Power BI retry and failures](powerbi-screenshots/02-retry-and-failures.png)
-
-## Headline results
-
-| Business metric | Result | Interpretation |
-| --- | ---: | --- |
-| Payment attempts | 51,237 | Three-month synthetic snapshot |
-| Authorization failure rate | 12.92% | 6,619 failed attempts |
-| Failed payment value | $500,158 | Opportunity pool, not realized loss |
-| Same-intent recovery (24h) | 855 / 6,237 (**13.71%**) | Linked `-RETRY` successes on initially failed intents |
-| Policy-eligible unrecovered value | **$232,328** | Excludes codes that should not auto-retry |
-| Illustrative 10% recovery scenario | **$23,233** | Scenario estimate, not booked revenue |
-| Fraud review @ 10% capacity | **9.5%** precision vs **5.5%** baseline | **1.73×** concentration in the queue |
-
-## Tools and stack
-
-| Layer | Tools |
-|---|---|
-| Analysis & modeling | Python (pandas, scikit-learn), BigQuery-oriented SQL |
-| Decision packaging | Excel workbook, Power BI dashboard |
-| Reproducibility | `run.ps1` pipeline, pytest contracts on schemas and methodology |
+<details>
+<summary><strong>Rebuild the analysis</strong></summary>
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 .\run.ps1 -Task all
-python generate_readme_assets.py
 ```
 
-Refresh `Payments_Optimization_Dashboard.pbix` (**Home → Refresh**) after regenerating `powerbi-data/`.
+Then open the `.pbix` and refresh. Full method notes: [`docs/EXECUTIVE_SUMMARY.md`](docs/EXECUTIVE_SUMMARY.md).
 
-## What's in this repo
+</details>
 
-| Path | Purpose |
-|---|---|
-| `sql/analysis/`, `sql/marts/` | Exploratory SQL and reporting marts |
-| `scenario_simulator.py` | Same-intent recovery and opportunity scenarios |
-| `retry_timing_analysis.py` | Minutes-to-recovery curve and cost-of-attempt |
-| `fintech.py`, `score_daily.py` | Fraud ranking train / daily score |
-| `prepare_powerbi_tables.py` | Stable Power BI CSV contracts |
-| `generate_readme_assets.py` | README key visuals from checked-in outputs |
-| `outputs/`, `powerbi-data/` | Analytical outputs and dashboard feeds |
-| `tests/` | Data, methodology, and schema regression tests |
+---
 
-## Limitations
+## Good to know
 
-- All transaction data is **synthetic**; results demonstrate method and decision framing, not production bank outcomes.
-- Scenario dollars are **opportunity sizing**, not measured revenue lift — validate with a controlled retry experiment before claiming uplift.
-- Fraud labels and model metrics are **workflow demonstration** (ROC-AUC 0.621 on this set), not production fraud-system performance.
-- `Interchange_Fee` is a synthetic per-attempt processing-cost field, not literal card-network interchange.
-- The issuer-timeout policy mismatch is a **single-snapshot** observation (1,102 attempts, 0 recoveries) — treat as a hypothesis to re-test on a longer window.
+- Data is **synthetic** — this shows the decision method, not a live bank result.
+- Dollar figures are **opportunity sizes and scenarios**, not measured revenue lift.
+- Fraud scores sort a review queue; they are not a production fraud engine claim.
+- The issuer-timeout finding is from **this snapshot** — re-check on a longer window before changing policy permanently.
